@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nguyen Dinh Phuoc Son - Senior Project Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Nguyen Dinh Phuoc Son</h1>
+      <h2>Senior Project Manager</h2>
+      <p>📞 <a href="tel:+84919846835">+84919846835</a> | ✉️ <a href="mailto:sslakd@gmail.com">sslakd@gmail.com</a></p>
+      <address>
+        Vietnam | <a href="#" id="download-pdf" class="download-btn">Download my CV</a> | <a href="https://www.linkedin.com/in/sslakd/" target="_blank">LinkedIn</a>
+      </address>
+    </header>
+
+    <section>
+      <h3>Career Goal</h3>
+      <p>Quản lý dự án phần mềm thâm niên: Agile/Scrum, Risk, Delivery, Stakeholder Management.</p>
+    </section>
+
+    <div class="two-columns">
+      <aside>
+        <section>
+          <h3>Education</h3>
+          <p><strong>Bachelor - Multimedia Design</strong><br/>
+          RMIT University Vietnam, Da Nang, Vietnam<br/>
+          2007 - 2011</p>
+        </section>
+
+        <section>
+          <h3>Certifications</h3>
+          <p><strong>PMI-ACP®</strong> - PMI, 04/2024</p>
+        </section>
+
+        <section>
+          <h3>Skills</h3>
+          <ul>
+            <li>Agile/Scrum, Kanban, Sprint/Release Planning</li>
+            <li>Risk & Issue Management, RAID log</li>
+            <li>Scope, Schedule, Cost, Quality (PM Triangle)</li>
+            <li>Stakeholder & Communication Management</li>
+            <li>Metrics: Velocity, Burndown, Lead/Cycle Time</li>
+            <li>Process Improvement & Retrospectives</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Languages</h3>
+          <p>English: Fluent</p>
+        </section>
+      </aside>
+
+      <main>
+        <section>
+          <h3>Work Experience</h3>
+
+          <article>
+            <h4>Project Manager - VMO Holding</h4>
+            <em>Hanoi, Vietnam (09/2024 - Present)</em>
+            <p>Dẫn dắt team Agile/Scrum, tối ưu collaboration & throughput. Kiểm soát tiến độ/chất lượng, quản trị rủi ro chủ động, báo cáo minh bạch. Xây dựng đội ngũ: phân bổ nguồn lực, chia sẻ tri thức, nuôi dưỡng môi trường tích cực. Cải tiến quy trình, nâng kỳ vọng khách hàng qua engagement chủ động.</p>
+          </article>
+
+          <article>
+            <h4>Project Manager - FPT Software</h4>
+            <em>Ho Chi Minh City, Vietnam (06/2023 - 06/2024)</em>
+            <p>Coach Agile/Scrum; đảm bảo giao tiếp đa bên hiệu quả. Quản trị rủi ro/vấn đề/phạm vi; báo cáo tiến độ định kỳ. Xây dựng tiêu chuẩn vận hành, đảm bảo chất lượng & deadline. Phối hợp năng lực đội ngũ; chuyển giao tri thức.</p>
+          </article>
+
+          <article>
+            <h4>General Manager → Product Manager → UI/UX Designer - Blue Otter Corp</h4>
+            <em>Ho Chi Minh City, Vietnam (10/2017 - 06/2023)</em>
+            <p>Điều hành vận hành hằng ngày, OKR/KPI, quản trị ngân sách. Xây dựng chiến lược tăng trưởng & lộ trình sản phẩm. Thiết kế trải nghiệm, thử nghiệm khả dụng, giữ chuẩn nhận diện.</p>
+          </article>
+        </section>
+
+        <section>
+          <h3>Projects</h3>
+
+          <article>
+            <h4>Finance WebApp - UK</h4>
+            2023 - 2024
+            <p>Vai trò PM/Scrum Master: cầu nối giao tiếp, điều phối nội bộ, đảm bảo tiến độ & chất lượng.</p>
+          </article>
+
+          <article>
+            <h4>Canvis App - US</h4>
+            2021 - 2023
+            <p>Facilitate sự kiện Scrum, theo dõi tiến độ hằng ngày, weekly report; đồng xây dựng yêu cầu & phân rã backlog.</p>
+          </article>
+
+          <article>
+            <h4>Winery Websites Migration - US</h4>
+            2021 - 2023
+            <p>Vai trò PM/Scrum Master: cầu nối giao tiếp, điều phối nội bộ, đảm bảo tiến độ & chất lượng.</p>
+          </article>
+
+          <article>
+            <h4>Xemoto (In-house) - US</h4>
+            2018 - 2023
+            <p>Vai trò Product Manager: nghiên cứu người dùng, định hướng chiến lược, quản lý KPI, truyền thông lộ trình.</p>
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+    <script>
+  document.getElementById('download-pdf').addEventListener('click', () => {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF('p', 'pt', 'a4');
+    const element = document.querySelector('.container'); // resume container
+
+    html2canvas(element, {scale: 2}).then(canvas => {
+      const imgData = canvas.toDataURL('image/png');
+      const imgProps = doc.getImageProperties(imgData);
+      const pdfWidth = doc.internal.pageSize.getWidth();
+      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+      doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+      doc.save('resume.pdf');
+    });
+  });
+</script>
+
+</body>
+</html>
