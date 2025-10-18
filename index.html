@@ -203,48 +203,27 @@
   </div>
     <script>
     document.getElementById('download-pdf').addEventListener('click', () => {
-        // Ensure jsPDF and html2canvas are available globally (e.g., loaded via <script> tags)
         const { jsPDF } = window.jspdf;
         const element = document.querySelector('.container'); // Your resume container
-
-        // Define PDF dimensions in points for A4 (595.28 x 841.89 points)
-        const pdfWidth = 595.28;
-        const pdfHeight = 841.89; // Standard A4 height
+        const pdfWidth = 595.28; // Standard A4 width in points
 
         html2canvas(element, { scale: 2 }).then(canvas => {
             const imgData = canvas.toDataURL('image/png');
             const contentWidth = canvas.width;
             const contentHeight = canvas.height;
 
-            // Calculate the ratio to fit the content width to the PDF width
+            // 1. Calculate the final scaled height based on the content's aspect ratio
             const scaleFactor = pdfWidth / contentWidth;
+            const finalPdfHeight = contentHeight * scaleFactor;
+
+            // 2. Initialize jsPDF with the dynamic height
+            // We use the calculated height for the 'height' parameter in the custom format [width, height]
+            const doc = new jsPDF('p', 'pt', [pdfWidth, finalPdfHeight]);
+
+            // 3. Add the entire image to the single page
+            // The height of the image on the PDF is now the calculated finalPdfHeight
+            doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, finalPdfHeight);
             
-            // Calculate the height of the content scaled to fit the PDF width
-            const scaledContentHeight = contentHeight * scaleFactor;
-
-            // Calculate the number of pages needed (Math.ceil ensures we get all content)
-            const pages = Math.ceil(scaledContentHeight / pdfHeight);
-
-            // Initialize jsPDF document
-            const doc = new jsPDF('p', 'pt', 'a4');
-            let position = 0; // The vertical position offset for the content
-
-            // Loop through the pages and add content slice by slice
-            for (let i = 0; i < pages; i++) {
-                // Check if it's not the first page, if so, add a new page before drawing
-                if (i > 0) {
-                    doc.addPage();
-                }
-
-                // Calculate the vertical position for this page slice
-                // The content image is "moved up" for each new page.
-                position = - (i * pdfHeight); 
-
-                // Add the image to the PDF page
-                // Arguments: imgData, format, x-position, y-position, width, height
-                doc.addImage(imgData, 'PNG', 0, position, pdfWidth, scaledContentHeight);
-            }
-
             // Save the document
             doc.save('CV_NguyenDinhPhuocSon_ProjectManager.pdf');
         });
