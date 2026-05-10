@@ -1,0 +1,51 @@
+baseURL = "https://sslakd.com/"
+title = "Son Nguyen"
+theme = "coder"
+paginate = 5
+
+defaultContentLanguage = "en"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+
+[params]
+  author = "Son Nguyen"
+  description = "Senior Project Manager | Agile Coach | former UI/UX Designer"
+  keywords = "project manager, agile, scrum, pmi-acp, brse, vietnam"
+  info = "Senior Project Manager"
+  avatarURL = "/images/avatar.jpg"
+
+  enableRSS = false
+  splitPosts = false
+  socialFirst = false
+
+  # Dark mode
+  darkMode = true
+  darkModeToggle = true
+
+  # Social
+  social = [
+    { name = "linkedin", url = "https://www.linkedin.com/in/sslakd/" },
+    { name = "github", url = "https://github.com/sslakd" },
+    { name = "email", url = "mailto:sslakd@gmail.com" },
+  ]
+
+  # Menu items
+  [menu]
+    [[menu.main]]
+      name = "About"
+      weight = 1
+      identifier = "about"
+      url = "/about/"
+    [[menu.main]]
+      name = "Posts"
+      weight = 2
+      identifier = "posts"
+      url = "/posts/"
+    [[menu.main]]
+      name = "Contact"
+      weight = 3
+      identifier = "contact"
+      url = "mailto:sslakd@gmail.com"
