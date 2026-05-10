@@ -125,3 +125,17 @@ li {
     flex: 1 1 100%;
   }
 }
+
+
+/* Flat black icons */
+.contact-line i {
+  font-size: 1em;
+  color: #000;
+  margin-right: 2px;
+}
+.download-link i {
+  margin-right: 4px;
+}
+i.fab, i.fas {
+  vertical-align: middle;
+}
