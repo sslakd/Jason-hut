@@ -153,3 +153,44 @@ i.fab, i.fas {
   margin-right: 6px;
   font-family: monospace;
 }
+
+/* Two-column summary layout */
+.two-summary {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.two-summary .summary-col {
+  flex: 1 1 45%;
+  min-width: 250px;
+  padding: 15px 20px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  background: #f9f9f9;
+}
+.two-summary .summary-col h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+}
+.two-summary .summary-col p {
+  font-size: 0.9em;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Tech meta for projects */
+.meta-tech {
+  font-size: 0.85em;
+  color: #555;
+  margin: -8px 0 12px 0;
+  font-style: italic;
+}
+@media (max-width: 768px) {
+  .two-summary {
+    flex-direction: column;
+  }
+  .two-summary .summary-col {
+    flex: 1 1 100%;
+  }
+}
