@@ -7,7 +7,6 @@
 <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>🌑 Góc Tối — Jason</title>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
@@ -173,9 +172,7 @@
 <body>
 
 <nav class="sidebar">
-  <div class="sidebar-header" style="display:flex;align-items:center;gap:8px">
-    <a href="/goc-toi/" style="color:#38bdf8;text-decoration:none;font-size:14px">← Góc Tối</a>
-    <span style="color:#475569">|</span>
+  <div class="sidebar-header">
     <h1><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="20" height="20" fill="var(--accent)" style="vertical-align:middle"><path d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM449.6 177.8L449.6 177.8L272.6 177.8C220.2 177.8 177.8 220.2 177.8 272.6L177.8 449.6C177.8 456.6 183.5 462.2 190.4 462.2L376.9 462.2C424 462.2 462.2 424 462.2 376.9L462.2 304.2C462.2 297.2 456.5 291.6 449.6 291.6L304.2 291.6C297.2 291.6 291.6 297.3 291.6 304.2L291.6 335.8C291.6 342.4 296.7 347.9 303.2 348.4L304.2 348.4L392.7 348.4C399.3 348.4 404.8 353.5 405.3 360L405.3 361L405.3 367.3C405.3 388.2 388.3 405.2 367.4 405.2L247.3 405.2C240.3 405.2 234.7 399.5 234.7 392.6L234.7 272.5C234.7 252.1 250.8 235.4 271.1 234.6L272.7 234.6L449.7 234.6C456.7 234.6 462.3 228.9 462.3 222L462.3 190.4C462.3 183.4 456.7 177.8 449.7 177.8z"/></svg> Góc Tối</h1>
     <div class="date-badge" id="sidebarDate"></div>
   </div>
@@ -243,23 +240,75 @@
 <script>
 const STORAGE_KEY = 'goc_toi_tasks';
 
-// Load from localStorage or use defaults
+// Load from data.json (live via GitHub) — fallback to localStorage, then defaults
 function loadTaskData() {
+  // Try fetch from data.json first
+  if (window._dataJsonLoaded) return window._dataJsonLoaded;
+  
   const saved = localStorage.getItem(STORAGE_KEY);
   if (saved) {
     try { return JSON.parse(saved); } catch(e) {}
   }
+  
+  // Try async fetch (handled by initDashboard)
+  return getDefaultTaskData();
+}
+
+function getDefaultTaskData() {
   return [
-    { name:"Viết sách KDP", prio:"P1", p:7, deadline:"30/05", status:"Đang viết", desc:"How to Manage a UI/UX Design Project — 15 chương, ~180 trang.", subtasks:["Outline 15 chương","Viết Preface","Chương 1 (đang viết)"] },
-    { name:"Amazon FBA", prio:"P1", p:20, deadline:"22/05", status:"Học & CB", desc:"Học cẩm nang → Chọn ngành → Hồ sơ Seller → PingPong ✅ → W-8BEN", subtasks:["Đọc cẩm nang","Tạo PingPong","Chọn ngành hàng"] },
-    { name:"CV Remote PM", prio:"P2", p:15, deadline:"—", status:"Chờ apply", desc:"Toptal screening · Vantage Search · LinkedIn · TopDev · Upwork", subtasks:["Toptal account","Apply Vantage Search","Tối ưu LinkedIn"] },
-    { name:"3QR Game", prio:"P3", p:95, deadline:"—", status:"Tạm dừng", desc:"Godot 4 · Xiangqi engine ~95% · Còn assets, card system", subtasks:["Xiangqi engine","Piece movement","Check/checkmate"] },
-    { name:"Google Photos → YouTube", prio:"P3", p:15, deadline:"Daily", status:"Tự động", desc:"147 videos · 6/41 ZIPs · Upload 7:00 AM daily", subtasks:["Script upload","Schedule cron","6/41 ZIPs done"] }
+    { name:"Viết sách KDP", prio:"P1", p:7, deadline:"30/05", status:"Đang viết", desc:"How to Manage a UI/UX Design Project — 15 chương, ~180 trang." },
+    { name:"Amazon FBA", prio:"P1", p:20, deadline:"22/05", status:"Học & CB", desc:"Học cẩm nang → PingPong ✅ → Chọn ngành" },
+    { name:"CV Remote PM", prio:"P2", p:15, deadline:"—", status:"Chờ apply", desc:"Toptal screening · Vantage Search" },
+    { name:"Google Photos → YouTube", prio:"P3", p:15, deadline:"Daily", status:"Tự động", desc:"147 videos · 6/41 ZIPs" },
+    { name:"3QR Game", prio:"P3", p:95, deadline:"—", status:"Tạm dừng", desc:"Godot 4 · Xiangqi engine ~95%" }
   ];
+}
+
+// Fetch data.json and merge into dashboard
+async function initDashboard() {
+  try {
+    const jsonUrl = window._dataJsonUrl || (window.location.origin + '/goc-toi/dashboard/data.json');
+    const resp = await fetch(jsonUrl + '?_=' + Date.now());
+    if (!resp.ok) throw new Error('Not found');
+    const data = await resp.json();
+    window._dataJsonLoaded = data;
+    
+    // Update projects from data.json
+    if (data.projects && data.projects.length > 0) {
+      TMC_DATA = data.projects;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(TMC_DATA));
+      renderAllTasks();
+    }
+    
+    // Update cron count in sidebar
+    if (data.cron) {
+      document.querySelectorAll('.cron-count').forEach(el => {
+        el.textContent = data.cron.activeJobs + ' active';
+      });
+    }
+    
+    // Update system status area if exists
+    if (data.amazon) {
+      document.querySelectorAll('.amazon-phase').forEach(el => {
+        el.textContent = data.amazon.phase;
+      });
+    }
+    
+    console.log('✅ Dashboard data loaded from data.json');
+  } catch(e) {
+    console.log('ℹ️ Using localStorage fallback (data.json not available)');
+  }
 }
 
 let TMC_DATA = loadTaskData();
 let _activeIdx = -1;
+
+// Gọi initDashboard khi trang load xong
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initDashboard);
+} else {
+  initDashboard();
+}
 
 function saveTaskData() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(TMC_DATA));
@@ -656,7 +705,8 @@ function saveTask() {
       mdContent.innerHTML = '<p style="color:var(--muted);text-align:center;padding:40px"><i class="fas fa-spinner fa-spin"></i> Loading ' + escapeHtml(fileName) + '...</p>';
 
       // Try to fetch from raw GitHub
-      const rawUrl = RAW_BASE + filePath;
+      const dataJsonUrl = window.location.origin + '/goc-toi/dashboard/data.json';
+const rawUrl = RAW_BASE + filePath;
       document.getElementById('mdSource').href = rawUrl;
 
       fetch(rawUrl)
