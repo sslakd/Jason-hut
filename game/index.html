@@ -2,77 +2,149 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 <title>Ai Là Triệu Phú — Học Toán & Tiếng Anh</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',Arial,sans-serif;background:linear-gradient(135deg,#0a1628,#1a237e,#0d47a1);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:16px;flex-direction:column}
-#app{width:100%;max-width:820px}
-.container{width:100%;background:linear-gradient(180deg,#1a237e,#283593);border-radius:28px;padding:24px;box-shadow:0 8px 40px rgba(0,0,0,.5);position:relative;overflow:hidden}
-.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-.logo{display:flex;align-items:center;gap:10px}
-.logo-icon{width:42px;height:42px;background:linear-gradient(135deg,#ffd700,#ff8f00);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:#1a237e;box-shadow:0 2px 8px rgba(255,215,0,.4)}
-.logo-text{color:#ffd700;font-size:1.1rem;font-weight:700;line-height:1.2}
-.logo-text span{color:#82b1ff;font-size:.75rem;font-weight:400;display:block}
-.money-display{background:linear-gradient(135deg,#2e7d32,#1b5e20);border-radius:12px;padding:8px 16px;display:flex;align-items:center;gap:8px;box-shadow:0 2px 12px rgba(46,125,50,.3)}
-.money-icon{font-size:1.3rem}
-.money-amount{color:#fff;font-size:1.2rem;font-weight:800;font-family:'Courier New',monospace}
-.money-amount span{color:#81c784;font-size:.8rem;font-weight:400}
-.opt-btn{padding:10px 24px;border-radius:12px;border:2px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#bbb;font-size:1rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s}
-.opt-btn:hover{background:rgba(255,255,255,.1);color:#fff}
-.opt-btn.selected{background:linear-gradient(135deg,#ffd700,#ff8f00);color:#1a237e;border-color:#ffd700;box-shadow:0 4px 16px rgba(255,215,0,.3)}
-.start-btn{background:linear-gradient(135deg,#ffd700,#ff8f00);color:#1a237e;border:none;border-radius:14px;padding:14px 48px;font-size:1.15rem;font-weight:800;cursor:pointer;font-family:inherit;transition:all .2s;box-shadow:0 4px 20px rgba(255,215,0,.3)}
-.start-btn:hover{transform:scale(1.03)}
-.start-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
-.qnum{color:rgba(255,255,255,.5);font-size:.85rem;text-align:center;margin-bottom:4px}
-.ladder{display:flex;justify-content:center;gap:6px;margin-bottom:16px;flex-wrap:wrap}
-.step{padding:4px 10px;border-radius:8px;font-size:.72rem;font-weight:700;background:rgba(255,255,255,.06);color:rgba(255,255,255,.4);transition:all .3s;font-family:'Courier New',monospace}
-.step.active{background:linear-gradient(135deg,#ffd700,#ff8f00);color:#1a237e;box-shadow:0 2px 10px rgba(255,215,0,.3)}
-.step.passed{background:rgba(46,125,50,.3);color:#81c784}
-.step.safe{border:1px solid rgba(255,215,0,.2)}
-.qbox{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px 24px;margin-bottom:16px;display:flex;align-items:center;justify-content:center}
-.qtext{color:#fff;font-size:1.15rem;font-weight:600;text-align:center;line-height:1.5}
-.ansgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.ansbtn{padding:14px 16px;border:2px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.05);color:#fff;font-size:1rem;font-weight:600;cursor:pointer;transition:all .2s;text-align:left;display:flex;align-items:center;gap:10px;font-family:inherit}
-.ansbtn .lbl{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;flex-shrink:0}
-.ansbtn:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2)}
-.ansbtn.correct{background:rgba(46,125,50,.3);border-color:#4caf50;color:#a5d6a7}
-.ansbtn.wrong{background:rgba(198,40,40,.3);border-color:#e53935;color:#ef9a9a}
-.ansbtn.disabled{pointer-events:none;opacity:.6}
-.btn-group{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
-.btn-group button{padding:12px 28px;border-radius:14px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s;border:none}
-.btn-play{background:linear-gradient(135deg,#ffd700,#ff8f00);color:#1a237e;box-shadow:0 4px 16px rgba(255,215,0,.3)}
-.btn-play:hover{transform:scale(1.02)}
-.btn-ss{background:rgba(255,255,255,.1);color:#90caf9;border:1px solid rgba(255,255,255,.12)!important}
-.btn-ss:hover{background:rgba(255,255,255,.15)}
-.btn-home{background:rgba(255,255,255,.08);color:#90caf9;border:1px solid rgba(255,255,255,.12)!important}
-.btn-home:hover{background:rgba(255,255,255,.12)}
-.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#2e7d32,#1b5e20);color:#fff;padding:12px 24px;border-radius:12px;font-size:.9rem;font-weight:600;display:none;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.3);animation:toastIn .3s ease}
-@keyframes toastIn{from{opacity:0;transform:translateX(-50%) translateY(20px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient(180deg,#ffecd2,#fcb69f,#ff9a9e,#fad0c4,#a18cd1);min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:12px;flex-direction:column}
+#app{width:100%;max-width:860px}
+
+/* ===== WELCOME ===== */
+.welcome{background:linear-gradient(135deg,#667eea,#764ba2,#f093fb);border-radius:32px;padding:28px 24px 40px;box-shadow:0 12px 50px rgba(102,126,234,.4);position:relative;overflow:hidden;text-align:center}
+.welcome::before{content:'';position:absolute;top:-30%;left:-30%;width:160%;height:160%;background:radial-gradient(circle at 30% 40%,rgba(255,255,255,.12),transparent 60%);pointer-events:none}
+.welcome::after{content:'✨';position:absolute;top:15px;right:20px;font-size:2.5rem;opacity:.3;animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes wobble{0%,100%{transform:rotate(0)}25%{transform:rotate(-3deg)}75%{transform:rotate(3deg)}}
+@keyframes rainbow{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(360deg)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes popIn{from{transform:scale(0);opacity:0}70%{transform:scale(1.15)}to{transform:scale(1);opacity:1}}
+@keyframes sparkle{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+@keyframes confetti{0%{transform:translateY(-20px) rotate(0);opacity:1}100%{transform:translateY(100px) rotate(720deg);opacity:0}}
+.welcome-icon{font-size:5rem;animation:bounce 2s ease-in-out infinite;margin-bottom:4px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.2))}
+.welcome-title{color:#fff;font-size:2.2rem;font-weight:900;text-shadow:0 3px 12px rgba(0,0,0,.15);margin-bottom:4px;letter-spacing:-.5px;animation:slideUp .5s ease}
+.welcome-title span{background:linear-gradient(90deg,#ffd700,#ff6b6b,#ffd700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.welcome-sub{color:rgba(255,255,255,.75);font-size:1.1rem;font-weight:600;margin-bottom:16px;animation:slideUp .6s ease}
+.welcome-stats{background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border-radius:16px;padding:10px 18px;display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;font-size:.95rem;color:rgba(255,255,255,.8);font-weight:600;border:1px solid rgba(255,255,255,.1);animation:slideUp .7s ease}
+.picker-label{color:rgba(255,255,255,.85);font-size:1rem;font-weight:700;margin-bottom:8px;display:block}
+.picker-group{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;animation:slideUp .8s ease}
+.picker-btn{padding:12px 28px;border-radius:50px;border:2.5px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);font-size:1.1rem;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s;backdrop-filter:blur(6px)}
+.picker-btn:hover,.picker-btn:active{background:rgba(255,255,255,.18);color:#fff;transform:scale(1.05)}
+.picker-btn.sel{background:linear-gradient(135deg,#ffd700,#ff8f00);color:#4a148c;border-color:#ffd700;box-shadow:0 4px 20px rgba(255,215,0,.35);transform:scale(1.06)}
+.btn-start{background:linear-gradient(135deg,#ff6b6b,#ee5a24,#ffd700);color:#fff;border:none;border-radius:50px;padding:16px 56px;font-size:1.4rem;font-weight:900;cursor:pointer;font-family:inherit;transition:all .2s;box-shadow:0 6px 30px rgba(238,90,36,.4);letter-spacing:1px;animation:pulse 1.5s ease-in-out infinite}
+.btn-start:hover,.btn-start:active{transform:scale(1.06);box-shadow:0 8px 35px rgba(238,90,36,.5)}
+.btn-start:disabled{opacity:.5;cursor:not-allowed;transform:none;animation:none}
+
+/* ===== GAME ===== */
+.game{background:linear-gradient(135deg,#5b2c6f,#6c3483,#8e44ad,#af7ac5);border-radius:32px;padding:16px 20px 24px;box-shadow:0 10px 40px rgba(91,44,111,.4);position:relative;overflow:hidden}
+.game::before{content:'';position:absolute;top:-40%;right:-30%;width:120%;height:120%;background:radial-gradient(circle at 70% 20%,rgba(255,215,0,.08),transparent 60%);pointer-events:none}
+.game-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;position:relative;z-index:1}
+.game-logo{display:flex;align-items:center;gap:8px}
+.game-logo-icon{width:40px;height:40px;background:linear-gradient(135deg,#ffd700,#ff8f00);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:#4a148c;box-shadow:0 3px 10px rgba(255,215,0,.35)}
+.game-logo-text{color:#ffd700;font-size:1.05rem;font-weight:800;line-height:1.15}
+.game-logo-text span{color:#d7bde2;font-size:.72rem;font-weight:500;display:block}
+.game-money{background:linear-gradient(135deg,#1e8449,#27ae60,#2ecc71);border-radius:50px;padding:6px 16px 6px 10px;display:flex;align-items:center;gap:6px;box-shadow:0 3px 15px rgba(46,204,113,.3);border:1px solid rgba(46,204,113,.3)}
+.game-money-icon{font-size:1.2rem}
+.game-money-val{color:#fff;font-size:1.2rem;font-weight:900;font-family:'Courier New',monospace}
+.game-money-val span{color:#82e0aa;font-size:.75rem;font-weight:500}
+.game-qnum{color:rgba(255,255,255,.45);font-size:.75rem;text-align:center;margin-bottom:4px;font-weight:600}
+.game-ladder{display:flex;justify-content:center;gap:4px;margin-bottom:12px;flex-wrap:wrap}
+.game-step{padding:3px 8px;border-radius:20px;font-size:.65rem;font-weight:800;background:rgba(255,255,255,.06);color:rgba(255,255,255,.35);transition:all .3s;font-family:'Courier New',monospace;white-space:nowrap}
+.game-step.active{background:linear-gradient(135deg,#ffd700,#ff8f00);color:#4a148c;box-shadow:0 2px 12px rgba(255,215,0,.35);transform:scale(1.08);font-weight:900}
+.game-step.passed{background:rgba(46,204,113,.2);color:#82e0aa}
+.game-step.passed.safe{border:1.5px solid rgba(46,204,113,.3)}
+.game-qbox{background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:2px solid rgba(255,255,255,.12);border-radius:20px;padding:18px 20px;margin-bottom:12px;min-height:70px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.game-qtext{color:#fff;font-size:1.25rem;font-weight:700;text-align:center;line-height:1.5;text-shadow:0 1px 4px rgba(0,0,0,.1)}
+.game-ansgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.game-ansbtn{padding:14px 12px;border:2.5px solid rgba(255,255,255,.15);border-radius:16px;background:rgba(255,255,255,.07);color:#fff;font-size:1rem;font-weight:700;cursor:pointer;transition:all .15s;text-align:left;display:flex;align-items:center;gap:10px;font-family:inherit;backdrop-filter:blur(4px);-webkit-user-select:none;user-select:none}
+.game-ansbtn .lbl{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,255,255,.05));display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;flex-shrink:0;border:1.5px solid rgba(255,255,255,.1)}
+.game-ansbtn:active{background:rgba(255,255,255,.15);transform:scale(.97)}
+.game-ansbtn.correct{background:linear-gradient(135deg,rgba(46,204,113,.5),rgba(39,174,96,.4));border-color:#2ecc71;color:#abebc6;box-shadow:0 0 20px rgba(46,204,113,.2);animation:popIn .3s ease}
+.game-ansbtn.wrong{background:linear-gradient(135deg,rgba(231,76,60,.5),rgba(192,57,43,.4));border-color:#e74c3c;color:#f5b7b1;box-shadow:0 0 20px rgba(231,76,60,.2);animation:wobble .4s ease}
+.game-ansbtn.disabled{pointer-events:none;opacity:.55}
+
+/* ===== RESULT ===== */
+.result{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460,#e94560);border-radius:32px;padding:24px 20px 36px;box-shadow:0 12px 50px rgba(233,69,96,.3);position:relative;overflow:hidden;text-align:center}
+.result::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 50% 60%,rgba(233,69,96,.08),transparent 50%);pointer-events:none}
+.result-icon{font-size:5rem;margin-bottom:6px;animation:bounce 1.5s ease-in-out infinite;filter:drop-shadow(0 4px 12px rgba(0,0,0,.2))}
+.result-title{color:#fff;font-size:2rem;font-weight:900;margin-bottom:4px;text-shadow:0 2px 10px rgba(0,0,0,.2)}
+.result-title.win{background:linear-gradient(90deg,#ffd700,#ff6b6b,#ffd700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:rainbow 2s linear infinite}
+.result-sub{color:rgba(255,255,255,.65);font-size:1.1rem;font-weight:600;margin-bottom:10px}
+.result-money-box{display:inline-block;background:linear-gradient(135deg,rgba(46,204,113,.15),rgba(39,174,96,.1));border:2px solid rgba(46,204,113,.3);border-radius:20px;padding:12px 32px;margin:8px 0 14px}
+.result-money{font-size:2.5rem;font-weight:900;color:#2ecc71;font-family:'Courier New',monospace}
+.result-money span{font-size:.7em;color:rgba(255,255,255,.4);font-weight:500}
+.result-stat{color:rgba(255,255,255,.35);font-size:.85rem;font-weight:500;margin-bottom:18px}
+.result-btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.result-btns button{padding:12px 28px;border-radius:50px;font-size:1rem;font-weight:800;cursor:pointer;font-family:inherit;transition:all .2s;border:none}
+.btn-replay{background:linear-gradient(135deg,#ffd700,#ff8f00);color:#4a148c;box-shadow:0 4px 20px rgba(255,215,0,.3)}
+.btn-replay:active{transform:scale(.95)}
+.btn-sshot{background:rgba(255,255,255,.12);color:#d7bde2;border:2px solid rgba(255,255,255,.12)!important;backdrop-filter:blur(6px)}
+.btn-sshot:active{background:rgba(255,255,255,.2);transform:scale(.95)}
+.btn-gohome{background:rgba(255,255,255,.08);color:#aab;border:2px solid rgba(255,255,255,.08)!important;backdrop-filter:blur(6px)}
+.btn-gohome:active{background:rgba(255,255,255,.15);transform:scale(.95)}
+
+/* ===== LOADING ===== */
+.loading{background:linear-gradient(135deg,#667eea,#764ba2);border-radius:32px;padding:40px 24px;text-align:center;box-shadow:0 10px 40px rgba(102,126,234,.3)}
+.spinner{width:50px;height:50px;border:5px solid rgba(255,255,255,.1);border-top-color:#ffd700;border-radius:50%;animation:spin .8s linear infinite;margin:10px auto}
 @keyframes spin{to{transform:rotate(360deg)}}
-.spinner{width:40px;height:40px;border:4px solid rgba(255,255,255,.1);border-top-color:#ffd700;border-radius:50%;animation:spin .8s linear infinite;margin:20px auto}
-.v{text-align:center;color:rgba(255,255,255,0.15);font-size:0.7rem;padding:10px 0 2px;font-family:'Segoe UI',Arial,sans-serif}
-@media(max-width:600px){.container{padding:16px;border-radius:20px}.ansgrid{grid-template-columns:1fr}.logo-text{font-size:.95rem}.step{font-size:.65rem;padding:3px 7px}}
+.loading-text{color:rgba(255,255,255,.7);font-size:1.05rem;font-weight:600;margin-top:10px}
+.loading-sub{color:rgba(255,255,255,.3);font-size:.85rem;margin-top:4px}
+
+/* ===== ERROR ===== */
+.error{background:linear-gradient(135deg,#2c3e50,#c0392b);border-radius:32px;padding:40px 24px;text-align:center;box-shadow:0 10px 40px rgba(192,57,43,.3)}
+.error-icon{font-size:4rem;margin-bottom:10px}
+.error-title{color:#fff;font-size:1.4rem;font-weight:800;margin-bottom:6px}
+.error-msg{color:rgba(255,255,255,.5);font-size:.9rem;margin-bottom:20px}
+.btn-retry{background:linear-gradient(135deg,#ffd700,#ff8f00);color:#1a1a2e;border:none;border-radius:50px;padding:12px 36px;font-size:1.1rem;font-weight:800;cursor:pointer;font-family:inherit;box-shadow:0 4px 20px rgba(255,215,0,.25)}
+
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#2e7d32,#1b5e20);color:#fff;padding:12px 28px;border-radius:50px;font-size:.9rem;font-weight:700;display:none;z-index:1000;box-shadow:0 6px 30px rgba(0,0,0,.3);animation:toastIn .35s ease;backdrop-filter:blur(10px)}
+@keyframes toastIn{from{opacity:0;transform:translateX(-50%) translateY(16px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+
+.v{text-align:center;color:rgba(255,255,255,.2);font-size:.7rem;padding:10px 0 2px;font-weight:500}
+
+@media(max-width:600px){
+  body{padding:8px}
+  .welcome,.game,.result,.loading,.error{border-radius:24px;padding:16px}
+  .welcome-title{font-size:1.6rem}
+  .welcome-icon{font-size:3.8rem}
+  .picker-btn{padding:10px 20px;font-size:1rem}
+  .btn-start{padding:14px 36px;font-size:1.2rem}
+  .game-logo-text{font-size:.9rem}
+  .game-money-val{font-size:1rem}
+  .game-ladder{gap:3px}
+  .game-step{font-size:.6rem;padding:2px 6px}
+  .game-qtext{font-size:1.05rem}
+  .game-ansgrid{gap:6px}
+  .game-ansbtn{padding:12px 10px;font-size:.9rem}
+  .result-title{font-size:1.5rem}
+  .result-money{font-size:2rem}
+  .result-btns{gap:8px}
+  .result-btns button{padding:10px 22px;font-size:.9rem}
+}
 </style>
 </head>
 <body>
-<div id="app"><div class="spinner"></div><p style="text-align:center;color:#90caf9;font-size:1rem">Đang tải ngân hàng câu hỏi...</p></div>
-<div class="v">v1.4.0 — Ai Là Triệu Phú Game © 2026</div>
+<div id="app"></div>
+<div class="v">v1.5.0 — Ai Là Triệu Phú Game © 2026</div>
 <div class="toast" id="toast"></div>
+
 <script>
 const PRIZES=[0,200,400,600,1000,2000,3000,4000,6000,8000,12000,16000,20000,30000,40000,50000];
 const SAFE=new Set([5,10]);
 const LABELS=['A','B','C','D'];
 
-let BANK=null, state={grade:1,subject:'toan',questions:[],cur:-1,money:0,correct:0,answered:false,loading:true};
+const EMOJI_MONEY=['🪙','🪙','🪙','🪙','💰','💰','💰','💎','💎','💎','👑','👑','🏆','🏆','🏆','🏆'];
+const EMOJI_Q=['🧮','📝','❓','💡','🔢','🎯'];
+
+let BANK=null, state={grade:1,subject:'toan',questions:[],cur:-1,money:0,correct:0,answered:false};
 
 function shuffle(a){for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 
 function pickUnique(pool,n){
   let s=shuffle([...pool]),seen=new Set(),r=[];
   for(let q of s){
-    let key=q.q.replace(/\d+/g,'#');
+    let key=q.q.replace(/\d+/g,'#').toLowerCase();
     if(!seen.has(key)){seen.add(key);r.push(q)}
     if(r.length>=n)break;
   }
@@ -82,7 +154,33 @@ function pickUnique(pool,n){
 function showToast(m){
   let t=document.getElementById('toast');
   t.textContent=m;t.style.display='block';
-  setTimeout(()=>t.style.display='none',2500);
+  clearTimeout(t._h); t._h=setTimeout(()=>t.style.display='none',2500);
+}
+
+function answer(idx){
+  if(state.answered)return;
+  state.answered=true;
+  let q=state.questions[state.cur];
+  render();
+  if(idx===q.c){
+    state.correct++;
+    setTimeout(()=>{
+      state.cur++;
+      state.money=PRIZES[state.cur];
+      state.answered=false;
+      if(state.cur>=15){state.cur=15;render();return}
+      render();
+    },900);
+  } else {
+    let g=0;
+    SAFE.forEach(l=>{if(state.cur>=l)g=PRIZES[l]});
+    setTimeout(()=>{
+      state.money=g;
+      state.answered=false;
+      state.cur=15;
+      render();
+    },1400);
+  }
 }
 
 function startGame(){
@@ -96,155 +194,126 @@ function startGame(){
 
 function goHome(){state.cur=-1;render()}
 
-function answer(idx){
-  if(state.answered)return;
-  state.answered=true;
-  let q=state.questions[state.cur];
-  render(); // Show correct/wrong colors immediately
-  if(idx===q.c){
-    state.correct++;
-    setTimeout(()=>{
-      state.cur++;
-      state.money=PRIZES[state.cur];
-      state.answered=false;
-      if(state.cur>=15){state.cur=15;render();return}
-      render();
-    },1000);
-  } else {
-    let g=0;
-    SAFE.forEach(l=>{if(state.cur>=l)g=PRIZES[l]});
-    setTimeout(()=>{
-      state.money=g;
-      state.answered=false;
-      state.cur=15; // Force to result screen
-      render();
-    },1500);
-  }
-}
-
 function takeSS(){
-  let c=document.querySelector('.container');
+  let c=document.querySelector('.welcome,.game,.result');
   if(!c)return;
   if(window.html2canvas){
-    window.html2canvas(c).then(can=>{
+    window.html2canvas(c,{scale:2,useCORS:true,backgroundColor:null}).then(can=>{
       can.toBlob(b=>{
-        let a=document.createElement('a');
-        a.href=URL.createObjectURL(b);
+        let a=document.createElement('a');a.href=URL.createObjectURL(b);
         a.download='ai-la-trieu-phu-'+new Date().toISOString().slice(0,10)+'.png';
-        a.click();
-        showToast('✅ Đã tải ảnh xuống!');
+        a.click();showToast('✅ Đã tải ảnh!');
       });
     });
   } else {
     let s=document.createElement('script');
     s.src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
-    s.onload=takeSS;
-    document.head.appendChild(s);
+    s.onload=takeSS;document.head.appendChild(s);
   }
 }
 
+// ===== RENDER =====
 function render(){
   let app=document.getElementById('app');
   let g=state.grade,s=state.subject,cur=state.cur;
-  let label=s==='toan'?'Toán':'Tiếng Anh';
 
-  if(state.loading||!BANK){
-    let total=BANK? (BANK.toan[1].length+BANK.toan[2].length+BANK.tienganh[1].length+BANK.tienganh[2].length).toLocaleString() : '...';
-    app.innerHTML=`<div class="container"><div class="header"><div class="logo"><div class="logo-icon">💰</div><div class="logo-text">AI LÀ TRIỆU PHÚ<br><span>Đang tải...</span></div></div></div><div class="spinner"></div><p style="text-align:center;color:#90caf9">Đang tải ngân hàng ${total} câu hỏi...</p></div>`;
+  if(!BANK){
+    app.innerHTML=`<div class="loading"><div class="spinner"></div><div class="loading-text">🌟 Đang chuẩn bị ngân hàng câu hỏi...</div><div class="loading-sub">Hơn 1000 câu Toán & Tiếng Anh</div></div>`;
     return;
   }
 
+  let totalQ=(BANK.toan[1].length+BANK.toan[2].length+BANK.tienganh[1].length+BANK.tienganh[2].length).toLocaleString();
+  let label=s==='toan'?'➕ Toán':'🔤 Tiếng Anh';
+
   if(cur<0){
-    let tq=(BANK.toan[1].length+BANK.toan[2].length+BANK.tienganh[1].length+BANK.tienganh[2].length).toLocaleString();
-    let gcls1=g===1?' opt-btn selected':' opt-btn';
-    let gcls2=g===2?' opt-btn selected':' opt-btn';
-    let scls1=s==='toan'?' opt-btn selected':' opt-btn';
-    let scls2=s==='tienganh'?' opt-btn selected':' opt-btn';
-    app.innerHTML=`<div class="container">
-      <div class="header"><div class="logo"><div class="logo-icon">💰</div><div class="logo-text">AI LÀ TRIỆU PHÚ<br><span>Học Toán & Tiếng Anh</span></div></div></div>
-      <div style="text-align:center;padding:20px 16px">
-        <div style="font-size:4rem;margin-bottom:8px;animation:bounce 2s infinite">🏆</div>
-        <h1 style="color:#ffd700;font-size:1.8rem;font-weight:800;margin-bottom:4px">Ai Là Triệu Phú?</h1>
-        <p style="color:#90caf9;margin-bottom:8px">Trả lời đúng 15 câu, rinh tiền thật 🤑</p>
-        <p style="color:rgba(255,255,255,0.3);font-size:0.8rem;margin-bottom:16px">📚 ${tq} câu hỏi trong ngân hàng</p>
-        <p style="color:#90caf9;font-size:0.85rem;margin-bottom:8px">📚 Chọn lớp</p>
-        <div style="display:flex;gap:12px;justify-content:center;margin-bottom:20px">
-          <button class="${gcls1}" onclick="state.grade=1;render()">Lớp 1</button>
-          <button class="${gcls2}" onclick="state.grade=2;render()">Lớp 2</button>
+    let gcls1='picker-btn'+(g===1?' sel':'');
+    let gcls2='picker-btn'+(g===2?' sel':'');
+    let scls1='picker-btn'+(s==='toan'?' sel':'');
+    let scls2='picker-btn'+(s==='tienganh'?' sel':'');
+    app.innerHTML=`<div class="welcome">
+      <div class="welcome-icon">🏆</div>
+      <div class="welcome-title">✨ AI LÀ <span>Triệu Phú</span> ✨</div>
+      <div class="welcome-sub">Học Toán + Tiếng Anh siêu vui! 🚀</div>
+      <div class="welcome-stats">📚 ${totalQ} câu hỏi · 🏅 15 câu / lượt</div>
+      <div>
+        <span class="picker-label">📖 Chọn lớp</span>
+        <div class="picker-group">
+          <button class="${gcls1}" onclick="state.grade=1;render()">🌟 Lớp 1</button>
+          <button class="${gcls2}" onclick="state.grade=2;render()">🌟 Lớp 2</button>
         </div>
-        <p style="color:#90caf9;font-size:0.85rem;margin-bottom:8px">🧮 Chọn môn</p>
-        <div style="display:flex;gap:12px;justify-content:center;margin-bottom:24px">
+      </div>
+      <div>
+        <span class="picker-label">📖 Chọn môn</span>
+        <div class="picker-group">
           <button class="${scls1}" onclick="state.subject='toan';render()">➕ Toán</button>
           <button class="${scls2}" onclick="state.subject='tienganh';render()">🔤 Tiếng Anh</button>
         </div>
-        <button class="start-btn" onclick="startGame()">▶ BẮT ĐẦU</button>
       </div>
+      <button class="btn-start" onclick="startGame()">▶ CHƠI NGAY</button>
     </div>`;
   } else if(cur<15){
     let q=state.questions[cur];
     let ldr='';
     for(let i=1;i<=15;i++){
-      let c='step'+(i===cur+1?' active':(i<=cur?' passed':''))+(SAFE.has(i)?' safe':'');
-      ldr+='<span class="'+c+'">₫'+PRIZES[i].toLocaleString()+'</span>';
+      let c='game-step'+(i===cur+1?' active':(i<=cur?' passed':''))+(SAFE.has(i)?' safe':'');
+      ldr+='<span class="'+c+'">'+EMOJI_MONEY[i]+' ${PRIZES[i].toLocaleString()}</span>';
     }
     let ans='';
     for(let i=0;i<4;i++){
-      let c='ansbtn'+(state.answered?(i===q.c?' correct':' wrong'):'')+(state.answered?' disabled':'');
+      let c='game-ansbtn'+(state.answered?(i===q.c?' correct':' wrong'):'')+(state.answered?' disabled':'');
       let oc=state.answered?'':'onclick="answer('+i+')"';
       ans+='<button class="'+c+'" '+oc+'><span class="lbl">'+LABELS[i]+'</span> '+q.a[i]+'</button>';
     }
-    app.innerHTML=`<div class="container">
-      <div class="header">
-        <div class="logo"><div class="logo-icon">💰</div><div class="logo-text">AI LÀ TRIỆU PHÚ<br><span>${label} Lớp ${g}</span></div></div>
-        <div class="money-display"><span class="money-icon">🪙</span><span class="money-amount">${state.money.toLocaleString()} <span>đ</span></span></div>
+    let em=EMOJI_Q[cur%EMOJI_Q.length];
+    app.innerHTML=`<div class="game">
+      <div class="game-top">
+        <div class="game-logo">
+          <div class="game-logo-icon">💰</div>
+          <div class="game-logo-text">AI LÀ TRIỆU PHÚ<br><span>${label} · Lớp ${g}</span></div>
+        </div>
+        <div class="game-money">
+          <span class="game-money-icon">${state.money>0?'💰':'🪙'}</span>
+          <span class="game-money-val">${state.money.toLocaleString()}<span>₫</span></span>
+        </div>
       </div>
-      <div class="qnum">Câu ${cur+1} / 15</div>
-      <div class="ladder">${ldr}</div>
-      <div class="qbox"><div class="qtext">${q.q}</div></div>
-      <div class="ansgrid">${ans}</div>
+      <div class="game-qnum">${em} Câu ${cur+1} / 15</div>
+      <div class="game-ladder">${ldr}</div>
+      <div class="game-qbox"><div class="game-qtext">${q.q}</div></div>
+      <div class="game-ansgrid">${ans}</div>
     </div>`;
   } else {
     let win=state.correct>=15;
-    let icon=win?'🏆':(state.correct>=5?'😊':'😅');
-    let title=win?'🎉 BẠN LÀ TRIỆU PHÚ!':(state.correct>=5?'Khá tốt!':'Cố gắng hơn nhé!');
-    let sub=win?'Trả lời đúng cả 15 câu!':'Trả lời đúng '+state.correct+'/15 câu.';
-    app.innerHTML=`<div class="container">
-      <div class="header"><div class="logo"><div class="logo-icon">💰</div><div class="logo-text">AI LÀ TRIỆU PHÚ<br><span>Kết quả</span></div></div></div>
-      <div style="text-align:center;padding:20px 16px">
-        <div style="font-size:4rem;margin-bottom:8px">${icon}</div>
-        <h2 style="color:#ffd700;font-size:1.6rem;font-weight:800;margin-bottom:4px">${title}</h2>
-        <p style="color:#90caf9;margin-bottom:6px">${sub}</p>
-        <div style="font-size:2.2rem;font-weight:800;color:#4caf50;font-family:'Courier New',monospace;margin:8px 0 20px">
-          💰 ${state.money.toLocaleString()}<span style="font-size:0.6em;font-weight:400;color:#90caf9">đ</span>
-        </div>
-        <p style="color:rgba(255,255,255,0.4);font-size:0.85rem;margin-bottom:20px">Đạt tới câu ${Math.min(15,cur)}/15</p>
-        <div class="btn-group">
-          <button class="btn-play" onclick="startGame()">🔄 Chơi lại</button>
-          <button class="btn-ss" onclick="takeSS()">📸 Chụp màn hình</button>
-          <button class="btn-home" onclick="goHome()">🏠 Về trang chủ</button>
-        </div>
+    let icon=win?'🏆':'😅';
+    let cls=win?'result-title win':'result-title';
+    let title=win?'🎉 BẠN LÀ TRIỆU PHÚ! 🎉':'Chưa được rồi!';
+    let sub=win?'🤩 Trả lời đúng cả 15 câu! Siêu giỏi!':'Trả lời đúng <strong>'+state.correct+'</strong>/15 câu.';
+    let stats='Đạt tới câu '+Math.min(15,cur)+'/15';
+    let extra=win?' 🎊🎉🎊':' 😅 Lần sau cố gắng nhé!';
+    app.innerHTML=`<div class="result">
+      <div class="result-icon">${icon}</div>
+      <div class="${cls}">${title}</div>
+      <div class="result-sub">${sub}${extra}</div>
+      <div class="result-money-box">
+        <div class="result-money">💰 ${state.money.toLocaleString()}<span> đ</span></div>
+      </div>
+      <div class="result-stat">${stats}</div>
+      <div class="result-btns">
+        <button class="btn-replay" onclick="startGame()">🔄 Chơi lại</button>
+        <button class="btn-sshot" onclick="takeSS()">📸 Chụp ảnh</button>
+        <button class="btn-gohome" onclick="goHome()">🏠 Về trang chủ</button>
       </div>
     </div>`;
   }
 }
 
-// Load question bank
-fetch('questions.json')
-  .then(r=>{
-    if(!r.ok)throw new Error('HTTP '+r.status);
-    return r.json();
-  })
-  .then(data=>{
-    BANK=data;
-    state.loading=false;
-    render();
-  })
+fetch('questions.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
+  .then(data=>{BANK=data;render()})
   .catch(e=>{
-    document.getElementById('app').innerHTML=`<div class="container" style="text-align:center;padding:40px">
-      <div style="font-size:3rem;margin-bottom:16px">😵</div>
-      <h2 style="color:#e53935;font-size:1.3rem;margin-bottom:8px">Không thể tải dữ liệu!</h2>
-      <p style="color:#90caf9;margin-bottom:20px">${e.message}</p>
-      <button class="start-btn" onclick="location.reload()">🔄 Thử lại</button>
+    document.getElementById('app').innerHTML=`<div class="error">
+      <div class="error-icon">😵</div>
+      <div class="error-title">Oops! Có lỗi rồi</div>
+      <div class="error-msg">${e.message}</div>
+      <button class="btn-retry" onclick="location.reload()">🔄 Thử lại</button>
     </div>`;
   });
 </script>
