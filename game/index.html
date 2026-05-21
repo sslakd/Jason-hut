@@ -256,7 +256,7 @@ function render(){
     let ldr='';
     for(let i=1;i<=15;i++){
       let c='game-step'+(i===cur+1?' active':(i<=cur?' passed':''))+(SAFE.has(i)?' safe':'');
-      ldr+='<span class="'+c+'">'+EMOJI_MONEY[i]+' ${PRIZES[i].toLocaleString()}</span>';
+      ldr+='<span class="'+c+'">'+EMOJI_MONEY[i]+' '+PRIZES[i].toLocaleString()+'</span>';
     }
     let ans='';
     for(let i=0;i<4;i++){
