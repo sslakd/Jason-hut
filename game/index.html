@@ -131,8 +131,8 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
 <div class="toast" id="toast"></div>
 
 <script>
-const PRIZES=[0,200,400,600,1000,2000,3000,4000,6000,8000,12000,16000,20000,30000,40000,50000];
-const SAFE=new Set([5,10]);
+const PRIZES=[0,200,400,600,1000,2000,3000,4000,5000,6000,10000,12000,16000,20000,30000,50000];
+const SAFE=new Set([5,9,15]);
 const LABELS=['A','B','C','D'];
 
 const EMOJI_MONEY=['🪙','🪙','🪙','🪙','💰','💰','💰','💎','💎','💎','👑','👑','🏆','🏆','🏆','🏆'];
@@ -307,7 +307,7 @@ function render(){
 }
 
 // Safe-level shield icons
-const SHIELD=['','','','','🛡️','','','','','🛡️','','','','','',''];
+const SHIELD=['','','','','🛡️','','','','','🛡️','','','','','','🛡️'];
 
 fetch('questions.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
   .then(data=>{BANK=data;render()})
