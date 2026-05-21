@@ -538,9 +538,30 @@ body {
   cursor: pointer;
 }
 
-.template-card .btn-download,
 .template-card .btn-detail {
   cursor: pointer;
+}
+
+/* ========== DOWNLOAD BUTTON ON CARD ========== */
+.btn-download-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.btn-download-card:hover {
+  background: var(--accent-hover);
 }
 
 /* ========== RESPONSIVE ========== */

@@ -45,7 +45,7 @@
           </div>
           <div class="modal-actions">
             <a href="${t.fileUrl}" class="btn-download" target="_blank" download>
-              ⬇️ Tải file
+              ⬇️ Tải về
             </a>
             <button class="btn-secondary" id="modalClose2">Đóng</button>
           </div>
@@ -98,19 +98,17 @@
           <span class="template-badge ${badgeClass}">${badgeLabel}</span>
           <span class="template-source">${t.source}</span>
         </div>
-        <button class="btn-detail">📋 Chi tiết</button>
+        <a href="${t.fileUrl}" class="btn-download-card" target="_blank" download>
+          ⬇️ Tải về
+        </a>
       </div>
     `;
 
-    // Click handlers
+    // Click card → show detail modal
     card.addEventListener('click', (e) => {
-      if (!e.target.closest('.btn-detail') && !e.target.closest('.btn-download')) {
+      if (!e.target.closest('a') && !e.target.closest('button')) {
         showModal(t);
       }
-    });
-    card.querySelector('.btn-detail').addEventListener('click', (e) => {
-      e.stopPropagation();
-      showModal(t);
     });
 
     return card;
