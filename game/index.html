@@ -58,7 +58,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:linear-gradient(135deg,#
 </head>
 <body>
 <div id="app"><div class="spinner"></div><p style="text-align:center;color:#90caf9;font-size:1rem">Đang tải ngân hàng câu hỏi...</p></div>
-<div class="v">v1.3.0 — Ai Là Triệu Phú Game © 2026</div>
+<div class="v">v1.4.0 — Ai Là Triệu Phú Game © 2026</div>
 <div class="toast" id="toast"></div>
 <script>
 const PRIZES=[0,200,400,600,1000,2000,3000,4000,6000,8000,12000,16000,20000,30000,40000,50000];
@@ -100,18 +100,26 @@ function answer(idx){
   if(state.answered)return;
   state.answered=true;
   let q=state.questions[state.cur];
+  render(); // Show correct/wrong colors immediately
   if(idx===q.c){
-    state.correct++;state.cur++;
-    state.money=PRIZES[state.cur];
-    if(state.cur>=15){state.cur=15;render();return}
-    setTimeout(()=>{state.answered=false;render()},1000);
+    state.correct++;
+    setTimeout(()=>{
+      state.cur++;
+      state.money=PRIZES[state.cur];
+      state.answered=false;
+      if(state.cur>=15){state.cur=15;render();return}
+      render();
+    },1000);
   } else {
     let g=0;
     SAFE.forEach(l=>{if(state.cur>=l)g=PRIZES[l]});
-    state.money=g;
-    setTimeout(()=>render(),1200);
+    setTimeout(()=>{
+      state.money=g;
+      state.answered=false;
+      state.cur=15; // Force to result screen
+      render();
+    },1500);
   }
-  render();
 }
 
 function takeSS(){
