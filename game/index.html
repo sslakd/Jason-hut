@@ -51,9 +51,10 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
 .game-qnum{color:rgba(255,255,255,.45);font-size:.75rem;text-align:center;margin-bottom:4px;font-weight:600}
 .game-ladder{display:flex;justify-content:center;gap:4px;margin-bottom:12px;flex-wrap:wrap}
 .game-step{padding:3px 8px;border-radius:20px;font-size:.65rem;font-weight:800;background:rgba(255,255,255,.06);color:rgba(255,255,255,.35);transition:all .3s;font-family:'Courier New',monospace;white-space:nowrap}
+.game-step.safe{background:rgba(255,215,0,.08);border:1.5px solid rgba(255,215,0,.25);color:rgba(255,215,0,.5);font-weight:700}
 .game-step.active{background:linear-gradient(135deg,#ffd700,#ff8f00);color:#4a148c;box-shadow:0 2px 12px rgba(255,215,0,.35);transform:scale(1.08);font-weight:900}
 .game-step.passed{background:rgba(46,204,113,.2);color:#82e0aa}
-.game-step.passed.safe{border:1.5px solid rgba(46,204,113,.3)}
+.game-step.safe.passed{background:rgba(46,204,113,.25);border:1.5px solid rgba(46,204,113,.4);color:#82e0aa;box-shadow:0 0 10px rgba(46,204,113,.1)}
 .game-qbox{background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:2px solid rgba(255,255,255,.12);border-radius:20px;padding:18px 20px;margin-bottom:12px;min-height:70px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
 .game-qtext{color:#fff;font-size:1.25rem;font-weight:700;text-align:center;line-height:1.5;text-shadow:0 1px 4px rgba(0,0,0,.1)}
 .game-ansgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -255,7 +256,7 @@ function render(){
     let ldr='';
     for(let i=1;i<=15;i++){
       let c='game-step'+(i===cur+1?' active':(i<=cur?' passed':''))+(SAFE.has(i)?' safe':'');
-      ldr+='<span class="'+c+'">'+EMOJI_MONEY[i]+' '+PRIZES[i].toLocaleString()+'</span>';
+      ldr+='<span class="'+c+'">'+SHIELD[i]+EMOJI_MONEY[i]+' '+PRIZES[i].toLocaleString()+'</span>';
     }
     let ans='';
     for(let i=0;i<4;i++){
@@ -304,6 +305,9 @@ function render(){
     </div>`;
   }
 }
+
+// Safe-level shield icons
+const SHIELD=['','','','','🛡️','','','','','🛡️','','','','','',''];
 
 fetch('questions.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
   .then(data=>{BANK=data;render()})
