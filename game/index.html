@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ai Là Triệu Phú — Học Toán & Tiếng Anh</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #0a1628 0%, #1a237e 50%, #0d47a1 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .container {
+      max-width: 820px;
+      width: 100%;
+      background: linear-gradient(180deg, #1a237e 0%, #283593 100%);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 40%, rgba(255,215,0,0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, #ffd700, #ff8f00);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 900;
+      color: #1a237e;
+      box-shadow: 0 2px 8px rgba(255,215,0,0.4);
+    }
+    .logo-text {
+      color: #ffd700;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      line-height: 1.2;
+    }
+    .logo-text span {
+      color: #82b1ff;
+      font-size: 0.75rem;
+      font-weight: 400;
+      display: block;
+    }
+    .money-display {
+      background: linear-gradient(135deg, #2e7d32, #1b5e20);
+      border-radius: 12px;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 12px rgba(46,125,50,0.3);
+    }
+    .money-icon { font-size: 1.3rem; }
+    .money-amount {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 800;
+      font-family: 'Courier New', monospace;
+    }
+    .money-amount span { color: #81c784; font-size: 0.8rem; font-weight: 400; }
+
+    /* ===== SCREEN: WELCOME ===== */
+    .screen { display: none; }
+    .screen.active { display: block; }
+
+    .welcome-screen {
+      text-align: center;
+      padding: 30px 16px 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .welcome-screen .trophy {
+      font-size: 4rem;
+      margin-bottom: 8px;
+      display: block;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .welcome-screen h1 {
+      color: #ffd700;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+      text-shadow: 0 2px 8px rgba(255,215,0,0.2);
+    }
+    .welcome-screen .subtitle {
+      color: #90caf9;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+    .grade-select {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .grade-btn {
+      padding: 12px 28px;
+      border: 2px solid rgba(255,255,255,0.15);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.06);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .grade-btn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.3); }
+    .grade-btn.selected {
+      background: linear-gradient(135deg, #ffd700, #ff8f00);
+      color: #1a237e;
+      border-color: #ffd700;
+      box-shadow: 0 4px 16px rgba(255,215,0,0.3);
+    }
+    .start-btn {
+      background: linear-gradient(135deg, #ffd700, #ff8f00);
+      color: #1a237e;
+      border: none;
+      border-radius: 14px;
+      padding: 14px 48px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s;
+      box-shadow: 0 4px 20px rgba(255,215,0,0.3);
+    }
+    .start-btn:hover { transform: scale(1.03); box-shadow: 0 6px 24px rgba(255,215,0,0.4); }
+    .start-btn:active { transform: scale(0.97); }
+
+    .subject-select {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .subject-btn {
+      padding: 10px 24px;
+      border-radius: 12px;
+      border: 2px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: #bbb;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .subject-btn:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    .subject-btn.selected {
+      background: rgba(255,215,0,0.15);
+      color: #ffd700;
+      border-color: rgba(255,215,0,0.3);
+    }
+
+    /* ===== SCREEN: GAME ===== */
+    .game-screen {
+      position: relative;
+      z-index: 1;
+    }
+    .question-number {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.85rem;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .prize-ladder {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .ladder-step {
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.4);
+      transition: all 0.3s;
+      font-family: 'Courier New', monospace;
+    }
+    .ladder-step.active {
+      background: linear-gradient(135deg, #ffd700, #ff8f00);
+      color: #1a237e;
+      box-shadow: 0 2px 10px rgba(255,215,0,0.3);
+    }
+    .ladder-step.passed {
+      background: rgba(46,125,50,0.3);
+      color: #81c784;
+    }
+
+    .question-box {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .question-text {
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .answers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .answer-btn {
+      padding: 14px 16px;
+      border: 2px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: inherit;
+    }
+    .answer-btn .label {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .answer-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
+    .answer-btn.correct { background: rgba(46,125,50,0.3); border-color: #4caf50; color: #a5d6a7; }
+    .answer-btn.wrong { background: rgba(198,40,40,0.3); border-color: #e53935; color: #ef9a9a; }
+    .answer-btn.disabled { pointer-events: none; opacity: 0.5; }
+
+    /* ===== SCREEN: RESULT ===== */
+    .result-screen {
+      text-align: center;
+      padding: 30px 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .result-screen .big-icon { font-size: 4rem; margin-bottom: 8px; }
+    .result-screen h2 {
+      color: #ffd700;
+      font-size: 1.6rem;
+      margin-bottom: 4px;
+    }
+    .result-screen .result-sub {
+      color: #90caf9;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+    .result-money {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #4caf50;
+      font-family: 'Courier New', monospace;
+      margin: 8px 0 20px;
+    }
+    .result-money .icon { font-size: 1.8rem; }
+    .play-again-btn {
+      background: linear-gradient(135deg, #ffd700, #ff8f00);
+      color: #1a237e;
+      border: none;
+      border-radius: 14px;
+      padding: 12px 40px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s;
+      box-shadow: 0 4px 16px rgba(255,215,0,0.3);
+    }
+    .play-again-btn:hover { transform: scale(1.02); }
+    .home-btn {
+      background: rgba(255,255,255,0.08);
+      color: #90caf9;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      padding: 12px 28px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      margin-left: 10px;
+      transition: all 0.2s;
+    }
+    .home-btn:hover { background: rgba(255,255,255,0.12); }
+
+    /* ===== HELPERS ===== */
+    .fade-in { animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .container { padding: 16px; border-radius: 20px; }
+      .logo-text { font-size: 0.95rem; }
+      .logo-text span { font-size: 0.7rem; }
+      .money-amount { font-size: 1rem; }
+      .welcome-screen h1 { font-size: 1.4rem; }
+      .grade-btn { padding: 10px 20px; font-size: 0.95rem; }
+      .subject-btn { padding: 8px 16px; font-size: 0.85rem; }
+      .question-text { font-size: 1rem; }
+      .answers-grid { grid-template-columns: 1fr; }
+      .answer-btn { padding: 12px 14px; }
+      .result-money { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container" id="app">
+  <!-- ===== WELCOME SCREEN ===== -->
+  <div class="screen welcome-screen active" id="welcomeScreen">
+    <div class="header" style="margin-bottom:8px">
+      <div class="logo">
+        <div class="logo-icon">💰</div>
+        <div class="logo-text">
+          AI LÀ TRIỆU PHÚ<br>
+          <span>Học Toán &amp; Tiếng Anh</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="trophy">🏆</div>
+    <h1>Ai Là Triệu Phú?</h1>
+    <p class="subtitle">Trả lời đúng 15 câu — rinh tiền thật! 🤑</p>
+
+    <div style="margin-bottom:12px">
+      <p style="color:#90caf9;font-size:0.85rem;margin-bottom:8px">📚 Chọn lớp</p>
+      <div class="grade-select">
+        <button class="grade-btn selected" data-grade="1" onclick="selectGrade(1)">Lớp 1</button>
+        <button class="grade-btn" data-grade="2" onclick="selectGrade(2)">Lớp 2</button>
+      </div>
+    </div>
+
+    <div style="margin-bottom:16px">
+      <p style="color:#90caf9;font-size:0.85rem;margin-bottom:8px">🧮 Chọn môn</p>
+      <div class="subject-select">
+        <button class="subject-btn selected" data-subject="toan" onclick="selectSubject('toan')">➕ Toán</button>
+        <button class="subject-btn" data-subject="tienganh" onclick="selectSubject('tienganh')">🔤 Tiếng Anh</button>
+      </div>
+    </div>
+
+    <button class="start-btn" onclick="startGame()">▶ BẮT ĐẦU</button>
+  </div>
+
+  <!-- ===== GAME SCREEN ===== -->
+  <div class="screen game-screen" id="gameScreen">
+    <div class="header">
+      <div class="logo">
+        <div class="logo-icon">💰</div>
+        <div class="logo-text">
+          AI LÀ TRIỆU PHÚ<br>
+          <span id="headerSubject">Toán Lớp 1</span>
+        </div>
+      </div>
+      <div class="money-display">
+        <span class="money-icon">🪙</span>
+        <span class="money-amount" id="moneyDisplay">0 <span>đ</span></span>
+      </div>
+    </div>
+
+    <div class="prize-ladder" id="prizeLadder"></div>
+
+    <div class="question-number" id="questionNumber">Câu 1 / 15</div>
+
+    <div class="question-box">
+      <div class="question-text" id="questionText">Đang tải câu hỏi...</div>
+    </div>
+
+    <div class="answers-grid" id="answersContainer"></div>
+  </div>
+
+  <!-- ===== RESULT SCREEN ===== -->
+  <div class="screen result-screen" id="resultScreen">
+    <div class="header" style="margin-bottom:8px">
+      <div class="logo">
+        <div class="logo-icon">💰</div>
+        <div class="logo-text">
+          AI LÀ TRIỆU PHÚ<br>
+          <span>Kết quả</span>
+        </div>
+      </div>
+    </div>
+    <div class="big-icon" id="resultIcon">🎉</div>
+    <h2 id="resultTitle">Chúc mừng!</h2>
+    <p class="result-sub" id="resultSub">Bạn đã trả lời đúng</p>
+    <div class="result-money" id="resultMoney">
+      <span class="icon">💰</span> 0<span style="font-size:0.6em;font-weight:400;color:#90caf9">đ</span>
+    </div>
+    <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap">
+      <button class="play-again-btn" onclick="startGame()">🔄 Chơi lại</button>
+      <button class="home-btn" onclick="showWelcome()">🏠 Về trang chủ</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== DATA =====
+const PRIZES = [0, 200, 400, 600, 1000, 2000, 3000, 4000, 6000, 8000, 12000, 16000, 20000, 30000, 40000, 50000];
+const SAFE_LEVELS = [4, 9]; // levels 4 and 9 are safe (1000đ and 8000đ)
+
+// Questions database
+const QUESTIONS = {
+  toan: {
+    1: [
+      { q: "1 + 1 = ?", a: ["2", "3", "4", "5"], c: 0 },
+      { q: "2 + 3 = ?", a: ["4", "5", "6", "7"], c: 1 },
+      { q: "Số lớn hơn: 5 hay 8?", a: ["5", "8", "Bằng nhau", "Không biết"], c: 1 },
+      { q: "10 - 4 = ?", a: ["4", "5", "6", "7"], c: 2 },
+      { q: "3 + 6 = ?", a: ["7", "8", "9", "10"], c: 2 },
+      { q: "Số nào nhỏ nhất: 3, 7, 1?", a: ["3", "7", "1", "Bằng nhau"], c: 2 },
+      { q: "7 + 2 = ?", a: ["8", "9", "10", "11"], c: 1 },
+      { q: "Có 5 con chim, bay đi 2 con. Còn mấy con?", a: ["2", "3", "4", "5"], c: 1 },
+      { q: "8 - 5 = ?", a: ["2", "3", "4", "5"], c: 1 },
+      { q: "4 + 5 = ?", a: ["7", "8", "9", "10"], c: 2 },
+      { q: "Số nào lớn hơn: 12 hay 9?", a: ["9", "12", "Bằng nhau", "Không biết"], c: 1 },
+      { q: "6 + 6 = ?", a: ["10", "11", "12", "13"], c: 2 },
+      { q: "Có 10 cái kẹo, ăn 3 cái. Còn mấy cái?", a: ["5", "6", "7", "8"], c: 2 },
+      { q: "9 + 3 = ?", a: ["10", "11", "12", "13"], c: 2 },
+      { q: "Số : 2, 4, 6, ?, 10. Số nào còn thiếu?", a: ["5", "7", "8", "9"], c: 2 },
+    ],
+    2: [
+      { q: "12 + 8 = ?", a: ["18", "20", "22", "24"], c: 1 },
+      { q: "25 - 7 = ?", a: ["16", "17", "18", "19"], c: 2 },
+      { q: "Số lớn nhất: 45, 32, 58?", a: ["32", "45", "58", "Bằng nhau"], c: 2 },
+      { q: "6 × 3 = ?", a: ["12", "15", "18", "21"], c: 2 },
+      { q: "30 + 40 = ?", a: ["50", "60", "70", "80"], c: 2 },
+      { q: "100 - 40 = ?", a: ["40", "50", "60", "70"], c: 2 },
+      { q: "Số nào nhỏ hơn: 99 hay 101?", a: ["99", "101", "Bằng nhau", "Không biết"], c: 0 },
+      { q: "8 × 2 = ?", a: ["14", "15", "16", "18"], c: 2 },
+      { q: "45 + 25 = ?", a: ["60", "65", "70", "75"], c: 2 },
+      { q: "Có 15 quả táo, chia đều cho 3 bạn. Mỗi bạn mấy quả?", a: ["3", "4", "5", "6"], c: 2 },
+      { q: "50 - 28 = ?", a: ["20", "22", "24", "28"], c: 1 },
+      { q: "7 × 4 = ?", a: ["24", "26", "28", "30"], c: 2 },
+      { q: "200 + 300 = ?", a: ["400", "500", "600", "700"], c: 1 },
+      { q: "Một tuần có mấy ngày?", a: ["5", "6", "7", "8"], c: 2 },
+      { q: "12 × 3 = ?", a: ["34", "35", "36", "38"], c: 2 },
+    ]
+  },
+  tienganh: {
+    1: [
+      { q: "Con mèo tiếng Anh là gì?", a: ["Dog", "Cat", "Bird", "Fish"], c: 1 },
+      { q: "Màu xanh dương là?", a: ["Red", "Blue", "Green", "Yellow"], c: 1 },
+      { q: "How are you? — I'm ____", a: ["Ten", "Fine", "Five", "Big"], c: 1 },
+      { q: "Số 'three' là số mấy?", a: ["2", "3", "4", "5"], c: 1 },
+      { q: "Con chó là ___?", a: ["Cat", "Dog", "Cow", "Pig"], c: 1 },
+      { q: "Apple là quả gì?", a: ["Cam", "Táo", "Chuối", "Nho"], c: 1 },
+      { q: "What color is the sky? — ____", a: ["Red", "Blue", "Green", "Black"], c: 1 },
+      { q: "Big có nghĩa là gì?", a: ["Nhỏ", "To", "Nhanh", "Chậm"], c: 1 },
+      { q: "Con cá là ___?", a: ["Fish", "Bird", "Cat", "Dog"], c: 0 },
+      { q: "Số 'ten' là số mấy?", a: ["6", "8", "10", "12"], c: 2 },
+      { q: "Good morning nghĩa là gì?", a: ["Chào buổi trưa", "Chào buổi sáng", "Chào buổi tối", "Tạm biệt"], c: 1 },
+      { q: "Sun là cái gì?", a: ["Trăng", "Sao", "Mặt trời", "Mây"], c: 2 },
+      { q: "I have two ____ (mắt)", a: ["Ears", "Eyes", "Hands", "Feet"], c: 1 },
+      { q: "Red + Blue = ? (màu gì?)", a: ["Green", "Purple", "Orange", "Pink"], c: 1 },
+      { q: "Happy Birthday nghĩa là gì?", a: ["Chúc mừng năm mới", "Chúc mừng sinh nhật", "Chúc ngủ ngon", "Cảm ơn"], c: 1 },
+    ],
+    2: [
+      { q: "What day comes after Monday?", a: ["Sunday", "Tuesday", "Wednesday", "Friday"], c: 1 },
+      { q: "Có bao nhiêu tháng trong năm?", a: ["10", "11", "12", "13"], c: 2 },
+      { q: "Elephant là con gì?", a: ["Hổ", "Sư tử", "Voi", "Hươu cao cổ"], c: 2 },
+      { q: "I ___ a student", a: ["am", "is", "are", "be"], c: 0 },
+      { q: "What is the opposite of 'hot'?", a: ["Warm", "Cool", "Cold", "Cool and Cold"], c: 2 },
+      { q: "She ___ a teacher", a: ["am", "is", "are", "be"], c: 1 },
+      { q: "Spring, Summer, ____, Winter", a: ["Autumn", "October", "September", "Sunday"], c: 0 },
+      { q: "How many legs does a dog have?", a: ["2", "3", "4", "6"], c: 2 },
+      { q: "I like ____ (bơi)", a: ["swim", "swimming", "swims", "swam"], c: 1 },
+      { q: "Large có nghĩa tương tự từ nào?", a: ["Small", "Fast", "Big", "Slow"], c: 2 },
+      { q: "What color do you get when you mix red and yellow?", a: ["Green", "Purple", "Orange", "Pink"], c: 2 },
+      { q: "We ___ going to school", a: ["am", "is", "are", "be"], c: 2 },
+      { q: "Banana is a kind of ___", a: ["Vegetable", "Fruit", "Meat", "Drink"], c: 1 },
+      { q: "The baby is ____ (đang ngủ)", a: ["sleep", "sleeps", "sleeping", "slept"], c: 2 },
+      { q: "How many days in a week?", a: ["5", "6", "7", "8"], c: 2 },
+    ]
+  }
+};
+
+// ===== STATE =====
+let state = {
+  grade: 1,
+  subject: 'toan',
+  questions: [],
+  currentIndex: 0,
+  money: 0,
+  answered: false,
+  correctCount: 0,
+  isGameOver: false
+};
+
+// ===== FUNCTIONS =====
+function selectGrade(g) {
+  state.grade = g;
+  document.querySelectorAll('.grade-btn').forEach(b => {
+    b.classList.toggle('selected', parseInt(b.dataset.grade) === g);
+  });
+}
+
+function selectSubject(s) {
+  state.subject = s;
+  document.querySelectorAll('.subject-btn').forEach(b => {
+    b.classList.toggle('selected', b.dataset.subject === s);
+  });
+}
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function startGame() {
+  // Load questions for selected grade + subject
+  let pool = QUESTIONS[state.subject][state.grade];
+  if (!pool || pool.length < 15) {
+    alert("Chưa đủ câu hỏi cho lựa chọn này! Vui lòng chọn môn khác.");
+    return;
+  }
+  
+  // Shuffle and pick 15
+  const shuffled = shuffle([...pool]);
+  
+  state.questions = shuffled.slice(0, 15);
+  state.currentIndex = 0;
+  state.money = 0;
+  state.correctCount = 0;
+  state.isGameOver = false;
+  state.answered = false;
+
+  // Show game screen
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('gameScreen').classList.add('active');
+
+  const subjLabel = state.subject === 'toan' ? 'Toán' : 'Tiếng Anh';
+  document.getElementById('headerSubject').textContent = `${subjLabel} Lớp ${state.grade}`;
+
+  updatePrizeLadder();
+  showQuestion();
+}
+
+function showWelcome() {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('welcomeScreen').classList.add('active');
+}
+
+function updatePrizeLadder() {
+  const container = document.getElementById('prizeLadder');
+  let html = '';
+  for (let i = 1; i <= 15; i++) {
+    const cls = i === state.currentIndex + 1 ? 'active' : (i <= state.currentIndex ? 'passed' : '');
+    html += `<span class="ladder-step ${cls}">₫${PRIZES[i].toLocaleString()}</span>`;
+  }
+  container.innerHTML = html;
+}
+
+function showQuestion() {
+  if (state.currentIndex >= 15 || state.isGameOver) {
+    showResult();
+    return;
+  }
+
+  const q = state.questions[state.currentIndex];
+  state.answered = false;
+
+  document.getElementById('questionNumber').textContent = `Câu ${state.currentIndex + 1} / 15`;
+  document.getElementById('questionText').textContent = q.q;
+  document.getElementById('moneyDisplay').innerHTML = `${state.money.toLocaleString()} <span>đ</span>`;
+
+  updatePrizeLadder();
+
+  const labels = ['A', 'B', 'C', 'D'];
+  const container = document.getElementById('answersContainer');
+  container.innerHTML = '';
+
+  q.a.forEach((answer, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'answer-btn';
+    btn.innerHTML = `<span class="label">${labels[i]}</span> ${answer}`;
+    btn.dataset.index = i;
+    btn.addEventListener('click', () => checkAnswer(i));
+    container.appendChild(btn);
+  });
+}
+
+function checkAnswer(index) {
+  if (state.answered || state.isGameOver) return;
+  state.answered = true;
+
+  const q = state.questions[state.currentIndex];
+  const btns = document.querySelectorAll('.answer-btn');
+
+  btns.forEach((btn, i) => {
+    btn.classList.add('disabled');
+    if (i === q.c) btn.classList.add('correct');
+    if (i === index && i !== q.c) btn.classList.add('wrong');
+  });
+
+  if (index === q.c) {
+    // Correct!
+    state.correctCount++;
+    state.currentIndex++;
+    
+    // Update money based on prize ladder
+    state.money = PRIZES[state.currentIndex];
+
+    setTimeout(() => {
+      showQuestion();
+    }, 1200);
+  } else {
+    // Wrong — game over
+    state.isGameOver = true;
+    
+    // Find safe level
+    let guaranteed = 0;
+    for (const lvl of SAFE_LEVELS) {
+      if (state.currentIndex >= lvl) {
+        guaranteed = PRIZES[lvl];
+      }
+    }
+    state.money = guaranteed;
+
+    setTimeout(() => {
+      showResult();
+    }, 1500);
+  }
+}
+
+function showResult() {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('resultScreen').classList.add('active');
+
+  const total = state.currentIndex;
+  const isWinner = total >= 15;
+
+  if (isWinner) {
+    document.getElementById('resultIcon').textContent = '🏆';
+    document.getElementById('resultTitle').textContent = '🎉 BẠN LÀ TRIỆU PHÚ! 🎉';
+    document.getElementById('resultSub').textContent = 'Trả lời đúng cả 15 câu!';
+  } else {
+    document.getElementById('resultIcon').textContent = total >= 5 ? '😊' : '😅';
+    document.getElementById('resultTitle').textContent = total >= 5 ? 'Khá tốt!' : 'Cố gắng hơn nhé!';
+    document.getElementById('resultSub').textContent = `Trả lời đúng ${state.correctCount}/15 câu. Đạt tới câu ${Math.max(1, state.currentIndex+1)}.`;
+  }
+
+  document.getElementById('resultMoney').innerHTML = `<span class="icon">💰</span> ${state.money.toLocaleString()}<span style="font-size:0.6em;font-weight:400;color:#90caf9">đ</span>`;
+}
+</script>
+
+</body>
+</html>
