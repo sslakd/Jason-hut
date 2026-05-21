@@ -316,6 +316,16 @@ function render(){
 
 // Initial render
 render();
+
+// Version footer - injected after container
+(function addVersion(){
+  const v = document.createElement('div');
+  v.style.cssText = 'text-align:center;color:rgba(255,255,255,0.2);font-size:0.7rem;padding:8px 0 4px;font-family:"Segoe UI",Arial,sans-serif;';
+  v.textContent = 'v1.2.0 — Ai Là Triệu Phú Game © 2026';
+  // Insert after #app
+  const app = document.getElementById('app');
+  if(app && app.parentNode) app.parentNode.insertBefore(v, app.nextSibling);
+})();
 </script>
 </body>
 </html>
