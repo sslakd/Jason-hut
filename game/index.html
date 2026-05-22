@@ -267,7 +267,7 @@ function render(){
     let em=EMOJI_Q[cur%EMOJI_Q.length];
     app.innerHTML=`<div class="game">
       <div class="game-top">
-        <div class="game-logo">
+        <div class="game-logo" onclick="goHome()" style="cursor:pointer">
           <div class="game-logo-icon">💰</div>
           <div class="game-logo-text">AI LÀ TRIỆU PHÚ<br><span>${label}</span></div>
         </div>
