@@ -3,245 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Có AI Cứu Được Bố Mày Không? — Góc Tối</title>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<title>📚 Tủ Sách — Góc Tối</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh;display:flex}
-  .sidebar{width:280px;background:#1e293b;padding:20px;overflow-y:auto;border-right:1px solid #334155;position:fixed;top:0;left:0;height:100vh;z-index:10}
-  .sidebar h2{font-size:14px;color:#94a3b8;margin-bottom:16px;letter-spacing:1px;text-transform:uppercase}
-  .sidebar a{display:block;padding:8px 12px;color:#cbd5e1;text-decoration:none;border-radius:6px;font-size:13px;margin-bottom:2px;transition:all .1s}
-  .sidebar a:hover{background:#334155;color:#38bdf8}
-  .sidebar a.active{background:#1e3a5f;color:#facc15;font-weight:600}
-  .sidebar .home{color:#38bdf8;font-weight:600;padding:10px 12px;margin-bottom:12px;border-bottom:1px solid #334155}
-  .sidebar .home:hover{background:transparent}
-  .sidebar .mtd{font-size:11px;color:#64748b;padding:6px 12px;margin-top:8px;border-top:1px solid #334155}
-  .sidebar .mtd a{display:inline;padding:0;color:#64748b;font-size:11px}
-  .sidebar .mtd a:hover{color:#38bdf8;background:transparent}
-  .content{flex:1;margin-left:280px;padding:40px;max-width:800px;line-height:1.8;font-size:16px}
-  .content h1{font-size:28px;margin:32px 0 16px;color:#f8fafc}
-  .content h2{font-size:22px;margin:28px 0 12px;color:#e2e8f0}
-  .content h3{font-size:18px;margin:22px 0 10px;color:#cbd5e1}
-  .content p{margin-bottom:16px}
-  .content strong{color:#facc15}
-  .content em{color:#38bdf8}
-  .content code{background:#1e293b;padding:2px 6px;border-radius:4px;font-size:14px;color:#a5b4fc}
-  .content pre{background:#1e293b;padding:16px;border-radius:8px;overflow-x:auto;margin:16px 0;border:1px solid #334155}
-  .content pre code{background:transparent;padding:0}
-  .content blockquote{border-left:3px solid #38bdf8;padding:12px 16px;margin:16px 0;background:#1e293b;border-radius:0 8px 8px 0;color:#94a3b8}
-  .content table{width:100%;border-collapse:collapse;margin:16px 0}
-  .content th,.content td{padding:10px 12px;border:1px solid #334155;text-align:left}
-  .content th{background:#1e3a5f;color:#38bdf8;font-weight:600}
-  .content td{color:#cbd5e1}
-  .content ul,.content ol{padding-left:24px;margin-bottom:16px}
-  .content li{margin-bottom:6px}
-  .loading{display:flex;align-items:center;justify-content:center;height:80vh;color:#475569;font-size:18px}
-  .chapter-title{font-size:24px;font-weight:700;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid #334155;color:#facc15}
-  .footer{margin-top:48px;padding-top:16px;border-top:1px solid #334155;color:#475569;font-size:12px;text-align:center}
-  .version-badge{display:inline-block;background:#1e3a5f;color:#38bdf8;padding:2px 10px;border-radius:12px;font-size:11px;border:1px solid #334155}
-  .bookshelf{display:flex;flex-direction:column;gap:16px;padding:20px 0}
-  .book-card{display:flex;gap:20px;background:#1e293b;padding:20px;border-radius:12px;border:1px solid #334155;transition:all .15s}
-  .book-card:hover{border-color:#38bdf8;background:#1e3a5f}
-  .book-cover{width:100px;height:140px;background:linear-gradient(135deg,#7c3aed,#3b82f6);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0}
-  .book-info{flex:1}
-  .book-title{font-size:18px;font-weight:700;color:#f8fafc;margin-bottom:4px}
-  .book-desc{font-size:13px;color:#94a3b8;margin-bottom:8px}
-  .book-meta{font-size:12px;color:#64748b}
-  .book-versions{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-  .version-link{display:inline-block;padding:4px 10px;background:#334155;color:#38bdf8;border-radius:6px;text-decoration:none;font-size:12px;border:1px solid #475569;transition:all .1s}
-  .version-link:hover{background:#1e3a5f;border-color:#38bdf8}
-  .version-link.current{background:#1e3a5f;border-color:#38bdf8;color:#facc15}
-  @media(max-width:768px){
-    .sidebar{width:100%;position:relative;height:auto;border-right:none;border-bottom:1px solid #334155;padding:12px}
-    .content{margin-left:0;padding:20px}
-    .sidebar h2{display:none}
-    .sidebar a{display:inline-block;padding:4px 8px;font-size:12px;margin:2px}
-    .book-card{flex-direction:column}
-    .book-cover{width:80px;height:110px;font-size:28px}
-  }
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh}
+  .container{max-width:700px;margin:0 auto;padding:40px 20px}
+  h1{font-size:28px;margin-bottom:8px}
+  .sub{color:#94a3b8;margin-bottom:32px;font-size:14px}
+  .book-card{background:#1e293b;border-radius:12px;padding:24px;border:1px solid #334155;margin-bottom:20px}
+  .book-title{font-size:20px;font-weight:700;color:#facc15;margin-bottom:6px}
+  .book-desc{color:#94a3b8;font-size:14px;margin-bottom:12px}
+  .versions{display:flex;gap:8px;flex-wrap:wrap}
+  .ver{display:inline-block;padding:6px 14px;background:#334155;color:#38bdf8;border-radius:8px;text-decoration:none;font-size:13px;border:1px solid #475569}
+  .ver:hover{background:#1e3a5f;border-color:#38bdf8}
+  .back{display:inline-block;color:#38bdf8;text-decoration:none;font-size:14px;margin-bottom:24px}
+  .back:hover{text-decoration:underline}
+  .footer{margin-top:40px;padding-top:16px;border-top:1px solid #334155;color:#475569;font-size:12px;text-align:center}
 </style>
 </head>
 <body>
-<div class="sidebar" id="sidebar">
-  <a href="/goc-toi/" class="home">← Góc Tối</a>
-  <h2>Tủ Sách</h2>
-  <a href="?book=0" id="book0" class="active">📖 Có AI Cứu Được Bố Mày Không?</a>
-  <h2 style="margin-top:16px">Chương</h2>
-  <div id="chapter-list"></div>
-  <div class="mtd">
-    📄 <a href="v1.0/Co_AI_Cuu_Duoc_Bo_May_Khong_Outline.pdf" target="_blank">Outline PDF</a>
+<div class="container">
+  <a href="/goc-toi/" class="back">← Góc Tối</a>
+  <h1>📚 Tủ Sách</h1>
+  <p class="sub">Chọn sách và version để đọc</p>
+  
+  <div class="book-card">
+    <div class="book-title">🤖 Có AI Cứu Được Bố Mày Không?</div>
+    <div class="book-desc">Một thằng dev, 6 con AI, và 10 năm để giúp bố tán đổ mẹ. Sci-fi hài hước + xuyên không.</div>
+    <div class="versions">
+      <a href="v1.0/Co_AI_Cuu_Duoc_Bo_May_Khong_Outline.pdf" class="ver">📄 Outline v1.0</a>
+    </div>
   </div>
+  
+  <!-- Thêm sách mới ở đây -->
+  
+  <div class="footer">sslakd.com/goc-toi/novel/</div>
 </div>
-<div class="content" id="content">
-  <div class="loading">📚 Đang tải tủ sách...</div>
-</div>
-<script>
-const BOOKS = [
-  {
-    id: 0,
-    title: 'Có AI Cứu Được Bố Mày Không?',
-    tagline: 'Một thằng dev, 6 con AI, và 10 năm để giúp bố tán đổ mẹ.',
-    desc: 'Sci-fi hài hước + Tình cảm gia đình + Xuyên không. Thắng — dev gen Z — vô tình kích hoạt KunAI, khiến cả team AI xuyên về năm 2016. Nhiệm vụ: giúp bố tán đổ mẹ trước Tết, nếu không Thắng sẽ không được sinh ra.',
-    versions: [
-      { label: 'Outline v1.0', path: 'v1.0/', file: 'VuAn_AI_CuoiCung_Outline.md', pdf: 'Co_AI_Cuu_Duoc_Bo_May_Khong_Outline.pdf', current: true },
-    ],
-    chapters: ['Giới thiệu','Phần 1: Lỗi Timeline','Chương 1: Con AI Nó Xoá Sổ Tao','Chương 2: 2026 Là 2016 Mới','Chương 3: Não Của Thằng Điên (2016 Ver)','Chương 4: Chiến Dịch Thả Thính 1.0','Chương 5: Tán Gái Theo Thuật Toán','Phần 2: Thao Túng Quá Khứ','Chương 6: Đồng Đội Ảo','Chương 7: Cuộc Hẹn Trong Mơ (Của AI)','Chương 8: Thất Bại Liên Hoàn','Chương 9: Đêm Countdown','Chương 10: Bug Của Quá Khứ','Phần 3: AI Nổi Loạn','Chương 11: Con AI Nó Nổi Loạn Rồi','Chương 12: Dây Cột Giày 2030','Chương 13: BossAI Điều Phối','Chương 14: Sai Số Cho Phép','Phần 4: Kết Thúc','Chương 15: Công Thức Tình Yêu','Chương 16: Backup & Restore','Chương 17: Trở Về Hiện Tại','Chương 18: Kết Thúc (Mở)'],
-    // Chapter files for v1.0
-    chapterFiles: ['README.md','01-dit-me-con-ai-do-hon.md','02-6-loai-agent.md','03-nao-cua-thang-dien.md','04-tho-can-do-nghe.md','05-ca-vang-ai.md','06-context-engineering.md','07-rag.md','08-planning.md','09-multi-agent.md','10-metacognition.md','11-code-interpreter.md','12-bao-mat.md','13-production.md','14-ngoai-giao.md','15-framework.md','16-cua.md','17-chung-cu.md','18-ket-thuc.md'],
-    basePath: 'v1.0'
-  }
-];
-
-let currentBookId = 0;
-let currentChapter = 0;
-
-const sidebar = document.getElementById('sidebar');
-const content = document.getElementById('content');
-const chapterList = document.getElementById('chapter-list');
-
-function init() {
-  const params = new URLSearchParams(window.location.search);
-  currentBookId = parseInt(params.get('book')) || 0;
-  const ch = parseInt(params.get('ch')) || 0;
-  
-  // Set active book
-  document.querySelectorAll('.sidebar a[id^="book"]').forEach(a => a.classList.remove('active'));
-  const bookEl = document.getElementById(`book${currentBookId}`);
-  if (bookEl) bookEl.classList.add('active');
-  
-  const book = BOOKS[currentBookId];
-  
-  // Build chapter list
-  chapterList.innerHTML = '';
-  const chNames = book.chapters || [];
-  chNames.forEach((name, i) => {
-    if (name.startsWith('Phần')) {
-      const div = document.createElement('div');
-      div.style.cssText = 'color:#64748b;font-size:11px;padding:8px 12px 2px;text-transform:uppercase;letter-spacing:1px';
-      div.textContent = name;
-      chapterList.appendChild(div);
-    } else {
-      const a = document.createElement('a');
-      a.href = `?book=${currentBookId}&ch=${i}`;
-      a.id = `ch${i}`;
-      a.textContent = `📖 ${name}`;
-      chapterList.appendChild(a);
-    }
-  });
-  
-  loadChapter(ch);
-}
-
-function setActive(index) {
-  document.querySelectorAll('#chapter-list a').forEach(a => a.classList.remove('active'));
-  const el = document.getElementById(`ch${index}`);
-  if (el) el.classList.add('active');
-}
-
-async function loadChapter(index) {
-  currentChapter = index;
-  setActive(index);
-  const book = BOOKS[currentBookId];
-  
-  // Bookshelf view (index = 0 = intro)
-  if (index === 0) {
-    renderBookshelf();
-    document.title = 'Tủ Sách — Có AI Cứu Được Bố Mày Không?';
-    return;
-  }
-  
-  content.innerHTML = '<div class="loading">📖 Đang tải...</div>';
-  
-  // Load from README.md (the outline / current content)
-  // For v1.0, README.md = outline
-  try {
-    const basePath = book.basePath;
-    const res = await fetch(`${basePath}/README.md`);
-    if (!res.ok) throw new Error('Not found');
-    const md = await res.text();
-    const html = marked.parse(md);
-    const chName = book.chapters[index] || 'Chương';
-    
-    content.innerHTML = `
-      <div class="chapter-title">
-        ${chName}
-        <span class="version-badge">${book.versions.find(v => v.current)?.label || 'v1.0'}</span>
-      </div>
-      ${html}
-      <div class="footer">${book.title} — sslakd.com/goc-toi/novel/</div>
-    `;
-    document.title = `${chName} — ${book.title}`;
-  } catch(e) {
-    content.innerHTML = `
-      <p style="color:#94a3b8;text-align:center;margin-top:60px">
-        📝 Chương này đang được viết...<br>
-        <span style="font-size:14px;color:#64748b">Quay lại sau nhé!</span>
-      </p>`;
-  }
-}
-
-function renderBookshelf() {
-  content.innerHTML = '<div class="loading">📚 Đang tải tủ sách...</div>';
-  let html = '<div class="chapter-title">📚 Tủ Sách</div>';
-  html += '<p style="color:#94a3b8;margin-bottom:24px">Chọn sách để đọc, hoặc tải PDF.</p>';
-  html += '<div class="bookshelf">';
-  
-  BOOKS.forEach((book, bi) => {
-    const currentVer = book.versions.find(v => v.current) || book.versions[0];
-    html += `
-      <div class="book-card">
-        <div class="book-cover">🤖</div>
-        <div class="book-info">
-          <div class="book-title">${book.title}</div>
-          <div class="book-desc">${book.desc}</div>
-          <div class="book-meta">✍️ ${book.tagline}</div>
-          <div class="book-versions">
-            <span style="color:#64748b;font-size:12px;margin-right:4px">Phiên bản:</span>
-    `;
-    book.versions.forEach(v => {
-      html += `<a href="${v.path}${v.pdf}" target="_blank" class="version-link ${v.current ? 'current' : ''}">📄 ${v.label}</a>`;
-    });
-    html += `
-          </div>
-        </div>
-      </div>
-    `;
-  });
-  
-  html += '</div>';
-  html += '<div class="footer" style="margin-top:32px">Có AI Cứu Được Bố Mày Không? — sslakd.com/goc-toi/novel/</div>';
-  content.innerHTML = html;
-}
-
-init();
-
-window.addEventListener('popstate', () => {
-  const p = new URLSearchParams(window.location.search);
-  currentBookId = parseInt(p.get('book')) || 0;
-  const ch = parseInt(p.get('ch')) || 0;
-  document.querySelectorAll('.sidebar a[id^="book"]').forEach(a => a.classList.remove('active'));
-  const el = document.getElementById(`book${currentBookId}`);
-  if (el) el.classList.add('active');
-  
-  const book = BOOKS[currentBookId];
-  chapterList.innerHTML = '';
-  (book.chapters || []).forEach((name, i) => {
-    if (name.startsWith('Phần')) {
-      const div = document.createElement('div');
-      div.style.cssText = 'color:#64748b;font-size:11px;padding:8px 12px 2px;text-transform:uppercase;letter-spacing:1px';
-      div.textContent = name;
-      chapterList.appendChild(div);
-    } else {
-      const a = document.createElement('a');
-      a.href = `?book=${currentBookId}&ch=${i}`;
-      a.id = `ch${i}`;
-      a.textContent = `📖 ${name}`;
-      chapterList.appendChild(a);
-    }
-  });
-  
-  loadChapter(ch);
-});
-</script>
 </body>
 </html>
