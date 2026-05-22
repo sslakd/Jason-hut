@@ -187,8 +187,6 @@ function answer(idx){
 function startGame(){
   if(!BANK)return;
   let pool=BANK[state.subject];
-  // If subject has grades (toan, tienganh), pick random grade 3 or 4
-  if(pool['3']){let grades=['3','4'];pool=[...pool[grades[Math.floor(Math.random()*2)]]]}
   if(!pool||pool.length<15){showToast('Chưa đủ câu hỏi!');return}
   state.questions=pickUnique(pool,15);
   state.cur=0;state.money=0;state.correct=0;state.answered=false;
@@ -226,7 +224,7 @@ function render(){
   }
 
   const SUB_LABELS={'toan':'➕ Toán','tienganh':'🔤 Tiếng Anh','lichsu':'📜 Lịch Sử','dialy':'🌍 Địa Lý','tiengviet':'📖 Tiếng Việt'};
-  let totalQ=(BANK.toan['3'].length+BANK.toan['4'].length+BANK.tienganh['3'].length+BANK.tienganh['4'].length+BANK.lichsu.length+BANK.dialy.length+BANK.tiengviet.length).toLocaleString();
+  let totalQ=(BANK.toan.length+BANK.tienganh.length+BANK.lichsu.length+BANK.dialy.length+BANK.tiengviet.length).toLocaleString();
   let label=SUB_LABELS[s]||'🧠 Tổng Hợp';
 
   const SUBJECTS=[
