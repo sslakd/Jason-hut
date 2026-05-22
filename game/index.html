@@ -187,6 +187,8 @@ function answer(idx){
 function startGame(){
   if(!BANK)return;
   let pool=BANK[state.subject];
+  // If subject has grades (toan, tienganh), pick random grade 3 or 4
+  if(pool['3']){let grades=['3','4'];pool=[...pool[grades[Math.floor(Math.random()*2)]]]}
   if(!pool||pool.length<15){showToast('Chưa đủ câu hỏi!');return}
   state.questions=pickUnique(pool,15);
   state.cur=0;state.money=0;state.correct=0;state.answered=false;
