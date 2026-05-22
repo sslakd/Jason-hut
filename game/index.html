@@ -218,7 +218,7 @@ function takeSS(){
 // ===== RENDER =====
 function render(){
   let app=document.getElementById('app');
-  let g=state.grade,s=state.subject,cur=state.cur;
+  let s=state.subject,cur=state.cur;
 
   if(!BANK){
     app.innerHTML=`<div class="loading"><div class="spinner"></div><div class="loading-text">🌟 Đang chuẩn bị ngân hàng câu hỏi...</div><div class="loading-sub">Hơn 1000 câu Toán & Tiếng Anh</div></div>`;
@@ -226,7 +226,7 @@ function render(){
   }
 
   const SUB_LABELS={'toan':'➕ Toán','tienganh':'🔤 Tiếng Anh','lichsu':'📜 Lịch Sử','dialy':'🌍 Địa Lý','tiengviet':'📖 Tiếng Việt'};
-  let totalQ=(BANK.toan[1].length+BANK.toan[2].length+BANK.tienganh[1].length+BANK.tienganh[2].length+BANK.lichsu.length+BANK.dialy.length+BANK.tiengviet.length).toLocaleString();
+  let totalQ=(BANK.toan['3'].length+BANK.toan['4'].length+BANK.tienganh['3'].length+BANK.tienganh['4'].length+BANK.lichsu.length+BANK.dialy.length+BANK.tiengviet.length).toLocaleString();
   let label=SUB_LABELS[s]||'🧠 Tổng Hợp';
 
   const SUBJECTS=[
