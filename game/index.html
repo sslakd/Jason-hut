@@ -132,7 +132,7 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
 
 <script>
 const PRIZES=[0,200,400,600,1000,2000,3000,4000,5000,6000,10000,12000,16000,20000,30000,50000];
-const SAFE=new Set([8,10,15]);
+const SAFE=new Set([5,10,15]);
 const LABELS=['A','B','C','D'];
 
 const EMOJI_MONEY=['🪙','🪙','🪙','🪙','💰','💰','💰','💎','💎','💎','👑','👑','🏆','🏆','🏆','🏆'];
@@ -188,7 +188,11 @@ function startGame(){
   if(!BANK)return;
   let bank=BANK[state.subject];
   if(!bank)return;
-  // Pick questions from grade-appropriate pools
+  // Validate pool sizes
+  if(!bank['1']||bank['1'].length<5){showToast('⚠️ Không đủ câu hỏi (lớp 1)!');return}
+  if(!bank['2']||bank['2'].length<5){showToast('⚠️ Không đủ câu hỏi (lớp 2-3)!');return}
+  if(!bank['4']||bank['4'].length<5){showToast('⚠️ Không đủ câu hỏi (lớp 4)!');return}
+  // Pick questions from grade-appropriate pools (each pool deduped independently)
   let qs1=pickUnique(bank['1'],5);
   let qs2=pickUnique(bank['2'],5);
   let qs3=pickUnique(bank['4'],5);

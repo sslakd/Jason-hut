@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>Vụ Án AI Cuối Cùng — AI Agents giải thích bằng truyện hài</title>
+<meta name="description" content="18 chương — AI Agents giải thích bằng truyện hài. Dành cho dân IT, dân PM, dân non-tech. Ebook + Podcast.">
+<meta name="keywords" content="AI agents, ebook, podcast, tiểu thuyết, học AI, GenZ, Việt Nam">
+<meta name="author" content="Jason Nguyen">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Vụ Án AI Cuối Cùng — AI Agents giải thích bằng truyện hài">
+<meta property="og:description" content="18 chương — AI Agents giải thích bằng truyện hài. Dành cho dân IT, dân PM, dân non-tech.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sslakd.com/ai-agent-novel/">
+<meta property="og:image" content="https://sslakd.com/ai-agent-novel/og-image.png">
+<meta property="og:locale" content="vi_VN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vụ Án AI Cuối Cùng — AI Agents giải thích bằng truyện hài">
+<meta name="twitter:description" content="18 chương — AI Agents giải thích bằng truyện hài. Dành cho dân IT, dân PM, dân non-tech.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-XXXXXXXXXX');
+</script>
+
+<style>
+/* ========== RESET & BASE ========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:#0a0a0f;
+  color:#e8e8f0;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden
+}
+a{color:#00d4ff;text-decoration:none;transition:color .2s}
+a:hover{color:#66e5ff}
+::selection{background:#00d4ff33;color:#fff}
+
+/* ========== TYPOGRAPHY ========== */
+h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.1;letter-spacing:-.03em}
+h2{font-size:clamp(1.4rem,3.5vw,2.2rem);font-weight:700;letter-spacing:-.02em}
+h3{font-size:clamp(1rem,2.5vw,1.4rem);font-weight:600}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* ========== CONTAINER ========== */
+.container{max-width:800px;margin:0 auto;padding:0 20px}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadeIn{
+  from{opacity:0}to{opacity:1}
+}
+@keyframes typing{
+  from{width:0}
+  to{width:100%}
+}
+@keyframes blinkCaret{
+  50%{border-color:transparent}
+}
+@keyframes glowPulse{
+  0%,100%{box-shadow:0 0 20px #00d4ff22,0 0 40px #00d4ff11}
+  50%{box-shadow:0 0 30px #00d4ff44,0 0 60px #00d4ff22}
+}
+@keyframes slideDown{
+  from{opacity:0;transform:translateY(-10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes modalOverlay{
+  from{opacity:0}to{opacity:1}
+}
+@keyframes modalIn{
+  from{opacity:0;transform:scale(.95) translateY(20px)}
+  to{opacity:1;transform:scale(1) translateY(0)}
+}
+
+.anim-fade{animation:fadeInUp .8s ease-out forwards;opacity:0}
+.anim-fade-1{animation-delay:.1s}
+.anim-fade-2{animation-delay:.2s}
+.anim-fade-3{animation-delay:.3s}
+.anim-fade-4{animation-delay:.4s}
+.anim-fade-5{animation-delay:.5s}
+.anim-fade-6{animation-delay:.6s}
+.anim-fade-7{animation-delay:.7s}
+.anim-fade-8{animation-delay:.8s}
+
+/* ========== HEADER ========== */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:#0a0a0fa8;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid #ffffff0a;
+  padding:12px 0
+}
+.header .container{
+  display:flex;align-items:center;justify-content:space-between
+}
+.header-logo{
+  font-size:.85rem;font-weight:600;color:#00d4ff;
+  letter-spacing:-.02em
+}
+.header-nav{display:flex;gap:20px;list-style:none}
+.header-nav a{
+  font-size:.8rem;color:#888;font-weight:500;
+  transition:color .2s
+}
+.header-nav a:hover{color:#00d4ff}
+
+/* ========== HERO ========== */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  padding:100px 0 60px;
+  position:relative;
+  overflow:hidden
+}
+.hero::before{
+  content:'';
+  position:absolute;top:-50%;left:-50%;width:200%;height:200%;
+  background:radial-gradient(ellipse at 50% 30%,#00d4ff06 0%,transparent 60%);
+  pointer-events:none
+}
+.hero-content{position:relative;z-index:1}
+.hero-badge{
+  display:inline-block;
+  background:#00d4ff11;
+  border:1px solid #00d4ff33;
+  color:#00d4ff;
+  font-size:.75rem;font-weight:600;
+  padding:6px 14px;border-radius:20px;
+  margin-bottom:20px;
+  letter-spacing:.03em;
+  text-transform:uppercase
+}
+.hero h1{
+  background:linear-gradient(135deg,#fff 0%,#00d4ff 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:16px
+}
+.hero-subtitle{
+  font-size:clamp(1rem,2.5vw,1.25rem);
+  color:#a0a0b0;
+  margin-bottom:12px;
+  font-weight:500
+}
+.typing-wrapper{
+  display:flex;align-items:center;gap:8px;
+  font-size:clamp(.9rem,2vw,1.1rem);
+  font-weight:500;
+  color:#00d4ff;
+  margin-bottom:28px;
+  min-height:2em
+}
+.typing-label{color:#888;white-space:nowrap}
+.typing-text{
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  border-right:2px solid #00d4ff;
+  animation:typing 3s steps(30) forwards,blinkCaret .8s step-end infinite;
+  max-width:fit-content
+}
+
+/* ========== BADGES ========== */
+.badges{
+  display:flex;gap:10px;flex-wrap:wrap;
+  margin-bottom:32px
+}
+.badge{
+  position:relative;
+  display:inline-flex;align-items:center;gap:6px;
+  background:#ffffff08;border:1px solid #ffffff15;
+  padding:10px 16px;border-radius:12px;
+  font-size:.8rem;font-weight:500;color:#ccc;cursor:help;
+  transition:all .25s
+}
+.badge:hover{
+  border-color:#00d4ff44;background:#00d4ff0a;
+  transform:translateY(-2px);
+  box-shadow:0 4px 20px #00d4ff11
+}
+.badge-done{color:#4ade80;font-size:.65rem}
+.badge-coming{color:#888;font-size:.65rem}
+.badge .tooltip{
+  position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);
+  background:#1a1a28;color:#ccc;font-size:.7rem;padding:8px 12px;border-radius:8px;
+  border:1px solid #ffffff15;
+  white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;
+  z-index:10
+}
+.badge:hover .tooltip{opacity:1}
+
+/* ========== SECTIONS ========== */
+section{padding:80px 0}
+.section-label{
+  display:inline-block;
+  font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:#00d4ff66;margin-bottom:12px
+}
+.section-title{margin-bottom:16px}
+.section-desc{
+  color:#888;font-size:clamp(.9rem,2vw,1.05rem);
+  max-width:640px;line-height:1.7;margin-bottom:32px
+}
+
+/* ========== ABOUT ========== */
+.about-card{
+  background:linear-gradient(135deg,#ffffff06,#00d4ff04);
+  border:1px solid #ffffff0d;
+  border-radius:16px;
+  padding:28px 24px
+}
+.about-card p{
+  color:#b0b0c0;line-height:1.8;font-size:.95rem
+}
+.about-card strong{color:#e8e8f0}
+.highlight-cyan{color:#00d4ff}
+
+/* ========== PRICING TABLE ========== */
+.pricing-grid{
+  display:grid;grid-template-columns:1fr;gap:12px;
+  margin-bottom:12px
+}
+@media(min-width:500px){
+  .pricing-grid{grid-template-columns:1fr 1fr 1fr}
+}
+.pricing-card{
+  background:#ffffff06;border:1px solid #ffffff0d;
+  border-radius:12px;padding:20px;text-align:center;
+  transition:all .3s
+}
+.pricing-card:hover{
+  border-color:#00d4ff33;
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px #00d4ff0a
+}
+.pricing-icon{font-size:1.8rem;margin-bottom:8px}
+.pricing-name{font-weight:600;font-size:.95rem;margin-bottom:4px}
+.pricing-price{
+  font-size:1.4rem;font-weight:800;color:#00d4ff;
+  margin-bottom:4px
+}
+.pricing-status{
+  display:inline-block;
+  font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:10px;
+  background:#8882;color:#888
+}
+.pricing-status.preorder{background:#00d4ff22;color:#00d4ff}
+.pricing-status.soon{background:#f59e0b22;color:#f59e0b}
+.pricing-status.free{background:#4ade8022;color:#4ade80}
+
+/* ========== SAMPLE CHAPTERS ========== */
+.chapter-list{display:flex;flex-direction:column;gap:12px}
+.chapter-item{
+  display:flex;align-items:center;justify-content:space-between;
+  background:#ffffff06;border:1px solid #ffffff0d;
+  border-radius:12px;padding:16px 20px;
+  cursor:pointer;transition:all .25s
+}
+.chapter-item:hover{
+  border-color:#00d4ff33;background:#00d4ff06
+}
+.chapter-info{flex:1}
+.chapter-num{
+  font-size:.7rem;font-weight:600;color:#00d4ff66;
+  letter-spacing:.05em;text-transform:uppercase;margin-bottom:2px
+}
+.chapter-title{font-weight:500;font-size:.95rem;color:#ddd}
+.chapter-link{
+  font-size:.8rem;color:#00d4ff;font-weight:500;
+  white-space:nowrap;margin-left:12px
+}
+
+/* ========== VARIANT TABLE ========== */
+.variant-table-wrap{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin:0 -20px;padding:0 20px
+}
+.variant-table{
+  width:100%;min-width:600px;
+  border-collapse:separate;border-spacing:0;
+  font-size:.85rem
+}
+.variant-table th,.variant-table td{
+  padding:14px 12px;text-align:left;
+  border-bottom:1px solid #ffffff0d
+}
+.variant-table th{
+  font-size:.75rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  color:#00d4ff;background:#00d4ff04;
+  position:sticky;top:0;
+  white-space:nowrap
+}
+.variant-table th:first-child{border-radius:8px 0 0 0}
+.variant-table th:last-child{border-radius:0 8px 0 0}
+.variant-table td:first-child{font-weight:600;color:#ccc;white-space:nowrap}
+.variant-table td{color:#888}
+.variant-table tr:last-child td:first-child{border-radius:0 0 0 8px}
+.variant-table tr:last-child td:last-child{border-radius:0 0 8px 0}
+.variant-table tr:hover td{background:#ffffff04}
+.status-done{color:#4ade80}
+.status-soon{color:#f59e0b}
+
+/* ========== CTA ========== */
+.cta-section{
+  background:linear-gradient(135deg,#0a0a0f,#00d4ff04);
+  border-top:1px solid #ffffff0a;
+  border-bottom:1px solid #ffffff0a;
+  text-align:center
+}
+.cta-buttons{
+  display:flex;gap:12px;flex-wrap:wrap;justify-content:center;
+  margin-top:28px
+}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 28px;border-radius:12px;
+  font-size:.95rem;font-weight:600;cursor:pointer;
+  transition:all .25s;border:none;text-decoration:none
+}
+.btn-primary{
+  background:linear-gradient(135deg,#00d4ff,#0099cc);
+  color:#0a0a0f;box-shadow:0 4px 20px #00d4ff33
+}
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 28px #00d4ff55;
+  color:#0a0a0f
+}
+.btn-secondary{
+  background:transparent;border:1px solid #ffffff20;
+  color:#ccc
+}
+.btn-secondary:hover{
+  border-color:#00d4ff;color:#00d4ff;
+  background:#00d4ff08
+}
+.btn-subtle{
+  background:#ffffff08;border:1px solid #ffffff0d;
+  color:#888;font-size:.8rem;padding:10px 20px
+}
+.btn-subtle:hover{color:#ccc;border-color:#ffffff20}
+.cta-note{font-size:.8rem;color:#666;margin-top:16px}
+
+/* ========== FOOTER ========== */
+footer{
+  padding:40px 0;
+  border-top:1px solid #ffffff0a;
+  text-align:center
+}
+.footer-links{display:flex;gap:20px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}
+.footer-links a{font-size:.8rem;color:#555}
+.footer-links a:hover{color:#00d4ff}
+.footer-version{
+  font-size:.75rem;
+  font-family:'JetBrains Mono',monospace;
+  color:#444
+}
+
+/* ========== MODAL ========== */
+.modal-overlay{
+  position:fixed;top:0;left:0;right:0;bottom:0;
+  background:#00000088;backdrop-filter:blur(4px);
+  z-index:200;
+  display:none;align-items:center;justify-content:center;
+  padding:20px;
+  animation:modalOverlay .25s ease-out
+}
+.modal-overlay.active{display:flex}
+.modal{
+  background:#12121d;border:1px solid #ffffff15;
+  border-radius:16px;max-width:700px;width:100%;
+  max-height:80vh;overflow-y:auto;
+  padding:32px;
+  position:relative;
+  animation:modalIn .3s ease-out;
+  box-shadow:0 24px 64px #00000055
+}
+.modal-close{
+  position:absolute;top:16px;right:16px;
+  background:none;border:none;color:#666;
+  font-size:1.4rem;cursor:pointer;width:32px;height:32px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:8px;transition:all .2s
+}
+.modal-close:hover{background:#ffffff0a;color:#fff}
+.modal h2{font-size:1.2rem;margin-bottom:16px;padding-right:32px}
+.modal-body{color:#aaa;font-size:.9rem;line-height:1.8;white-space:pre-wrap}
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#ffffff15;border-radius:2px}
+::-webkit-scrollbar-thumb:hover{background:#ffffff25}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width:768px){
+  .header-nav{display:none}
+  section{padding:60px 0}
+  .hero{min-height:auto;padding:80px 0 40px}
+  .variant-table{font-size:.8rem}
+  .variant-table th,.variant-table td{padding:10px 8px}
+  .modal{padding:24px 20px}
+}
+@media(max-width:480px){
+  .badges{gap:8px}
+  .badge{font-size:.75rem;padding:8px 12px}
+  .pricing-card{padding:16px}
+  .chapter-item{padding:12px 16px;flex-wrap:wrap}
+  .chapter-link{margin-left:0;margin-top:8px}
+  .cta-buttons{flex-direction:column;align-items:stretch}
+  .btn{text-align:center;justify-content:center}
+}
+@media(max-width:360px){
+  .badge .tooltip{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container">
+    <span class="header-logo">📖 Vụ Án AI</span>
+    <ul class="header-nav">
+      <li><a href="#about">Giới thiệu</a></li>
+      <li><a href="#pricing">Giá</a></li>
+      <li><a href="#chapters">Đọc thử</a></li>
+      <li><a href="#variants">Phiên bản</a></li>
+      <li><a href="#cta">Mua</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="container hero-content">
+    <div class="anim-fade anim-fade-1">
+      <span class="hero-badge">✨ Mới ra mắt</span>
+    </div>
+    <h1 class="anim-fade anim-fade-2">Vụ Án AI<br>Cuối Cùng</h1>
+    <p class="hero-subtitle anim-fade anim-fade-3">18 chương — AI Agents giải thích bằng truyện hài</p>
+    <div class="typing-wrapper anim-fade anim-fade-4">
+      <span class="typing-label">Dành cho:</span>
+      <span class="typing-text mono">dân IT / dân PM / dân non-tech</span>
+    </div>
+    <div class="badges anim-fade anim-fade-5">
+      <div class="badge">
+        🎙️ Nam-HN-GenZ
+        <span class="badge-done">✓</span>
+        <span class="tooltip">Giọng Độ Mixi, kể chuyện bụi đời Hà Nội</span>
+      </div>
+      <div class="badge">
+        📖 Nam-SG-GenZ
+        <span class="badge-done">✓</span>
+        <span class="tooltip">Giọng Andy, kể chuyện Sài Gòn dân dã</span>
+      </div>
+      <div class="badge">
+        🔜 Nữ-HN-GenZ
+        <span class="badge-coming">Sắp ra</span>
+        <span class="tooltip">Sắp ra mắt — giọng nữ Hà Nội</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="container">
+    <span class="section-label anim-fade">Giới thiệu</span>
+    <h2 class="section-title anim-fade anim-fade-1">Chuyện gì thế này?</h2>
+    <div class="about-card anim-fade anim-fade-2">
+      <p>
+        <strong>Không phải sách kỹ thuật khô khan.</strong><br><br>
+        Là câu chuyện về thằng <strong>Thắng</strong> — dev gen Z Hà Nội — và đám
+        <strong class="highlight-cyan">AI Agent</strong> dở hơi ở công ty
+        <strong>THĂNG LONG AI</strong>.<br><br>
+        Dựa trên <strong>18 bài học từ Microsoft AI Agents for Beginners</strong>
+        — nhưng không học thuật, không sơ đồ. Chỉ có những thằng AI Agent
+        tưởng mình là thiên tài và một thằng dev chỉ muốn về nhà chơi game.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section id="pricing">
+  <div class="container">
+    <span class="section-label anim-fade">Bảng giá</span>
+    <h2 class="section-title anim-fade anim-fade-1">Chọn format của bạn</h2>
+    <div class="pricing-grid anim-fade anim-fade-2">
+      <div class="pricing-card">
+        <div class="pricing-icon">📖</div>
+        <div class="pricing-name">Ebook PDF</div>
+        <div class="pricing-price">$4.99</div>
+        <div class="pricing-desc" style="font-size:.8rem;color:#666;margin-bottom:10px">Full 18 chương</div>
+        <span class="pricing-status preorder">Pre-order</span>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-icon">📕</div>
+        <div class="pricing-name">Paperback</div>
+        <div class="pricing-price">$9.99</div>
+        <div class="pricing-desc" style="font-size:.8rem;color:#666;margin-bottom:10px">Amazon KDP</div>
+        <span class="pricing-status soon">Coming soon</span>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-icon">🎧</div>
+        <div class="pricing-name">Audiobook</div>
+        <div class="pricing-price">Free</div>
+        <div class="pricing-desc" style="font-size:.8rem;color:#666;margin-bottom:10px">Podcast</div>
+        <span class="pricing-status free">Coming soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SAMPLE CHAPTERS ===== -->
+<section id="chapters">
+  <div class="container">
+    <span class="section-label anim-fade">Đọc thử</span>
+    <h2 class="section-title anim-fade anim-fade-1">Trích chương</h2>
+    <p class="section-desc anim-fade anim-fade-2">Nhấp vào chương để đọc thử nội dung.</p>
+    <div class="chapter-list">
+      <div class="chapter-item anim-fade anim-fade-3" onclick="openModal(1)">
+        <div class="chapter-info">
+          <div class="chapter-num">Chương 1</div>
+          <div class="chapter-title">"Con AI Nó Dở Hơi Rồi!"</div>
+        </div>
+        <span class="chapter-link">Đọc thử →</span>
+      </div>
+      <div class="chapter-item anim-fade anim-fade-4" onclick="openModal(2)">
+        <div class="chapter-info">
+          <div class="chapter-num">Chương 2</div>
+          <div class="chapter-title">Sáu Loại Agent — Từ Gà Đến Pro</div>
+        </div>
+        <span class="chapter-link">Đọc thử →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VARIANT COMPARISON ===== -->
+<section id="variants">
+  <div class="container">
+    <span class="section-label anim-fade">Phiên bản</span>
+    <h2 class="section-title anim-fade anim-fade-1">So sánh các variant</h2>
+    <p class="section-desc anim-fade anim-fade-2">Mỗi phiên bản kể cùng câu chuyện — nhưng cách kể hoàn toàn khác nhau. Chọn variant hợp vibe của bạn.</p>
+    <div class="variant-table-wrap anim-fade anim-fade-3">
+      <table class="variant-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>GenZ HN (Mixi)</th>
+            <th>GenZ SG (Andy)</th>
+            <th>8x HN</th>
+            <th>8x SG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Status</td>
+            <td><span class="status-done">✅ Hoàn thành</span></td>
+            <td><span class="status-done">✅ Hoàn thành</span></td>
+            <td><span class="status-soon">🔜</span></td>
+            <td><span class="status-soon">🔜</span></td>
+          </tr>
+          <tr>
+            <td>Giọng văn</td>
+            <td>Phố HN, bụi đời</td>
+            <td>Sài Gòn, dân dã</td>
+            <td>Lịch sự</td>
+            <td>Lịch sự</td>
+          </tr>
+          <tr>
+            <td>Ẩn dụ</td>
+            <td>Robot hút bụi, phở</td>
+            <td>Cần gạt nước, bánh mì</td>
+            <td>Doanh nghiệp</td>
+            <td>Doanh nghiệp</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section" id="cta">
+  <div class="container">
+    <span class="section-label anim-fade">Mua ngay</span>
+    <h2 class="section-title anim-fade anim-fade-1">Sẵn sàng đọc chưa?</h2>
+    <p class="section-desc" style="margin:0 auto 0;text-align:center">Tải miễn phí 3 chương đầu hoặc mua bản đầy đủ ngay.</p>
+    <div class="cta-buttons anim-fade anim-fade-2">
+      <a href="mailto:?subject=Nh%E1%BA%ADn%20ebook%20mi%E1%BB%85n%20ph%C3%AD%20V%E1%BB%A5%20%C3%81n%20AI%20Cu%E1%BB%91i%20C%C3%B9ng&body=M%C3%ACnh%20mu%E1%BB%91n%20nh%E1%BA%ADn%20ebook%20mi%E1%BB%85n%20ph%C3%AD%203%20ch%C6%B0%C6%A1ng%20%C4%91%E1%BA%A7u." class="btn btn-primary" target="_blank">
+        📥 Nhận ebook miễn phí ch.1-3
+      </a>
+      <a href="#" class="btn btn-secondary" onclick="return false;">
+        🛒 Mua bản đầy đủ — $4.99
+      </a>
+    </div>
+    <p class="cta-note anim-fade anim-fade-3">
+      PDF, full 18 chương. Pre-order — giao hàng trong vòng 48h.
+    </p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://github.com/sslakd/Jason-hut/tree/main/ai-agent-novel" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://sslakd.com">sslakd.com</a>
+      <a href="#hero">Lên đầu ↑</a>
+    </div>
+    <div class="footer-version">
+      v1.0.0 — Vụ Án AI Cuối Cùng © 2026
+    </div>
+  </div>
+</footer>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2 id="modalTitle">Chương 1</h2>
+    <div class="modal-body" id="modalBody">
+      Đang tải nội dung...
+    </div>
+  </div>
+</div>
+
+<script>
+/* ========== MODAL ========== */
+const modalOverlay = document.getElementById('modal');
+const modalTitle = document.getElementById('modalTitle');
+const modalBody = document.getElementById('modalBody');
+
+const chapters = {
+  1: {
+    title: 'Chương 1: "Con AI Nó Dở Hơi Rồi!"',
+    body: `Sáng thứ Hai, Thắng vừa kịp đặt mông xuống ghế thì thằng Cường — hay còn gọi là "Cường Fix" — phi từ cuối phòng lên như một cơn lốc.
+
+"Thắng ơi thằng AI nó dở hơi rồi mày ơi!"
+
+Thắng thở dài. Câu này nghe quen vl. Cũng giống như "mày ơi con chó nhà tao ăn mất bài tập" hồi cấp 3, nhưng lần này mẹ nó đau hơn vì nó là việc.
+
+"Cái gì cơ?"
+
+"Thằng AI Agent của đơn hàng 69. Nó nói chuyện với khách. Khách hỏi 'khi nào hàng về', nó trả lời 'đợi anh ơi em đang ăn cơm'. Em đùa đấy, nó nói y như thế!"
+
+Cả phòng cười. Nhưng sếp Tuấn — founder THĂNG LONG AI — mặt cắt không còn giọt máu. Vì cái AI Agent đấy đang chạy cho 50.000 user.
+
+"Thế hệ AI Agent đầu tiên," Thắng nhìn lên bảng, "hơi ngu thật."
+
+Đây là hồi Thắng chưa biết cái gì đang chờ nó phía trước: 18 dạng Agent khác nhau, mỗi thằng một tính cách riêng, và một câu hỏi duy nhất: "Liệu AI có thay thế được dev không?"
+
+Spoiler: còn lâu. Vì dev còn phải sửa bug cho AI cơ.`
+  },
+  2: {
+    title: 'Chương 2: Sáu Loại Agent — Từ Gà Đến Pro',
+    body: `Tuấn gọi cả team vào phòng họp. Trên bảng trắng, ổng vẽ 6 cái ô vuông to đùng.
+
+"Nghe đây. Chúng ta có 6 loại AI Agent. Xếp từ gà đến pro."
+
+\textbf{Level 1: Simple Agent}
+Con này chỉ biết làm một việc. Hỏi mấy giờ nó trả lời. Hỏi thời tiết cũng trả lời. Hỏi cả hai — nó treo.
+
+\textbf{Level 2: Router Agent}
+Biết chuyển câu hỏi cho thằng khác. Như lễ tân bệnh viện: bạn đau đầu qua phòng số 2, bạn đau tim qua phòng số 3. Nhưng hỏi "đau cả đầu cả tim" — nó hoang mang.
+
+"Đây là lúc chúng ta xây cái mà dân chuyên gọi là Agent Architecture," Tuấn nói, tay chỉ lên bảng. "Không phải AI thông minh hơn. Mà là hệ thống AI làm việc cùng nhau — biết khi nào im, khi nào nói, khi nào gọi thằng khác vào."
+
+Thắng nhìn đồng hồ. 9:15 sáng. Ngày còn dài.
+
+Và thằng AI kia vẫn còn đang "ăn cơm".`
+  }
+};
+
+function openModal(id) {
+  const ch = chapters[id];
+  if (!ch) return;
+  modalTitle.textContent = ch.title;
+  modalBody.innerHTML = ch.body.replace(/\\textbf/g,'<strong>').replace(/\\text/g,'<em>');
+  modalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  modalOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+modalOverlay.addEventListener('click', function(e) {
+  if (e.target === modalOverlay) closeModal();
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+/* ========== SCROLL ANIMATIONS (Intersection Observer) ========== */
+document.addEventListener('DOMContentLoaded', function() {
+  const animEls = document.querySelectorAll('.anim-fade');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  animEls.forEach(el => {
+    el.style.animationPlayState = 'paused';
+    observer.observe(el);
+  });
+
+  /* Fix for hero items - they should play immediately */
+  document.querySelectorAll('.hero .anim-fade').forEach(el => {
+    el.style.animationPlayState = 'running';
+  });
+});
+</script>
+
+</body>
+</html>
