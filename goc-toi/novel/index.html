@@ -85,7 +85,7 @@ const BOOKS = [
     versions: [
       { label: 'Outline v1.0', path: 'v1.0/', file: 'VuAn_AI_CuoiCung_Outline.md', pdf: 'Co_AI_Cuu_Duoc_Bo_May_Khong_Outline.pdf', current: true },
     ],
-    chapters: ['Giới thiệu','Phần 1: Lỗi Timeline','Chương 1','Chương 2','Chương 3','Chương 4','Chương 5','Phần 2: Thao Túng Quá Khứ','Chương 6','Chương 7','Chương 8','Chương 9','Chương 10','Phần 3: AI Nổi Loạn','Chương 11','Chương 12','Chương 13','Chương 14','Phần 4: Kết Thúc','Chương 15','Chương 16','Chương 17','Chương 18'],
+    chapters: ['Giới thiệu','Phần 1: Lỗi Timeline','Chương 1: Con AI Nó Xoá Sổ Tao','Chương 2: 2026 Là 2016 Mới','Chương 3: Não Của Thằng Điên (2016 Ver)','Chương 4: Chiến Dịch Thả Thính 1.0','Chương 5: Tán Gái Theo Thuật Toán','Phần 2: Thao Túng Quá Khứ','Chương 6: Đồng Đội Ảo','Chương 7: Cuộc Hẹn Trong Mơ (Của AI)','Chương 8: Thất Bại Liên Hoàn','Chương 9: Đêm Countdown','Chương 10: Bug Của Quá Khứ','Phần 3: AI Nổi Loạn','Chương 11: Con AI Nó Nổi Loạn Rồi','Chương 12: Dây Cột Giày 2030','Chương 13: BossAI Điều Phối','Chương 14: Sai Số Cho Phép','Phần 4: Kết Thúc','Chương 15: Công Thức Tình Yêu','Chương 16: Backup & Restore','Chương 17: Trở Về Hiện Tại','Chương 18: Kết Thúc (Mở)'],
     // Chapter files for v1.0
     chapterFiles: ['README.md','01-dit-me-con-ai-do-hon.md','02-6-loai-agent.md','03-nao-cua-thang-dien.md','04-tho-can-do-nghe.md','05-ca-vang-ai.md','06-context-engineering.md','07-rag.md','08-planning.md','09-multi-agent.md','10-metacognition.md','11-code-interpreter.md','12-bao-mat.md','13-production.md','14-ngoai-giao.md','15-framework.md','16-cua.md','17-chung-cu.md','18-ket-thuc.md'],
     basePath: 'v1.0'
@@ -152,17 +152,11 @@ async function loadChapter(index) {
   
   content.innerHTML = '<div class="loading">📖 Đang tải...</div>';
   
-  // Find which version's chapter file
-  const chIdx = index - 1; // subtract intro
-  const chapterFile = book.chapterFiles[chIdx];
-  if (!chapterFile) {
-    content.innerHTML = '<p style="color:#ef4444">❌ Chương chưa có nội dung</p>';
-    return;
-  }
-  
+  // Load from README.md (the outline / current content)
+  // For v1.0, README.md = outline
   try {
     const basePath = book.basePath;
-    const res = await fetch(`${basePath}/${chapterFile}`);
+    const res = await fetch(`${basePath}/README.md`);
     if (!res.ok) throw new Error('Not found');
     const md = await res.text();
     const html = marked.parse(md);
