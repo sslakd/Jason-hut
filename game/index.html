@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-<title>Ai Là Triệu Phú — Học Toán & Tiếng Anh</title>
+<title>Ai Là Triệu Phú</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient(180deg,#ffecd2,#fcb69f,#ff9a9e,#fad0c4,#a18cd1);min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:12px;flex-direction:column}
@@ -127,7 +127,7 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
 </head>
 <body>
 <div id="app"></div>
-<div class="v">v1.5.1 — Ai Là Triệu Phú Game © 2026</div>
+<div class="v">v1.6.0 — Ai Là Triệu Phú Game © 2026</div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -138,7 +138,7 @@ const LABELS=['A','B','C','D'];
 const EMOJI_MONEY=['🪙','🪙','🪙','🪙','💰','💰','💰','💎','💎','💎','👑','👑','🏆','🏆','🏆','🏆'];
 const EMOJI_Q=['🧮','📝','❓','💡','🔢','🎯'];
 
-let BANK=null, state={grade:1,subject:'toan',questions:[],cur:-1,money:0,correct:0,answered:false};
+let BANK=null, state={subject:'toan',questions:[],cur:-1,money:0,correct:0,answered:false,lastSubject:''};
 
 function shuffle(a){for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 
@@ -186,7 +186,7 @@ function answer(idx){
 
 function startGame(){
   if(!BANK)return;
-  let pool=BANK[state.subject][String(state.grade)];
+  let pool=BANK[state.subject];
   if(!pool||pool.length<15){showToast('Chưa đủ câu hỏi!');return}
   state.questions=pickUnique(pool,15);
   state.cur=0;state.money=0;state.correct=0;state.answered=false;
@@ -223,31 +223,29 @@ function render(){
     return;
   }
 
-  let totalQ=(BANK.toan[1].length+BANK.toan[2].length+BANK.tienganh[1].length+BANK.tienganh[2].length).toLocaleString();
-  let label=s==='toan'?'➕ Toán':'🔤 Tiếng Anh';
+  const SUB_LABELS={'toan':'➕ Toán','tienganh':'🔤 Tiếng Anh','lichsu':'📜 Lịch Sử','dialy':'🌍 Địa Lý','tiengviet':'📖 Tiếng Việt'};
+  let totalQ=(BANK.toan[1].length+BANK.toan[2].length+BANK.tienganh[1].length+BANK.tienganh[2].length+BANK.lichsu.length+BANK.dialy.length+BANK.tiengviet.length).toLocaleString();
+  let label=SUB_LABELS[s]||'🧠 Tổng Hợp';
+
+  const SUBJECTS=[
+    ['toan','➕ Toán'],
+    ['tienganh','🔤 Tiếng Anh'],
+    ['lichsu','📜 Lịch Sử'],
+    ['dialy','🌍 Địa Lý'],
+    ['tiengviet','📖 Tiếng Việt']
+  ];
 
   if(cur<0){
-    let gcls1='picker-btn'+(g===1?' sel':'');
-    let gcls2='picker-btn'+(g===2?' sel':'');
-    let scls1='picker-btn'+(s==='toan'?' sel':'');
-    let scls2='picker-btn'+(s==='tienganh'?' sel':'');
+    let pickers=SUBJECTS.map(([k,emoji]) =>
+      `<button class="picker-btn${s===k?' sel':''}" onclick="state.subject='${k}';render()">${emoji}</button>`
+    ).join('');
     app.innerHTML=`<div class="welcome">
       <div class="welcome-icon">🏆</div>
       <div class="welcome-title">✨ AI LÀ <span>Triệu Phú</span> ✨</div>
       <div class="welcome-sub">🐷 Kiếm tiền nuôi heo! 🐖</div>
       <div>
-        <span class="picker-label">📖 Chọn lớp</span>
-        <div class="picker-group">
-          <button class="${gcls1}" onclick="state.grade=1;render()">🌟 Lớp 1</button>
-          <button class="${gcls2}" onclick="state.grade=2;render()">🌟 Lớp 2</button>
-        </div>
-      </div>
-      <div>
         <span class="picker-label">📖 Chọn môn</span>
-        <div class="picker-group">
-          <button class="${scls1}" onclick="state.subject='toan';render()">➕ Toán</button>
-          <button class="${scls2}" onclick="state.subject='tienganh';render()">🔤 Tiếng Anh</button>
-        </div>
+        <div class="picker-group">${pickers}</div>
       </div>
       <button class="btn-start" onclick="startGame()">▶ CHƠI NGAY</button>
     </div>`;
@@ -269,7 +267,7 @@ function render(){
       <div class="game-top">
         <div class="game-logo">
           <div class="game-logo-icon">💰</div>
-          <div class="game-logo-text">AI LÀ TRIỆU PHÚ<br><span>${label} · Lớp ${g}</span></div>
+          <div class="game-logo-text">AI LÀ TRIỆU PHÚ<br><span>${label}</span></div>
         </div>
         <div class="game-money">
           <span class="game-money-icon">${state.money>0?'💰':'🪙'}</span>
