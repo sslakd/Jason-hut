@@ -402,8 +402,7 @@ function render(){
       '<div class="welcome-icon">🏆</div>' +
       '<div class="welcome-title">✨ AI LÀ <span>Triệu Phú</span> ✨</div>' +
       '<div class="welcome-sub">🐷 Kiếm tiền nuôi heo! 🐖</div>' +
-      '<div><span class="picker-label">📖 Chọn môn</' +
-      '</div>' +
+      '<div><span class="picker-label">📖 Chọn môn</div>' +
       '<div class="picker-group">' + pickers + '</div>' +
       '</div>' +
       '<button class="btn-start" onclick="startGame()">▶ CHƠI NGAY</button>' +
@@ -422,7 +421,7 @@ function render(){
       ans+='<button class="'+c+'" '+oc+'><span class="lbl">'+LABELS[i]+'</span> '+q.a[i]+'</button>';
     }
     let em=EMOJI_Q[cur%EMOJI_Q.length];
-    app.innerHTML = soundHTML + '<div class="game-wrap"><div class="game">'
+    app.innerHTML = soundHTML + '<div class="game-wrap"><div class="game">' +
       '<div class="game-top">' +
         '<div class="game-logo" onclick="goHome()" style="cursor:pointer">' +
           '<div class="game-logo-icon">💰</div>' +
