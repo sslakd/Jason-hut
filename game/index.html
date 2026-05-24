@@ -359,7 +359,7 @@ function render(){
   let app=document.getElementById('app');
   let s=state.subject,cur=state.cur;
 
-  var soundHTML = '<button class="sound-toggle" id="soundToggleBtn" onclick="toggleSound()">'+(SOUND_ENABLED?'🔊':'🔇')+'</button>';
+  var soundHTML = soundBtnHTML();
 
   if(!BANK){
     app.innerHTML = soundHTML + '<div class="loading"><div class="spinner"></div><div class="loading-text">🌟 Đang chuẩn bị ngân hàng câu hỏi...</div><div class="loading-sub">Hơn 1000 câu Toán & Tiếng Anh</div></div>';
@@ -386,7 +386,7 @@ function render(){
       '<div class="welcome-icon">🏆</div>' +
       '<div class="welcome-title">✨ AI LÀ <span>Triệu Phú</span> ✨</div>' +
       '<div class="welcome-sub">🐷 Kiếm tiền nuôi heo! 🐖</div>' +
-      '<div><span class="picker-label">📖 Chọn môn</
+      '<div><span class="picker-label">📖 Chọn môn</' +
       '</div>' +
       '<div class="picker-group">' + pickers + '</div>' +
       '</div>' +
@@ -450,10 +450,12 @@ function render(){
 // Safe-level shield icons
 const SHIELD=['','','','','🛡️','','','','','🛡️','','','','','','🛡️'];
 
+function soundBtnHTML(){return '<button class="sound-toggle" id="soundToggleBtn" onclick="toggleSound()">'+(SOUND_ENABLED?'🔊':'🔇')+'</button>';}
+
 fetch('questions.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
   .then(data=>{BANK=data;render();if(SOUND_ENABLED)SFX.intro();})
   .catch(e=>{
-    document.getElementById('app').innerHTML=soundHTML+'<div class="error">'+
+    document.getElementById('app').innerHTML=soundBtnHTML()+'<div class="error">'+
       '<div class="error-icon">😵</div>'+
       '<div class="error-title">Oops! Có lỗi rồi</div>'+
       '<div class="error-msg">'+e.message+'</div>'+
