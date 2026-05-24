@@ -99,6 +99,10 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
 .error-msg{color:rgba(255,255,255,.5);font-size:.9rem;margin-bottom:20px}
 .btn-retry{background:linear-gradient(135deg,#ffd700,#ff8f00);color:#1a1a2e;border:none;border-radius:50px;padding:12px 36px;font-size:1.1rem;font-weight:800;cursor:pointer;font-family:inherit;box-shadow:0 4px 20px rgba(255,215,0,.25)}
 
+/* ===== SOUND TOGGLE ===== */
+.sound-toggle{position:fixed;top:14px;right:14px;z-index:999;width:40px;height:40px;border-radius:50%;border:2px solid rgba(255,255,255,.25);background:rgba(0,0,0,.25);backdrop-filter:blur(8px);color:#fff;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;font-family:inherit}
+.sound-toggle:active{transform:scale(.9);background:rgba(0,0,0,.4)}
+
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#2e7d32,#1b5e20);color:#fff;padding:12px 28px;border-radius:50px;font-size:.9rem;font-weight:700;display:none;z-index:1000;box-shadow:0 6px 30px rgba(0,0,0,.3);animation:toastIn .35s ease;backdrop-filter:blur(10px)}
 @keyframes toastIn{from{opacity:0;transform:translateX(-50%) translateY(16px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 
@@ -122,15 +126,124 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
   .result-money{font-size:2rem}
   .result-btns{gap:8px}
   .result-btns button{padding:10px 22px;font-size:.9rem}
+  .sound-toggle{top:8px;right:8px;width:34px;height:34px;font-size:1rem}
 }
 </style>
 </head>
 <body>
 <div id="app"></div>
-<div class="v">v1.7.0 — Ai Là Triệu Phú Game © 2026</div>
+<div class="v">v1.8.0 — Ai Là Triệu Phú Game © 2026</div>
 <div class="toast" id="toast"></div>
 
 <script>
+// ===== RETRO SOUND ENGINE (Web Audio API — no external files needed) =====
+const SFX = (() => {
+  let ctx = null;
+  function getCtx() {
+    if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
+    if (ctx.state === 'suspended') ctx.resume();
+    return ctx;
+  }
+  function note(freq, dur, vol, type) {
+    vol = vol || 0.15; type = type || 'square';
+    const c = getCtx();
+    const o = c.createOscillator();
+    const g = c.createGain();
+    o.type = type;
+    o.frequency.setValueAtTime(freq, c.currentTime);
+    g.gain.setValueAtTime(vol, c.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, c.currentTime + dur);
+    o.connect(g); g.connect(c.destination);
+    o.start(c.currentTime); o.stop(c.currentTime + dur);
+  }
+  function arp(notes, dur, vol) {
+    notes.forEach(function(f, i) {
+      setTimeout(function() { note(f, dur, vol); }, i * (dur * 1000 * 0.3));
+    });
+  }
+  return {
+    // Intro: triumphant retro fanfare — 4 ascending square notes + kick drum
+    intro: function() {
+      var c = getCtx();
+      [523.25, 659.25, 783.99, 1046.5].forEach(function(f, i) {
+        var g = c.createGain();
+        var o = c.createOscillator();
+        o.type = 'square';
+        o.frequency.setValueAtTime(f, c.currentTime + i * 0.12);
+        g.gain.setValueAtTime(0.13, c.currentTime + i * 0.12);
+        g.gain.exponentialRampToValueAtTime(0.001, c.currentTime + i * 0.12 + 0.25);
+        o.connect(g); g.connect(c.destination);
+        o.start(c.currentTime + i * 0.12);
+        o.stop(c.currentTime + i * 0.12 + 0.3);
+      });
+      setTimeout(function() {
+        var o2 = c.createOscillator();
+        var g2 = c.createGain();
+        o2.type = 'sine'; o2.frequency.setValueAtTime(120, c.currentTime);
+        o2.frequency.exponentialRampToValueAtTime(30, c.currentTime + 0.15);
+        g2.gain.setValueAtTime(0.3, c.currentTime);
+        g2.gain.exponentialRampToValueAtTime(0.001, c.currentTime + 0.2);
+        o2.connect(g2); g2.connect(c.destination);
+        o2.start(c.currentTime); o2.stop(c.currentTime + 0.2);
+      }, 500);
+    },
+    // Generic click: short retro bleep
+    click: function() { note(880, 0.06, 0.12); },
+    // Button press: quick two-tone
+    btnPress: function() {
+      note(660, 0.04, 0.1);
+      setTimeout(function() { note(880, 0.06, 0.1); }, 30);
+    },
+    // Correct answer: ascending chime arpeggio
+    correct: function() { arp([523, 659, 784, 1047], 0.08, 0.1); },
+    // Wrong answer: descending sawtooth buzz
+    wrong: function() {
+      var c = getCtx();
+      [400, 350, 300, 200].forEach(function(f, i) {
+        var o = c.createOscillator();
+        var g = c.createGain();
+        o.type = 'sawtooth';
+        o.frequency.setValueAtTime(f, c.currentTime + i * 0.1);
+        g.gain.setValueAtTime(0.1, c.currentTime + i * 0.1);
+        g.gain.exponentialRampToValueAtTime(0.001, c.currentTime + i * 0.1 + 0.2);
+        o.connect(g); g.connect(c.destination);
+        o.start(c.currentTime + i * 0.1);
+        o.stop(c.currentTime + i * 0.1 + 0.25);
+      });
+    },
+    // Winning music: full 8-note ascending scale + bass foundation
+    win: function() {
+      var notes = [523, 587, 659, 698, 784, 880, 988, 1047];
+      notes.forEach(function(f, i) {
+        setTimeout(function() { note(f, 0.18, 0.12, 'square'); }, i * 120);
+      });
+      setTimeout(function() { note(131, 0.5, 0.15, 'square'); }, 0);
+      setTimeout(function() { note(165, 0.5, 0.15, 'square'); }, 400);
+      setTimeout(function() { note(196, 0.6, 0.15, 'square'); }, 800);
+    },
+    // Losing music: descending sad triangle-wave notes
+    lose: function() {
+      var c = getCtx();
+      [440, 349, 262, 175].forEach(function(f, i) {
+        var o = c.createOscillator();
+        var g = c.createGain();
+        o.type = 'triangle';
+        o.frequency.setValueAtTime(f, c.currentTime + i * 0.2);
+        g.gain.setValueAtTime(0.12, c.currentTime + i * 0.2);
+        g.gain.exponentialRampToValueAtTime(0.001, c.currentTime + i * 0.2 + 0.4);
+        o.connect(g); g.connect(c.destination);
+        o.start(c.currentTime + i * 0.2);
+        o.stop(c.currentTime + i * 0.2 + 0.5);
+      });
+    },
+    // Money increase ping
+    moneyPing: function() {
+      note(1200, 0.08, 0.08);
+      setTimeout(function() { note(1400, 0.1, 0.07); }, 60);
+    }
+  };
+})();
+
 const PRIZES=[0,200,400,600,1000,5000,7000,8000,9000,10000,15000,20000,25000,30000,40000,50000];
 const SAFE=new Set([5,10,15]);
 const LABELS=['A','B','C','D'];
@@ -139,6 +252,14 @@ const EMOJI_MONEY=['🪙','🪙','🪙','🪙','💰','💰','💰','💎','💎
 const EMOJI_Q=['🧮','📝','❓','💡','🔢','🎯'];
 
 let BANK=null, state={subject:'toan',questions:[],cur:-1,money:0,correct:0,answered:false,lastSubject:''};
+let SOUND_ENABLED = true;
+
+function toggleSound() {
+  SOUND_ENABLED = !SOUND_ENABLED;
+  var btn = document.getElementById('soundToggleBtn');
+  if (btn) btn.textContent = SOUND_ENABLED ? '🔊' : '🔇';
+  if (SOUND_ENABLED) SFX.click();
+}
 
 function shuffle(a){for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 
@@ -164,21 +285,30 @@ function answer(idx){
   let q=state.questions[state.cur];
   render();
   if(idx===q.c){
+    if(SOUND_ENABLED) SFX.correct();
     state.correct++;
     setTimeout(()=>{
       state.cur++;
       state.money=PRIZES[state.cur];
       state.answered=false;
-      if(state.cur>=15){state.cur=15;render();return}
+      if(state.cur>=15){
+        state.cur=15;
+        if(SOUND_ENABLED) SFX.win();
+        render();
+        return;
+      }
+      if(SOUND_ENABLED) SFX.moneyPing();
       render();
     },900);
   } else {
+    if(SOUND_ENABLED) SFX.wrong();
     let g=0;
     SAFE.forEach(l=>{if(state.cur>=l)g=PRIZES[l]});
     setTimeout(()=>{
       state.money=g;
       state.answered=false;
       state.cur=15;
+      if(SOUND_ENABLED) SFX.lose();
       render();
     },1400);
   }
@@ -188,20 +318,23 @@ function startGame(){
   if(!BANK)return;
   let bank=BANK[state.subject];
   if(!bank)return;
-  // Validate pool sizes
   if(!bank['1']||bank['1'].length<5){showToast('⚠️ Không đủ câu hỏi (lớp 1)!');return}
   if(!bank['2']||bank['2'].length<5){showToast('⚠️ Không đủ câu hỏi (lớp 2-3)!');return}
   if(!bank['4']||bank['4'].length<5){showToast('⚠️ Không đủ câu hỏi (lớp 4)!');return}
-  // Pick questions from grade-appropriate pools (each pool deduped independently)
   let qs1=pickUnique(bank['1'],5);
   let qs2=pickUnique(bank['2'],5);
   let qs3=pickUnique(bank['4'],5);
   state.questions=[...qs1,...qs2,...qs3];
   state.cur=0;state.money=0;state.correct=0;state.answered=false;
+  if(SOUND_ENABLED) SFX.btnPress();
   render();
 }
 
-function goHome(){state.cur=-1;render()}
+function goHome(){
+  state.cur=-1;
+  if(SOUND_ENABLED) SFX.btnPress();
+  render();
+}
 
 function takeSS(){
   let c=document.querySelector('.welcome,.game,.result');
@@ -226,8 +359,10 @@ function render(){
   let app=document.getElementById('app');
   let s=state.subject,cur=state.cur;
 
+  var soundHTML = '<button class="sound-toggle" id="soundToggleBtn" onclick="toggleSound()">'+(SOUND_ENABLED?'🔊':'🔇')+'</button>';
+
   if(!BANK){
-    app.innerHTML=`<div class="loading"><div class="spinner"></div><div class="loading-text">🌟 Đang chuẩn bị ngân hàng câu hỏi...</div><div class="loading-sub">Hơn 1000 câu Toán & Tiếng Anh</div></div>`;
+    app.innerHTML = soundHTML + '<div class="loading"><div class="spinner"></div><div class="loading-text">🌟 Đang chuẩn bị ngân hàng câu hỏi...</div><div class="loading-sub">Hơn 1000 câu Toán & Tiếng Anh</div></div>';
     return;
   }
 
@@ -244,19 +379,19 @@ function render(){
   ];
 
   if(cur<0){
-    let pickers=SUBJECTS.map(([k,emoji]) =>
-      `<button class="picker-btn${s===k?' sel':''}" onclick="state.subject='${k}';render()">${emoji}</button>`
-    ).join('');
-    app.innerHTML=`<div class="welcome">
-      <div class="welcome-icon">🏆</div>
-      <div class="welcome-title">✨ AI LÀ <span>Triệu Phú</span> ✨</div>
-      <div class="welcome-sub">🐷 Kiếm tiền nuôi heo! 🐖</div>
-      <div>
-        <span class="picker-label">📖 Chọn môn</span>
-        <div class="picker-group">${pickers}</div>
-      </div>
-      <button class="btn-start" onclick="startGame()">▶ CHƠI NGAY</button>
-    </div>`;
+    let pickers=SUBJECTS.map(function(kv){
+      return '<button class="picker-btn'+(s===kv[0]?' sel':'')+'" onclick="SFX.btnPress();state.subject=\''+kv[0]+'\';render()">'+kv[1]+'</button>';
+    }).join('');
+    app.innerHTML = soundHTML + '<div class="welcome">' +
+      '<div class="welcome-icon">🏆</div>' +
+      '<div class="welcome-title">✨ AI LÀ <span>Triệu Phú</span> ✨</div>' +
+      '<div class="welcome-sub">🐷 Kiếm tiền nuôi heo! 🐖</div>' +
+      '<div><span class="picker-label">📖 Chọn môn</
+      '</div>' +
+      '<div class="picker-group">' + pickers + '</div>' +
+      '</div>' +
+      '<button class="btn-start" onclick="startGame()">▶ CHƠI NGAY</button>' +
+      '</div>';
   } else if(cur<15){
     let q=state.questions[cur];
     let ldr='';
@@ -271,22 +406,22 @@ function render(){
       ans+='<button class="'+c+'" '+oc+'><span class="lbl">'+LABELS[i]+'</span> '+q.a[i]+'</button>';
     }
     let em=EMOJI_Q[cur%EMOJI_Q.length];
-    app.innerHTML=`<div class="game">
-      <div class="game-top">
-        <div class="game-logo" onclick="goHome()" style="cursor:pointer">
-          <div class="game-logo-icon">💰</div>
-          <div class="game-logo-text">AI LÀ TRIỆU PHÚ<br><span>${label}</span></div>
-        </div>
-        <div class="game-money">
-          <span class="game-money-icon">${state.money>0?'💰':'🪙'}</span>
-          <span class="game-money-val">${state.money.toLocaleString()}<span>₫</span></span>
-        </div>
-      </div>
-      <div class="game-qnum">${em} Câu ${cur+1} / 15</div>
-      <div class="game-ladder">${ldr}</div>
-      <div class="game-qbox"><div class="game-qtext">${q.q}</div></div>
-      <div class="game-ansgrid">${ans}</div>
-    </div>`;
+    app.innerHTML = soundHTML + '<div class="game">' +
+      '<div class="game-top">' +
+        '<div class="game-logo" onclick="goHome()" style="cursor:pointer">' +
+          '<div class="game-logo-icon">💰</div>' +
+          '<div class="game-logo-text">AI LÀ TRIỆU PHÚ<br><span>'+label+'</span></div>' +
+        '</div>' +
+        '<div class="game-money">' +
+          '<span class="game-money-icon">'+(state.money>0?'💰':'🪙')+'</span>' +
+          '<span class="game-money-val">'+state.money.toLocaleString()+'<span>₫</span></span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="game-qnum">'+em+' Câu '+(cur+1)+' / 15</div>' +
+      '<div class="game-ladder">'+ldr+'</div>' +
+      '<div class="game-qbox"><div class="game-qtext">'+q.q+'</div></div>' +
+      '<div class="game-ansgrid">'+ans+'</div>' +
+      '</div>';
   } else {
     let win=state.correct>=15;
     let icon=win?'🏆':'😅';
@@ -295,20 +430,20 @@ function render(){
     let sub=win?'🤩 Trả lời đúng cả 15 câu! Siêu giỏi!':'Trả lời đúng <strong>'+state.correct+'</strong>/15 câu.';
     let stats='Đạt tới câu '+Math.min(15,cur)+'/15';
     let extra=win?' 🎊🎉🎊':' 😅 Lần sau cố gắng nhé!';
-    app.innerHTML=`<div class="result">
-      <div class="result-icon">${icon}</div>
-      <div class="${cls}">${title}</div>
-      <div class="result-sub">${sub}${extra}</div>
-      <div class="result-money-box">
-        <div class="result-money">💰 ${state.money.toLocaleString()}<span> đ</span></div>
-      </div>
-      <div class="result-stat">${stats}</div>
-      <div class="result-btns">
-        <button class="btn-replay" onclick="startGame()">🔄 Chơi lại</button>
-        <button class="btn-sshot" onclick="takeSS()">📸 Chụp ảnh</button>
-        <button class="btn-gohome" onclick="goHome()">🏠 Về trang chủ</button>
-      </div>
-    </div>`;
+    app.innerHTML = soundHTML + '<div class="result">' +
+      '<div class="result-icon">'+icon+'</div>' +
+      '<div class="'+cls+'">'+title+'</div>' +
+      '<div class="result-sub">'+sub+extra+'</div>' +
+      '<div class="result-money-box">' +
+        '<div class="result-money">💰 '+state.money.toLocaleString()+'<span> đ</span></div>' +
+      '</div>' +
+      '<div class="result-stat">'+stats+'</div>' +
+      '<div class="result-btns">' +
+        '<button class="btn-replay" onclick="startGame()">🔄 Chơi lại</button>' +
+        '<button class="btn-sshot" onclick="takeSS()">📸 Chụp ảnh</button>' +
+        '<button class="btn-gohome" onclick="goHome()">🏠 Về trang chủ</button>' +
+      '</div>' +
+      '</div>';
   }
 }
 
@@ -316,15 +451,16 @@ function render(){
 const SHIELD=['','','','','🛡️','','','','','🛡️','','','','','','🛡️'];
 
 fetch('questions.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
-  .then(data=>{BANK=data;render()})
+  .then(data=>{BANK=data;render();if(SOUND_ENABLED)SFX.intro();})
   .catch(e=>{
-    document.getElementById('app').innerHTML=`<div class="error">
-      <div class="error-icon">😵</div>
-      <div class="error-title">Oops! Có lỗi rồi</div>
-      <div class="error-msg">${e.message}</div>
-      <button class="btn-retry" onclick="location.reload()">🔄 Thử lại</button>
-    </div>`;
+    document.getElementById('app').innerHTML=soundHTML+'<div class="error">'+
+      '<div class="error-icon">😵</div>'+
+      '<div class="error-title">Oops! Có lỗi rồi</div>'+
+      '<div class="error-msg">'+e.message+'</div>'+
+      '<button class="btn-retry" onclick="location.reload()">🔄 Thử lại</button>'+
+      '</div>';
   });
 </script>
 </body>
 </html>
+
