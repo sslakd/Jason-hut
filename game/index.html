@@ -280,10 +280,9 @@ function pickUnique(pool,n){
 function walkOut(){
   if(state.answered)return;
   state.answered=true;
-  // Money = prize of previous question (câu trước đó)
-  // cur is 0-indexed: cur=0 (Q1) → previous question is none → 0đ
-  // cur=1 (Q2) → already answered Q1 → PRIZES[1]=200
-  state.money = cur > 0 ? PRIZES[cur] : 0;
+  // Money = prize of previous question (state.cur is 0-indexed)
+  // Q1 (cur=0) → 0đ. Q2 (cur=1) → PRIZES[1]=200đ
+  state.money = state.cur > 0 ? PRIZES[state.cur] : 0;
   state.cur = 15;
   state.answered = false;
   if(SOUND_ENABLED) SFX.btnPress();
