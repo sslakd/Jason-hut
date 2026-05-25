@@ -158,8 +158,8 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:#1a1a2e;display
 
 <script>
 // ===== SOUND ENGINE (Retro) =====
-const SFX = (() => {
-  let ctx = null;
+var SFX = (function() {
+  var ctx = null;
   function getCtx() {
     if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
     if (ctx.state === 'suspended') ctx.resume();
@@ -167,9 +167,9 @@ const SFX = (() => {
   }
   function note(f, dur, vol, type) {
     vol = vol || 0.12; type = type || 'square';
-    const c = getCtx();
-    const o = c.createOscillator();
-    const g = c.createGain();
+    var c = getCtx();
+    var o = c.createOscillator();
+    var g = c.createGain();
     o.type = type; o.frequency.setValueAtTime(f, c.currentTime);
     g.gain.setValueAtTime(vol, c.currentTime);
     g.gain.exponentialRampToValueAtTime(0.001, c.currentTime + dur);
@@ -205,18 +205,13 @@ const SFX = (() => {
 })();
 
 // ===== GAME STATE =====
-let DIFFICULTY = 1;
-let score = 0;
-let lives = 3;
-let currentAnswer = 0;
-let activeBubbles = [];
-let gameRunning = false;
-let bubbleInterval = null;
-let SPEED = 4000; // ms for bubble to cross screen
-let MAX_BUBBLES = 5;
-let questionCount = 0;
-let bestScore = parseInt(localStorage.getItem('mathpop_best') || '0');
-
+var DIFFICULTY = 1;
+var score = 0;
+var lives = 3;
+var currentAnswer = 0;
+var gameRunning = false;
+var sessionId = 0; // incremented each startGame — stale callbacks check this
+var bestScore = parseInt(localStorage.getItem('mathpop_best') || '0');
 document.getElementById('bestScore').textContent = bestScore;
 
 function setDiff(d) {
@@ -229,8 +224,8 @@ function setDiff(d) {
 function genQuestion(diff) {
   var max = diff === 1 ? 10 : (diff === 2 ? 20 : 50);
   var a = Math.floor(Math.random() * max) + 1;
-  var b = Math.floor(Math.random() * a) + 1; // ensure a >= b for subtraction
-  var op = Math.random() < 0.6 ? '+' : '-'; // more addition
+  var b = Math.floor(Math.random() * a) + 1;
+  var op = Math.random() < 0.6 ? '+' : '-';
   var ans, text;
   if (op === '+') {
     ans = a + b;
@@ -249,7 +244,6 @@ function genDistractors(correct, count, max) {
     if (d >= 0 && d <= max * 2) set.add(d);
   }
   var arr = Array.from(set);
-  // shuffle
   for (var i = arr.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
     var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
@@ -257,24 +251,19 @@ function genDistractors(correct, count, max) {
   return arr;
 }
 
-function createBubble(answer, isCorrect, max) {
+// === BUBBLE CLASS (self-contained, no stale listeners) ===
+function Bubble(n, isCorrect, max, sid) {
   var area = document.getElementById('bubbleArea');
-  var areaRect = area.getBoundingClientRect();
-  var size = 56 + Math.floor(Math.random() * 20); // 56-76px
-  var x = Math.random() * (areaRect.width - size - 20) + 10;
-  var y = areaRect.height - size - 10;
-
+  var rect = area.getBoundingClientRect();
+  var size = 56 + Math.floor(Math.random() * 20);
   var el = document.createElement('div');
   el.className = 'bubble';
-  el.textContent = answer;
+  el.textContent = n;
   el.style.width = size + 'px';
   el.style.height = size + 'px';
-  el.style.left = x + 'px';
-  el.style.bottom = '0px';
+  el.style.left = (Math.random() * (rect.width - size - 20) + 10) + 'px';
   el.style.fontSize = (size * 0.38) + 'px';
-
-  // Random retro colors
-  var colors = [
+  el.style.background = [
     'linear-gradient(135deg,#e94560,#ff6b6b)',
     'linear-gradient(135deg,#0f3460,#533483)',
     'linear-gradient(135deg,#27ae60,#2ecc71)',
@@ -282,140 +271,117 @@ function createBubble(answer, isCorrect, max) {
     'linear-gradient(135deg,#9b59b6,#8e44ad)',
     'linear-gradient(135deg,#1abc9c,#16a085)',
     'linear-gradient(135deg,#3498db,#2980b9)'
-  ];
-  el.style.background = colors[Math.floor(Math.random() * colors.length)];
-
+  ][Math.floor(Math.random() * 7)];
+  el.style.animation = 'floatBubble ' + (2 + Math.random() * 2) + 's ease-in-out infinite';
   el.dataset.correct = isCorrect ? '1' : '0';
 
-  var floatDur = 2 + Math.random() * 2;
-  el.style.animation = 'floatBubble ' + floatDur + 's ease-in-out infinite';
-
-  el.addEventListener('click', function() { popBubble(el); });
-  el.addEventListener('touchstart', function(e) { e.preventDefault(); popBubble(el); });
+  var self = this;
+  el.addEventListener('click', function() { self.pop(sid); });
+  el.addEventListener('touchstart', function(e) { e.preventDefault(); self.pop(sid); });
 
   area.appendChild(el);
+  this.el = el;
+  this.sid = sid;
+  this.isCorrect = isCorrect;
 
-  // Move up
-  var riseTime = SPEED + Math.random() * 1000;
-  var startTime = Date.now();
+  // Animate rising
+  var riseMs = 4000 + Math.random() * 1000;
+  var start = Date.now();
+  var height = rect.height;
 
-  function animate() {
-    var elapsed = Date.now() - startTime;
-    var progress = Math.min(elapsed / riseTime, 1);
-    var moveY = areaRect.height - size - 10 - (areaRect.height - 10) * progress;
-    el.style.bottom = moveY + 'px';
-
-    if (progress < 1 && gameRunning && el.parentNode) {
-      requestAnimationFrame(animate);
+  function doFrame() {
+    if (!el.parentNode || self.sid !== sessionId) { el.remove(); return; }
+    var progress = Math.min((Date.now() - start) / riseMs, 1);
+    el.style.bottom = (height - size - 10 - (height - 10) * progress) + 'px';
+    if (progress < 1 && gameRunning) {
+      requestAnimationFrame(doFrame);
     } else if (progress >= 1 && el.parentNode) {
-      // Bubble escaped — lose life if it was the correct one
-      if (isCorrect) {
-        loseLife();
-      }
+      if (isCorrect) loseLife(sid);
       el.remove();
     }
   }
-  requestAnimationFrame(animate);
-
-  return el;
+  requestAnimationFrame(doFrame);
 }
 
-function popBubble(el) {
-  if (!el.parentNode || !gameRunning) return;
-  var isCorrect = el.dataset.correct === '1';
+Bubble.prototype.pop = function(sid) {
+  var el = this.el;
+  if (!el || !el.parentNode) return;
+  if (sid !== sessionId) { el.remove(); return; }
+  var correct = el.dataset.correct === '1';
+  if (!gameRunning) return;
 
-  if (isCorrect) {
+  if (correct) {
     SFX.pop();
     el.className = 'bubble correct';
     score += DIFFICULTY * 10;
     document.getElementById('score').textContent = score;
-    setTimeout(function() { if (el.parentNode) el.remove(); }, 350);
-    nextQuestion();
+    var self = this;
+    setTimeout(function() { if (self.sid === sessionId && el.parentNode) el.remove(); }, 350);
+    nextQuestion(sid);
   } else {
     SFX.wrong();
     el.className = 'bubble wrong';
+    var self = this;
     setTimeout(function() {
-      if (el.parentNode) {
-        el.className = 'bubble wrong-fade';
-        setTimeout(function() { if (el.parentNode) el.remove(); }, 300);
-      }
+      if (self.sid !== sessionId || !el.parentNode) return;
+      el.className = 'bubble wrong-fade';
+      setTimeout(function() { if (self.sid === sessionId && el.parentNode) el.remove(); }, 300);
     }, 400);
-    loseLife();
+    loseLife(sid);
   }
-}
+};
 
-function loseLife() {
+function loseLife(sid) {
+  if (sid !== sessionId) return;
   lives--;
-  updateLives();
-  if (lives <= 0) {
-    endGame();
-  }
-}
-
-function updateLives() {
   var ls = document.querySelectorAll('#livesDisplay span');
-  ls.forEach(function(s, i) {
-    s.classList.toggle('active', i < lives);
-  });
+  ls.forEach(function(s, i) { s.classList.toggle('active', i < lives); });
+  if (lives <= 0) endGame(sid);
 }
 
-function nextQuestion() {
-  questionCount++;
-  if (!gameRunning) return;
-  spawnRound();
+function nextQuestion(sid) {
+  if (!gameRunning || sid !== sessionId) return;
+  spawnRound(sid);
 }
 
-function spawnRound() {
+function spawnRound(sid) {
   var q = genQuestion(DIFFICULTY);
   currentAnswer = q.answer;
   document.getElementById('questionDisplay').textContent = q.text;
-
-  var nums = genDistractors(q.answer, MAX_BUBBLES - 1, q.max);
-
-  // Remove old bubbles that aren't being animated
-  document.querySelectorAll('.bubble').forEach(function(b) { b.remove(); });
-
+  var nums = genDistractors(q.answer, 4, q.max);
+  document.getElementById('bubbleArea').innerHTML = '';
   nums.forEach(function(n, i) {
     setTimeout(function() {
-      if (gameRunning) createBubble(n, n === q.answer, q.max);
+      if (gameRunning && sid === sessionId) new Bubble(n, n === q.answer, q.max, sid);
     }, i * 200);
   });
 }
 
 function startGame() {
   SFX.intro();
+  sessionId++; // invalidate all old bubbles & callbacks
   score = 0;
   lives = 3;
-  questionCount = 0;
   currentAnswer = 0;
   gameRunning = true;
   document.getElementById('score').textContent = '0';
+  document.getElementById('bubbleArea').innerHTML = '';
   document.getElementById('gameover').classList.remove('active');
   document.getElementById('welcome').style.display = 'none';
   document.getElementById('gameWrap').classList.add('active');
-  updateLives();
-  document.querySelectorAll('.bubble').forEach(function(b) { b.remove(); });
-
-  if (bubbleInterval) { clearInterval(bubbleInterval); bubbleInterval = null; }
-
-  setTimeout(function() {
-    if (gameRunning) spawnRound();
-  }, 500);
+  var ls = document.querySelectorAll('#livesDisplay span');
+  ls.forEach(function(s, i) { s.classList.toggle('active', i < lives); });
+  var sid = sessionId;
+  setTimeout(function() { if (gameRunning && sid === sessionId) spawnRound(sid); }, 500);
 }
 
-function endGame() {
+function endGame(sid) {
   gameRunning = false;
-  if (bubbleInterval) { clearInterval(bubbleInterval); bubbleInterval = null; }
-  // Remove any remaining bubbles
-  document.querySelectorAll('.bubble').forEach(function(b) { b.remove(); });
+  if (sid !== sessionId) return;
+  document.getElementById('bubbleArea').innerHTML = '';
 
-  // Save best score
   var isNewBest = score > bestScore;
-  if (isNewBest) {
-    bestScore = score;
-    localStorage.setItem('mathpop_best', String(bestScore));
-  }
-
+  if (isNewBest) { bestScore = score; localStorage.setItem('mathpop_best', String(bestScore)); }
   document.getElementById('finalScore').textContent = score;
   document.getElementById('bestScore').textContent = bestScore;
 
@@ -435,26 +401,23 @@ function endGame() {
     document.getElementById('gameoverTitle').className = 'gameover-title';
     SFX.lose();
   }
-
   document.getElementById('gameover').classList.add('active');
 }
 
 function goHome() {
+  sessionId++;
   gameRunning = false;
-  if (bubbleInterval) { clearInterval(bubbleInterval); bubbleInterval = null; }
-  document.querySelectorAll('.bubble').forEach(function(b) { b.remove(); });
+  document.getElementById('bubbleArea').innerHTML = '';
   document.getElementById('gameover').classList.remove('active');
   document.getElementById('gameWrap').classList.remove('active');
   document.getElementById('welcome').style.display = 'flex';
 }
 
-// Keyboard support
+// Keyboard
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Enter' || e.key === ' ') {
-    var startBtn = document.querySelector('.btn-start');
-    if (startBtn && startBtn.offsetParent !== null) {
-      startGame();
-    }
+    var btn = document.querySelector('.btn-start');
+    if (btn && btn.offsetParent !== null) startGame();
   }
 });
 </script>
