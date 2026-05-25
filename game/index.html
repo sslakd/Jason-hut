@@ -53,7 +53,8 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
 .game-money-val{color:#fff;font-size:1.2rem;font-weight:900;font-family:'Courier New',monospace}
 .game-money-val span{color:#82e0aa;font-size:.75rem;font-weight:500}
 .game-qnum{color:rgba(255,255,255,.45);font-size:.75rem;text-align:center;margin-bottom:4px;font-weight:600}
-.game-ladder{display:flex;justify-content:center;gap:4px;margin-bottom:12px;flex-wrap:wrap}
+.game-ladder{display:flex;justify-content:center;gap:4px;margin-bottom:12px;flex-wrap:wrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.game-ladder::-webkit-scrollbar{display:none}
 .game-step{padding:3px 8px;border-radius:20px;font-size:.65rem;font-weight:800;background:rgba(255,255,255,.06);color:rgba(255,255,255,.35);transition:all .3s;font-family:'Courier New',monospace;white-space:nowrap}
 .game-step.safe{background:rgba(255,215,0,.08);border:1.5px solid rgba(255,215,0,.25);color:rgba(255,215,0,.5);font-weight:700}
 .game-step.active{background:linear-gradient(135deg,#ffd700,#ff8f00);color:#4a148c;box-shadow:0 2px 12px rgba(255,215,0,.35);transform:scale(1.08);font-weight:900}
@@ -113,26 +114,63 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
 .v{text-align:center;color:rgba(255,255,255,.2);font-size:.7rem;padding:10px 0 2px;font-weight:500}
 
 @media(max-width:600px){
-  body{padding:8px}
-  .welcome,.game,.result,.loading,.error{border-radius:24px;padding:16px}
-  .welcome-title{font-size:1.6rem}
-  .welcome-icon{font-size:3.8rem}
-  .picker-btn{padding:10px 20px;font-size:1rem}
-  .btn-start{padding:14px 36px;font-size:1.2rem}
-  .game-logo-text{font-size:.9rem}
-  .game-money-val{font-size:1rem}
-  .game-ladder{gap:3px}
-  .game-step{font-size:.6rem;padding:2px 6px}
-  .game-qtext{font-size:1.05rem}
-  .game-ansgrid{gap:6px}
-  .game-ansbtn{padding:12px 10px;font-size:.9rem}
-  .result-title{font-size:1.5rem}
-  .result-money{font-size:2rem}
+  body{padding:6px}
+  .welcome,.game,.result,.loading,.error{border-radius:20px;padding:14px}
+  .welcome-title{font-size:1.4rem}
+  .welcome-icon{font-size:3.2rem}
+  .welcome-sub{font-size:.95rem;margin-bottom:12px}
+  .picker-btn{padding:8px 16px;font-size:.9rem}
+  .picker-group{gap:8px;margin-bottom:10px}
+  .btn-start{padding:12px 28px;font-size:1.05rem}
+  .game-logo-icon{width:32px;height:32px;font-size:18px;border-radius:10px}
+  .game-logo-text{font-size:.8rem}
+  .game-money-val{font-size:.9rem}
+  .game-ladder{gap:2px}
+  .game-step{font-size:.5rem;padding:2px 4px}
+  .game-qtext{font-size:.95rem}
+  .game-qbox{padding:14px 14px;min-height:56px;margin-bottom:10px}
+  .game-ansgrid{gap:5px}
+  .game-ansbtn{padding:10px 8px;font-size:.82rem;border-radius:12px;gap:6px}
+  .game-ansbtn .lbl{width:26px;height:26px;font-size:.75rem}
+  .result-title{font-size:1.3rem}
+  .result-money{font-size:1.6rem}
   .result-btns{gap:8px}
-  .result-btns button{padding:10px 22px;font-size:.9rem}
+  .result-btns button{padding:8px 18px;font-size:.82rem}
   .game-wrap{gap:8px}
-  .game-stopbtn{max-width:300px;padding:8px 24px;font-size:.8rem}
-  .sound-toggle{top:8px;right:8px;width:34px;height:34px;font-size:1rem}
+  .game-stopbtn{max-width:none;width:100%;padding:8px 20px;font-size:.78rem}
+  .sound-toggle{top:6px;right:6px;width:30px;height:30px;font-size:.9rem}
+}
+
+/* Very small phones (<=400px) */
+@media(max-width:400px){
+  body{padding:4px}
+  .welcome,.game,.result,.loading,.error{border-radius:16px;padding:10px}
+  .welcome-title{font-size:1.15rem}
+  .welcome-icon{font-size:2.5rem}
+  .welcome-sub{font-size:.8rem;margin-bottom:8px}
+  .picker-btn{padding:6px 12px;font-size:.78rem;border-radius:40px}
+  .picker-group{gap:5px;margin-bottom:8px}
+  .btn-start{padding:10px 22px;font-size:.9rem}
+  .game-logo-icon{width:26px;height:26px;font-size:15px;border-radius:8px}
+  .game-logo-text{font-size:.7rem}
+  .game-money{padding:4px 10px 4px 6px;gap:3px}
+  .game-money-val{font-size:.78rem}
+  .game-money-icon{font-size:1rem}
+  .game-ladder{gap:1px}
+  .game-step{font-size:.42rem;padding:1px 3px;border-radius:14px}
+  .game-qtext{font-size:.82rem}
+  .game-qbox{padding:10px 10px;min-height:44px;margin-bottom:8px;border-radius:14px}
+  .game-ansgrid{gap:4px;grid-template-columns:1fr 1fr}
+  .game-ansbtn{padding:8px 6px;font-size:.73rem;border-radius:10px;gap:4px}
+  .game-ansbtn .lbl{width:22px;height:22px;font-size:.65rem}
+  .game-qnum{font-size:.6rem}
+  .result-title{font-size:1.1rem}
+  .result-money{font-size:1.3rem}
+  .result-sub{font-size:.82rem}
+  .result-btns button{padding:7px 14px;font-size:.73rem}
+  .game-wrap{gap:6px}
+  .game-stopbtn{padding:6px 14px;font-size:.7rem}
+  .sound-toggle{top:4px;right:4px;width:26px;height:26px;font-size:.75rem}
 }
 </style>
 </head>
