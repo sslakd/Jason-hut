@@ -114,6 +114,8 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
 @keyframes toastIn{from{opacity:0;transform:translateX(-50%) translateY(16px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 
 .v{text-align:center;color:rgba(255,255,255,.2);font-size:.7rem;padding:10px 0 2px;font-weight:500}
+.back-link{display:block;width:fit-content;margin:6px auto 10px;padding:10px 28px;border-radius:50px;border:2px solid rgba(255,255,255,.12);background:rgba(255,255,255,.08);color:rgba(255,255,255,.55);font-size:.85rem;font-weight:700;text-decoration:none;text-align:center;transition:all .2s;font-family:inherit;backdrop-filter:blur(6px)}
+.back-link:hover,.back-link:active{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.25);transform:scale(1.02)}
 
 /* Tablet & below — full-width + full-height game */
 @media(max-width:768px){
@@ -160,6 +162,7 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
   
   /* Sound toggle */
   .sound-toggle{top:8px;right:8px;width:34px;height:34px;font-size:1rem}
+  .back-link{padding:10px 26px;font-size:.85rem}
   
   /* Result page on mobile */
   .result-title{font-size:1.4rem}
@@ -193,6 +196,7 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
   .result-money{font-size:1.4rem}
   .result-btns button{padding:8px 18px;font-size:.8rem}
   .sound-toggle{top:5px;right:5px;width:30px;height:30px;font-size:.85rem}
+  .back-link{padding:9px 24px;font-size:.8rem}
 }
 
 /* Tiny phones (<=360px) */
@@ -217,14 +221,15 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
   .result-money{font-size:1.1rem}
   .result-btns button{padding:6px 14px;font-size:.72rem}
   .sound-toggle{width:26px;height:26px;font-size:.75rem}
+  .back-link{padding:8px 22px;font-size:.72rem}
 }
 </style>
 </head>
 <body>
 <div id="app"></div>
-<div style="text-align:center;margin-top:auto;padding:8px 0 2px"><a href="../" style="color:rgba(255,255,255,.35);font-size:.8rem;font-weight:700;text-decoration:none;transition:color .2s" onmouseover="this.style.color='rgba(255,255,255,.7)'" onmouseout="this.style.color='rgba(255,255,255,.35)'">← Về danh sách game</a></div>
 <div class="v">v1.11.5 — Ai Là Triệu Phú Game © 2026</div>
 <div class="toast" id="toast"></div>
+<a class="back-link" href="../">← Danh sách game</a>
 
 <script>
 // ===== RETRO SOUND ENGINE (Web Audio API — no external files needed) =====
