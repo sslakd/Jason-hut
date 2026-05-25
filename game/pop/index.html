@@ -7,10 +7,12 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;overflow:hidden}
-body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:#1a1a2e;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100dvh;user-select:none;-webkit-user-select:none}
+body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:#1a1a2e;min-height:100dvh;min-height:-webkit-fill-available;user-select:none;-webkit-user-select:none;display:flex;align-items:center;justify-content:center;padding:0}
+html,body{height:100%}
+#app{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
 
 /* ===== WELCOME SCREEN ===== */
-.welcome{background:linear-gradient(135deg,#16213e,#0f3460,#e94560);border-radius:32px;padding:32px 28px 40px;text-align:center;max-width:480px;width:90%;box-shadow:0 12px 50px rgba(233,69,96,.3);position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center}
+.welcome{background:linear-gradient(135deg,#16213e,#0f3460,#e94560);text-align:center;padding:32px 24px 36px;width:100%;max-width:100%;height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:none;border-radius:0;position:relative;overflow:hidden}
 .welcome::before{content:'';position:absolute;top:-40%;left:-40%;width:180%;height:180%;background:radial-gradient(circle at 50% 40%,rgba(255,215,0,.08),transparent 50%);pointer-events:none}
 .welcome-icon{font-size:4.5rem;animation:bounce 2s ease-in-out infinite;margin-bottom:4px}
 .welcome-title{color:#fff;font-size:2rem;font-weight:900;text-shadow:0 3px 12px rgba(0,0,0,.2);margin-bottom:2px}
@@ -27,7 +29,7 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:#1a1a2e;display
 /* ===== GAME SCREEN ===== */
 .game-wrap{position:fixed;top:0;left:0;width:100%;height:100%;display:none;flex-direction:column;background:linear-gradient(180deg,#0f3460,#1a1a2e,#16213e);overflow:hidden}
 .game-wrap.active{display:flex}
-.game-hud{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;z-index:10;flex-shrink:0}
+.game-hud{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;z-index:10;flex-shrink:0;padding-top:calc(12px + env(safe-area-inset-top))}
 .game-hud-left{display:flex;align-items:center;gap:8px}
 .game-hud-score{color:#ffd700;font-size:1.2rem;font-weight:900;font-family:'Courier New',monospace}
 .game-hud-score span{color:rgba(255,215,0,.5);font-size:.8rem}
@@ -86,29 +88,36 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:#1a1a2e;display
   .welcome-title{font-size:1.5rem}
   .diff-btn{padding:8px 18px;font-size:.9rem}
   .btn-start{padding:12px 36px;font-size:1.1rem}
-  .game-hud{padding:8px 10px}
-  .game-hud-score{font-size:1rem}
-  .game-hud-question{font-size:.95rem;padding:5px 14px}
-  .gameover-box{padding:28px 24px;border-radius:24px}
-  .gameover-icon{font-size:3rem}
-  .gameover-title{font-size:1.5rem}
-  .gameover-score{font-size:2rem}
-  .gameover-btns button{padding:10px 24px;font-size:.9rem}
+  .game-hud{padding:10px 14px;padding-top:calc(10px + env(safe-area-inset-top))}
+  .game-hud-score{font-size:1.1rem}
+  .game-hud-question{font-size:1rem;padding:6px 16px}
+  .gameover-box{border-radius:0;padding:32px 24px;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .gameover-icon{font-size:3.5rem}
+  .gameover-title{font-size:1.6rem}
+  .gameover-score{font-size:2.2rem}
+  .gameover-btns{flex-direction:column;width:100%;max-width:300px;gap:8px}
+  .gameover-btns button{padding:12px 24px;font-size:1rem;width:100%}
+  .btn-home{border-color:rgba(255,255,255,.15)!important}
+  .welcome{padding:24px 20px}
+  .welcome-icon{font-size:3.8rem}
+  .welcome-title{font-size:1.6rem}
+  .diff-btn{padding:9px 20px;font-size:.95rem}
+  .btn-start{padding:14px 40px;font-size:1.15rem}
 }
 @media(max-width:400px){
-  .back-link{bottom:18px;padding:8px 20px;font-size:.72rem}
-  .welcome{padding:18px 14px 24px}
+  .back-link{bottom:16px;padding:8px 20px;font-size:.72rem}
+  .welcome{padding:16px 14px}
   .welcome-icon{font-size:2.8rem}
-  .welcome-title{font-size:1.2rem}
+  .welcome-title{font-size:1.3rem}
   .welcome-sub{font-size:.85rem}
-  .diff-btn{padding:6px 14px;font-size:.8rem}
+  .diff-btn{padding:7px 16px;font-size:.82rem}
   .diff-group{gap:6px}
-  .btn-start{padding:10px 28px;font-size:.95rem}
-  .game-hud{padding:6px 8px}
-  .game-hud-score{font-size:.85rem}
-  .game-hud-question{font-size:.82rem;padding:4px 10px;border-radius:12px}
-  .gameover-box{padding:20px 16px}
-  .gameover-score{font-size:1.6rem}
+  .btn-start{padding:11px 30px;font-size:1rem}
+  .game-hud{padding:6px 10px;padding-top:calc(6px + env(safe-area-inset-top))}
+  .game-hud-score{font-size:.9rem}
+  .game-hud-question{font-size:.85rem;padding:5px 12px;border-radius:12px}
+  .gameover-box{padding:20px 14px}
+  .gameover-score{font-size:1.8rem}
   .v{font-size:.5rem}
 }
 </style>
