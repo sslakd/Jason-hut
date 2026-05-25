@@ -238,12 +238,15 @@ function genQuestion(diff) {
 }
 
 function genDistractors(correct, count, max) {
-  var set = new Set([correct]);
-  while (set.size < count + 1) {
-    var d = correct + Math.floor(Math.random() * 7) - 3;
-    if (d >= 0 && d <= max * 2) set.add(d);
+  var set = {};
+  set[correct] = true;
+  var tries = 0;
+  while (Object.keys(set).length < count + 1 && tries < 50) {
+    var d = correct + Math.floor(Math.random() * 9) - 4;
+    if (d >= 0 && d <= max * 2) set[d] = true;
+    tries++;
   }
-  var arr = Array.from(set);
+  var arr = Object.keys(set).map(Number);
   for (var i = arr.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
     var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
@@ -290,14 +293,15 @@ function Bubble(n, isCorrect, max, sid) {
   var height = rect.height;
 
   function doFrame() {
-    if (!el.parentNode || self.sid !== sessionId) { el.remove(); return; }
+    if (self.sid !== sessionId || !gameRunning) { if (el.parentNode) el.remove(); return; }
+    if (!el.parentNode) return;
     var progress = Math.min((Date.now() - start) / riseMs, 1);
     el.style.bottom = (height - size - 10 - (height - 10) * progress) + 'px';
-    if (progress < 1 && gameRunning) {
+    if (progress < 1) {
       requestAnimationFrame(doFrame);
-    } else if (progress >= 1 && el.parentNode) {
+    } else {
       if (isCorrect) loseLife(sid);
-      el.remove();
+      if (el.parentNode) el.remove();
     }
   }
   requestAnimationFrame(doFrame);
@@ -316,8 +320,10 @@ Bubble.prototype.pop = function(sid) {
     score += DIFFICULTY * 10;
     document.getElementById('score').textContent = score;
     var self = this;
-    setTimeout(function() { if (self.sid === sessionId && el.parentNode) el.remove(); }, 350);
-    nextQuestion(sid);
+    setTimeout(function() {
+      if (el.parentNode) el.remove();
+      if (self.sid === sessionId) nextQuestion(sid);
+    }, 400);
   } else {
     SFX.wrong();
     el.className = 'bubble wrong';
@@ -377,8 +383,8 @@ function startGame() {
 
 function endGame(sid) {
   gameRunning = false;
-  if (sid !== sessionId) return;
   document.getElementById('bubbleArea').innerHTML = '';
+  if (sid !== sessionId) return;
 
   var isNewBest = score > bestScore;
   if (isNewBest) { bestScore = score; localStorage.setItem('mathpop_best', String(bestScore)); }
