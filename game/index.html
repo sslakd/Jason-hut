@@ -55,7 +55,7 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
 .game-money-val{color:#fff;font-size:1.2rem;font-weight:900;font-family:'Courier New',monospace}
 .game-money-val span{color:#82e0aa;font-size:.75rem;font-weight:500}
 .game-qnum{color:rgba(255,255,255,.45);font-size:.75rem;text-align:center;margin-bottom:4px;font-weight:600}
-.game-ladder{display:flex;justify-content:center;gap:4px;margin-bottom:12px;flex-wrap:wrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.game-ladder{display:flex;justify-content:center;gap:4px;margin-bottom:12px;flex-wrap:wrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px}
 .game-ladder::-webkit-scrollbar{display:none}
 .game-step{padding:3px 8px;border-radius:20px;font-size:.65rem;font-weight:800;background:rgba(255,255,255,.06);color:rgba(255,255,255,.35);transition:all .3s;font-family:'Courier New',monospace;white-space:nowrap}
 .game-step.safe{background:rgba(255,215,0,.08);border:1.5px solid rgba(255,215,0,.25);color:rgba(255,215,0,.5);font-weight:700}
@@ -132,7 +132,7 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
   
   /* Game container fullscreen */
   .game-wrap{display:flex;flex-direction:column;flex:1;min-height:0}
-  .game{border-radius:0;padding:10px 12px 14px;display:flex;flex-direction:column;flex:1;min-height:0;overflow-y:auto}
+  .game{border-radius:0;padding:10px 12px 14px;display:flex;flex-direction:column;flex:1;min-height:0}
   .game-top{margin-bottom:4px;flex-shrink:0}
   .game-logo-icon{width:30px;height:30px;font-size:17px;border-radius:9px}
   .game-logo-text{font-size:.8rem}
@@ -143,7 +143,7 @@ body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:linear-gradient
   .game-qnum{font-size:.7rem;margin-bottom:2px;flex-shrink:0}
   
   /* Ladder: gọn lại — scroll ngang, show all 15 levels */
-  .game-ladder{gap:3px;justify-content:center;flex-wrap:nowrap;overflow-x:auto;padding:2px 0 4px;margin-bottom:6px;flex-shrink:0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .game-ladder{gap:3px;justify-content:center;flex-wrap:wrap;padding:2px 0 4px;margin-bottom:6px;flex-shrink:0}
   .game-step{font-size:.55rem;padding:3px 7px;flex-shrink:0}
   
   /* Question box */
