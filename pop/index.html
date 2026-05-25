@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>Bong Bóng Toán Học</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overflow:hidden}
+body{font-family:'Nunito','Segoe UI',Arial,sans-serif;background:#1a1a2e;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100dvh;user-select:none;-webkit-user-select:none}
+
+/* ===== WELCOME SCREEN ===== */
+.welcome{background:linear-gradient(135deg,#16213e,#0f3460,#e94560);border-radius:32px;padding:32px 28px 40px;text-align:center;max-width:480px;width:90%;box-shadow:0 12px 50px rgba(233,69,96,.3);position:relative;overflow:hidden}
+.welcome::before{content:'';position:absolute;top:-40%;left:-40%;width:180%;height:180%;background:radial-gradient(circle at 50% 40%,rgba(255,215,0,.08),transparent 50%);pointer-events:none}
+.welcome-icon{font-size:4.5rem;animation:bounce 2s ease-in-out infinite;margin-bottom:4px}
+.welcome-title{color:#fff;font-size:2rem;font-weight:900;text-shadow:0 3px 12px rgba(0,0,0,.2);margin-bottom:2px}
+.welcome-title span{background:linear-gradient(90deg,#ffd700,#ff6b6b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.welcome-sub{color:rgba(255,255,255,.7);font-size:1.05rem;margin-bottom:4px;font-weight:600}
+.welcome-desc{color:rgba(255,255,255,.4);font-size:.85rem;margin-bottom:16px}
+.diff-group{display:flex;gap:10px;justify-content:center;margin-bottom:16px}
+.diff-btn{padding:10px 24px;border-radius:50px;border:2.5px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s}
+.diff-btn:hover,.diff-btn:active{background:rgba(255,255,255,.15);color:#fff;transform:scale(1.05)}
+.diff-btn.sel{background:linear-gradient(135deg,#ffd700,#ff8f00);color:#4a148c;border-color:#ffd700;box-shadow:0 4px 20px rgba(255,215,0,.3);transform:scale(1.06)}
+.btn-start{background:linear-gradient(135deg,#e94560,#ff6b6b);color:#fff;border:none;border-radius:50px;padding:14px 48px;font-size:1.3rem;font-weight:900;cursor:pointer;font-family:inherit;transition:all .2s;box-shadow:0 6px 30px rgba(233,69,96,.4);animation:pulse 1.5s ease-in-out infinite}
+.btn-start:active{transform:scale(.95)}
+
+/* ===== GAME SCREEN ===== */
+.game-wrap{position:fixed;top:0;left:0;width:100%;height:100%;display:none;flex-direction:column;background:linear-gradient(180deg,#0f3460,#1a1a2e,#16213e);overflow:hidden}
+.game-wrap.active{display:flex}
+.game-hud{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;z-index:10;flex-shrink:0}
+.game-hud-left{display:flex;align-items:center;gap:8px}
+.game-hud-score{color:#ffd700;font-size:1.2rem;font-weight:900;font-family:'Courier New',monospace}
+.game-hud-score span{color:rgba(255,215,0,.5);font-size:.8rem}
+.game-hud-question{background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.1);border-radius:16px;padding:6px 18px;color:#fff;font-size:1.1rem;font-weight:800;text-align:center;flex-shrink:0}
+.game-hud-lives{display:flex;gap:3px;font-size:1rem}
+.game-hud-lives span{opacity:.35;transition:all .3s}
+.game-hud-lives span.active{opacity:1;animation:pulse .8s ease-in-out infinite}
+
+/* Bubble area */
+.bubble-area{flex:1;position:relative;overflow:hidden}
+.bubble{position:absolute;display:flex;align-items:center;justify-content:center;border-radius:50%;cursor:pointer;transition:transform .1s;font-weight:900;font-family:'Courier New',monospace;text-shadow:0 2px 6px rgba(0,0,0,.3);-webkit-tap-highlight-color:transparent;box-shadow:0 4px 20px rgba(0,0,0,.2),inset 0 -4px 10px rgba(0,0,0,.15),inset 0 4px 10px rgba(255,255,255,.3)}
+.bubble:active{transform:scale(.85)!important}
+.bubble.correct{animation:popBubble .35s ease forwards}
+.bubble.wrong{animation:shakeBubble .4s ease}
+.bubble.wrong-fade{animation:fadeOut .3s ease forwards}
+@keyframes popBubble{0%{transform:scale(1);opacity:1}50%{transform:scale(1.3);opacity:.7}100%{transform:scale(0);opacity:0}}
+@keyframes shakeBubble{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}50%{transform:translateX(8px)}75%{transform:translateX(-5px)}}
+@keyframes fadeOut{to{opacity:0;transform:scale(.5)}}
+@keyframes floatBubble{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* ===== GAME OVER ===== */
+.gameover{position:fixed;top:0;left:0;width:100%;height:100%;display:none;flex-direction:column;align-items:center;justify-content:center;background:rgba(0,0,0,.85);z-index:100;padding:20px;backdrop-filter:blur(8px)}
+.gameover.active{display:flex}
+.gameover-box{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460,#e94560);border-radius:32px;padding:36px 32px;text-align:center;max-width:420px;width:100%;box-shadow:0 12px 50px rgba(233,69,96,.3);position:relative;overflow:hidden}
+.gameover-box::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 50% 60%,rgba(233,69,96,.08),transparent 60%);pointer-events:none}
+.gameover-icon{font-size:4rem;margin-bottom:4px;animation:bounce 1.5s ease-in-out infinite}
+.gameover-title{color:#fff;font-size:2rem;font-weight:900;margin-bottom:2px}
+.gameover-title.high{background:linear-gradient(90deg,#ffd700,#ff6b6b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gameover-score{font-size:2.5rem;font-weight:900;color:#ffd700;font-family:'Courier New',monospace;margin:8px 0 2px}
+.gameover-score span{color:rgba(255,215,0,.5);font-size:1rem}
+.gameover-best{color:rgba(255,255,255,.4);font-size:.85rem;margin-bottom:14px}
+.gameover-best span{color:#ff6b6b;font-weight:700}
+.gameover-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.gameover-btns button{padding:12px 32px;border-radius:50px;border:none;font-size:1rem;font-weight:800;cursor:pointer;font-family:inherit;transition:all .2s}
+.btn-retry{background:linear-gradient(135deg,#ffd700,#ff8f00);color:#4a148c;box-shadow:0 4px 20px rgba(255,215,0,.3)}
+.btn-retry:active{transform:scale(.95)}
+.btn-home{background:rgba(255,255,255,.1);color:#d7bde2;border:2px solid rgba(255,255,255,.1)!important}
+.btn-home:active{transform:scale(.95)}
+
+/* ===== ANIMATIONS ===== */
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes popIn{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* ===== VERSION ===== */
+.v{position:fixed;bottom:4px;left:0;right:0;text-align:center;color:rgba(255,255,255,.15);font-size:.6rem;pointer-events:none;z-index:1}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+  .welcome{border-radius:24px;padding:24px 20px 32px}
+  .welcome-icon{font-size:3.5rem}
+  .welcome-title{font-size:1.5rem}
+  .diff-btn{padding:8px 18px;font-size:.9rem}
+  .btn-start{padding:12px 36px;font-size:1.1rem}
+  .game-hud{padding:8px 10px}
+  .game-hud-score{font-size:1rem}
+  .game-hud-question{font-size:.95rem;padding:5px 14px}
+  .gameover-box{padding:28px 24px;border-radius:24px}
+  .gameover-icon{font-size:3rem}
+  .gameover-title{font-size:1.5rem}
+  .gameover-score{font-size:2rem}
+  .gameover-btns button{padding:10px 24px;font-size:.9rem}
+}
+@media(max-width:400px){
+  .welcome{padding:18px 14px 24px}
+  .welcome-icon{font-size:2.8rem}
+  .welcome-title{font-size:1.2rem}
+  .welcome-sub{font-size:.85rem}
+  .diff-btn{padding:6px 14px;font-size:.8rem}
+  .diff-group{gap:6px}
+  .btn-start{padding:10px 28px;font-size:.95rem}
+  .game-hud{padding:6px 8px}
+  .game-hud-score{font-size:.85rem}
+  .game-hud-question{font-size:.82rem;padding:4px 10px;border-radius:12px}
+  .gameover-box{padding:20px 16px}
+  .gameover-score{font-size:1.6rem}
+  .v{font-size:.5rem}
+}
+</style>
+</head>
+<body>
+
+<div id="app">
+<div class="welcome" id="welcome">
+  <div class="welcome-icon">🫧</div>
+  <div class="welcome-title">BONG BÓNG <span>TOÁN</span></div>
+  <div class="welcome-sub">➕ Bấm bong bóng có đáp án đúng nhé! ➖</div>
+  <div class="welcome-desc">Cộng & Trừ • Cấp 1: số 1-10 • Cấp 2: số 1-20 • Cấp 3: số 1-50</div>
+  <div class="diff-group">
+    <button class="diff-btn sel" data-diff="1" onclick="setDiff(1)">🌟 Cấp 1</button>
+    <button class="diff-btn" data-diff="2" onclick="setDiff(2)">🔥 Cấp 2</button>
+    <button class="diff-btn" data-diff="3" onclick="setDiff(3)">⚡ Cấp 3</button>
+  </div>
+  <button class="btn-start" onclick="startGame()">▶ CHƠI NGAY</button>
+</div>
+
+<div class="game-wrap" id="gameWrap">
+  <div class="game-hud">
+    <div class="game-hud-left">
+      <div class="game-hud-score">💰 <span id="score">0</span></div>
+    </div>
+    <div class="game-hud-question" id="questionDisplay">2 + 3 = ?</div>
+    <div class="game-hud-lives" id="livesDisplay">
+      <span class="active">❤️</span>
+      <span class="active">❤️</span>
+      <span class="active">❤️</span>
+    </div>
+  </div>
+  <div class="bubble-area" id="bubbleArea"></div>
+</div>
+
+<div class="gameover" id="gameover">
+  <div class="gameover-box">
+    <div class="gameover-icon" id="gameoverIcon">🏆</div>
+    <div class="gameover-title" id="gameoverTitle">HẾT GAME!</div>
+    <div class="gameover-score">💰 <span id="finalScore">0</span></div>
+    <div class="gameover-best">🥇 Kỷ lục: <span id="bestScore">0</span></div>
+    <div class="gameover-btns">
+      <button class="btn-retry" onclick="startGame()">🔄 Chơi lại</button>
+      <button class="btn-home" onclick="goHome()">🏠 Về trang chủ</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="v">v1.0.0 — Bong Bóng Toán © 2026</div>
+
+<script>
+// ===== SOUND ENGINE (Retro) =====
+const SFX = (() => {
+  let ctx = null;
+  function getCtx() {
+    if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
+    if (ctx.state === 'suspended') ctx.resume();
+    return ctx;
+  }
+  function note(f, dur, vol, type) {
+    vol = vol || 0.12; type = type || 'square';
+    const c = getCtx();
+    const o = c.createOscillator();
+    const g = c.createGain();
+    o.type = type; o.frequency.setValueAtTime(f, c.currentTime);
+    g.gain.setValueAtTime(vol, c.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, c.currentTime + dur);
+    o.connect(g); g.connect(c.destination);
+    o.start(c.currentTime); o.stop(c.currentTime + dur);
+  }
+  return {
+    intro: function() {
+      var c = getCtx();
+      [523, 659, 784].forEach(function(f, i) {
+        var o = c.createOscillator();
+        var g = c.createGain();
+        o.type = 'square'; o.frequency.setValueAtTime(f, c.currentTime + i * 0.15);
+        g.gain.setValueAtTime(0.1, c.currentTime + i * 0.15);
+        g.gain.exponentialRampToValueAtTime(0.001, c.currentTime + i * 0.15 + 0.25);
+        o.connect(g); g.connect(c.destination);
+        o.start(c.currentTime + i * 0.15); o.stop(c.currentTime + i * 0.15 + 0.3);
+      });
+    },
+    pop: function() { note(988, 0.08, 0.1); setTimeout(function() { note(1319, 0.06, 0.08); }, 40); },
+    wrong: function() { note(200, 0.15, 0.08, 'sawtooth'); },
+    lose: function() {
+      [440, 349, 262].forEach(function(f, i) {
+        setTimeout(function() { note(f, 0.2, 0.08, 'triangle'); }, i * 150);
+      });
+    },
+    win: function() {
+      [523, 659, 784, 1047].forEach(function(f, i) {
+        setTimeout(function() { note(f, 0.12, 0.1); }, i * 100);
+      });
+    }
+  };
+})();
+
+// ===== GAME STATE =====
+let DIFFICULTY = 1;
+let score = 0;
+let lives = 3;
+let currentAnswer = 0;
+let activeBubbles = [];
+let gameRunning = false;
+let bubbleInterval = null;
+let SPEED = 4000; // ms for bubble to cross screen
+let MAX_BUBBLES = 5;
+let questionCount = 0;
+let bestScore = parseInt(localStorage.getItem('mathpop_best') || '0');
+
+document.getElementById('bestScore').textContent = bestScore;
+
+function setDiff(d) {
+  DIFFICULTY = d;
+  document.querySelectorAll('.diff-btn').forEach(function(b) {
+    b.classList.toggle('sel', parseInt(b.dataset.diff) === d);
+  });
+}
+
+function genQuestion(diff) {
+  var max = diff === 1 ? 10 : (diff === 2 ? 20 : 50);
+  var a = Math.floor(Math.random() * max) + 1;
+  var b = Math.floor(Math.random() * a) + 1; // ensure a >= b for subtraction
+  var op = Math.random() < 0.6 ? '+' : '-'; // more addition
+  var ans, text;
+  if (op === '+') {
+    ans = a + b;
+    text = a + ' + ' + b + ' = ?';
+  } else {
+    ans = a - b;
+    text = a + ' - ' + b + ' = ?';
+  }
+  return { text: text, answer: ans, max: max };
+}
+
+function genDistractors(correct, count, max) {
+  var set = new Set([correct]);
+  while (set.size < count + 1) {
+    var d = correct + Math.floor(Math.random() * 7) - 3;
+    if (d >= 0 && d <= max * 2) set.add(d);
+  }
+  var arr = Array.from(set);
+  // shuffle
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+
+function createBubble(answer, isCorrect, max) {
+  var area = document.getElementById('bubbleArea');
+  var areaRect = area.getBoundingClientRect();
+  var size = 56 + Math.floor(Math.random() * 20); // 56-76px
+  var x = Math.random() * (areaRect.width - size - 20) + 10;
+  var y = areaRect.height - size - 10;
+
+  var el = document.createElement('div');
+  el.className = 'bubble';
+  el.textContent = answer;
+  el.style.width = size + 'px';
+  el.style.height = size + 'px';
+  el.style.left = x + 'px';
+  el.style.bottom = '0px';
+  el.style.fontSize = (size * 0.38) + 'px';
+
+  // Random retro colors
+  var colors = [
+    'linear-gradient(135deg,#e94560,#ff6b6b)',
+    'linear-gradient(135deg,#0f3460,#533483)',
+    'linear-gradient(135deg,#27ae60,#2ecc71)',
+    'linear-gradient(135deg,#f39c12,#e67e22)',
+    'linear-gradient(135deg,#9b59b6,#8e44ad)',
+    'linear-gradient(135deg,#1abc9c,#16a085)',
+    'linear-gradient(135deg,#3498db,#2980b9)'
+  ];
+  el.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+  el.dataset.correct = isCorrect ? '1' : '0';
+
+  var floatDur = 2 + Math.random() * 2;
+  el.style.animation = 'floatBubble ' + floatDur + 's ease-in-out infinite';
+
+  el.addEventListener('click', function() { popBubble(el); });
+  el.addEventListener('touchstart', function(e) { e.preventDefault(); popBubble(el); });
+
+  area.appendChild(el);
+
+  // Move up
+  var riseTime = SPEED + Math.random() * 1000;
+  var startTime = Date.now();
+
+  function animate() {
+    var elapsed = Date.now() - startTime;
+    var progress = Math.min(elapsed / riseTime, 1);
+    var moveY = areaRect.height - size - 10 - (areaRect.height - 10) * progress;
+    el.style.bottom = moveY + 'px';
+
+    if (progress < 1 && gameRunning && el.parentNode) {
+      requestAnimationFrame(animate);
+    } else if (progress >= 1 && el.parentNode) {
+      // Bubble escaped — lose life if it was the correct one
+      if (isCorrect) {
+        loseLife();
+      }
+      el.remove();
+    }
+  }
+  requestAnimationFrame(animate);
+
+  return el;
+}
+
+function popBubble(el) {
+  if (!el.parentNode || !gameRunning) return;
+  var isCorrect = el.dataset.correct === '1';
+
+  if (isCorrect) {
+    SFX.pop();
+    el.className = 'bubble correct';
+    score += DIFFICULTY * 10;
+    document.getElementById('score').textContent = score;
+    setTimeout(function() { if (el.parentNode) el.remove(); }, 350);
+    nextQuestion();
+  } else {
+    SFX.wrong();
+    el.className = 'bubble wrong';
+    setTimeout(function() {
+      if (el.parentNode) {
+        el.className = 'bubble wrong-fade';
+        setTimeout(function() { if (el.parentNode) el.remove(); }, 300);
+      }
+    }, 400);
+    loseLife();
+  }
+}
+
+function loseLife() {
+  lives--;
+  updateLives();
+  if (lives <= 0) {
+    endGame();
+  }
+}
+
+function updateLives() {
+  var ls = document.querySelectorAll('#livesDisplay span');
+  ls.forEach(function(s, i) {
+    s.classList.toggle('active', i < lives);
+  });
+}
+
+function nextQuestion() {
+  questionCount++;
+  if (!gameRunning) return;
+  spawnRound();
+}
+
+function spawnRound() {
+  var q = genQuestion(DIFFICULTY);
+  currentAnswer = q.answer;
+  document.getElementById('questionDisplay').textContent = q.text;
+
+  var nums = genDistractors(q.answer, MAX_BUBBLES - 1, q.max);
+
+  // Remove old bubbles that aren't being animated
+  document.querySelectorAll('.bubble').forEach(function(b) { b.remove(); });
+
+  nums.forEach(function(n, i) {
+    setTimeout(function() {
+      if (gameRunning) createBubble(n, n === q.answer, q.max);
+    }, i * 200);
+  });
+}
+
+function startGame() {
+  SFX.intro();
+  score = 0;
+  lives = 3;
+  questionCount = 0;
+  gameRunning = true;
+  document.getElementById('score').textContent = '0';
+  document.getElementById('gameover').classList.remove('active');
+  document.getElementById('gameWrap').classList.add('active');
+  document.getElementById('welcome').style.display = 'none';
+  updateLives();
+  document.querySelectorAll('.bubble').forEach(function(b) { b.remove(); });
+
+  if (bubbleInterval) clearInterval(bubbleInterval);
+
+  setTimeout(function() {
+    if (gameRunning) spawnRound();
+  }, 500);
+}
+
+function endGame() {
+  gameRunning = false;
+  if (bubbleInterval) clearInterval(bubbleInterval);
+
+  // Save best score
+  var isNewBest = score > bestScore;
+  if (isNewBest) {
+    bestScore = score;
+    localStorage.setItem('mathpop_best', String(bestScore));
+  }
+
+  document.getElementById('finalScore').textContent = score;
+  document.getElementById('bestScore').textContent = bestScore;
+
+  if (score >= DIFFICULTY * 100) {
+    document.getElementById('gameoverIcon').textContent = '🏆';
+    document.getElementById('gameoverTitle').textContent = '🎉 SIÊU GIỎI! 🎉';
+    document.getElementById('gameoverTitle').className = 'gameover-title high';
+    SFX.win();
+  } else if (score >= DIFFICULTY * 50) {
+    document.getElementById('gameoverIcon').textContent = '⭐';
+    document.getElementById('gameoverTitle').textContent = 'Giỏi quá!';
+    document.getElementById('gameoverTitle').className = 'gameover-title';
+    SFX.win();
+  } else {
+    document.getElementById('gameoverIcon').textContent = '😅';
+    document.getElementById('gameoverTitle').textContent = 'Cố gắng thêm nhé!';
+    document.getElementById('gameoverTitle').className = 'gameover-title';
+    SFX.lose();
+  }
+
+  document.getElementById('gameover').classList.add('active');
+}
+
+function goHome() {
+  document.getElementById('gameover').classList.remove('active');
+  document.getElementById('gameWrap').classList.remove('active');
+  document.getElementById('welcome').style.display = 'block';
+}
+
+// Keyboard support
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    var startBtn = document.querySelector('.btn-start');
+    if (startBtn && startBtn.offsetParent !== null) {
+      startGame();
+    }
+  }
+});
+</script>
+</body>
+</html>
