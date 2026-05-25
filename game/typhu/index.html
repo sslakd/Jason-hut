@@ -553,7 +553,7 @@ const SHIELD=['','','','','🛡️','','','','','🛡️','','','','','','🛡�
 
 function soundBtnHTML(){return '<button class="sound-toggle" id="soundToggleBtn" onclick="toggleSound()">'+(SOUND_ENABLED?'🔊':'🔇')+'</button>';}
 
-fetch('typhu/questions.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
+fetch('questions.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
   .then(data=>{BANK=data;render();if(SOUND_ENABLED)SFX.intro();})
   .catch(e=>{
     document.getElementById('app').innerHTML=soundBtnHTML()+'<div class="error">'+
