@@ -1,0 +1,21 @@
+{
+  "note": "Replace these files with your own SVG, PNG, JPG, or WebP art. Keep the same filenames so ZomChess picks them up automatically.",
+  "tileSize": "Any square image works best. Recommended: 256x256.",
+  "refresh": "The local dev build reloads these assets automatically about every 1.5 seconds.",
+  "files": [
+    "terrain-dirt.svg",
+    "terrain-water.svg",
+    "terrain-wall.svg",
+    "terrain-fire.svg",
+    "terrain-forest.svg",
+    "terrain-ice.svg",
+    "human.svg",
+    "zombie-normal.svg",
+    "zombie-fast.svg",
+    "zombie-exploding.svg",
+    "zombie-vampire.svg",
+    "zombie-sick.svg",
+    "marker-mine.svg",
+    "marker-grenade.svg"
+  ]
+}
