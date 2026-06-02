@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sneaky Pivot — FPT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  padding: 16px;
+}
+.container { max-width: 1200px; margin: 0 auto; }
+
+/* Header */
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+  margin-bottom: 20px;
+}
+.header h1 {
+  font-size: 22px; font-weight: 800;
+  background: linear-gradient(135deg, #a6e3a1, #89b4fa);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.header .badge {
+  background: #313244; padding: 8px 14px; border-radius: 10px;
+  font-size: 13px; display: flex; align-items: center; gap: 16px;
+}
+.badge span { display: flex; align-items: center; gap: 4px; }
+
+/* Card */
+.card {
+  background: #181825; border-radius: 16px;
+  padding: 20px; margin-bottom: 16px;
+  border: 1px solid #313244;
+}
+.card-title {
+  font-size: 15px; font-weight: 700; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+  color: #bac2de;
+}
+
+/* Grid */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+
+/* Chart */
+.chart-wrapper {
+  position: relative; border-radius: 12px; overflow: hidden;
+  background: #11111b; margin-bottom: 16px;
+}
+
+/* 4 Price Lines Overlay */
+.price-overlay {
+  position: relative; margin-top: 12px; display: flex;
+  flex-wrap: wrap; gap: 8px;
+}
+.price-line {
+  display: flex; align-items: center; gap: 6px;
+  background: #313244; padding: 6px 12px; border-radius: 8px;
+  font-size: 12px; font-weight: 600;
+}
+.price-line input {
+  width: 72px; padding: 4px 8px; border-radius: 6px;
+  border: 1px solid #45475a; background: #1e1e2e;
+  color: #cdd6f4; font-size: 13px; font-weight: 600;
+  font-family: 'Inter', sans-serif; text-align: right;
+}
+.price-line input:focus { outline: none; border-color: #89b4fa; }
+.price-line .color-dot {
+  width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0;
+}
+
+/* Signal Panel */
+.signal-panel { display: flex; flex-direction: column; gap: 12px; }
+.signal-row {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+.signal-label {
+  font-size: 13px; font-weight: 600; color: #a6adc8; min-width: 110px;
+}
+
+/* Checkbox */
+.check-group { display: flex; gap: 8px; flex-wrap: wrap; }
+.check-item {
+  display: flex; align-items: center; gap: 8px;
+  background: #313244; padding: 8px 14px; border-radius: 10px;
+  cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: all 0.2s;
+  user-select: none;
+}
+.check-item input[type="checkbox"] {
+  appearance: none; width: 18px; height: 18px;
+  border: 2px solid #585b70; border-radius: 5px;
+  cursor: pointer; position: relative; transition: all 0.2s;
+  flex-shrink: 0;
+}
+.check-item input[type="checkbox"]:checked {
+  background: #a6e3a1; border-color: #a6e3a1;
+}
+.check-item input[type="checkbox"]:checked::after {
+  content: '✓'; position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  color: #1e1e2e; font-size: 14px; font-weight: 800;
+}
+.check-group.bear input[type="checkbox"]:checked {
+  background: #f38ba8; border-color: #f38ba8;
+}
+
+/* Radio Direction */
+.direction-group {
+  display: flex; gap: 8px;
+}
+.direction-group label {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border-radius: 10px;
+  background: #313244; font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+}
+.direction-group input[type="radio"] {
+  appearance: none; width: 16px; height: 16px;
+  border: 2px solid #585b70; border-radius: 50%;
+  cursor: pointer; position: relative; transition: all 0.2s;
+}
+.direction-group input[type="radio"]:checked::after {
+  content: ''; position: absolute; width: 8px; height: 8px;
+  border-radius: 50%; top: 2px; left: 2px;
+}
+.bull-radio input[type="radio"]:checked { border-color: #a6e3a1; }
+.bull-radio input[type="radio"]:checked::after { background: #a6e3a1; }
+.bear-radio input[type="radio"]:checked { border-color: #f38ba8; }
+.bear-radio input[type="radio"]:checked::after { background: #f38ba8; }
+.bull-radio.active { border: 1px solid #a6e3a1; }
+.bear-radio.active { border: 1px solid #f38ba8; }
+
+/* Signal Display */
+.signal-display {
+  text-align: center; padding: 16px;
+  border-radius: 12px; font-size: 24px; font-weight: 800;
+  transition: all 0.3s;
+}
+.signal-none { background: #313244; color: #585b70; }
+.signal-buy { background: rgba(166,227,161,0.15); color: #a6e3a1; border: 1px solid #a6e3a1; }
+.signal-sell { background: rgba(243,139,168,0.15); color: #f38ba8; border: 1px solid #f38ba8; }
+
+/* Zone Inputs */
+.zone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.zone-card {
+  background: #313244; border-radius: 10px; padding: 12px;
+  font-size: 13px;
+}
+.zone-card h4 { font-size: 13px; margin-bottom: 8px; color: #a6adc8; }
+.zone-card .row { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.zone-card input {
+  width: 90px; padding: 3px 6px; border-radius: 5px;
+  border: 1px solid #45475a; background: #1e1e2e;
+  color: #cdd6f4; font-size: 13px; font-family: 'Inter', sans-serif;
+  text-align: right;
+}
+.zone-card input:focus { outline: none; border-color: #89b4fa; }
+
+/* Trend Select */
+.trend-select {
+  padding: 6px 12px; border-radius: 8px;
+  border: 1px solid #45475a; background: #313244;
+  color: #cdd6f4; font-size: 13px; font-family: 'Inter', sans-serif;
+}
+
+/* Journal */
+.journal-table {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+  margin-bottom: 12px;
+}
+.journal-table th {
+  background: #313244; padding: 8px 10px; text-align: left;
+  font-weight: 600; color: #a6adc8; font-size: 12px;
+}
+.journal-table td {
+  padding: 8px 10px; border-bottom: 1px solid #313244;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border-radius: 10px; border: none;
+  font-size: 13px; font-weight: 600; cursor: pointer;
+  font-family: 'Inter', sans-serif; transition: all 0.2s;
+}
+.btn-primary { background: #89b4fa; color: #1e1e2e; }
+.btn-primary:hover { background: #74c7ec; }
+.btn-secondary { background: #45475a; color: #cdd6f4; }
+.btn-secondary:hover { background: #585b70; }
+.btn-group { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* Collapsible */
+.collapsible-header {
+  display: flex; align-items: center; gap: 8px;
+  cursor: pointer; font-weight: 600; font-size: 14px;
+  user-select: none; padding: 4px 0;
+}
+.collapsible-header .arrow { transition: transform 0.2s; font-size: 12px; }
+.collapsible-header.open .arrow { transform: rotate(90deg); }
+.collapsible-content { display: none; padding-top: 12px; }
+.collapsible-content.open { display: block; }
+.guide-list { list-style: none; }
+.guide-list li {
+  padding: 8px 12px; background: #313244; border-radius: 8px;
+  margin-bottom: 6px; font-size: 13px;
+}
+.guide-list li::before {
+  content: ''; display: inline-block; width: 6px; height: 6px;
+  border-radius: 50%; margin-right: 10px;
+}
+.guide-list li:nth-child(1)::before { background: #f38ba8; }
+.guide-list li:nth-child(2)::before { background: #fab387; }
+.guide-list li:nth-child(3)::before { background: #f9e2af; }
+.guide-list li:nth-child(4)::before { background: #a6e3a1; }
+.guide-list li:nth-child(5)::before { background: #89b4fa; }
+
+/* Footer */
+.footer {
+  text-align: center; padding: 16px 0; font-size: 12px; color: #585b70;
+}
+.footer strong { color: #a6adc8; }
+
+/* Notification popup */
+.toast {
+  position: fixed; bottom: 20px; right: 20px;
+  background: #313244; padding: 12px 20px; border-radius: 12px;
+  font-size: 13px; font-weight: 500; border: 1px solid #45475a;
+  transform: translateY(100px); opacity: 0;
+  transition: all 0.3s; z-index: 999;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* Status indicator */
+.status-dot {
+  display: inline-block; width: 8px; height: 8px;
+  border-radius: 50%; margin-right: 6px;
+}
+.status-up { background: #a6e3a1; }
+.status-down { background: #f38ba8; }
+.status-sideways { background: #f9e2af; }
+
+/* Price tag display */
+.price-tag {
+  font-size: 28px; font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.price-change { font-size: 14px; font-weight: 500; margin-left: 8px; }
+.price-change.pos { color: #a6e3a1; }
+.price-change.neg { color: #f38ba8; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>🎯 Sneaky Pivot Dashboard</h1>
+    <div class="badge">
+      <span>📱 VPS</span>
+      <span>💰 10,000,000 ₫</span>
+      <span>🕐 <span id="clock">--:--:--</span></span>
+    </div>
+  </div>
+
+  <!-- Chart -->
+  <div class="card">
+    <div class="card-title">📈 FPT — HOSE (Khung 15 phút)</div>
+    <div class="chart-wrapper" style="position:relative;">
+      <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container" style="height:600px;">
+        <div id="tv-chart" style="height:600px;"></div>
+        <script src="https://s3.tradingview.com/tv.js"></script>
+        <script>
+        new TradingView.widget({
+          "container_id": "tv-chart",
+          "symbol": "HOSE:FPT",
+          "interval": "15",
+          "timezone": "Asia/Saigon",
+          "theme": "dark",
+          "style": "1",
+          "locale": "vi_VN",
+          "toolbar_bg": "#1e1e2e",
+          "hide_side_toolbar": false,
+          "allow_symbol_change": false,
+          "studies": ["VOL@tv-basicstudies"],
+          "height": 600,
+          "width": "100%"
+        });
+        </script>
+      </div>
+      <!-- TradingView Widget END -->
+    </div>
+
+    <!-- 4 Price Lines -->
+    <div class="price-overlay">
+      <div class="price-line">
+        <span class="color-dot" style="background:#f38ba8;"></span>
+        <span>SH</span>
+        <input type="number" id="sh" value="67000" step="100">
+      </div>
+      <div class="price-line">
+        <span class="color-dot" style="background:#fab387;"></span>
+        <span>RH</span>
+        <input type="number" id="rh" value="66500" step="100">
+      </div>
+      <div class="price-line">
+        <span class="color-dot" style="background:#a6e3a1;"></span>
+        <span>RL</span>
+        <input type="number" id="rl" value="65000" step="100">
+      </div>
+      <div class="price-line">
+        <span class="color-dot" style="background:#89b4fa;"></span>
+        <span>SL</span>
+        <input type="number" id="sl" value="64500" step="100">
+      </div>
+      <div style="font-size:11px;color:#585b70;display:flex;align-items:center;gap:4px;">
+        <span>📌</span> Nhập giá dựa trên chart
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Grid -->
+  <div class="grid-2">
+
+    <!-- Left: Signal -->
+    <div>
+
+      <!-- Market Status -->
+      <div class="card">
+        <div class="card-title">📊 Trạng thái thị trường</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px;">
+          <div><span style="color:#a6adc8;">Khung:</span> 15 phút</div>
+          <div><span style="color:#a6adc8;">Mã:</span> FPT</div>
+          <div>
+            <span style="color:#a6adc8;">Xu hướng:</span>
+            <select class="trend-select" id="trend">
+              <option value="up">📈 Tăng</option>
+              <option value="side">➡️ Đi ngang</option>
+              <option value="down">📉 Giảm</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Candle Model -->
+      <div class="card">
+        <div class="card-title">🕯️ Mô hình 3 nến</div>
+
+        <div style="margin-bottom:12px;">
+          <div class="direction-group">
+            <label class="bull-radio active" id="dir-bull">
+              <input type="radio" name="direction" value="buy" checked> 🟢 Canh MUA
+            </label>
+            <label class="bear-radio" id="dir-bear">
+              <input type="radio" name="direction" value="sell"> 🔴 Canh BÁN
+            </label>
+          </div>
+        </div>
+
+        <div class="check-group" id="candle-checks">
+          <label class="check-item">
+            <input type="checkbox" data-candle="1"> Nến 1 — Lực mạnh chạm vùng
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-candle="2"> Nến 2 — Sneaky test, rút râu
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-candle="3"> Nến 3 — Breakout xác nhận
+          </label>
+        </div>
+
+        <div class="signal-display signal-none" id="signal">⏳ Chờ tín hiệu...</div>
+      </div>
+
+      <!-- Zones -->
+      <div class="card">
+        <div class="card-title">🎯 Vùng giá</div>
+        <div class="zone-grid">
+          <div class="zone-card">
+            <h4>🟢 VÙNG MUA</h4>
+            <div class="row"><span>RL → SL</span> <span id="zone-buy-range">65,000 → 64,500</span></div>
+            <div class="row" style="margin-top:6px;">
+              <span>Giá vào:</span>
+              <input type="number" id="entry-price" value="65200" step="100">
+            </div>
+          </div>
+          <div class="zone-card">
+            <h4>🔴 VÙNG BÁN</h4>
+            <div class="row"><span>RH → SH</span> <span id="zone-sell-range">66,500 → 67,000</span></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+          <div class="zone-card">
+            <h4>🛑 Stop Loss</h4>
+            <div class="row">
+              <span>SL:</span>
+              <input type="number" id="stop-loss" value="64200" step="100">
+            </div>
+          </div>
+          <div class="zone-card">
+            <h4>🎯 Take Profit</h4>
+            <div class="row"><span>TP:</span> <span id="take-profit">66,500</span></div>
+            <div class="row" style="margin-top:4px;color:#f9e2af;">
+              <span>R:R:</span> <span id="rr">1:2.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right: Journal -->
+    <div>
+
+      <!-- Journal -->
+      <div class="card">
+        <div class="card-title">📝 Nhật ký giao dịch</div>
+        <div style="overflow-x:auto;">
+          <table class="journal-table" id="journal">
+            <thead>
+              <tr>
+                <th>Ngày</th>
+                <th>Mã</th>
+                <th>Hướng</th>
+                <th>Giá vào</th>
+                <th>SL</th>
+                <th>TP</th>
+                <th>KQ</th>
+              </tr>
+            </thead>
+            <tbody id="journal-body">
+            </tbody>
+          </table>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="addTrade()">➕ Thêm giao dịch</button>
+          <button class="btn btn-secondary" onclick="exportJournal()">📋 Xuất JSON</button>
+          <button class="btn btn-secondary" onclick="clearJournal()">🗑️ Xoá hết</button>
+        </div>
+      </div>
+
+      <!-- Guide -->
+      <div class="card">
+        <div class="collapsible-header open" onclick="toggleGuide(this)">
+          <span class="arrow">▶</span> 🎯 Hướng dẫn nhanh
+        </div>
+        <div class="collapsible-content open" id="guide-content">
+          <ul class="guide-list">
+            <li><strong>1 giao dịch/tuần</strong> — không hơn, chờ cơ hội đẹp</li>
+            <li><strong>Chỉ mua 50-70% tài khoản</strong> (~5-7tr)</li>
+            <li><strong>SL cố định 5%</strong> — thua 500k là nghỉ, sống để còn đánh tiếp</li>
+            <li><strong>Không margin, không đòn bẩy</strong> — 10tr là mất được toàn bộ</li>
+            <li><strong>Ghi chép mỗi lệnh</strong> — lý do vào, lý do thoát, đúng sai chỗ nào</li>
+          </ul>
+          <div style="margin-top:12px;padding:10px;background:#313244;border-radius:8px;font-size:12px;color:#a6adc8;">
+            <strong>⏰ Giờ giao dịch:</strong> Sáng 9:00-11:30 | Chiều 13:00-15:00
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <strong>Sneaky Pivot Dashboard</strong> — Phân tích kỹ thuật cho newbie<br>
+    Powered by TradingView · Dữ liệu tham khảo, không phải lời khuyên tài chính
+  </div>
+
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+// Clock
+function updateClock() {
+  const now = new Date();
+  document.getElementById('clock').textContent =
+    now.toLocaleTimeString('vi-VN', { hour12: false });
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+// Collapsible
+function toggleGuide(el) {
+  el.classList.toggle('open');
+  document.getElementById('guide-content').classList.toggle('open');
+}
+
+// Toast
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// Radio toggle styling
+document.querySelectorAll('input[name="direction"]').forEach(r => {
+  r.addEventListener('change', () => {
+    document.getElementById('dir-bull').classList.toggle('active', r.value === 'buy');
+    document.getElementById('dir-bear').classList.toggle('active', r.value === 'sell');
+    updateSignal();
+  });
+});
+
+// Zone & RR calc
+function updateZones() {
+  const rl = parseInt(document.getElementById('rl').value) || 0;
+  const sl = parseInt(document.getElementById('sl').value) || 0;
+  const rh = parseInt(document.getElementById('rh').value) || 0;
+  const sh = parseInt(document.getElementById('sh').value) || 0;
+  const entry = parseInt(document.getElementById('entry-price').value) || 0;
+  const slPrice = parseInt(document.getElementById('stop-loss').value) || 0;
+
+  document.getElementById('zone-buy-range').textContent =
+    rl.toLocaleString() + ' → ' + sl.toLocaleString();
+  document.getElementById('zone-sell-range').textContent =
+    rh.toLocaleString() + ' → ' + sh.toLocaleString();
+
+  // TP
+  const dir = document.querySelector('input[name="direction"]:checked').value;
+  let tp = 0;
+  if (dir === 'buy') {
+    tp = rh;
+  } else {
+    tp = rl;
+  }
+  document.getElementById('take-profit').textContent = tp ? tp.toLocaleString() : '--';
+
+  // R:R
+  if (entry && slPrice && tp && entry !== slPrice) {
+    const risk = Math.abs(entry - slPrice);
+    const reward = Math.abs(tp - entry);
+    const rr = reward / risk;
+    document.getElementById('rr').textContent = '1:' + rr.toFixed(1);
+  } else {
+    document.getElementById('rr').textContent = '--';
+  }
+}
+
+document.getElementById('rl').addEventListener('input', updateZones);
+document.getElementById('sl').addEventListener('input', updateZones);
+document.getElementById('rh').addEventListener('input', updateZones);
+document.getElementById('sh').addEventListener('input', updateZones);
+document.getElementById('entry-price').addEventListener('input', updateZones);
+document.getElementById('stop-loss').addEventListener('input', updateZones);
+document.querySelectorAll('input[name="direction"]').forEach(r => {
+  r.addEventListener('change', updateZones);
+});
+updateZones();
+
+// Signal logic
+function updateSignal() {
+  const c1 = document.querySelector('[data-candle="1"]').checked;
+  const c2 = document.querySelector('[data-candle="2"]').checked;
+  const c3 = document.querySelector('[data-candle="3"]').checked;
+  const dir = document.querySelector('input[name="direction"]:checked').value;
+  const sig = document.getElementById('signal');
+
+  // Update check-group class for color
+  const checkGroup = document.getElementById('candle-checks');
+  checkGroup.classList.toggle('bear', dir === 'sell');
+
+  if (c1 && c2 && c3) {
+    if (dir === 'buy') {
+      sig.className = 'signal-display signal-buy';
+      sig.textContent = '🟢 BUY — VÀO LỆNH MUA!';
+    } else {
+      sig.className = 'signal-display signal-sell';
+      sig.textContent = '🔴 SELL — VÀO LỆNH BÁN!';
+    }
+  } else {
+    const checked = [c1, c2, c3].filter(Boolean).length;
+    const status = checked === 0 ? '⏳ Chờ nến 1...' :
+                   checked === 1 ? '👀 Đã có nến 1, chờ nến 2...' :
+                   '🔍 Đã có nến 2, chờ xác nhận nến 3...';
+    sig.className = 'signal-display signal-none';
+    sig.textContent = status;
+  }
+}
+
+document.querySelectorAll('[data-candle]').forEach(cb => {
+  cb.addEventListener('change', updateSignal);
+});
+updateSignal();
+
+// Journal
+function loadJournal() {
+  const data = localStorage.getItem('sneaky-pivot-journal');
+  if (data) {
+    const trades = JSON.parse(data);
+    const tbody = document.getElementById('journal-body');
+    tbody.innerHTML = '';
+    trades.forEach(t => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${t.date}</td>
+        <td>${t.symbol}</td>
+        <td>${t.dir === 'buy' ? '🟢 MUA' : '🔴 BÁN'}</td>
+        <td>${t.entry.toLocaleString()}</td>
+        <td>${t.sl.toLocaleString()}</td>
+        <td>${t.tp.toLocaleString()}</td>
+        <td>${t.result || '—'}</td>
+      `;
+      tbody.appendChild(row);
+    });
+  }
+}
+loadJournal();
+
+function getJournal() {
+  const data = localStorage.getItem('sneaky-pivot-journal');
+  return data ? JSON.parse(data) : [];
+}
+
+function saveJournal(trades) {
+  localStorage.setItem('sneaky-pivot-journal', JSON.stringify(trades));
+}
+
+function addTrade() {
+  const now = new Date();
+  const date = now.toLocaleDateString('vi-VN');
+  const symbol = 'FPT';
+  const dir = document.querySelector('input[name="direction"]:checked').value;
+  const entry = parseInt(document.getElementById('entry-price').value) || 0;
+  const sl = parseInt(document.getElementById('stop-loss').value) || 0;
+  const tp = parseInt(document.getElementById('take-profit').textContent.replace(/,/g,'')) || 0;
+
+  if (!entry) { showToast('⚠️ Nhập giá vào lệnh'); return; }
+
+  const result = prompt('Kết quả? (để trống nếu chưa biết)\nGhi: +200k, -300k, hoặc để trống');
+  if (result === null) return;
+
+  const trades = getJournal();
+  trades.unshift({
+    date, symbol,
+    dir,
+    entry, sl, tp,
+    result: result.trim() || ''
+  });
+  saveJournal(trades);
+  loadJournal();
+  showToast('✅ Đã thêm giao dịch!');
+}
+
+function exportJournal() {
+  const data = localStorage.getItem('sneaky-pivot-journal');
+  if (!data || JSON.parse(data).length === 0) {
+    showToast('⚠️ Chưa có giao dịch nào');
+    return;
+  }
+  navigator.clipboard.writeText(data).then(() => {
+    showToast('📋 Đã copy JSON vào clipboard!');
+  }).catch(() => {
+    // Fallback
+    const ta = document.createElement('textarea');
+    ta.value = data; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy'); ta.remove();
+    showToast('📋 Đã copy JSON!');
+  });
+}
+
+function clearJournal() {
+  if (!confirm('Xoá tất cả nhật ký giao dịch?')) return;
+  localStorage.removeItem('sneaky-pivot-journal');
+  loadJournal();
+  showToast('🗑️ Đã xoá nhật ký');
+}
+
+// Auto-refresh zone when price lines change
+document.querySelectorAll('.price-line input').forEach(inp => {
+  inp.addEventListener('input', updateZones);
+});
+</script>
+
+</body>
+</html>
