@@ -7,7 +7,7 @@ const UI = Object.fromEntries([
   "startOverlay", "pauseOverlay", "resultOverlay", "playButton", "newGameButton", "pauseButton",
   "resumeButton", "restartButton", "soundButton", "nextButton", "pausedLevel", "pausedScore",
   "resultTitle", "resultText", "resultStars", "saveNote", "powerButton", "powerIcon",
-  "powerName", "powerOverlay", "powerChoices", "powerSummary"
+  "powerName", "powerOverlay", "powerChoices", "powerSummary", "swapButton"
 ].map(id => [id, document.querySelector(`#${id}`)]));
 
 const STORAGE_KEY = "bamboo-pop-save-v1";
@@ -221,6 +221,7 @@ function updateUI() {
   UI.shotsLabel.textContent = state.shots;
   UI.pausedLevel.textContent = state.level;
   UI.pausedScore.textContent = state.score.toLocaleString("vi-VN");
+  UI.swapButton.disabled = !state.playing || state.paused || Boolean(state.projectile) || state.resolving;
   updatePowerUI();
 }
 
@@ -359,8 +360,17 @@ function shoot() {
   state.powerArmed = null;
   state.shooter.color = state.shooter.next;
   state.shooter.next = randomColor();
+  UI.swapButton.disabled = true;
   updatePowerUI();
   playSound("shoot");
+}
+
+function swapAmmo() {
+  if (state.projectile || !state.playing || state.paused || state.resolving) return;
+  [state.shooter.color, state.shooter.next] = [state.shooter.next, state.shooter.color];
+  playSound("swap");
+  showToast("Đã đổi đạn");
+  saveGame();
 }
 
 function usePowerUp() {
@@ -705,6 +715,7 @@ function selectPowerUp(id) {
   state.playing = true;
   state.pendingNextLevel = null;
   state.savedSnapshot = snapshotState();
+  updateUI();
   saveGame();
   showToast(`Đã nhận ${POWER_UPS[id].name}`);
 }
@@ -732,6 +743,7 @@ function startSavedOrNew() {
   }
   state.savedSnapshot = snapshotState();
   state.playing = true;
+  updateUI();
   UI.startOverlay.classList.remove("visible");
   setTimeout(() => UI.startOverlay.classList.add("hidden"), 250);
   saveGame();
@@ -925,24 +937,66 @@ function drawAimGuide() {
   const { x, y, angle } = state.shooter;
   let px = x + Math.cos(angle) * 46;
   let py = y - 4 + Math.sin(angle) * 46;
-  let vx = Math.cos(angle) * 17;
-  let vy = Math.sin(angle) * 17;
-  ctx.save();
-  const guideSteps = state.powerArmed === "guide" ? 70 : 28;
+  let vx = Math.cos(angle) * 9;
+  let vy = Math.sin(angle) * 9;
+  const points = [{ x: px, y: py }];
+  let impact = null;
+  const guideSteps = state.powerArmed === "guide" ? 780 : 420;
+
   for (let i = 0; i < guideSteps; i++) {
-    px += vx; py += vy;
-    if (px < state.radius || px > state.width - state.radius) vx *= -1;
-    if (py < 105) break;
+    px += vx;
+    py += vy;
+    if (px < state.radius) {
+      px = state.radius;
+      vx = Math.abs(vx);
+    } else if (px > state.width - state.radius) {
+      px = state.width - state.radius;
+      vx = -Math.abs(vx);
+    }
+    points.push({ x: px, y: py });
+    if (py < 105) {
+      impact = { x: px, y: 105 };
+      break;
+    }
     const hit = state.grid.some(b => {
       const pos = cellPosition(b.row, b.col);
       return Math.hypot(px - pos.x, py - pos.y) < state.radius * 1.7;
     });
-    if (hit) break;
-    if (i % 2 === 0) {
-      ctx.globalAlpha = Math.max(.12, .7 - i * .018);
-      ctx.fillStyle = "white";
-      ctx.beginPath(); ctx.arc(px, py, Math.max(2, state.radius * .11), 0, TAU); ctx.fill();
+    if (hit) {
+      impact = { x: px, y: py };
+      break;
     }
+  }
+
+  ctx.save();
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+  ctx.beginPath();
+  points.forEach((point, index) => index ? ctx.lineTo(point.x, point.y) : ctx.moveTo(point.x, point.y));
+  ctx.strokeStyle = "rgba(13, 65, 61, .68)";
+  ctx.lineWidth = 7;
+  ctx.stroke();
+
+  ctx.setLineDash([9, 8]);
+  ctx.lineDashOffset = -state.elapsed * 28;
+  ctx.shadowColor = "#bffcff";
+  ctx.shadowBlur = 10;
+  ctx.strokeStyle = "rgba(245, 255, 237, .96)";
+  ctx.lineWidth = 3;
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  if (impact) {
+    const palette = COLORS[state.shooter.color];
+    ctx.shadowColor = palette.light;
+    ctx.shadowBlur = 13;
+    ctx.fillStyle = "rgba(255,255,255,.2)";
+    ctx.strokeStyle = palette.light;
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.arc(impact.x, impact.y, state.radius * .48, 0, TAU);
+    ctx.fill();
+    ctx.stroke();
   }
   ctx.restore();
 }
@@ -1033,11 +1087,7 @@ canvas.addEventListener("pointercancel", () => { state.aiming = false; });
 
 canvas.addEventListener("dblclick", event => {
   event.preventDefault();
-  if (!state.projectile && state.playing) {
-    [state.shooter.color, state.shooter.next] = [state.shooter.next, state.shooter.color];
-    playSound("swap");
-    showToast("Đã đổi bóng");
-  }
+  swapAmmo();
 });
 
 UI.playButton.addEventListener("click", startSavedOrNew);
@@ -1060,6 +1110,10 @@ UI.soundButton.addEventListener("click", () => {
   saveGame();
 });
 UI.powerButton.addEventListener("click", usePowerUp);
+UI.swapButton.addEventListener("click", event => {
+  event.stopPropagation();
+  swapAmmo();
+});
 UI.nextButton.addEventListener("click", () => {
   UI.resultOverlay.classList.remove("visible");
   setTimeout(() => UI.resultOverlay.classList.add("hidden"), 240);
@@ -1080,7 +1134,8 @@ window.BambooPop = {
     skillRating: state.skillRating, difficulty: state.difficulty, pressureEvery: state.pressureEvery,
     currentPowerUp: state.currentPowerUp, lastSelectedPowerUp: state.lastSelectedPowerUp,
     powerUsed: state.powerUsed, powerArmed: state.powerArmed, frozen: state.frozen,
-    metrics: state.metrics, stoneCount: state.grid.filter(b => b.stone).length
+    metrics: state.metrics, stoneCount: state.grid.filter(b => b.stone).length,
+    shooterColor: state.shooter.color, nextColor: state.shooter.next
   })
 };
 
