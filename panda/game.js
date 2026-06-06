@@ -349,7 +349,7 @@ function shoot() {
   if (!state.playing || state.paused || state.projectile || state.resolving) return;
   const angle = state.shooter.angle;
   if (Math.sin(angle) > -.12) return;
-  const speed = Math.max(650, state.height * .78);
+  const speed = Math.max(950, state.height * 1.12);
   state.projectile = {
     x: state.shooter.x, y: state.shooter.y - 34, color: state.shooter.color,
     vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed, trail: [],
