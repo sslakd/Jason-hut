@@ -63,16 +63,31 @@
     var badge = game.badge
       ? '<span class="badge badge-' + game.badge + '">' + (game.badge === "top" ? "Top" : "New") + "</span>"
       : "";
+    var playable = game.status === "mvp" && window.GamePlatform.has(game.id);
+    var requested = isRequested(game.id);
+    var primaryAction = playable
+      ? [
+        '<button class="button button-primary play-button" type="button" data-game="', game.id, '">',
+        'Chơi <i class="fa-solid fa-play" aria-hidden="true"></i></button>'
+      ].join("")
+      : [
+        '<button class="button button-secondary request-card-button" type="button" data-request-game="',
+        game.id, '" ', requested ? "disabled" : "", ">",
+        requested
+          ? '<i class="fa-solid fa-check" aria-hidden="true"></i> Đã thích game này'
+          : '<i class="fa-regular fa-heart" aria-hidden="true"></i> Tôi thích chơi game này',
+        "</button>"
+      ].join("");
     return [
-      '<article class="game-card" data-card-game="', game.id, '">',
+      '<article class="game-card', playable ? "" : " game-card-unavailable",
+      '" data-card-game="', game.id, '" data-playable="', playable, '">',
       badge,
       '<div class="game-icon ', game.color, '">', icon(game.icon), "</div>",
       '<p class="game-category">', game.category, "</p>",
       "<h3>", game.name, "</h3>",
       '<p class="game-summary">', game.summary, "</p>",
       '<div class="card-actions">',
-      '<button class="button button-primary play-button" type="button" data-game="', game.id, '">',
-      'Chơi <i class="fa-solid fa-play" aria-hidden="true"></i></button>',
+      primaryAction,
       '<button class="button guide-button" type="button" data-guide="', game.id,
       '" aria-label="Hướng dẫn chơi ', game.name, '" title="Hướng dẫn chơi">',
       '<i class="fa-regular fa-circle-question" aria-hidden="true"></i></button>',
@@ -103,8 +118,34 @@
     return catalog.find(function (game) { return game.id === id; });
   }
 
+  function requestKey(gameId) {
+    return "game5phut-request-" + gameId;
+  }
+
+  function isRequested(gameId) {
+    return localStorage.getItem(requestKey(gameId)) === "yes";
+  }
+
+  function syncRequestButtons(gameId) {
+    var requested = isRequested(gameId);
+    document.querySelectorAll('[data-request-game="' + gameId + '"]').forEach(function (button) {
+      button.disabled = requested;
+      button.innerHTML = requested
+        ? '<i class="fa-solid fa-check" aria-hidden="true"></i> Đã thích game này'
+        : '<i class="fa-regular fa-heart" aria-hidden="true"></i> Tôi thích chơi game này';
+    });
+  }
+
+  function requestGame(gameId) {
+    localStorage.setItem(requestKey(gameId), "yes");
+    syncRequestButtons(gameId);
+    window.GameAudio.open();
+  }
+
   function openGuide(game) {
     state.selectedGame = game;
+    var guideAction = document.getElementById("guide-play");
+    var playable = game.status === "mvp" && window.GamePlatform.has(game.id);
     document.getElementById("guide-icon").innerHTML = icon(game.icon);
     document.getElementById("guide-title").textContent = game.name;
     document.getElementById("guide-summary").textContent = game.summary;
@@ -112,6 +153,12 @@
     document.getElementById("guide-steps").innerHTML = game.steps.map(function (step) {
       return "<li>" + step + "</li>";
     }).join("");
+    guideAction.disabled = !playable && isRequested(game.id);
+    guideAction.innerHTML = playable
+      ? 'Chọn độ khó <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>'
+      : isRequested(game.id)
+        ? '<i class="fa-solid fa-check" aria-hidden="true"></i> Đã thích game này'
+        : '<i class="fa-regular fa-heart" aria-hidden="true"></i> Tôi thích chơi game này';
     guideModal.showModal();
     window.GameAudio.open();
   }
@@ -144,12 +191,8 @@
     window.GameAudio.open();
   }
 
-  function requestKey() {
-    return "game5phut-request-" + state.selectedGame.id;
-  }
-
   function updateRequestCount() {
-    var requested = localStorage.getItem(requestKey()) === "yes";
+    var requested = isRequested(state.selectedGame.id);
     document.getElementById("request-count").textContent = requested
       ? "Đã ghi nhận mong muốn của bạn."
       : "Ý kiến của bạn sẽ giúp trò này được ưu tiên sớm hơn.";
@@ -270,9 +313,14 @@
   });
 
   function handleGameAction(event) {
+    var requestButton = event.target.closest("[data-request-game]");
     var playButton = event.target.closest("[data-game]");
     var guideButton = event.target.closest("[data-guide]");
     var card = event.target.closest("[data-card-game]");
+    if (requestButton) {
+      requestGame(requestButton.dataset.requestGame);
+      return;
+    }
     if (guideButton) {
       openGuide(findGame(guideButton.dataset.guide));
       return;
@@ -286,7 +334,6 @@
     if (card) {
       var cardGame = findGame(card.dataset.cardGame);
       if (cardGame.status === "mvp") openDifficulty(cardGame);
-      else openComingSoon(cardGame);
     }
   }
 
@@ -330,8 +377,10 @@
 
   document.getElementById("guide-play").addEventListener("click", function () {
     guideModal.close();
-    if (state.selectedGame.status === "mvp") openDifficulty(state.selectedGame);
-    else openComingSoon(state.selectedGame);
+    if (state.selectedGame.status === "mvp" && window.GamePlatform.has(state.selectedGame.id)) {
+      openDifficulty(state.selectedGame);
+    }
+    else requestGame(state.selectedGame.id);
   });
 
   document.getElementById("difficulty-list").addEventListener("click", function (event) {
@@ -387,9 +436,8 @@
   document.getElementById("finish-demo").addEventListener("click", exitGame);
 
   document.getElementById("request-game").addEventListener("click", function () {
-    localStorage.setItem(requestKey(), "yes");
+    requestGame(state.selectedGame.id);
     updateRequestCount();
-    window.GameAudio.open();
     setTimeout(function () {
       comingSoonModal.close();
       window.location.assign("./#");

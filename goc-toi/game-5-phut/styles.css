@@ -469,6 +469,20 @@ kbd {
 }
 
 .card-actions .button-primary { flex: 1; }
+.request-card-button {
+  flex: 1;
+  padding-inline: 10px;
+  font-size: 12px;
+}
+
+.request-card-button:not(:disabled) {
+  border-color: #bdd2ba;
+  color: var(--brand-deep);
+  background: #edf5ea;
+}
+
+.request-card-button:not(:disabled):hover { background: #e2efdf; }
+.game-card-unavailable { cursor: default; }
 
 .guide-button {
   width: 42px;
