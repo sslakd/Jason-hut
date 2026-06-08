@@ -45,7 +45,7 @@ window.GAME_CATALOG = [
     id: "xep-nuoc", name: "Phân Loại Nước", category: "Sắp xếp", icon: "fa-flask", color: "sky", badge: "top", status: "mvp",
     summary: "Rót những lớp nước màu qua lại giữa các ống thủy tinh.",
     objective: "Đưa mỗi màu về một ống riêng biệt.",
-    steps: ["Chạm ống muốn rót rồi chọn ống nhận.", "Chỉ rót lên lớp cùng màu hoặc ống trống.", "Sắp để mỗi ống hoàn chỉnh một màu."]
+    steps: ["Kéo ống muốn rót sang ống nhận.", "Chỉ rót lên lớp cùng màu hoặc ống trống.", "Sắp để mỗi ống hoàn chỉnh một màu."]
   },
   {
     id: "domino", name: "Domino", category: "Cờ bàn", icon: "fa-dice-two", color: "ink",
@@ -57,7 +57,7 @@ window.GAME_CATALOG = [
     id: "cat-roi", name: "Cát Rơi", category: "Phản xạ", icon: "fa-hourglass-half", color: "amber", badge: "new", status: "mvp",
     summary: "Xoay và xếp những cụm cát màu đang rơi xuống.",
     objective: "Tạo dải màu liền để xóa cát và giữ bàn không bị đầy.",
-    steps: ["Di chuyển hoặc xoay cụm cát khi đang rơi.", "Nối các hạt cùng màu thành một dải.", "Xóa cát liên tục để giữ khoảng trống."]
+    steps: ["Vuốt ngang để di chuyển, vuốt lên để xoay.", "Vuốt xuống để thả nhanh cụm cát.", "Xóa đủ hàng để giữ khoảng trống."]
   },
   {
     id: "lap-day-khoi", name: "Lấp Đầy Khối", category: "Giải đố", icon: "fa-border-all", color: "mint",
@@ -123,7 +123,7 @@ window.GAME_CATALOG = [
     id: "dau-mau", name: "Đấu Màu", category: "Bài", icon: "fa-clone", color: "coral", status: "mvp",
     summary: "Đánh lá cùng màu hoặc cùng ký hiệu trong một ván bài nhanh.",
     objective: "Đánh hết bài trên tay trước những người chơi còn lại.",
-    steps: ["Đánh lá cùng màu hoặc cùng ký hiệu với lá trên bàn.", "Dùng lá chức năng để đổi nhịp ván đấu.", "Khi còn một lá, nhớ báo trước khi kết thúc."]
+    steps: ["Kéo lá cùng màu hoặc cùng ký hiệu lên bàn.", "Chạm chồng bài khi không có nước đi.", "Đánh hết bài trên tay trước đối thủ."]
   },
   {
     id: "noi-mau", name: "Nối Màu", category: "Giải đố", icon: "fa-bezier-curve", color: "violet",
@@ -153,7 +153,7 @@ window.GAME_CATALOG = [
     id: "o-an-quan", name: "Ô Ăn Quan", category: "Cờ Việt", icon: "fa-circle-dot", color: "mint", status: "mvp",
     summary: "Rải quân quanh bàn và tính đường để thu về nhiều dân, quan.",
     objective: "Kết thúc ván với tổng điểm cao hơn đối thủ.",
-    steps: ["Chọn một ô dân bên phía mình.", "Rải lần lượt từng quân theo một chiều.", "Tận dụng ô trống để ăn quân ở ô kế tiếp."]
+    steps: ["Vuốt từ một ô dân sang trái hoặc phải.", "Quân được rải lần lượt theo hướng vuốt.", "Tận dụng ô trống để ăn quân ở ô kế tiếp."]
   },
   {
     id: "co-nha-dat", name: "Cờ Nhà Đất", category: "Cờ bàn", icon: "fa-house-chimney", color: "sky",

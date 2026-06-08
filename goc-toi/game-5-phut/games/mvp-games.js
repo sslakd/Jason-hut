@@ -7,6 +7,70 @@
       action + '">' + label + "</button>";
   }
 
+  function bindGesture(root, handlers) {
+    var gesture = null;
+    var suppressClick = false;
+    var suppressTimer;
+
+    function onPointerDown(event) {
+      if (event.pointerType === "mouse" && event.button !== 0) return;
+      gesture = {
+        id: event.pointerId,
+        x: event.clientX,
+        y: event.clientY,
+        target: event.target
+      };
+      root.classList.add("gesture-active");
+    }
+
+    function onPointerUp(event) {
+      if (!gesture || event.pointerId !== gesture.id) return;
+      var dx = event.clientX - gesture.x;
+      var dy = event.clientY - gesture.y;
+      var distance = Math.hypot(dx, dy);
+      var endTarget = document.elementFromPoint(event.clientX, event.clientY) || event.target;
+      if (distance >= 18 && handlers.swipe) {
+        suppressClick = true;
+        clearTimeout(suppressTimer);
+        suppressTimer = setTimeout(function () { suppressClick = false; }, 80);
+        handlers.swipe({
+          dx: dx,
+          dy: dy,
+          startTarget: gesture.target,
+          endTarget: endTarget
+        });
+      } else if (handlers.tap) {
+        handlers.tap({ target: gesture.target });
+      }
+      gesture = null;
+      root.classList.remove("gesture-active");
+    }
+
+    function onPointerCancel() {
+      gesture = null;
+      root.classList.remove("gesture-active");
+    }
+
+    function onClick(event) {
+      if (!suppressClick) return;
+      event.preventDefault();
+      event.stopPropagation();
+      suppressClick = false;
+    }
+
+    root.addEventListener("pointerdown", onPointerDown);
+    root.addEventListener("pointerup", onPointerUp);
+    root.addEventListener("pointercancel", onPointerCancel);
+    root.addEventListener("click", onClick, true);
+    return function () {
+      root.removeEventListener("pointerdown", onPointerDown);
+      root.removeEventListener("pointerup", onPointerUp);
+      root.removeEventListener("pointercancel", onPointerCancel);
+      root.removeEventListener("click", onClick, true);
+      clearTimeout(suppressTimer);
+    };
+  }
+
   function escapeGame(root, options) {
     var size = 6;
     var selected = "red";
@@ -88,9 +152,23 @@
       }
       if (action) move(action.dataset.action === "plus" ? 1 : -1);
     };
-    options.onHint("Đưa xe đỏ tới lối ra bên phải.");
+    var unbindGesture = bindGesture(root, {
+      swipe: function (gesture) {
+        var carButton = gesture.startTarget.closest("[data-car]");
+        if (!carButton) return;
+        selected = carButton.dataset.car;
+        var car = vehicles.find(function (item) { return item.id === selected; });
+        var board = root.querySelector(".escape-board");
+        var cellSize = board.getBoundingClientRect().width / size;
+        var distance = car.axis === "h" ? gesture.dx : gesture.dy;
+        var steps = Math.max(1, Math.round(Math.abs(distance) / cellSize));
+        var direction = distance >= 0 ? 1 : -1;
+        for (var i = 0; i < steps; i += 1) move(direction);
+      }
+    });
+    options.onHint("Kéo từng xe theo chiều của nó. Đưa xe đỏ ra bên phải.");
     render();
-    return { destroy: function () { root.onclick = null; } };
+    return { destroy: function () { unbindGesture(); root.onclick = null; } };
   }
 
   function waterSortGame(root, options) {
@@ -147,9 +225,19 @@
       }
       render();
     };
-    options.onHint("Đưa mỗi màu về một ống riêng.");
+    var unbindGesture = bindGesture(root, {
+      swipe: function (gesture) {
+        var source = gesture.startTarget.closest("[data-tube]");
+        var target = gesture.endTarget.closest && gesture.endTarget.closest("[data-tube]");
+        if (!source || !target) return;
+        pour(Number(source.dataset.tube), Number(target.dataset.tube));
+        selected = null;
+        render();
+      }
+    });
+    options.onHint("Kéo ống nguồn sang ống đích, hoặc chạm lần lượt hai ống.");
     render();
-    return { destroy: function () { root.onclick = null; } };
+    return { destroy: function () { unbindGesture(); root.onclick = null; } };
   }
 
   function sandGame(root, options) {
@@ -243,6 +331,10 @@
       if (action === "left" && !collides(-1, 0, piece.shape)) piece.x -= 1;
       if (action === "right" && !collides(1, 0, piece.shape)) piece.x += 1;
       if (action === "down") drop();
+      if (action === "hard-drop") {
+        while (!collides(0, 1, piece.shape)) piece.y += 1;
+        lock();
+      }
       window.GameAudio.tap();
       draw();
     }
@@ -279,6 +371,19 @@
       var control = event.target.closest("[data-action]");
       if (control) move(control.dataset.action);
     };
+    var unbindGesture = bindGesture(canvas, {
+      tap: function () { move("rotate"); },
+      swipe: function (gesture) {
+        if (Math.abs(gesture.dx) > Math.abs(gesture.dy)) {
+          var steps = Math.max(1, Math.round(Math.abs(gesture.dx) / 36));
+          for (var i = 0; i < steps; i += 1) move(gesture.dx > 0 ? "right" : "left");
+        } else if (gesture.dy > 0) {
+          move("hard-drop");
+        } else {
+          move("rotate");
+        }
+      }
+    });
     function onKey(event) {
       var map = { ArrowLeft: "left", ArrowRight: "right", ArrowDown: "down", ArrowUp: "rotate" };
       if (map[event.key]) { event.preventDefault(); move(map[event.key]); }
@@ -288,10 +393,15 @@
     draw();
     var speed = Math.max(260, 720 / options.difficulty.multiplier / Math.pow(1.05, options.level - 1));
     var timer = setInterval(drop, speed);
-    options.onHint("Xóa " + target + " hàng để qua màn.");
+    options.onHint("Vuốt ngang để di chuyển, vuốt lên để xoay, vuốt xuống để thả.");
     return {
       setPaused: function (value) { paused = value; },
-      destroy: function () { clearInterval(timer); window.removeEventListener("keydown", onKey); root.onclick = null; }
+      destroy: function () {
+        clearInterval(timer);
+        unbindGesture();
+        window.removeEventListener("keydown", onKey);
+        root.onclick = null;
+      }
     };
   }
 
@@ -345,31 +455,46 @@
       }, Math.max(280, 700 / options.difficulty.multiplier));
     }
 
+    function playCard(index) {
+      if (locked || !player[index] || !playable(player[index])) return;
+      discard = player.splice(index, 1)[0];
+      window.GameAudio.tap();
+      if (!player.length) {
+        render();
+        options.onWin("Bạn đã đánh hết bài.");
+        return;
+      }
+      render();
+      aiTurn();
+    }
+
     root.onclick = function (event) {
       if (locked) return;
       var card = event.target.closest('[data-owner="player"]');
       var draw = event.target.closest("[data-draw]");
       if (card) {
-        var index = Number(card.dataset.index);
-        if (!playable(player[index])) return;
-        discard = player.splice(index, 1)[0];
-        window.GameAudio.tap();
-        if (!player.length) {
-          render();
-          options.onWin("Bạn đã đánh hết bài.");
-          return;
-        }
-        render();
-        aiTurn();
+        playCard(Number(card.dataset.index));
       } else if (draw && deck.length) {
         player.push(deck.pop());
         render();
         aiTurn();
       }
     };
-    options.onHint("Đánh lá cùng màu hoặc cùng số.");
+    var unbindGesture = bindGesture(root, {
+      swipe: function (gesture) {
+        var card = gesture.startTarget.closest('[data-owner="player"]');
+        if (card && gesture.dy < -30) playCard(Number(card.dataset.index));
+      }
+    });
+    options.onHint("Kéo lá bài lên để đánh. Chạm chồng bài để rút.");
     render();
-    return { destroy: function () { clearTimeout(timeout); root.onclick = null; } };
+    return {
+      destroy: function () {
+        clearTimeout(timeout);
+        unbindGesture();
+        root.onclick = null;
+      }
+    };
   }
 
   function oAnQuanGame(root, options) {
@@ -383,18 +508,19 @@
       return [1, 2, 3, 4, 5, 7, 8, 9, 10, 11].every(function (i) { return pits[i] === 0; });
     }
 
-    function sow(index, isPlayer) {
+    function sow(index, isPlayer, direction) {
       var stones = pits[index];
       if (!stones) return false;
       pits[index] = 0;
       var cursor = index;
+      var step = direction || 1;
       while (stones > 0) {
-        cursor = (cursor + 1) % 12;
+        cursor = (cursor + step + 12) % 12;
         pits[cursor] += 1;
         stones -= 1;
       }
-      var empty = (cursor + 1) % 12;
-      var capture = (cursor + 2) % 12;
+      var empty = (cursor + step + 12) % 12;
+      var capture = (cursor + step * 2 + 24) % 12;
       if (pits[empty] === 0 && pits[capture] > 0) {
         if (isPlayer) playerScore += pits[capture];
         else aiScore += pits[capture];
@@ -422,7 +548,7 @@
           choices = [7, 8, 9, 10, 11];
         }
         var choice = choices[Math.floor(Math.random() * choices.length)];
-        sow(choice, false);
+        sow(choice, false, Math.random() > .5 ? 1 : -1);
         if ([1, 2, 3, 4, 5].every(function (i) { return pits[i] === 0; }) && !smallEmpty()) {
           [1, 2, 3, 4, 5].forEach(function (i) { pits[i] = 1; });
           playerScore = Math.max(0, playerScore - 5);
@@ -457,15 +583,34 @@
       var pitButton = event.target.closest("[data-pit]");
       if (!pitButton) return;
       var index = Number(pitButton.dataset.pit);
-      if (sow(index, true)) {
+      if (sow(index, true, 1)) {
         window.GameAudio.tap();
         render();
         if (!finishIfNeeded()) aiTurn();
       }
     };
-    options.onHint("Chọn một ô dân phía bạn để rải quân.");
+    var unbindGesture = bindGesture(root, {
+      swipe: function (gesture) {
+        if (locked || Math.abs(gesture.dx) < 18) return;
+        var pitButton = gesture.startTarget.closest("[data-pit]");
+        if (!pitButton || pitButton.disabled) return;
+        var index = Number(pitButton.dataset.pit);
+        if (sow(index, true, gesture.dx > 0 ? 1 : -1)) {
+          window.GameAudio.tap();
+          render();
+          if (!finishIfNeeded()) aiTurn();
+        }
+      }
+    });
+    options.onHint("Vuốt từ ô dân sang trái hoặc phải để chọn hướng rải.");
     render();
-    return { destroy: function () { clearTimeout(timeout); root.onclick = null; } };
+    return {
+      destroy: function () {
+        clearTimeout(timeout);
+        unbindGesture();
+        root.onclick = null;
+      }
+    };
   }
 
   function flappyGame(root, options) {
@@ -543,7 +688,10 @@
       ctx.fillText(score + "/" + target, 16, 26);
     }
 
-    root.onclick = flap;
+    root.onpointerdown = function (event) {
+      if (event.pointerType === "mouse" && event.button !== 0) return;
+      flap();
+    };
     function onKey(event) { if (event.code === "Space") { event.preventDefault(); flap(); } }
     window.addEventListener("keydown", onKey);
     options.onHint("Chạm để bay qua " + target + " cột gió.");
@@ -558,7 +706,7 @@
         ended = true;
         cancelAnimationFrame(animation);
         window.removeEventListener("keydown", onKey);
-        root.onclick = null;
+        root.onpointerdown = null;
       }
     };
   }

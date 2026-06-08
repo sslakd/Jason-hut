@@ -692,7 +692,12 @@ footer {
     var(--surface);
   background-size: 42px 42px;
   transition: opacity .16s ease;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
 }
+
+.game-board.gesture-active { cursor: grabbing; }
 
 .play-message {
   display: flex;
@@ -820,6 +825,7 @@ footer {
   cursor: pointer;
   font-size: 18px;
   transition: box-shadow .14s ease, transform .14s ease;
+  touch-action: none;
 }
 
 .escape-car.selected {
@@ -872,6 +878,7 @@ footer {
   background: rgba(255, 255, 255, .55);
   cursor: pointer;
   transition: transform .16s ease, box-shadow .16s ease;
+  touch-action: none;
 }
 
 .tube.selected {
@@ -1002,6 +1009,7 @@ footer {
   margin-left: -14px;
   cursor: pointer;
   transition: transform .14s ease;
+  touch-action: none;
 }
 
 .color-card:hover { transform: translateY(-10px); }
@@ -1037,6 +1045,7 @@ footer {
   color: var(--brand-deep);
   background: #edf5ea;
   cursor: pointer;
+  touch-action: none;
 }
 
 .quan-pit:disabled { cursor: default; }
@@ -1143,11 +1152,11 @@ body.playing { overflow: hidden; }
   .escape-board { width: min(100%, 50vh); }
   .escape-exit { right: -50px; font-size: 9px; }
   .mini-panel { align-items: flex-start; flex-direction: column; }
-  .mini-panel div { width: 100%; }
+  .mini-panel div { display: none; width: 100%; }
   .mini-panel .mini-control { flex: 1; }
   .tube-grid { gap: 6px; }
   .tube { height: min(42vh, 240px); padding: 4px; border-width: 2px; border-top: 0; }
-  .touch-controls { right: 8px; bottom: 8px; left: 8px; }
+  .touch-controls { display: none; right: 8px; bottom: 8px; left: 8px; }
   .touch-controls .mini-control { flex: 1; }
   .tap-zone { right: 12px; bottom: 12px; }
   .card-game { gap: 8px; padding: 6px; }
@@ -1164,6 +1173,25 @@ body.playing { overflow: hidden; }
   .result-card {
     width: 100%;
     padding: 25px 20px max(20px, env(safe-area-inset-bottom));
+  }
+}
+
+@media (pointer: coarse) {
+  .touch-controls,
+  .mini-panel div {
+    display: none;
+  }
+
+  .mini-panel {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .escape-car,
+  .tube,
+  .color-card,
+  .quan-pit {
+    -webkit-tap-highlight-color: transparent;
   }
 }
 

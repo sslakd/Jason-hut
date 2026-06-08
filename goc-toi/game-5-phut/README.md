@@ -15,3 +15,6 @@ Static app chạy tại `/goc-toi/game-5-phut/`.
 Sáu MVP hiện tại: Thoát Bãi Xe, Phân Loại Nước, Cát Rơi, Đấu Màu, Ô Ăn Quan
 và Chim Vượt Gió. Khi mở rộng, tách từng game từ `mvp-games.js` thành
 `games/<game-id>/` để quản lý engine, UI, AI và asset độc lập.
+
+Input của game ưu tiên mobile: kéo, vuốt và chạm bằng Pointer Events. Chuột,
+bàn phím và các nút điều khiển chỉ là phương án dự phòng trên desktop.
