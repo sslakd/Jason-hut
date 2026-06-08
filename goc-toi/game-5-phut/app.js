@@ -8,8 +8,10 @@
     selectedGame: null,
     difficulty: difficulties[0],
     level: 1,
-    paused: false
+    paused: false,
+    result: null
   };
+  var activeGame = null;
 
   var grid = document.getElementById("game-grid");
   var topGames = document.getElementById("top-games");
@@ -21,8 +23,10 @@
   var guideModal = document.getElementById("guide-modal");
   var difficultyModal = document.getElementById("difficulty-modal");
   var aboutModal = document.getElementById("about-modal");
+  var comingSoonModal = document.getElementById("coming-soon-modal");
   var playScreen = document.getElementById("play-screen");
   var resultModal = document.getElementById("result-modal");
+  var gameBoard = document.getElementById("game-board");
 
   function normalize(value) {
     return value
@@ -58,7 +62,7 @@
       ? '<span class="badge badge-' + game.badge + '">' + (game.badge === "top" ? "Top" : "New") + "</span>"
       : "";
     return [
-      '<article class="game-card">',
+      '<article class="game-card" data-card-game="', game.id, '">',
       badge,
       '<div class="game-icon ', game.color, '">', icon(game.icon), "</div>",
       '<p class="game-category">', game.category, "</p>",
@@ -108,6 +112,10 @@
   }
 
   function openDifficulty(game) {
+    if (game.status !== "mvp" || !window.GameMVP.has(game.id)) {
+      openComingSoon(game);
+      return;
+    }
     state.selectedGame = game;
     document.getElementById("difficulty-game-name").textContent = game.name + " · " + game.summary;
     document.getElementById("difficulty-list").innerHTML = difficulties.map(function (difficulty) {
@@ -122,19 +130,28 @@
     window.GameAudio.open();
   }
 
-  function makeDemoBoard(game) {
-    var colors = ["#cfe2ca", "#f1dfb8", "#d6e7eb", "#ead9d6", "#e3daea", "#bcd8c1"];
-    var positions = [
-      [14, 18, 80], [61, 12, 104], [37, 38, 92],
-      [8, 64, 112], [70, 62, 76], [43, 73, 65]
-    ];
-    var shapes = positions.map(function (position, index) {
-      var rotation = index % 2 ? "border-radius:50%" : "";
-      return '<span class="demo-shape" style="left:' + position[0] + "%;top:" + position[1] +
-        "%;width:" + position[2] + "px;height:" + position[2] + "px;background:" +
-        colors[index] + ";" + rotation + '">' + (index === 2 ? icon(game.icon) : "") + "</span>";
-    });
-    return shapes.join("");
+  function openComingSoon(game) {
+    state.selectedGame = game;
+    document.getElementById("coming-soon-copy").textContent =
+      game.name + " đang được hoàn thiện. Bấm nút bên dưới để cho chúng tôi biết bạn muốn chơi trò này.";
+    updateRequestCount();
+    comingSoonModal.showModal();
+    window.GameAudio.open();
+  }
+
+  function requestKey() {
+    return "game5phut-request-" + state.selectedGame.id;
+  }
+
+  function updateRequestCount() {
+    var requested = localStorage.getItem(requestKey()) === "yes";
+    document.getElementById("request-count").textContent = requested
+      ? "Đã ghi nhận mong muốn của bạn."
+      : "Ý kiến của bạn sẽ giúp trò này được ưu tiên sớm hơn.";
+    document.getElementById("request-game").disabled = requested;
+    document.getElementById("request-game").innerHTML = requested
+      ? '<i class="fa-solid fa-check"></i> Đã ghi nhận'
+      : '<i class="fa-regular fa-heart"></i> Tôi muốn chơi game này';
   }
 
   function updatePlayMeta() {
@@ -149,15 +166,34 @@
     state.paused = false;
     difficultyModal.close();
     updatePlayMeta();
-    document.getElementById("demo-board").innerHTML = makeDemoBoard(state.selectedGame);
     playScreen.classList.add("active");
     playScreen.setAttribute("aria-hidden", "false");
     document.body.classList.add("playing");
+    mountCurrentGame();
     window.GameAudio.tap();
+  }
+
+  function mountCurrentGame() {
+    if (activeGame) activeGame.destroy();
+    gameBoard.innerHTML = "";
+    activeGame = window.GameMVP.mount(state.selectedGame.id, gameBoard, {
+      level: state.level,
+      difficulty: state.difficulty,
+      onHint: function (text) {
+        document.getElementById("game-hint").textContent = text;
+      },
+      onWin: function (detail) { showResult("win", detail); },
+      onLose: function (detail) { showResult("lose", detail); }
+    });
   }
 
   function exitGame() {
     if (resultModal.open) resultModal.close();
+    if (activeGame) {
+      activeGame.destroy();
+      activeGame = null;
+    }
+    gameBoard.innerHTML = "";
     playScreen.classList.remove("active");
     playScreen.setAttribute("aria-hidden", "true");
     document.body.classList.remove("playing");
@@ -165,12 +201,23 @@
     document.querySelector("#pause-play i").className = "fa-solid fa-pause";
   }
 
-  function showWin() {
+  function showResult(type, detail) {
+    state.result = type;
+    var won = type === "win";
     var nextMultiplier = window.getDifficultyMultiplier(state.difficulty.multiplier, state.level + 1);
-    document.getElementById("result-copy").textContent =
-      "Màn sau khó hơn 5% · hệ số thử thách " + nextMultiplier.toFixed(2) + "×";
+    document.getElementById("result-mark").classList.toggle("lost", !won);
+    document.getElementById("result-mark").innerHTML = won
+      ? '<i class="fa-solid fa-check"></i>'
+      : '<i class="fa-solid fa-rotate-right"></i>';
+    document.getElementById("result-eyebrow").textContent = won ? "Qua màn" : "Chưa qua màn";
+    document.getElementById("result-title").textContent = won ? "Hay đấy!" : "Thử lại nhé";
+    document.getElementById("result-copy").textContent = won
+      ? detail + " Màn sau khó hơn 5% · hệ số " + nextMultiplier.toFixed(2) + "×."
+      : detail;
+    document.getElementById("next-level").hidden = !won;
+    document.getElementById("retry-level").hidden = won;
     resultModal.showModal();
-    window.GameAudio.win();
+    if (won) window.GameAudio.win();
   }
 
   filters.addEventListener("click", function (event) {
@@ -185,8 +232,22 @@
   function handleGameAction(event) {
     var playButton = event.target.closest("[data-game]");
     var guideButton = event.target.closest("[data-guide]");
-    if (playButton) openDifficulty(findGame(playButton.dataset.game));
-    if (guideButton) openGuide(findGame(guideButton.dataset.guide));
+    var card = event.target.closest("[data-card-game]");
+    if (guideButton) {
+      openGuide(findGame(guideButton.dataset.guide));
+      return;
+    }
+    if (playButton) {
+      var game = findGame(playButton.dataset.game);
+      if (game.status === "mvp") openDifficulty(game);
+      else openComingSoon(game);
+      return;
+    }
+    if (card) {
+      var cardGame = findGame(card.dataset.cardGame);
+      if (cardGame.status === "mvp") openDifficulty(cardGame);
+      else openComingSoon(cardGame);
+    }
   }
 
   grid.addEventListener("click", handleGameAction);
@@ -215,7 +276,8 @@
 
   document.getElementById("guide-play").addEventListener("click", function () {
     guideModal.close();
-    openDifficulty(state.selectedGame);
+    if (state.selectedGame.status === "mvp") openDifficulty(state.selectedGame);
+    else openComingSoon(state.selectedGame);
   });
 
   document.getElementById("difficulty-list").addEventListener("click", function (event) {
@@ -239,14 +301,18 @@
   });
 
   document.getElementById("exit-play").addEventListener("click", exitGame);
-  document.getElementById("demo-win").addEventListener("click", showWin);
+  document.getElementById("restart-game").addEventListener("click", function () {
+    mountCurrentGame();
+    window.GameAudio.tap();
+  });
 
   document.getElementById("pause-play").addEventListener("click", function (event) {
     state.paused = !state.paused;
     event.currentTarget.setAttribute("aria-label", state.paused ? "Tiếp tục" : "Tạm dừng");
     event.currentTarget.querySelector("i").className =
       state.paused ? "fa-solid fa-play" : "fa-solid fa-pause";
-    document.getElementById("demo-board").style.opacity = state.paused ? ".45" : "1";
+    gameBoard.style.opacity = state.paused ? ".45" : "1";
+    if (activeGame && activeGame.setPaused) activeGame.setPaused(state.paused);
     window.GameAudio.tap();
   });
 
@@ -254,12 +320,34 @@
     state.level += 1;
     resultModal.close();
     updatePlayMeta();
+    mountCurrentGame();
+    window.GameAudio.tap();
+  });
+
+  document.getElementById("retry-level").addEventListener("click", function () {
+    resultModal.close();
+    mountCurrentGame();
     window.GameAudio.tap();
   });
 
   document.getElementById("finish-demo").addEventListener("click", exitGame);
 
-  [guideModal, difficultyModal, aboutModal].forEach(function (modal) {
+  document.getElementById("request-game").addEventListener("click", function () {
+    localStorage.setItem(requestKey(), "yes");
+    updateRequestCount();
+    window.GameAudio.open();
+    setTimeout(function () {
+      comingSoonModal.close();
+      window.location.assign("./#");
+    }, 450);
+  });
+
+  document.getElementById("back-home").addEventListener("click", function () {
+    comingSoonModal.close();
+    window.location.assign("./#");
+  });
+
+  [guideModal, difficultyModal, aboutModal, comingSoonModal].forEach(function (modal) {
     modal.addEventListener("click", function (event) {
       if (event.target === modal) modal.close();
     });

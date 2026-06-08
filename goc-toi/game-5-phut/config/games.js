@@ -1,6 +1,6 @@
 window.GAME_CATALOG = [
   {
-    id: "thoat-bai-xe", name: "Thoát Bãi Xe", category: "Giải đố", icon: "fa-car-side", color: "mint", badge: "top",
+    id: "thoat-bai-xe", name: "Thoát Bãi Xe", category: "Giải đố", icon: "fa-car-side", color: "mint", badge: "top", status: "mvp",
     summary: "Dịch chuyển những chiếc xe đang chắn đường để mở lối ra.",
     objective: "Đưa xe chính ra khỏi bãi với số lượt di chuyển ít nhất.",
     steps: ["Chạm và kéo xe theo chiều xe có thể di chuyển.", "Quan sát khoảng trống trước khi dịch chuyển.", "Mở một đường thông từ xe chính tới lối ra."]
@@ -42,7 +42,7 @@ window.GAME_CATALOG = [
     steps: ["Chạm để thả tầng đang di chuyển.", "Phần lệch khỏi tầng dưới sẽ bị cắt bỏ.", "Giữ nhịp để mặt tháp không bị thu nhỏ."]
   },
   {
-    id: "xep-nuoc", name: "Phân Loại Nước", category: "Sắp xếp", icon: "fa-flask", color: "sky", badge: "top",
+    id: "xep-nuoc", name: "Phân Loại Nước", category: "Sắp xếp", icon: "fa-flask", color: "sky", badge: "top", status: "mvp",
     summary: "Rót những lớp nước màu qua lại giữa các ống thủy tinh.",
     objective: "Đưa mỗi màu về một ống riêng biệt.",
     steps: ["Chạm ống muốn rót rồi chọn ống nhận.", "Chỉ rót lên lớp cùng màu hoặc ống trống.", "Sắp để mỗi ống hoàn chỉnh một màu."]
@@ -54,7 +54,7 @@ window.GAME_CATALOG = [
     steps: ["Chọn quân có đầu khớp với một đầu trên bàn.", "Đặt quân vào phía phù hợp.", "Nếu không còn quân hợp lệ, bạn phải bỏ lượt."]
   },
   {
-    id: "cat-roi", name: "Cát Rơi", category: "Phản xạ", icon: "fa-hourglass-half", color: "amber", badge: "new",
+    id: "cat-roi", name: "Cát Rơi", category: "Phản xạ", icon: "fa-hourglass-half", color: "amber", badge: "new", status: "mvp",
     summary: "Xoay và xếp những cụm cát màu đang rơi xuống.",
     objective: "Tạo dải màu liền để xóa cát và giữ bàn không bị đầy.",
     steps: ["Di chuyển hoặc xoay cụm cát khi đang rơi.", "Nối các hạt cùng màu thành một dải.", "Xóa cát liên tục để giữ khoảng trống."]
@@ -66,7 +66,7 @@ window.GAME_CATALOG = [
     steps: ["Chọn một mảnh bên ngoài bàn.", "Kéo và xoay mảnh nếu màn cho phép.", "Đặt mọi mảnh vừa khít, không chồng nhau."]
   },
   {
-    id: "chim-vuot-gio", name: "Chim Vượt Gió", category: "Phản xạ", icon: "fa-feather-pointed", color: "sky",
+    id: "chim-vuot-gio", name: "Chim Vượt Gió", category: "Phản xạ", icon: "fa-feather-pointed", color: "sky", status: "mvp",
     summary: "Giữ chú chim bay qua những khoảng trống liên tiếp.",
     objective: "Vượt càng nhiều chướng ngại càng tốt mà không va chạm.",
     steps: ["Chạm màn hình để chim vỗ cánh bay lên.", "Thả tay để chim hạ thấp dần.", "Canh nhịp bay qua giữa các cột."]
@@ -120,7 +120,7 @@ window.GAME_CATALOG = [
     steps: ["Chạm số bắt đầu của một chuỗi.", "Kéo qua các ô theo thứ tự tăng dần.", "Hoàn tất mọi chuỗi trên bàn."]
   },
   {
-    id: "dau-mau", name: "Đấu Màu", category: "Bài", icon: "fa-clone", color: "coral",
+    id: "dau-mau", name: "Đấu Màu", category: "Bài", icon: "fa-clone", color: "coral", status: "mvp",
     summary: "Đánh lá cùng màu hoặc cùng ký hiệu trong một ván bài nhanh.",
     objective: "Đánh hết bài trên tay trước những người chơi còn lại.",
     steps: ["Đánh lá cùng màu hoặc cùng ký hiệu với lá trên bàn.", "Dùng lá chức năng để đổi nhịp ván đấu.", "Khi còn một lá, nhớ báo trước khi kết thúc."]
@@ -150,7 +150,7 @@ window.GAME_CATALOG = [
     steps: ["Xếp lá giảm dần và xen kẽ đỏ đen.", "Lật lá úp khi một cột được mở.", "Đưa các lá lên chồng đích theo đúng chất."]
   },
   {
-    id: "o-an-quan", name: "Ô Ăn Quan", category: "Cờ Việt", icon: "fa-circle-dot", color: "mint",
+    id: "o-an-quan", name: "Ô Ăn Quan", category: "Cờ Việt", icon: "fa-circle-dot", color: "mint", status: "mvp",
     summary: "Rải quân quanh bàn và tính đường để thu về nhiều dân, quan.",
     objective: "Kết thúc ván với tổng điểm cao hơn đối thủ.",
     steps: ["Chọn một ô dân bên phía mình.", "Rải lần lượt từng quân theo một chiều.", "Tận dụng ô trống để ăn quân ở ô kế tiếp."]

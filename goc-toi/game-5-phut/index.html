@@ -137,12 +137,29 @@
       <div class="modal-icon"><i class="fa-solid fa-leaf" aria-hidden="true"></i></div>
       <p class="eyebrow">Về dự án</p>
       <h2>Một góc chơi nhẹ nhàng</h2>
-      <p class="modal-summary">Chơi Game 5 Phút được thiết kế thuần Việt, tối giản và vừa đủ. Bản này dùng để thử nghiệm giao diện trước khi các trò chơi hoàn chỉnh được đưa vào.</p>
+      <p class="modal-summary">Chơi Game 5 Phút được thiết kế thuần Việt, tối giản và vừa đủ. Bản thử nghiệm hiện có sáu trò chơi MVP.</p>
       <div class="guide-section">
-        <h3>Đang thử nghiệm</h3>
-        <p>Danh mục game, luồng chọn độ khó, hướng dẫn và trải nghiệm chơi toàn màn hình trên điện thoại.</p>
+        <h3>Có thể chơi ngay</h3>
+        <p>Thoát Bãi Xe, Phân Loại Nước, Cát Rơi, Đấu Màu, Ô Ăn Quan và Chim Vượt Gió.</p>
       </div>
       <button class="button button-primary button-full" type="button" data-close="about-modal">Đã hiểu</button>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="coming-soon-modal">
+    <div class="modal-card coming-soon-card">
+      <button class="modal-close icon-button" type="button" data-close="coming-soon-modal" aria-label="Đóng">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="modal-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+      <p class="eyebrow">Sắp ra mắt</p>
+      <h2 id="coming-soon-title">Đang cập nhật</h2>
+      <p class="modal-summary" id="coming-soon-copy"></p>
+      <div class="request-count" id="request-count"></div>
+      <button class="button button-primary button-full" id="request-game" type="button">
+        <i class="fa-regular fa-heart" aria-hidden="true"></i> Tôi muốn chơi game này
+      </button>
+      <button class="button button-quiet button-full" id="back-home" type="button">Về trang chủ</button>
     </div>
   </dialog>
 
@@ -159,22 +176,27 @@
         <i class="fa-solid fa-pause" aria-hidden="true"></i>
       </button>
     </div>
-    <div class="demo-board" id="demo-board" role="img" aria-label="Màn chơi minh họa"></div>
+    <div class="game-board" id="game-board" aria-label="Vùng chơi"></div>
     <div class="play-message">
-      <span>Bản xem trước giao diện chơi</span>
-      <button class="button button-primary" id="demo-win" type="button">Thử trạng thái thắng</button>
+      <span id="game-hint"></span>
+      <div class="game-actions">
+        <button class="button button-secondary" id="restart-game" type="button">
+          <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Chơi lại
+        </button>
+      </div>
     </div>
   </section>
 
   <dialog class="result-sheet" id="result-modal">
     <div class="result-card">
-      <div class="result-mark"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
-      <p class="eyebrow">Qua màn</p>
-      <h2>Hay đấy!</h2>
+      <div class="result-mark" id="result-mark"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
+      <p class="eyebrow" id="result-eyebrow">Qua màn</p>
+      <h2 id="result-title">Hay đấy!</h2>
       <p id="result-copy"></p>
       <button class="button button-primary button-full" id="next-level" type="button">
         Màn tiếp theo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
       </button>
+      <button class="button button-secondary button-full" id="retry-level" type="button">Chơi lại màn này</button>
       <button class="button button-quiet button-full" id="finish-demo" type="button">Về thư viện</button>
     </div>
   </dialog>
@@ -182,6 +204,7 @@
   <script src="./config/games.js"></script>
   <script src="./config/difficulty.js"></script>
   <script src="./audio/audio.js"></script>
+  <script src="./games/mvp-games.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>
