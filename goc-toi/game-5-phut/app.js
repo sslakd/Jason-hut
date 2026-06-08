@@ -4,6 +4,7 @@
   var difficulties = window.GAME_DIFFICULTIES;
   var state = {
     category: "Tất cả",
+    badge: null,
     query: "",
     selectedGame: null,
     difficulty: difficulties[0],
@@ -52,8 +53,9 @@
     var query = normalize(state.query.trim());
     return catalog.filter(function (game) {
       var categoryMatch = state.category === "Tất cả" || game.category === state.category;
+      var badgeMatch = !state.badge || game.badge === state.badge;
       var queryMatch = !query || normalize(game.name + " " + game.category + " " + game.summary).includes(query);
-      return categoryMatch && queryMatch;
+      return categoryMatch && badgeMatch && queryMatch;
     });
   }
 
@@ -82,6 +84,9 @@
     var visible = getVisibleGames();
     grid.innerHTML = visible.map(gameCard).join("");
     count.textContent = visible.length + " trò chơi";
+    document.getElementById("library-title").textContent = state.badge === "top"
+      ? "Game được chơi nhiều"
+      : state.badge === "new" ? "Game vừa cập nhật" : "Tất cả trò chơi";
     empty.hidden = visible.length !== 0;
   }
 
@@ -224,6 +229,7 @@
     var button = event.target.closest("[data-category]");
     if (!button) return;
     state.category = button.dataset.category;
+    state.badge = null;
     renderFilters();
     renderGames();
     window.GameAudio.tap();
@@ -254,8 +260,22 @@
   topGames.addEventListener("click", handleGameAction);
   newGames.addEventListener("click", handleGameAction);
 
+  document.addEventListener("click", function (event) {
+    var seeAll = event.target.closest("[data-see-all]");
+    if (!seeAll) return;
+    state.badge = seeAll.dataset.seeAll;
+    state.category = "Tất cả";
+    state.query = "";
+    search.value = "";
+    renderFilters();
+    renderGames();
+    document.querySelector(".library").scrollIntoView({ behavior: "smooth", block: "start" });
+    window.GameAudio.tap();
+  });
+
   search.addEventListener("input", function () {
     state.query = search.value;
+    state.badge = null;
     renderGames();
   });
 
