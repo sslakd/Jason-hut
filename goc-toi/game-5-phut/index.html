@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#edf5ea">
+  <meta name="description" content="Chơi Game 5 Phút - những trò chơi nhanh, nhẹ nhàng và hoàn toàn bằng tiếng Việt.">
+  <title>Chơi Game 5 Phút</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Trang chủ Chơi Game 5 Phút">
+      <span class="brand-mark">5</span>
+      <span>Chơi Game <strong>5 Phút</strong></span>
+    </a>
+    <div class="header-actions">
+      <button class="icon-button" id="sound-toggle" type="button" aria-label="Tắt âm thanh" title="Âm thanh">
+        <i class="fa-solid fa-volume-low" aria-hidden="true"></i>
+      </button>
+      <button class="icon-button" id="about-button" type="button" aria-label="Giới thiệu" title="Giới thiệu">
+        <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Một khoảng nghỉ nhỏ</p>
+      <h1>Có 5 phút không?<br><span>Làm một ván nhé.</span></h1>
+      <p class="hero-copy">Những trò chơi quen thuộc, gọn nhẹ và đủ vui để đầu óc được nghỉ một chút.</p>
+      <label class="search-box">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <span class="sr-only">Tìm trò chơi</span>
+        <input id="game-search" type="search" placeholder="Tìm trò chơi..." autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+    </section>
+
+    <section class="library" aria-labelledby="library-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Thư viện</p>
+          <h2 id="library-title">Chọn trò chơi</h2>
+        </div>
+        <p id="game-count" class="game-count"></p>
+      </div>
+      <div class="filters" id="category-filters" aria-label="Lọc theo thể loại"></div>
+      <div class="game-grid" id="game-grid"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <i class="fa-regular fa-face-smile" aria-hidden="true"></i>
+        <h3>Chưa tìm thấy trò phù hợp</h3>
+        <p>Thử một từ khóa hoặc thể loại khác nhé.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Chơi Game 5 Phút</span>
+    <span>Bản thử nghiệm · 48 trò chơi</span>
+  </footer>
+
+  <dialog class="modal" id="guide-modal">
+    <div class="modal-card">
+      <button class="modal-close icon-button" type="button" data-close="guide-modal" aria-label="Đóng hướng dẫn">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="modal-icon" id="guide-icon"></div>
+      <p class="eyebrow">Hướng dẫn chơi</p>
+      <h2 id="guide-title"></h2>
+      <p class="modal-summary" id="guide-summary"></p>
+      <div class="guide-section">
+        <h3>Mục tiêu</h3>
+        <p id="guide-objective"></p>
+      </div>
+      <div class="guide-section">
+        <h3>Cách chơi</h3>
+        <ol id="guide-steps"></ol>
+      </div>
+      <div class="modal-actions">
+        <button class="button button-secondary" type="button" data-close="guide-modal">Để sau</button>
+        <button class="button button-primary" id="guide-play" type="button">
+          Chọn độ khó <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="difficulty-modal">
+    <div class="modal-card difficulty-card">
+      <button class="modal-close icon-button" type="button" data-close="difficulty-modal" aria-label="Đóng">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <p class="eyebrow">Sắp vào ván</p>
+      <h2>Hôm nay muốn chơi tới đâu?</h2>
+      <p class="modal-summary" id="difficulty-game-name"></p>
+      <div class="difficulty-list" id="difficulty-list"></div>
+      <p class="difficulty-note"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> Mỗi màn tiếp theo sẽ khó hơn 5%.</p>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="about-modal">
+    <div class="modal-card">
+      <button class="modal-close icon-button" type="button" data-close="about-modal" aria-label="Đóng">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="modal-icon"><i class="fa-solid fa-leaf" aria-hidden="true"></i></div>
+      <p class="eyebrow">Về dự án</p>
+      <h2>Một góc chơi nhẹ nhàng</h2>
+      <p class="modal-summary">Chơi Game 5 Phút được thiết kế thuần Việt, tối giản và vừa đủ. Bản này dùng để thử nghiệm giao diện trước khi các trò chơi hoàn chỉnh được đưa vào.</p>
+      <div class="guide-section">
+        <h3>Đang thử nghiệm</h3>
+        <p>Danh mục game, luồng chọn độ khó, hướng dẫn và trải nghiệm chơi toàn màn hình trên điện thoại.</p>
+      </div>
+      <button class="button button-primary button-full" type="button" data-close="about-modal">Đã hiểu</button>
+    </div>
+  </dialog>
+
+  <section class="play-screen" id="play-screen" aria-hidden="true">
+    <div class="play-topbar">
+      <button class="play-control" id="exit-play" type="button" aria-label="Thoát màn chơi">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+      </button>
+      <div class="play-meta">
+        <strong id="play-title"></strong>
+        <span id="play-level"></span>
+      </div>
+      <button class="play-control" id="pause-play" type="button" aria-label="Tạm dừng">
+        <i class="fa-solid fa-pause" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="demo-board" id="demo-board" role="img" aria-label="Màn chơi minh họa"></div>
+    <div class="play-message">
+      <span>Bản xem trước giao diện chơi</span>
+      <button class="button button-primary" id="demo-win" type="button">Thử trạng thái thắng</button>
+    </div>
+  </section>
+
+  <dialog class="result-sheet" id="result-modal">
+    <div class="result-card">
+      <div class="result-mark"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
+      <p class="eyebrow">Qua màn</p>
+      <h2>Hay đấy!</h2>
+      <p id="result-copy"></p>
+      <button class="button button-primary button-full" id="next-level" type="button">
+        Màn tiếp theo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </button>
+      <button class="button button-quiet button-full" id="finish-demo" type="button">Về thư viện</button>
+    </div>
+  </dialog>
+
+  <script src="./config/games.js"></script>
+  <script src="./config/difficulty.js"></script>
+  <script src="./audio/audio.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
