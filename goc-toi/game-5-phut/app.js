@@ -12,6 +12,8 @@
   };
 
   var grid = document.getElementById("game-grid");
+  var topGames = document.getElementById("top-games");
+  var newGames = document.getElementById("new-games");
   var filters = document.getElementById("category-filters");
   var search = document.getElementById("game-search");
   var count = document.getElementById("game-count");
@@ -52,8 +54,12 @@
   }
 
   function gameCard(game) {
+    var badge = game.badge
+      ? '<span class="badge badge-' + game.badge + '">' + (game.badge === "top" ? "Top" : "New") + "</span>"
+      : "";
     return [
       '<article class="game-card">',
+      badge,
       '<div class="game-icon ', game.color, '">', icon(game.icon), "</div>",
       '<p class="game-category">', game.category, "</p>",
       "<h3>", game.name, "</h3>",
@@ -73,6 +79,15 @@
     grid.innerHTML = visible.map(gameCard).join("");
     count.textContent = visible.length + " trò chơi";
     empty.hidden = visible.length !== 0;
+  }
+
+  function renderFeaturedGames() {
+    topGames.innerHTML = catalog.filter(function (game) {
+      return game.badge === "top";
+    }).slice(0, 2).map(gameCard).join("");
+    newGames.innerHTML = catalog.filter(function (game) {
+      return game.badge === "new";
+    }).slice(0, 2).map(gameCard).join("");
   }
 
   function findGame(id) {
@@ -167,12 +182,16 @@
     window.GameAudio.tap();
   });
 
-  grid.addEventListener("click", function (event) {
+  function handleGameAction(event) {
     var playButton = event.target.closest("[data-game]");
     var guideButton = event.target.closest("[data-guide]");
     if (playButton) openDifficulty(findGame(playButton.dataset.game));
     if (guideButton) openGuide(findGame(guideButton.dataset.guide));
-  });
+  }
+
+  grid.addEventListener("click", handleGameAction);
+  topGames.addEventListener("click", handleGameAction);
+  newGames.addEventListener("click", handleGameAction);
 
   search.addEventListener("input", function () {
     state.query = search.value;
@@ -253,5 +272,6 @@
     initialSound ? "fa-solid fa-volume-low" : "fa-solid fa-volume-xmark";
 
   renderFilters();
+  renderFeaturedGames();
   renderGames();
 }());

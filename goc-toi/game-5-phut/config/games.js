@@ -1,6 +1,6 @@
 window.GAME_CATALOG = [
   {
-    id: "thoat-bai-xe", name: "Thoát Bãi Xe", category: "Giải đố", icon: "fa-car-side", color: "mint",
+    id: "thoat-bai-xe", name: "Thoát Bãi Xe", category: "Giải đố", icon: "fa-car-side", color: "mint", badge: "top",
     summary: "Dịch chuyển những chiếc xe đang chắn đường để mở lối ra.",
     objective: "Đưa xe chính ra khỏi bãi với số lượt di chuyển ít nhất.",
     steps: ["Chạm và kéo xe theo chiều xe có thể di chuyển.", "Quan sát khoảng trống trước khi dịch chuyển.", "Mở một đường thông từ xe chính tới lối ra."]
@@ -24,7 +24,7 @@ window.GAME_CATALOG = [
     steps: ["Quan sát hình dạng và màu của các khối.", "Kéo khối tới vị trí phù hợp.", "Hoàn thành mục tiêu trước khi hết chỗ."]
   },
   {
-    id: "ghep-trai-cay", name: "Ghép Trái Cây", category: "Ghép nối", icon: "fa-apple-whole", color: "coral",
+    id: "ghep-trai-cay", name: "Ghép Trái Cây", category: "Ghép nối", icon: "fa-apple-whole", color: "coral", badge: "new",
     summary: "Thả và ghép những trái cây giống nhau thành loại lớn hơn.",
     objective: "Tạo trái cây lớn nhất mà không để hộp bị đầy.",
     steps: ["Chọn vị trí rồi thả trái cây xuống.", "Hai trái giống nhau chạm vào sẽ hợp nhất.", "Giữ trái cây dưới vạch giới hạn."]
@@ -42,7 +42,7 @@ window.GAME_CATALOG = [
     steps: ["Chạm để thả tầng đang di chuyển.", "Phần lệch khỏi tầng dưới sẽ bị cắt bỏ.", "Giữ nhịp để mặt tháp không bị thu nhỏ."]
   },
   {
-    id: "xep-nuoc", name: "Phân Loại Nước", category: "Sắp xếp", icon: "fa-flask", color: "sky",
+    id: "xep-nuoc", name: "Phân Loại Nước", category: "Sắp xếp", icon: "fa-flask", color: "sky", badge: "top",
     summary: "Rót những lớp nước màu qua lại giữa các ống thủy tinh.",
     objective: "Đưa mỗi màu về một ống riêng biệt.",
     steps: ["Chạm ống muốn rót rồi chọn ống nhận.", "Chỉ rót lên lớp cùng màu hoặc ống trống.", "Sắp để mỗi ống hoàn chỉnh một màu."]
@@ -54,7 +54,7 @@ window.GAME_CATALOG = [
     steps: ["Chọn quân có đầu khớp với một đầu trên bàn.", "Đặt quân vào phía phù hợp.", "Nếu không còn quân hợp lệ, bạn phải bỏ lượt."]
   },
   {
-    id: "cat-roi", name: "Cát Rơi", category: "Phản xạ", icon: "fa-hourglass-half", color: "amber",
+    id: "cat-roi", name: "Cát Rơi", category: "Phản xạ", icon: "fa-hourglass-half", color: "amber", badge: "new",
     summary: "Xoay và xếp những cụm cát màu đang rơi xuống.",
     objective: "Tạo dải màu liền để xóa cát và giữ bàn không bị đầy.",
     steps: ["Di chuyển hoặc xoay cụm cát khi đang rơi.", "Nối các hạt cùng màu thành một dải.", "Xóa cát liên tục để giữ khoảng trống."]
