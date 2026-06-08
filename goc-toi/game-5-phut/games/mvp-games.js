@@ -722,6 +722,7 @@
 
   window.GameMVP = {
     has: function (id) { return Boolean(games[id]); },
+    register: function (id, factory) { games[id] = factory; },
     mount: function (id, root, options) {
       if (!games[id]) throw new Error("Game chưa được triển khai: " + id);
       return games[id](root, options);

@@ -36,7 +36,7 @@ window.GAME_CATALOG = [
     steps: ["Chạm một điểm màu để bắt đầu.", "Kéo đường màu qua các ô trống.", "Phủ kín bàn chơi bằng tất cả màu đã cho."]
   },
   {
-    id: "xep-thap", name: "Xếp Tháp", category: "Phản xạ", icon: "fa-building", color: "amber",
+    id: "xep-thap", name: "Xếp Tháp", category: "Phản xạ", icon: "fa-building", color: "amber", status: "mvp",
     summary: "Thả các tầng đúng nhịp để dựng một ngọn tháp thật cao.",
     objective: "Xếp chồng nhiều tầng nhất mà không làm tháp đổ.",
     steps: ["Chạm để thả tầng đang di chuyển.", "Phần lệch khỏi tầng dưới sẽ bị cắt bỏ.", "Giữ nhịp để mặt tháp không bị thu nhỏ."]
@@ -204,19 +204,19 @@ window.GAME_CATALOG = [
     steps: ["Chạm một vật đang nhìn thấy để đưa vào khay.", "Ba vật giống nhau trong khay sẽ biến mất.", "Tính thứ tự chọn để không dùng hết chỗ trống."]
   },
   {
-    id: "truot-so", name: "Trượt Số", category: "Ghép nối", icon: "fa-grip-vertical", color: "amber",
+    id: "truot-so", name: "Trượt Số", category: "Ghép nối", icon: "fa-grip-vertical", color: "amber", status: "mvp",
     summary: "Trượt toàn bộ ô số và gộp những cặp có cùng giá trị.",
     objective: "Tạo ô số mục tiêu trước khi lưới bị lấp kín.",
     steps: ["Vuốt lên, xuống, trái hoặc phải.", "Hai ô cùng số chạm nhau sẽ hợp nhất.", "Giữ ô lớn ở một góc để dễ kiểm soát bàn."]
   },
   {
-    id: "bon-quan-lien", name: "Bốn Quân Liền", category: "Cờ bàn", icon: "fa-circle-nodes", color: "coral",
+    id: "bon-quan-lien", name: "Bốn Quân Liền", category: "Cờ bàn", icon: "fa-circle-nodes", color: "coral", status: "mvp",
     summary: "Thả quân vào cột và tạo một hàng bốn quân liên tiếp.",
     objective: "Nối bốn quân theo ngang, dọc hoặc chéo trước đối thủ.",
     steps: ["Chọn cột để thả quân xuống.", "Quan sát cả thế tấn công lẫn phòng thủ.", "Tạo một đường bốn quân liền nhau."]
   },
   {
-    id: "caro-ba", name: "Caro 3×3", category: "Cờ bàn", icon: "fa-xmarks-lines", color: "mint",
+    id: "caro-ba", name: "Caro 3×3", category: "Cờ bàn", icon: "fa-xmarks-lines", color: "mint", status: "mvp",
     summary: "Đặt X và O trong một ván đấu trí nhỏ gọn.",
     objective: "Tạo hàng ba ký hiệu trước đối thủ.",
     steps: ["Chọn một ô trống để đặt ký hiệu.", "Chặn đối thủ khi họ có hai ô liền nhau.", "Nối ba ô theo hàng, cột hoặc đường chéo."]
@@ -228,7 +228,7 @@ window.GAME_CATALOG = [
     steps: ["Đổ hai xúc xắc để nhận số bước.", "Di chuyển quân tới các điểm hợp lệ.", "Chặn, bắt quân lẻ và đưa quân về khu nhà."]
   },
   {
-    id: "do-min", name: "Dò Mìn", category: "Giải đố", icon: "fa-bomb", color: "ink",
+    id: "do-min", name: "Dò Mìn", category: "Giải đố", icon: "fa-bomb", color: "ink", status: "mvp",
     summary: "Mở những ô an toàn bằng các con số gợi ý quanh bãi mìn.",
     objective: "Mở toàn bộ ô không có mìn mà không kích nổ.",
     steps: ["Chạm để mở một ô chưa biết.", "Dùng con số để suy ra số mìn xung quanh.", "Đánh dấu những ô chắc chắn có mìn."]
@@ -246,19 +246,19 @@ window.GAME_CATALOG = [
     steps: ["Chọn một trong ba khối đang có.", "Kéo khối vào vùng trống vừa hình.", "Lấp kín hàng hoặc cột để xóa chúng."]
   },
   {
-    id: "ran-san-moi", name: "Rắn Săn Mồi", category: "Phản xạ", icon: "fa-staff-snake", color: "mint",
+    id: "ran-san-moi", name: "Rắn Săn Mồi", category: "Phản xạ", icon: "fa-staff-snake", color: "mint", status: "mvp",
     summary: "Điều khiển chú rắn ăn quà và dài thêm qua từng lượt.",
     objective: "Ăn được nhiều quà nhất mà không va vào thân hoặc tường.",
     steps: ["Vuốt để đổi hướng di chuyển.", "Đi tới món quà để tăng điểm và chiều dài.", "Chừa đường quay đầu khi thân rắn dài dần."]
   },
   {
-    id: "lat-hinh", name: "Lật Hình", category: "Trí nhớ", icon: "fa-copy", color: "sky",
+    id: "lat-hinh", name: "Lật Hình", category: "Trí nhớ", icon: "fa-copy", color: "sky", status: "mvp",
     summary: "Ghi nhớ vị trí và tìm những cặp hình giống nhau.",
     objective: "Mở hết các cặp với số lượt lật ít nhất.",
     steps: ["Chạm để lật hai thẻ trong mỗi lượt.", "Cặp giống nhau sẽ được giữ mở.", "Ghi nhớ các thẻ chưa khớp để tìm ở lượt sau."]
   },
   {
-    id: "tranh-truot", name: "Tranh Trượt", category: "Giải đố", icon: "fa-puzzle-piece", color: "violet",
+    id: "tranh-truot", name: "Tranh Trượt", category: "Giải đố", icon: "fa-puzzle-piece", color: "violet", status: "mvp",
     summary: "Trượt từng mảnh qua ô trống để khôi phục bức hình.",
     objective: "Sắp mọi mảnh về đúng vị trí ban đầu.",
     steps: ["Chạm mảnh cạnh ô trống để di chuyển.", "Sắp từng hàng hoặc vùng theo thứ tự.", "Hoàn thiện bức tranh bằng ít lượt nhất."]
