@@ -7,68 +7,9 @@
       action + '">' + label + "</button>";
   }
 
-  function bindGesture(root, handlers) {
-    var gesture = null;
-    var suppressClick = false;
-    var suppressTimer;
-
-    function onPointerDown(event) {
-      if (event.pointerType === "mouse" && event.button !== 0) return;
-      gesture = {
-        id: event.pointerId,
-        x: event.clientX,
-        y: event.clientY,
-        target: event.target
-      };
-      root.classList.add("gesture-active");
-    }
-
-    function onPointerUp(event) {
-      if (!gesture || event.pointerId !== gesture.id) return;
-      var dx = event.clientX - gesture.x;
-      var dy = event.clientY - gesture.y;
-      var distance = Math.hypot(dx, dy);
-      var endTarget = document.elementFromPoint(event.clientX, event.clientY) || event.target;
-      if (distance >= 18 && handlers.swipe) {
-        suppressClick = true;
-        clearTimeout(suppressTimer);
-        suppressTimer = setTimeout(function () { suppressClick = false; }, 80);
-        handlers.swipe({
-          dx: dx,
-          dy: dy,
-          startTarget: gesture.target,
-          endTarget: endTarget
-        });
-      } else if (handlers.tap) {
-        handlers.tap({ target: gesture.target });
-      }
-      gesture = null;
-      root.classList.remove("gesture-active");
-    }
-
-    function onPointerCancel() {
-      gesture = null;
-      root.classList.remove("gesture-active");
-    }
-
-    function onClick(event) {
-      if (!suppressClick) return;
-      event.preventDefault();
-      event.stopPropagation();
-      suppressClick = false;
-    }
-
-    root.addEventListener("pointerdown", onPointerDown);
-    root.addEventListener("pointerup", onPointerUp);
-    root.addEventListener("pointercancel", onPointerCancel);
-    root.addEventListener("click", onClick, true);
-    return function () {
-      root.removeEventListener("pointerdown", onPointerDown);
-      root.removeEventListener("pointerup", onPointerUp);
-      root.removeEventListener("pointercancel", onPointerCancel);
-      root.removeEventListener("click", onClick, true);
-      clearTimeout(suppressTimer);
-    };
+  function bindGesture(root, handlers, runtime) {
+    window.GamePlatform.gesture(root, handlers, runtime);
+    return function () {};
   }
 
   function escapeGame(root, options) {
@@ -117,7 +58,7 @@
       window.GameAudio.tap();
       render();
       if (car.id === "red" && car.x + car.length === size) {
-        setTimeout(function () { options.onWin("Thoát bãi sau " + moves + " lượt."); }, 180);
+        options.runtime.timeout(function () { options.onWin("Thoát bãi sau " + moves + " lượt."); }, 180);
       }
     }
 
@@ -165,7 +106,7 @@
         var direction = distance >= 0 ? 1 : -1;
         for (var i = 0; i < steps; i += 1) move(direction);
       }
-    });
+    }, options.runtime);
     options.onHint("Kéo từng xe theo chiều của nó. Đưa xe đỏ ra bên phải.");
     render();
     return { destroy: function () { unbindGesture(); root.onclick = null; } };
@@ -197,7 +138,7 @@
       }
       moves += 1;
       window.GameAudio.tap();
-      if (isComplete()) setTimeout(function () {
+      if (isComplete()) options.runtime.timeout(function () {
         options.onWin("Phân loại xong sau " + moves + " lượt rót.");
       }, 250);
     }
@@ -234,7 +175,7 @@
         selected = null;
         render();
       }
-    });
+    }, options.runtime);
     options.onHint("Kéo ống nguồn sang ống đích, hoặc chạm lần lượt hai ống.");
     render();
     return { destroy: function () { unbindGesture(); root.onclick = null; } };
@@ -391,13 +332,13 @@
     window.addEventListener("keydown", onKey);
     spawn();
     draw();
-    var speed = Math.max(260, 720 / options.difficulty.multiplier / Math.pow(1.05, options.level - 1));
-    var timer = setInterval(drop, speed);
+    var speed = Math.max(260, 720 / options.difficulty.multiplier);
+    var cancelDrop = options.runtime.interval(drop, speed);
     options.onHint("Vuốt ngang để di chuyển, vuốt lên để xoay, vuốt xuống để thả.");
     return {
       setPaused: function (value) { paused = value; },
       destroy: function () {
-        clearInterval(timer);
+        cancelDrop();
         unbindGesture();
         window.removeEventListener("keydown", onKey);
         root.onclick = null;
@@ -442,7 +383,7 @@
     function aiTurn() {
       if (!ai.length) return;
       locked = true;
-      timeout = setTimeout(function () {
+      timeout = options.runtime.timeout(function () {
         var index = ai.findIndex(playable);
         if (index >= 0) discard = ai.splice(index, 1)[0];
         else if (deck.length) ai.push(deck.pop());
@@ -485,12 +426,12 @@
         var card = gesture.startTarget.closest('[data-owner="player"]');
         if (card && gesture.dy < -30) playCard(Number(card.dataset.index));
       }
-    });
+    }, options.runtime);
     options.onHint("Kéo lá bài lên để đánh. Chạm chồng bài để rút.");
     render();
     return {
       destroy: function () {
-        clearTimeout(timeout);
+        if (timeout) timeout();
         unbindGesture();
         root.onclick = null;
       }
@@ -540,7 +481,7 @@
 
     function aiTurn() {
       locked = true;
-      timeout = setTimeout(function () {
+      timeout = options.runtime.timeout(function () {
         var choices = [7, 8, 9, 10, 11].filter(function (i) { return pits[i] > 0; });
         if (!choices.length) {
           [7, 8, 9, 10, 11].forEach(function (i) { pits[i] = 1; });
@@ -601,12 +542,12 @@
           if (!finishIfNeeded()) aiTurn();
         }
       }
-    });
+    }, options.runtime);
     options.onHint("Vuốt từ ô dân sang trái hoặc phải để chọn hướng rải.");
     render();
     return {
       destroy: function () {
-        clearTimeout(timeout);
+        if (timeout) timeout();
         unbindGesture();
         root.onclick = null;
       }
@@ -711,21 +652,10 @@
     };
   }
 
-  var games = {
-    "thoat-bai-xe": escapeGame,
-    "xep-nuoc": waterSortGame,
-    "cat-roi": sandGame,
-    "dau-mau": colorCardsGame,
-    "o-an-quan": oAnQuanGame,
-    "chim-vuot-gio": flappyGame
-  };
-
-  window.GameMVP = {
-    has: function (id) { return Boolean(games[id]); },
-    register: function (id, factory) { games[id] = factory; },
-    mount: function (id, root, options) {
-      if (!games[id]) throw new Error("Game chưa được triển khai: " + id);
-      return games[id](root, options);
-    }
-  };
+  window.GamePlatform.register("thoat-bai-xe", escapeGame);
+  window.GamePlatform.register("xep-nuoc", waterSortGame);
+  window.GamePlatform.register("cat-roi", sandGame);
+  window.GamePlatform.register("dau-mau", colorCardsGame);
+  window.GamePlatform.register("o-an-quan", oAnQuanGame);
+  window.GamePlatform.register("chim-vuot-gio", flappyGame);
 }());

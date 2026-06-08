@@ -7,8 +7,10 @@ Static app chạy tại `/goc-toi/game-5-phut/`.
 - `config/games.js`: tên, thể loại, mô tả, hướng dẫn, icon và badge từng game.
 - `config/difficulty.js`: bốn mức độ khó và công thức tăng 5% mỗi màn.
 - `audio/audio.js`: âm lượng, cao độ và kiểu phản hồi âm thanh.
-- `games/mvp-games.js`: luật và vòng đời của sáu game MVP đầu tiên.
-- `games/next-games.js`: tám game mở rộng và các thao tác chạm, vuốt.
+- `games/core/platform.js`: registry, lifecycle, timer, event và gesture dùng chung.
+- `games/mvp-games.js`: sáu game MVP đầu tiên.
+- `games/<game-id>/game.js`: module độc lập của từng game mới.
+- `tests/platform.test.js`: contract test bảo vệ phần dùng chung.
 - `assets/images/`: ảnh riêng của game khi bắt đầu bổ sung đồ họa.
 - `styles.css`: theme xanh lá, responsive và giao diện toàn màn hình mobile.
 - `app.js`: luồng tìm kiếm, lọc, hướng dẫn, chọn độ khó và màn chơi demo.
@@ -17,6 +19,8 @@ Static app chạy tại `/goc-toi/game-5-phut/`.
 Ô Ăn Quan, Chim Vượt Gió, Caro 3×3, Bốn Quân Liền, Trượt Số, Dò Mìn,
 Lật Hình, Tranh Trượt, Rắn Săn Mồi và Xếp Tháp. Khi tiếp tục mở rộng, tách
 từng game thành `games/<game-id>/` để quản lý engine, UI, AI và asset độc lập.
+Game mới phải đăng ký qua `GamePlatform.register()` và dùng `options.runtime`
+để quản lý timeout, interval, event listener và gesture.
 
 Input của game ưu tiên mobile: kéo, vuốt và chạm bằng Pointer Events. Chuột,
 bàn phím và các nút điều khiển chỉ là phương án dự phòng trên desktop.

@@ -698,6 +698,20 @@ footer {
 }
 
 .game-board.gesture-active { cursor: grabbing; }
+.game-board.game-paused { pointer-events: none; }
+
+.game-error {
+  display: grid;
+  max-width: 320px;
+  padding: 24px;
+  place-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.game-error i { color: #a76560; font-size: 28px; }
+.game-error strong { color: var(--brand-deep); }
+.game-error span { color: var(--muted); font-size: 13px; }
 
 .play-message {
   display: flex;
@@ -1054,22 +1068,22 @@ footer {
 .quan-pit.large { border-radius: 40px; background: #e4eddc; }
 .ai-row .quan-pit { background: #f2eadc; }
 
-.ttt-board,
-.number-board,
-.memory-board,
-.slide-board {
+.game-caro,
+.game-number-slide,
+.game-memory,
+.game-slide-puzzle {
   display: grid;
   width: min(82vw, 430px);
   aspect-ratio: 1;
   gap: 8px;
 }
 
-.ttt-board { grid-template-columns: repeat(3, 1fr); }
+.game-caro { grid-template-columns: repeat(3, 1fr); }
 
-.ttt-board button,
-.number-board div,
-.memory-board button,
-.slide-board button {
+.game-caro__cell,
+.game-number-slide__cell,
+.game-memory__card,
+.game-slide-puzzle__cell {
   display: grid;
   min-width: 0;
   place-items: center;
@@ -1081,11 +1095,11 @@ footer {
   touch-action: none;
 }
 
-.ttt-board button { font-size: clamp(32px, 12vw, 64px); }
-.ttt-board .x { color: #4f8059; background: #e4efe1; }
-.ttt-board .o { color: #a76560; background: #f1dfdc; }
+.game-caro__cell { font-size: clamp(32px, 12vw, 64px); }
+.game-caro__cell--x { color: #4f8059; background: #e4efe1; }
+.game-caro__cell--o { color: #a76560; background: #f1dfdc; }
 
-.connect-board {
+.game-connect-four {
   display: grid;
   width: min(92vw, 560px);
   aspect-ratio: 7 / 6;
@@ -1096,7 +1110,7 @@ footer {
   background: #dbe9d8;
 }
 
-.disc {
+.game-connect-four__disc {
   aspect-ratio: 1;
   border: 0;
   border-radius: 50%;
@@ -1104,22 +1118,22 @@ footer {
   box-shadow: inset 0 2px 7px rgba(54, 83, 59, .12);
 }
 
-.disc.p1 { background: #d7a959; }
-.disc.p2 { background: #d8736c; }
+.game-connect-four__disc--p1 { background: #d7a959; }
+.game-connect-four__disc--p2 { background: #d8736c; }
 
-.number-board { grid-template-columns: repeat(4, 1fr); }
-.number-board div { font-size: clamp(17px, 6vw, 28px); background: #e5eee2; }
-.number-board .n2 { background: #e7f0e3; }
-.number-board .n4 { background: #d7e8d3; }
-.number-board .n8 { background: #f0dfbd; }
-.number-board .n16 { background: #eacb9d; }
-.number-board .n32 { background: #e3ab83; }
-.number-board .n64 { color: white; background: #ce7c67; }
-.number-board .n128,
-.number-board .n256,
-.number-board .n512 { color: white; background: var(--brand-strong); }
+.game-number-slide { grid-template-columns: repeat(4, 1fr); }
+.game-number-slide__cell { font-size: clamp(17px, 6vw, 28px); background: #e5eee2; }
+.game-number-slide__cell--n2 { background: #e7f0e3; }
+.game-number-slide__cell--n4 { background: #d7e8d3; }
+.game-number-slide__cell--n8 { background: #f0dfbd; }
+.game-number-slide__cell--n16 { background: #eacb9d; }
+.game-number-slide__cell--n32 { background: #e3ab83; }
+.game-number-slide__cell--n64 { color: white; background: #ce7c67; }
+.game-number-slide__cell--n128,
+.game-number-slide__cell--n256,
+.game-number-slide__cell--n512 { color: white; background: var(--brand-strong); }
 
-.mine-board {
+.game-mines {
   display: grid;
   width: min(88vw, 500px);
   aspect-ratio: 1;
@@ -1127,7 +1141,7 @@ footer {
   gap: 3px;
 }
 
-.mine-board button {
+.game-mines__cell {
   min-width: 0;
   padding: 0;
   border: 1px solid #b9cdb6;
@@ -1139,28 +1153,28 @@ footer {
   touch-action: none;
 }
 
-.mine-board button.open { background: var(--surface-strong); }
-.mine-board button.boom { color: white; background: #c96b67; }
+.game-mines__cell--open { background: var(--surface-strong); }
+.game-mines__cell--boom { color: white; background: #c96b67; }
 
-.memory-board { grid-template-columns: repeat(4, 1fr); }
-.memory-board button {
+.game-memory { grid-template-columns: repeat(4, 1fr); }
+.game-memory__card {
   color: var(--brand);
   background: var(--brand-strong);
   font-size: clamp(18px, 7vw, 30px);
 }
-.memory-board button.shown { color: var(--brand-deep); background: var(--surface-strong); }
-.memory-board button.matched { background: #dcebd8; }
+.game-memory__card--shown { color: var(--brand-deep); background: var(--surface-strong); }
+.game-memory__card--matched { background: #dcebd8; }
 
-.slide-board { grid-template-columns: repeat(var(--slide-side), 1fr); }
-.slide-board button {
+.game-slide-puzzle { grid-template-columns: repeat(var(--slide-side), 1fr); }
+.game-slide-puzzle__cell {
   color: white;
   background: var(--brand);
   font-size: clamp(16px, 6vw, 28px);
 }
-.slide-board button.empty { border-color: transparent; background: transparent; }
+.game-slide-puzzle__cell--empty { border-color: transparent; background: transparent; }
 
-.snake-canvas { aspect-ratio: 3 / 4; }
-.tower-canvas { aspect-ratio: 9 / 13; }
+.game-snake__canvas { aspect-ratio: 3 / 4; }
+.game-tower__canvas { aspect-ratio: 9 / 13; }
 
 body.playing { overflow: hidden; }
 

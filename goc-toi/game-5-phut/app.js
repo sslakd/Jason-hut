@@ -117,7 +117,7 @@
   }
 
   function openDifficulty(game) {
-    if (game.status !== "mvp" || !window.GameMVP.has(game.id)) {
+    if (game.status !== "mvp" || !window.GamePlatform.has(game.id)) {
       openComingSoon(game);
       return;
     }
@@ -181,15 +181,40 @@
   function mountCurrentGame() {
     if (activeGame) activeGame.destroy();
     gameBoard.innerHTML = "";
-    activeGame = window.GameMVP.mount(state.selectedGame.id, gameBoard, {
-      level: state.level,
-      difficulty: state.difficulty,
-      onHint: function (text) {
-        document.getElementById("game-hint").textContent = text;
-      },
-      onWin: function (detail) { showResult("win", detail); },
-      onLose: function (detail) { showResult("lose", detail); }
-    });
+    gameBoard.style.opacity = "1";
+    gameBoard.inert = false;
+    state.paused = false;
+    document.getElementById("pause-play").setAttribute("aria-label", "Tạm dừng");
+    document.querySelector("#pause-play i").className = "fa-solid fa-pause";
+    var effectiveMultiplier = window.getDifficultyMultiplier(
+      state.difficulty.multiplier,
+      state.level
+    );
+    try {
+      activeGame = window.GamePlatform.mount(state.selectedGame.id, gameBoard, {
+        level: state.level,
+        difficulty: Object.assign({}, state.difficulty, {
+          baseMultiplier: state.difficulty.multiplier,
+          multiplier: effectiveMultiplier
+        }),
+        onHint: function (text) {
+          document.getElementById("game-hint").textContent = text;
+        },
+        onWin: function (detail) { showResult("win", detail); },
+        onLose: function (detail) { showResult("lose", detail); }
+      });
+    } catch (error) {
+      activeGame = null;
+      console.error("Không thể khởi động game " + state.selectedGame.id, error);
+      gameBoard.innerHTML = [
+        '<div class="game-error" role="alert">',
+        '<i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>',
+        "<strong>Game chưa thể khởi động</strong>",
+        "<span>Hãy thử tải lại hoặc quay về thư viện.</span>",
+        "</div>"
+      ].join("");
+      document.getElementById("game-hint").textContent = "Đã có lỗi riêng trong game này.";
+    }
   }
 
   function exitGame() {
@@ -199,6 +224,8 @@
       activeGame = null;
     }
     gameBoard.innerHTML = "";
+    gameBoard.style.opacity = "1";
+    gameBoard.inert = false;
     playScreen.classList.remove("active");
     playScreen.setAttribute("aria-hidden", "true");
     document.body.classList.remove("playing");
@@ -332,7 +359,7 @@
     event.currentTarget.querySelector("i").className =
       state.paused ? "fa-solid fa-play" : "fa-solid fa-pause";
     gameBoard.style.opacity = state.paused ? ".45" : "1";
-    if (activeGame && activeGame.setPaused) activeGame.setPaused(state.paused);
+    if (activeGame) activeGame.setPaused(state.paused);
     window.GameAudio.tap();
   });
 
