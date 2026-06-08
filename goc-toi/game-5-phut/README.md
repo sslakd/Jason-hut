@@ -11,6 +11,8 @@ Static app chạy tại `/goc-toi/game-5-phut/`.
 - `games/mvp-games.js`: sáu game MVP đầu tiên.
 - `games/<game-id>/game.js`: module độc lập của từng game mới.
 - `tests/platform.test.js`: contract test bảo vệ phần dùng chung.
+- `assets/images/<game-id>/`: placeholder `cover`, `background`, `primary`.
+- `assets/images/manifest.js`: đường dẫn ảnh dùng chung, không ghi cứng trong game.
 - `assets/images/`: ảnh riêng của game khi bắt đầu bổ sung đồ họa.
 - `styles.css`: theme xanh lá, responsive và giao diện toàn màn hình mobile.
 - `app.js`: luồng tìm kiếm, lọc, hướng dẫn, chọn độ khó và màn chơi demo.

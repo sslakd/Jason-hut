@@ -183,6 +183,12 @@
     gameBoard.innerHTML = "";
     gameBoard.style.opacity = "1";
     gameBoard.inert = false;
+    var assets = window.GAME_ASSETS && window.GAME_ASSETS.games[state.selectedGame.id];
+    ["cover", "background", "primary"].forEach(function (role) {
+      var value = assets && assets[role] ? 'url("' + assets[role] + '")' : "none";
+      gameBoard.style.setProperty("--asset-" + role, value);
+    });
+    gameBoard.dataset.gameId = state.selectedGame.id;
     state.paused = false;
     document.getElementById("pause-play").setAttribute("aria-label", "Tạm dừng");
     document.querySelector("#pause-play i").className = "fa-solid fa-pause";
@@ -226,6 +232,7 @@
     gameBoard.innerHTML = "";
     gameBoard.style.opacity = "1";
     gameBoard.inert = false;
+    delete gameBoard.dataset.gameId;
     playScreen.classList.remove("active");
     playScreen.setAttribute("aria-hidden", "true");
     document.body.classList.remove("playing");

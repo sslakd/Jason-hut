@@ -1,0 +1,12 @@
+.asset-placeholder {
+  --asset-cover: none;
+  --asset-background: none;
+  --asset-primary: none;
+}
+
+/*
+ * Game UI can opt in gradually:
+ * background-image: var(--asset-background);
+ *
+ * The application sets these variables from GAME_ASSETS when a game mounts.
+ */
