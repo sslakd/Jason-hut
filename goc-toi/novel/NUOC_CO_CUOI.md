@@ -48,6 +48,126 @@ Huy không về nhà. Huy biến mất suốt 3 tháng.
 
 ---
 
+## INTERLUDE 1 — HUY: 3 THÁNG
+
+### Tháng thứ nhất — Sốc
+
+Sau trận chung kết, Huy về nhà — một căn chung cư cũ ở Hai Bà Trưng. Căn hộ trống, lạnh, im lặng như một bàn cờ không người chơi.
+
+Hắn không bật đèn. Không ăn. Không uống. Ngồi trong bóng tối suốt 3 ngày.
+
+Trong đầu hắn, ván cờ vẫn tiếp diễn. Nước thứ 127 — nước mà hắn cố tình thua — lặp đi lặp lại hàng trăm lần. Mỗi lần, hắn thử một nước khác. Một nước thắng.
+
+Nhưng không có nước thắng. Hắn đã quyết định thua trước khi đặt quân xuống.
+
+*Tại sao?*
+
+Câu hỏi đó không rời khỏi hắn suốt 3 ngày.
+
+Huy là thiên tài. Từ năm 7 tuổi, hắn đã thắng tất cả. Ở trường, ở giải trẻ, ở vô địch quốc gia — chưa từng thua.
+
+Nhưng không phải vì hắn muốn thắng. Mà vì hắn **sợ thua**.
+
+Nỗi sợ đó — sâu hơn bất cứ điều gì hắn từng nói với ai. Nó đến từ một thời thơ ấu mà hắn không bao giờ nhắc đến.
+
+---
+
+Ngày thứ 4.
+
+Huy mở tủ. Lấy ra một bức ảnh cũ, ố vàng — chụp 3 người: một người phụ nữ gầy, mặc áo bà ba; một người đàn ông mặt hằm hằm; và một cậu bé 7 tuổi, đứng ở giữa, không cười.
+
+Cha hắn — một người đàn ông vũ phu, nghiện rượu. Mẹ hắn — một người phụ nữ cam chịu, sợ chồng hơn sợ chết.
+
+Huy 7 tuổi, lần đầu tiên cầm quân cờ — là một quân cờ bằng nhựa rẻ tiền, mua ngoài chợ. Mẹ hắn mua cho hắn. Bà nói: *"Con giỏi, con sẽ thắng. Thắng là thoát."*
+
+Huy không hiểu câu đó lúc 7 tuổi. Đến năm 20 tuổi hắn mới hiểu.
+
+Bà không nói về cờ. Bà nói về cuộc đời.
+
+Nhưng Huy — dù có thắng hàng trăm ván cờ — chưa bao giờ cảm thấy mình "thoát" được.
+
+---
+
+Ngày thứ 7.
+
+Huy đứng trước gương. 34 tuổi. Kiện tướng số 1. Chưa thua ai.
+
+Nhưng hắn thấy gì?
+
+Một thằng nhóc 7 tuổi vẫn sợ cha đánh. Vẫn sợ mẹ khóc. Vẫn sợ — dù đã thắng tất cả.
+
+*Lâm thắng tao. Và tao — lần đầu tiên — thấy nhẹ người.*
+
+Đó mới là nỗi đau thật sự. Không phải vì thua. Mà vì — khi thua — hắn không thấy gì cả. Không đau. Không buồn. Chỉ có... trống rỗng.
+
+Hắn mong đợi điều gì? Nước mắt? Giận dữ? Tuyệt vọng?
+
+Không. Chỉ có im lặng.
+
+Huy cầm một quân cờ — quân Tướng bằng ngà voi — và siết chặt nó trong tay. Quân cờ đó từng là tất cả với hắn. Giờ nó chỉ là một mảnh xà cừ vô tri.
+
+*Nếu tao không còn cảm giác gì khi thua — vậy khi thắng, tao có cảm giác gì không?*
+
+Câu trả lời: không.
+
+---
+
+### Tháng thứ hai — Điên
+
+Huy bắt đầu ra ngoài.
+
+Hắn đi lang thang. Uống cà phê. Nhìn người.
+
+Hắn thấy một gã đàn ông đánh vợ trước cửa nhà — và hắn không cảm thấy gì. Thấy một đứa trẻ khóc vì mất bóng — và không cảm thấy gì.
+
+Hắn không còn cảm xúc. Như một bàn cờ — nơi không có quân nào biết đau.
+
+Nhưng có một thứ còn sót lại. Một thứ hắn vẫn còn cảm thấy — rất mạnh.
+
+**Sự thèm khát.**
+
+Không phải thèm khát tình dục theo nghĩa thông thường. Mà là thèm khát **cảm giác**. Một cảm giác mạnh đến mức xuyên thủng lớp vỏ bọc vô cảm của hắn.
+
+Hắn thử: rượu, gái, cờ bạc. Không thấm.
+
+Rồi một đêm, hắn đứng trên ban công tầng 10, nhìn xuống. Một ý nghĩ thoáng qua: *nếu nhảy, chắc sẽ cảm thấy gì đó.*
+
+Hắn không nhảy. Nhưng ý nghĩ đó — **ranh giới giữa sống và chết** — kích thích hắn.
+
+*Giết — sẽ cảm thấy gì?*
+
+---
+
+### Tháng thứ ba — Quyết định
+
+Huy tìm đến luật sư Hùng — người từng giúp hắn trong một vụ kiện. Nói chuyện. Uống trà. Và hắn biết — Hùng là người đầu tiên hắn có thể dùng làm... quân cờ.
+
+Kế hoạch hình thành trong 3 tuần. Mỗi ngày một lớp. Giống như xây một thế cờ — từng nước một.
+
+Chọn nạn nhân. Tạo lòng tin. Dàn dựng hiện trường. Đổ tội cho Lâm.
+
+Và — quan trọng nhất — để lại một dấu vết.
+
+Một nụ hôn lên cổ nạn nhân.
+
+Huy không biết tại sao mình làm vậy. Nhưng khi môi hắn chạm vào da người chết — lần đầu tiên sau 3 tháng — hắn **cảm thấy**.
+
+Không phải khoái cảm. Mà là một cơn rùng mình chạy dọc sống lưng. Một cảm giác **kết nối** — dù chỉ với một xác chết.
+
+Trong khoảnh khắc đó, Huy hiểu: *Đây là cách duy nhất để tao cảm thấy mình còn sống.*
+
+Hắn lau son môi. Đặt thế cờ. Và biến mất khỏi hiện trường.
+
+3 ngày sau, Lâm bị bắt.
+
+Huy đứng trong đám đông trước tòa, nhìn Lâm bị dẫn đi. Mặt Lâm — không phải giận dữ, không phải sợ hãi — mà là **bối rối**.
+
+*Nó không hiểu tại sao. Cũng như tao — không hiểu tại sao mình thua.*
+
+Và Huy mỉm cười. Lần đầu tiên sau nhiều tháng, hắn thấy — ván cờ vừa bắt đầu.
+
+---
+
 ## Chương 1: Cổng Trại Giam
 
 Trại giam số 2 — Hoà Lạc.
@@ -193,6 +313,84 @@ Lâm: *"Vụ 1. Mã Hậu Pháo. Và lần này — con phải cho ba xem tất 
 Mai im lặng một lúc. Rồi cô mở tủ, lấy ra một tập hồ sơ dày, bìa đã cũ.
 
 Trên bìa — chữ ký tay: *"Phong"*.
+
+---
+
+## CHƯƠNG 3.5 — TUỔI THƠ
+
+Đêm đó, Lâm không ngủ được.
+
+Ổng nằm trên ghế sofa trong phòng trọ của Mai, nhìn lên trần nhà. Trong đầu ổng — những hình ảnh từ 20 năm trước cứ hiện về.
+
+---
+
+*Năm 2005. Hà Nội, một quán cờ vỉa hè trên phố Huế.*
+
+*Lâm 16 tuổi, lần đầu gặp Huy.*
+
+*Lúc đó Lâm đang ngồi chơi với một ông già trong quán. Thắng 3 ván liên tiếp. Đang hí hửng.*
+
+*Một thằng nhóc gầy nhom, cao hơn tuổi, mặc áo sơ mi trắng cũ — cộc tay vì đã ngắn — đến ngồi xuống đối diện: "Chơi một ván."*
+
+*Lâm cười: "Mày biết chơi không?"*
+
+*Huy không trả lời. Chỉ bày cờ.*
+
+*15 nước. Lâm thua.*
+
+*Lâm không tin. Xin ván thứ hai. Thua tiếp. 12 nước.*
+
+*Lâm: "Mày học ở đâu?"*
+
+*Huy: "Tự học."*
+
+*Đó là lần đầu tiên Lâm thấy một người bằng tuổi mình chơi cờ hay hơn mình — và khiêm tốn đến mức lạnh lùng.*
+
+---
+
+*Năm 2007. 18 tuổi.*
+
+*Lâm đến nhà Huy chơi. Lần đầu tiên — và cũng là lần cuối cùng.*
+
+*Một căn nhà nhỏ trong ngõ sâu. Tối. Ẩm thấp. Bên trong — chai lọ bia khắp nhà. Một người đàn ông trung niên nằm trên ghế sô-pha, say khướt.*
+
+*Huy nói: "Đừng để ý. Ổng không biết tao có bạn."*
+
+*Hai đứa vào phòng Huy — căn phòng nhỏ nhất trong nhà, nhưng gọn gàng, ngăn nắp. Trên tường — một bàn cờ vẽ bằng bút bi trực tiếp lên tường. Và một câu viết bằng bút đỏ:*
+
+> *"Thắng là thoát."*
+
+*Lâm: "Ai viết?"*
+
+*Huy: "Mẹ tao. Bả mất năm tao 12 tuổi."*
+
+*Lâm không hỏi thêm. Huy không nói thêm.*
+
+*Nhưng trong khoảnh khắc đó, Lâm biết — bạn mình không chỉ là một thiên tài cờ. Mà là một đứa trẻ đã phải thắng để sống sót.*
+
+---
+
+*Năm 2010. 21 tuổi.*
+
+*Cả hai cùng thi giải sinh viên toàn quốc. Huy vô địch. Lâm hạng ba. Sau giải, Lâm hỏi: "Sao mày chơi hay thế? Tao tập mãi không bằng."*
+
+*Huy: "Vì mày chơi vì vui. Tao chơi vì..."*
+
+*Hắn ngừng. Cười — một nụ cười Lâm chưa từng thấy. Không phải cười vui. Cười như một người vừa thú nhận điều gì đó:*
+
+*"...vì không có gì khác."*
+
+---
+
+Lâm nhớ lại tất cả những điều đó, nằm trong bóng tối. 12 năm trong tù không có cờ, không có bạn. Ổng đã quên mất những ký ức này.
+
+Nhưng giờ đây — đối diện với 9 vụ án, với 9 thế cờ, với 9 dấu vết tình dục mà Huy để lại — ổng bắt đầu hiểu.
+
+Huy không giết vì thù.
+
+Huy giết vì **không còn cách nào khác để cảm thấy mình đang sống.**
+
+Và Lâm — người bạn duy nhất của Huy — vô tình đã cướp đi thứ duy nhất cho Huy cảm giác đó: chiến thắng.
 
 ---
 
@@ -403,6 +601,12 @@ Mai: *"Tạm biệt ai?"*
 
 Lâm: *"Không phải nạn nhân. Mà là tạm biệt phần người trong hắn. Sau mỗi vụ, hắn càng ít người hơn."*
 
+Trong lúc Mai nói về vết son môi MAC Ruby Woo, Lâm nhớ lại một chuyện.
+
+Năm thứ 3 đại học, Huy từng nói: *"Mày để ý không — trên bàn cờ, không có màu đỏ. Chỉ có đen và trắng. Tao ghét điều đó."*
+
+Lúc đó Lâm không hiểu. Giờ ổng hiểu — Huy cần màu đỏ. Cần máu. Cần son môi trên cổ người chết. Để bù đắp cho một thế giới chỉ có đen và trắng.
+
 ---
 
 ## Chương 8: Thầy Bửu
@@ -451,6 +655,26 @@ Lâm: *"Không biết."*
 
 Cả hai đều nghĩ một câu không nói ra: *Thầy Bửu — già, cô đơn, có kiến thức cờ, và biết quá rõ về Huy — có thể là hung thủ không?*
 
+Thầy Bửu đi rồi. Lâm ngồi nhìn bộ cờ trên bàn — bộ cờ thầy tặng.
+
+Mai: *"Ba từng kể con nghe về thầy chưa?"*
+
+*"Chưa."*
+
+*"Kể đi."*
+
+Lâm im lặng một lúc. Rồi ổng nói — lần đầu tiên sau 12 năm:
+
+*"Thầy Bửu là người duy nhất Huy từng kính trọng. Hồi đó, thầy dạy bọn ba trong một quán cờ ở phố Huế. Huy ít nói, không hỏi, chỉ chơi. Thầy bảo: 'Thằng này có tố chất — nhưng nó chơi cờ như đang đánh nhau với chính mình.'"*
+
+Mai: *"Đánh nhau với chính mình?"*
+
+*"Sau này ba mới hiểu. Huy không chơi để thắng đối thủ. Huy chơi để chứng minh — hắn có thể kiểm soát ít nhất một thứ trên đời. Khi thua ba — hắn không chỉ mất ván cờ. Hắn mất thứ duy nhất cho hắn cảm giác kiểm soát."*
+
+*"Và thầy Bửu biết điều đó?"*
+
+*"Thầy biết. Và thầy sợ — từ lâu lắm rồi."*
+
 ---
 
 ## Chương 9: Vụ 4 & 5 — Hải Để Lao Nguyệt & Song Pháo Tướng
@@ -478,6 +702,16 @@ Mai: *"Huy không chọn nạn nhân ngẫu nhiên. Hắn chọn những ngườ
 Cô ngừng. Lâm nói tiếp:
 
 *"...cũng như hắn. Hắn từng ở bên tao. Và hắn nghĩ tao đã bỏ rơi hắn."*
+
+Một flashback nữa — khi Mai hỏi về nạn nhân bị bỏ rơi (vụ 4):
+
+Năm 2008. Huy và Lâm ngồi trong quán phở gần trường. Huy kể: *"Hồi nhỏ, tao từng có một con mèo. Mẹ tao mang về. Ba tao đập chết nó trước mặt tao vì nó kêu ồn."*
+
+Lâm: *"Sao mày không nói gì?"*
+
+Huy: *"Nói với ai?"*
+
+Lúc đó Lâm nghĩ đó chỉ là một câu chuyện buồn thời thơ ấu. Giờ ổng hiểu — Huy không kể về con mèo. Huy kể về lần đầu tiên hắn thấy một sinh vật bị hủy diệt mà hắn không thể ngăn. Và hắn thề — không bao giờ để điều đó xảy ra lần nữa. Để rồi — 20 năm sau — hắn trở thành kẻ hủy diệt.
 
 ---
 
@@ -551,6 +785,14 @@ Mai đặt tay lên vai cha. 12 năm. 12 năm không có cảm giác này. Một
 
 Mai: *"Con cũng vậy. Con sẽ không để hắn chạm vào ba thêm lần nào nữa."*
 
+Sau khi phân tích vụ 7 — ảnh mộ mẹ Mai — Lâm ở lại một mình trước bảng chỉ đỏ.
+
+Ổng nghĩ về mẹ của Huy.
+
+Bà mất khi Huy 12 tuổi. Bà là người duy nhất hiểu hắn — vì bà cũng từng là nạn nhân. Sau khi bà mất, Huy không khóc. Huy đến quán cờ, ngồi chơi 10 ván, thắng cả 10. Rồi về nhà. Và không bao giờ nhắc đến bà nữa.
+
+Bây giờ Lâm hiểu — Huy đã biến nỗi đau thành thứ duy nhất hắn biết: chiến thắng. Và khi không còn chiến thắng — hắn biến nỗi đau thành... cái chết.
+
 ---
 
 ## Chương 11: Chị Lan
@@ -605,6 +847,16 @@ Lâm nhìn chị Lan. 20 năm quen biết. Một người phụ nữ hiền làn
 
 Và trong mắt Lâm — chị ta là một nạn nhân đang chờ đến lượt.
 
+Trước khi ra về, chị Lan nói với Lâm một câu — khi Mai đã ra ngoài trả tiền:
+
+*"Có một chuyện tao chưa kể với ai. Hồi đó, trước giải chung kết — Huy có ghé quán. Nó ngồi một mình, uống trà đá, nhìn bàn cờ trống. Tao hỏi 'Sao không rủ thằng Lâm?' Nó bảo: 'Đây là ván cuối tao chơi với nó.' Tao tưởng nó nói đùa..."*
+
+Lâm lặng người.
+
+Huy biết trước. Huy biết hắn sẽ thua — hoặc Huy biết hắn sẽ làm gì sau đó.
+
+Cả hai — đều dẫn đến cùng một kết thúc.
+
 ---
 
 ## Chương 12: Vụ 8 & 9 — Thiên Địa Pháo & Bát Diện Uy Phong
@@ -638,6 +890,20 @@ Mai: *"Không. Con đã kiểm tra. Họ không có liên quan gì."*
 Mai: *"Vậy Huy..."*
 
 *"...đã cho họ thứ họ muốn. Một cái chết êm, đẹp, cùng nhau. Thiên Địa Pháo — ép từ hai phía. Nhưng họ không bị ép. Họ đồng ý."*
+
+Một flashback sau khi phân tích vụ 8 (cặp đôi cùng chết):
+
+Lâm nhớ — năm 22 tuổi, Huy từng nói: *"Mày có nghĩ — chết cùng nhau là lãng mạn hay hèn?"*
+
+Lâm: *"Sao mày hỏi thế?"*
+
+Huy: *"Vì nếu tao chết, tao muốn chết một mình. Không muốn ai dính vào."*
+
+Lâm: *"Vậy còn tao?"*
+
+Huy im lặng một lúc — điều hiếm thấy ở hắn. Rồi nói: *"Mày không chết cùng ai được. Mày là người duy nhất tao không muốn thấy chết."*
+
+12 năm sau, Lâm mới hiểu câu đó có nghĩa gì. Huy không muốn Lâm chết. Huy muốn Lâm sống — để thấy những gì Huy làm.
 
 ---
 
@@ -725,6 +991,18 @@ Lâm nhìn con gái. Ổng thấy mẹ nó trong mắt nó. Và ổng biết —
 
 *"Đi."*
 
+Khi Mai ra ngoài gọi điện báo Phong, Lâm ở lại trước bảng chỉ đỏ. 9 vụ. 9 quân cờ. Và một quân Mã gãy.
+
+Ổng cầm quân Mã gãy lên. Nhìn nó.
+
+Thế Mã gãy — huyền thoại từ một ván cờ cổ. Trong truyện, một kiện tướng đã hy sinh con Mã của mình để cứu Tướng. Đối thủ cười: "Mã gãy sao đi được?" Kiện tướng nói: "Nó không cần đi. Nó chỉ cần ở đó — để nhắc mày rằng mày đã từng có một con Mã."
+
+Huy nhắn: "Nước cuối — mày sẽ không thể đi đâu được."
+
+Nhưng cũng có thể — Huy đang nói về chính hắn.
+
+*"Mã gãy — là tao. Một thứ từng linh hoạt, từng tài năng — giờ không thể di chuyển. Nhưng tao vẫn còn đó. Để nhắc mày — mày đã từng có một người bạn."*
+
 ---
 
 ## Chương 14: Căn Nhà Số 12
@@ -791,7 +1069,25 @@ Mai gục xuống trước cửa.
 
 Bên ngoài — Huy ngồi trên mái nhà đối diện, nhìn qua ống nhòm. Hắn thấy Lâm chọn phải. Hắn thấy Mai chạy ra. Hắn thấy Lâm ngồi xuống, bình thản chờ chết.
 
-Huy hạ ống nhòm xuống. Lần đầu tiên sau 12 năm, hắn không biết mình vừa thắng hay vừa thua.
+Huy hạ ống nhòm xuống.
+
+Hắn thấy Lâm chọn. Hắn thấy Lâm ngồi xuống. Hắn thấy Lâm chờ chết — bình thản, không hối hận, không sợ hãi.
+
+Và lần đầu tiên sau 12 năm — Huy cảm thấy một điều mà hắn không định nghĩa được.
+
+Không phải thắng. Cũng không phải thua.
+
+Là **ghen tị**.
+
+Lâm có thể chết vì con gái mình. Lâm có điều gì đó đáng để chết.
+
+Còn Huy — hắn giết 9 người, nhưng chưa bao giờ có thứ gì đáng để sống — huống hồ chết.
+
+Huy ngồi xuống. Rít một điếu thuốc. Nhìn bầu trời Hà Nội — mờ mịt, không sao.
+
+12 năm. Hắn đã dành 12 năm để trả thù một người bạn. Và người bạn đó — trong giây phút cuối cùng — đã dạy hắn một bài học mà hắn không bao giờ học được từ cờ:
+
+*Có những thứ quan trọng hơn thắng thua.*
 
 ---
 
@@ -815,9 +1111,7 @@ Hắn già hơn trong trí nhớ của cô. Tóc bạc. Mắt vẫn lạnh. Như
 
 *"Cháu muốn gì?"*
 
-Mai đặt lên bệ một bàn cờ mini.
-
-*"Ông dạy tôi chơi cờ đi. Cha tôi không kịp dạy."*
+Mai đặt lên bệ một bàn cờ mini: *"Ông dạy tôi chơi cờ đi. Cha tôi không kịp dạy."*
 
 Huy nhìn cô. Hồi lâu.
 
@@ -825,7 +1119,27 @@ Huy nhìn cô. Hồi lâu.
 
 *"Dạy cháu biết — có những nước cờ không thể đi. Và có những nước cờ — dù sai — vẫn phải đi."*
 
-Huy im lặng. Hắn cầm quân Tướng lên. Đặt xuống nước đầu tiên.
+Huy im lặng. Hắn cầm quân Tướng lên.
+
+Trước khi hắn đặt quân xuống, hắn nói:
+
+*"Cháu có biết tại sao tao giết người không?"*
+
+Mai: *"Vì ông không còn cách nào khác để cảm thấy mình còn sống."*
+
+Huy nhìn cô. Lần đầu tiên — một tia gì đó như sự ngạc nhiên thoáng qua mắt hắn:
+
+*"Ai nói với cháu?"*
+
+*"Cha tôi. Trong lúc ông phân tích 9 vụ án, ông không chỉ hiểu các vụ — ông hiểu ông. Và trước khi chết, ông bảo con: 'Đừng ghét Huy. Vì ghét chỉ làm con giống hắn.'"*
+
+Huy không đặt quân cờ xuống nữa.
+
+Hắn nhìn quân Tướng trong tay — quân cờ duy nhất có thể thắng và thua. Quân cờ mà hắn đã chơi suốt đời. Và lần đầu tiên, hắn thấy nó không phải để thắng hay thua.
+
+Nó chỉ là một quân cờ.
+
+Huy đặt quân Tướng xuống. Nước đầu tiên.
 
 *"Tướng. Đi trước."*
 
