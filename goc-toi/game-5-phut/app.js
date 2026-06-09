@@ -204,8 +204,26 @@
 
   function updatePlayMeta() {
     document.getElementById("play-title").textContent = state.selectedGame.name;
-    document.getElementById("play-level").textContent =
-      "Màn " + state.level + " · " + state.difficulty.name;
+    document.getElementById("play-level").textContent = state.selectedGame.mode === "endless"
+      ? "Vô hạn · " + state.difficulty.name
+      : "Màn " + state.level + " · " + state.difficulty.name;
+  }
+
+  function scoreKey(gameId) {
+    return "game5phut-best-" + gameId;
+  }
+
+  function getBestScore(gameId) {
+    return Number(localStorage.getItem(scoreKey(gameId))) || 0;
+  }
+
+  function saveBestScore(gameId, score) {
+    var best = getBestScore(gameId);
+    if (score > best) {
+      localStorage.setItem(scoreKey(gameId), String(score));
+      return { score: score, isNew: true };
+    }
+    return { score: best, isNew: false };
   }
 
   function startGame(difficulty) {
@@ -246,6 +264,8 @@
           baseMultiplier: state.difficulty.multiplier,
           multiplier: effectiveMultiplier
         }),
+        mode: state.selectedGame.mode || "levels",
+        bestScore: getBestScore(state.selectedGame.id),
         onHint: function (text) {
           document.getElementById("game-hint").textContent = text;
         },
@@ -285,6 +305,26 @@
 
   function showResult(type, detail) {
     state.result = type;
+    var endless = state.selectedGame.mode === "endless";
+    if (endless) {
+      var result = typeof detail === "object" ? detail : { message: detail, score: 0 };
+      var best = saveBestScore(state.selectedGame.id, Number(result.score) || 0);
+      document.getElementById("result-mark").classList.toggle("lost", !best.isNew);
+      document.getElementById("result-mark").innerHTML = best.isNew
+        ? '<i class="fa-solid fa-trophy"></i>'
+        : '<i class="fa-solid fa-chart-simple"></i>';
+      document.getElementById("result-eyebrow").textContent = "Chơi vô hạn";
+      document.getElementById("result-title").textContent = best.isNew ? "Kỷ lục mới!" : "Ván kết thúc";
+      document.getElementById("result-copy").textContent =
+        (result.message || "Ván chơi đã kết thúc.") +
+        " Điểm: " + (Number(result.score) || 0) + " · Kỷ lục: " + best.score + ".";
+      document.getElementById("next-level").hidden = true;
+      document.getElementById("retry-level").hidden = false;
+      document.getElementById("retry-level").textContent = "Chơi lại";
+      resultModal.showModal();
+      if (best.isNew) window.GameAudio.win();
+      return;
+    }
     var won = type === "win";
     var nextMultiplier = window.getDifficultyMultiplier(state.difficulty.multiplier, state.level + 1);
     document.getElementById("result-mark").classList.toggle("lost", !won);
@@ -298,6 +338,7 @@
       : detail;
     document.getElementById("next-level").hidden = !won;
     document.getElementById("retry-level").hidden = won;
+    document.getElementById("retry-level").textContent = "Chơi lại màn này";
     resultModal.showModal();
     if (won) window.GameAudio.win();
   }

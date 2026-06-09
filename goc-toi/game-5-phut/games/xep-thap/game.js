@@ -6,14 +6,15 @@
     canvas.className = "arcade-canvas game-tower__canvas";
     canvas.width = 360;
     canvas.height = 520;
-    root.innerHTML = '<div class="canvas-game game-tower"></div><button class="tap-zone">Chạm để thả</button>';
+    root.innerHTML = '<div class="game-live-score" aria-live="polite">Tầng 0</div>' +
+      '<div class="canvas-game game-tower"></div><button class="tap-zone">Chạm để thả</button>';
     root.querySelector(".game-tower").appendChild(canvas);
+    var scoreLabel = root.querySelector(".game-live-score");
 
     var context = canvas.getContext("2d");
     var blocks = [{ x: 70, width: 220, y: 480 }];
     var moving = { x: 0, width: 220, y: 442, speed: 2.2 * options.difficulty.multiplier };
     var score = 0;
-    var target = 7 + Math.min(options.level, 5);
     var ended = false;
     var paused = false;
     var animation;
@@ -29,7 +30,10 @@
       context.fillRect(moving.x, moving.y, moving.width, 32);
       context.fillStyle = "#294a31";
       context.font = "600 13px sans-serif";
-      context.fillText(score + "/" + target, 12, 22);
+      context.fillText("Tầng " + score, 12, 22);
+      context.textAlign = "right";
+      context.fillText("Kỷ lục " + Math.max(options.bestScore, score), 348, 22);
+      context.textAlign = "left";
     }
 
     function drop() {
@@ -39,24 +43,22 @@
       var right = Math.min(base.x + base.width, moving.x + moving.width);
       if (right <= left) {
         ended = true;
-        options.onLose("Khối tháp đã rơi lệch.");
+        options.onLose({ message: "Khối tháp đã rơi lệch.", score: score });
         return;
       }
       moving.x = left;
       moving.width = right - left;
       blocks.push({ x: moving.x, width: moving.width, y: moving.y });
       score += 1;
-      if (score >= target) {
-        ended = true;
-        draw();
-        options.onWin("Bạn đã xếp " + target + " tầng.");
-        return;
+      scoreLabel.textContent = "Tầng " + score;
+      if (moving.y < 155) {
+        blocks.forEach(function (block) { block.y += 38; });
       }
       moving = {
         x: 0,
         width: moving.width,
         y: moving.y - 38,
-        speed: (2.2 + score * .12) * options.difficulty.multiplier
+        speed: Math.min(8, (2.2 + score * .1) * options.difficulty.multiplier)
       };
     }
 
@@ -73,7 +75,7 @@
       if (event.pointerType !== "mouse" || event.button === 0) drop();
     });
     options.runtime.cleanup(function () { window.cancelAnimationFrame(animation); });
-    options.onHint("Chạm đúng lúc để thả và xếp " + target + " tầng.");
+    options.onHint("Chạm đúng lúc để xây tháp cao nhất có thể.");
     loop();
     return {
       setPaused: function (value) { paused = value; },

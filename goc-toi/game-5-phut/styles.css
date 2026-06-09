@@ -1202,6 +1202,19 @@ footer {
   font-weight: 600;
 }
 
+.game-live-score {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--brand-deep);
+  background: rgba(247, 251, 245, .9);
+  font-size: 11px;
+  font-weight: 700;
+}
+
 .game-nut-sort {
   display: grid;
   width: min(92vw, 620px);

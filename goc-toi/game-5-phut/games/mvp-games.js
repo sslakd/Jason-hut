@@ -566,11 +566,18 @@
     var pipes = [];
     var frame = 0;
     var score = 0;
-    var target = 4 + Math.min(options.level, 4);
     var paused = false;
     var ended = false;
     var animation;
-    var gap = Math.max(112, 165 - options.difficulty.multiplier * 10 - options.level * 2);
+    var nextPipeAt = 90;
+
+    function currentGap() {
+      return Math.max(92, 172 - options.difficulty.multiplier * 9 - score * 1.4);
+    }
+
+    function currentSpeed() {
+      return Math.min(4.7, 2.15 + options.difficulty.multiplier * .12 + score * .025);
+    }
 
     function flap() {
       if (!ended && !paused) {
@@ -584,26 +591,29 @@
         frame += 1;
         bird.vy += .34;
         bird.y += bird.vy;
-        if (frame % 105 === 0) {
-          pipes.push({ x: 380, top: 70 + Math.random() * 230, passed: false });
+        if (frame >= nextPipeAt) {
+          var gap = currentGap();
+          pipes.push({
+            x: 380,
+            top: 55 + Math.random() * (canvas.height - gap - 110),
+            gap: gap,
+            passed: false
+          });
+          nextPipeAt = frame + Math.max(68, 105 - Math.floor(score * .8));
         }
-        pipes.forEach(function (pipe) { pipe.x -= 2.25 + options.difficulty.multiplier * .12; });
+        pipes.forEach(function (pipe) { pipe.x -= currentSpeed(); });
         pipes = pipes.filter(function (pipe) { return pipe.x > -60; });
         pipes.forEach(function (pipe) {
           if (!pipe.passed && pipe.x + 54 < bird.x) {
             pipe.passed = true;
             score += 1;
-            if (score >= target) {
-              ended = true;
-              options.onWin("Bạn đã vượt " + score + " cột gió.");
-            }
           }
           var hitX = bird.x + 13 > pipe.x && bird.x - 13 < pipe.x + 54;
-          var hitY = bird.y - 13 < pipe.top || bird.y + 13 > pipe.top + gap;
+          var hitY = bird.y - 13 < pipe.top || bird.y + 13 > pipe.top + pipe.gap;
           if (hitX && hitY) ended = true;
         });
         if (bird.y < 0 || bird.y > canvas.height) ended = true;
-        if (ended && score < target) options.onLose("Chú chim đã va vào chướng ngại.");
+        if (ended) options.onLose({ message: "Chú chim đã va vào chướng ngại.", score: score });
       }
       draw();
       if (!ended) animation = requestAnimationFrame(loop);
@@ -615,7 +625,7 @@
       ctx.fillStyle = "#8bb390";
       pipes.forEach(function (pipe) {
         ctx.fillRect(pipe.x, 0, 54, pipe.top);
-        ctx.fillRect(pipe.x, pipe.top + gap, 54, canvas.height - pipe.top - gap);
+        ctx.fillRect(pipe.x, pipe.top + pipe.gap, 54, canvas.height - pipe.top - pipe.gap);
       });
       ctx.fillStyle = "#d7a959";
       ctx.beginPath();
@@ -626,7 +636,10 @@
       ctx.arc(bird.x + 5, bird.y - 4, 2, 0, Math.PI * 2);
       ctx.fill();
       ctx.font = "600 14px sans-serif";
-      ctx.fillText(score + "/" + target, 16, 26);
+      ctx.fillText("Điểm " + score, 16, 26);
+      ctx.textAlign = "right";
+      ctx.fillText("Kỷ lục " + Math.max(options.bestScore, score), canvas.width - 16, 26);
+      ctx.textAlign = "left";
     }
 
     root.onpointerdown = function (event) {
@@ -635,7 +648,7 @@
     };
     function onKey(event) { if (event.code === "Space") { event.preventDefault(); flap(); } }
     window.addEventListener("keydown", onKey);
-    options.onHint("Chạm để bay qua " + target + " cột gió.");
+    options.onHint("Chạm để bay càng xa càng tốt. Tốc độ sẽ tăng dần.");
     loop();
     return {
       setPaused: function (value) {

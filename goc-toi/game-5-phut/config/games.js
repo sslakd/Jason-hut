@@ -36,7 +36,7 @@ window.GAME_CATALOG = [
     steps: ["Chạm một điểm màu để bắt đầu.", "Kéo đường màu qua các ô trống.", "Phủ kín bàn chơi bằng tất cả màu đã cho."]
   },
   {
-    id: "xep-thap", name: "Xếp Tháp", category: "Phản xạ", icon: "fa-building", color: "amber", status: "mvp",
+    id: "xep-thap", name: "Xếp Tháp", category: "Phản xạ", icon: "fa-building", color: "amber", status: "mvp", mode: "endless",
     summary: "Thả các tầng đúng nhịp để dựng một ngọn tháp thật cao.",
     objective: "Xếp chồng nhiều tầng nhất mà không làm tháp đổ.",
     steps: ["Chạm để thả tầng đang di chuyển.", "Phần lệch khỏi tầng dưới sẽ bị cắt bỏ.", "Giữ nhịp để mặt tháp không bị thu nhỏ."]
@@ -66,7 +66,7 @@ window.GAME_CATALOG = [
     steps: ["Chọn một mảnh bên ngoài bàn.", "Kéo và xoay mảnh nếu màn cho phép.", "Đặt mọi mảnh vừa khít, không chồng nhau."]
   },
   {
-    id: "chim-vuot-gio", name: "Chim Vượt Gió", category: "Phản xạ", icon: "fa-feather-pointed", color: "sky", status: "mvp",
+    id: "chim-vuot-gio", name: "Chim Vượt Gió", category: "Phản xạ", icon: "fa-feather-pointed", color: "sky", status: "mvp", mode: "endless",
     summary: "Giữ chú chim bay qua những khoảng trống liên tiếp.",
     objective: "Vượt càng nhiều chướng ngại càng tốt mà không va chạm.",
     steps: ["Chạm màn hình để chim vỗ cánh bay lên.", "Thả tay để chim hạ thấp dần.", "Canh nhịp bay qua giữa các cột."]

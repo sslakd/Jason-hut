@@ -25,5 +25,9 @@ từng game thành `games/<game-id>/` để quản lý engine, UI, AI và asset 
 Game mới phải đăng ký qua `GamePlatform.register()` và dùng `options.runtime`
 để quản lý timeout, interval, event listener và gesture.
 
+Game phá kỷ lục khai báo `mode: "endless"` trong catalog. Khi kết thúc, engine
+gọi `options.onLose({ message, score })`; app tự lưu kỷ lục và chỉ hiện nút
+chơi lại, không tạo màn tiếp theo.
+
 Input của game ưu tiên mobile: kéo, vuốt và chạm bằng Pointer Events. Chuột,
 bàn phím và các nút điều khiển chỉ là phương án dự phòng trên desktop.

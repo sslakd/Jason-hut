@@ -92,6 +92,13 @@ async function run() {
   );
   assert.deepEqual(
     Array.from(sandbox.window.GAME_CATALOG)
+      .filter((game) => game.mode === "endless")
+      .map((game) => game.id)
+      .sort(),
+    ["chim-vuot-gio", "xep-thap"]
+  );
+  assert.deepEqual(
+    Array.from(sandbox.window.GAME_CATALOG)
       .filter((game) => game.status === "mvp")
       .map((game) => game.id)
       .sort(),
