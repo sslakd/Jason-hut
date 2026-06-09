@@ -6,8 +6,10 @@
     canvas.className = "arcade-canvas game-snake__canvas";
     canvas.width = 360;
     canvas.height = 480;
-    root.innerHTML = '<div class="canvas-game game-snake"></div>';
+    root.innerHTML = '<div class="game-live-score game-live-score--right" aria-live="polite">Điểm 0 · Nhịp 1</div>' +
+      '<div class="canvas-game game-snake"></div>';
     root.querySelector(".game-snake").appendChild(canvas);
+    var scoreLabel = root.querySelector(".game-live-score");
 
     var context = canvas.getContext("2d");
     var cellSize = 24;
@@ -18,7 +20,23 @@
     var food = {};
     var score = 0;
     var ended = false;
-    var target = 5 + Math.min(options.level, 5);
+    var cancelTick;
+
+    function difficulty() {
+      return options.getEndlessDifficulty(score);
+    }
+
+    function tickDelay() {
+      return Math.max(58, 190 / difficulty().multiplier);
+    }
+
+    function scheduleTick() {
+      if (ended) return;
+      cancelTick = options.runtime.timeout(function () {
+        tick();
+        scheduleTick();
+      }, tickDelay());
+    }
 
     function placeFood() {
       do {
@@ -47,7 +65,10 @@
       });
       context.fillStyle = "#294a31";
       context.font = "600 13px sans-serif";
-      context.fillText(score + "/" + target, 10, 20);
+      context.fillText("Điểm " + score, 10, 20);
+      context.textAlign = "right";
+      context.fillText("Nhịp " + difficulty().stage + " · ×" + difficulty().factor.toFixed(2), 350, 20);
+      context.textAlign = "left";
     }
 
     function tick() {
@@ -59,17 +80,14 @@
       if (head.x < 0 || head.x >= columns || head.y < 0 || head.y >= rows ||
           snake.some(function (part) { return part.x === head.x && part.y === head.y; })) {
         ended = true;
-        options.onLose("Rắn đã va chạm.");
+        options.onLose({ message: "Rắn đã va chạm.", score: score });
         return;
       }
       snake.unshift(head);
       if (head.x === food.x && head.y === food.y) {
         score += 1;
+        scoreLabel.textContent = "Điểm " + score + " · Nhịp " + difficulty().stage;
         placeFood();
-        if (score >= target) {
-          ended = true;
-          options.onWin("Bạn đã ăn đủ " + target + " món.");
-        }
       } else {
         snake.pop();
       }
@@ -95,8 +113,12 @@
     });
     placeFood();
     draw();
-    options.runtime.interval(tick, Math.max(85, 190 / options.difficulty.multiplier));
-    options.onHint("Vuốt để đổi hướng và ăn đủ " + target + " món.");
-    return {};
+    scheduleTick();
+    options.onHint("Vuốt để đổi hướng. Rắn chạy nhanh dần theo số món đã ăn.");
+    return {
+      destroy: function () {
+        if (cancelTick) cancelTick();
+      }
+    };
   });
 }());

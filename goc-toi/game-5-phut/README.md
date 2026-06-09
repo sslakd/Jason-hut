@@ -32,6 +32,8 @@ chơi lại, không tạo màn tiếp theo.
 Trong ván endless, dùng `options.getEndlessDifficulty(progress)` để lấy
 `stage`, `factor` và `multiplier`. Mỗi engine ánh xạ đường cong chung này sang
 tốc độ, mật độ chướng ngại hoặc độ phức tạp phù hợp với luật riêng.
+Các game endless hiện có: Chim Vượt Gió, Xếp Tháp, Cát Rơi, Ghép Trái Cây,
+Trượt Số và Rắn Săn Mồi.
 
 Input của game ưu tiên mobile: kéo, vuốt và chạm bằng Pointer Events. Chuột,
 bàn phím và các nút điều khiển chỉ là phương án dự phòng trên desktop.

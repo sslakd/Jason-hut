@@ -186,7 +186,8 @@
     canvas.className = "arcade-canvas sand-canvas";
     canvas.width = 300;
     canvas.height = 480;
-    root.innerHTML = '<div class="canvas-game"></div><div class="touch-controls">' +
+    root.innerHTML = '<div class="game-live-score game-live-score--right" aria-live="polite">Hàng 0 · Nhịp 1</div>' +
+      '<div class="canvas-game"></div><div class="touch-controls">' +
       button('<i class="fa-solid fa-arrow-left"></i>', "left") +
       button('<i class="fa-solid fa-rotate-right"></i>', "rotate") +
       button('<i class="fa-solid fa-arrow-down"></i>', "down") +
@@ -203,9 +204,26 @@
     ];
     var piece;
     var lines = 0;
-    var target = 2 + Math.min(options.level - 1, 3);
     var paused = false;
     var ended = false;
+    var cancelDrop;
+    var scoreLabel = root.querySelector(".game-live-score");
+
+    function difficulty() {
+      return options.getEndlessDifficulty(lines);
+    }
+
+    function dropDelay() {
+      return Math.max(145, 720 / difficulty().multiplier);
+    }
+
+    function scheduleDrop() {
+      if (ended) return;
+      cancelDrop = options.runtime.timeout(function () {
+        drop();
+        scheduleDrop();
+      }, dropDelay());
+    }
 
     function spawn() {
       piece = {
@@ -214,7 +232,7 @@
       };
       if (collides(0, 0, piece.shape)) {
         ended = true;
-        options.onLose("Cát đã chạm tới đỉnh.");
+        options.onLose({ message: "Cát đã chạm tới đỉnh.", score: lines });
       }
     }
 
@@ -247,14 +265,9 @@
           grid.splice(y, 1);
           grid.unshift(Array(cols).fill(null));
           lines += 1;
+          scoreLabel.textContent = "Hàng " + lines + " · Nhịp " + difficulty().stage;
           y += 1;
         }
-      }
-      if (lines >= target) {
-        ended = true;
-        draw();
-        options.onWin("Đã xóa " + lines + " hàng cát.");
-        return;
       }
       spawn();
     }
@@ -267,7 +280,7 @@
     }
 
     function move(action) {
-      if (ended) return;
+      if (ended || paused) return;
       if (action === "rotate") rotate();
       if (action === "left" && !collides(-1, 0, piece.shape)) piece.x -= 1;
       if (action === "right" && !collides(1, 0, piece.shape)) piece.x += 1;
@@ -300,7 +313,10 @@
       });
       ctx.fillStyle = "#294a31";
       ctx.font = "600 13px sans-serif";
-      ctx.fillText("Hàng " + lines + "/" + target, 10, 22);
+      ctx.fillText("Hàng " + lines, 10, 22);
+      ctx.textAlign = "right";
+      ctx.fillText("Nhịp " + difficulty().stage + " · ×" + difficulty().factor.toFixed(2), canvas.width - 10, 22);
+      ctx.textAlign = "left";
     }
 
     function drawCell(x, y, color) {
@@ -324,17 +340,16 @@
           move("rotate");
         }
       }
-    });
+    }, options.runtime);
     function onKey(event) {
       var map = { ArrowLeft: "left", ArrowRight: "right", ArrowDown: "down", ArrowUp: "rotate" };
-      if (map[event.key]) { event.preventDefault(); move(map[event.key]); }
+      if (map[event.key] && !paused) { event.preventDefault(); move(map[event.key]); }
     }
     window.addEventListener("keydown", onKey);
     spawn();
     draw();
-    var speed = Math.max(260, 720 / options.difficulty.multiplier);
-    var cancelDrop = options.runtime.interval(drop, speed);
-    options.onHint("Vuốt ngang để di chuyển, vuốt lên để xoay, vuốt xuống để thả.");
+    scheduleDrop();
+    options.onHint("Xóa càng nhiều hàng, cát sẽ rơi càng nhanh.");
     return {
       setPaused: function (value) { paused = value; },
       destroy: function () {

@@ -3,12 +3,19 @@
 
   window.GamePlatform.register("truot-so", function (root, options) {
     var board = Array(16).fill(0);
-    var target = options.level > 2 ? 512 : 256;
+    var score = 0;
+    var moves = 0;
+    var ended = false;
+
+    function difficulty() {
+      return options.getEndlessDifficulty(moves);
+    }
 
     function add() {
       var empty = board.map(function (value, index) { return value ? -1 : index; })
         .filter(function (index) { return index >= 0; });
-      if (empty.length) board[empty[Math.floor(Math.random() * empty.length)]] = Math.random() < .88 ? 2 : 4;
+      var fourChance = Math.min(.32, .08 + difficulty().factor * .06);
+      if (empty.length) board[empty[Math.floor(Math.random() * empty.length)]] = Math.random() < 1 - fourChance ? 2 : 4;
     }
 
     function compress(line) {
@@ -16,6 +23,7 @@
       for (var index = 0; index < values.length - 1; index += 1) {
         if (values[index] === values[index + 1]) {
           values[index] *= 2;
+          score += values[index];
           values.splice(index + 1, 1);
         }
       }
@@ -24,13 +32,15 @@
     }
 
     function render() {
-      root.innerHTML = '<div class="game-number-slide">' + board.map(function (value) {
+      root.innerHTML = '<div class="game-live-score" aria-live="polite">Điểm ' + score +
+        ' · Nhịp ' + difficulty().stage + '</div><div class="game-number-slide">' + board.map(function (value) {
         return '<div class="game-number-slide__cell game-number-slide__cell--n' + value + '">' +
           (value || "") + "</div>";
       }).join("") + "</div>";
     }
 
     function move(direction) {
+      if (ended) return;
       var old = board.join(",");
       var next = Array(16).fill(0);
       for (var lineIndex = 0; lineIndex < 4; lineIndex += 1) {
@@ -56,18 +66,18 @@
       }
       board = next;
       if (board.join(",") !== old) {
+        moves += 1;
         add();
         window.GameAudio.tap();
       }
       render();
-      if (board.some(function (value) { return value >= target; })) {
-        options.onWin("Bạn đã tạo được ô " + target + ".");
-      } else if (!board.includes(0) && !board.some(function (value, index) {
+      if (!board.includes(0) && !board.some(function (value, index) {
         var row = Math.floor(index / 4);
         var col = index % 4;
         return (col < 3 && board[index + 1] === value) || (row < 3 && board[index + 4] === value);
       })) {
-        options.onLose("Bàn số đã kín.");
+        ended = true;
+        options.onLose({ message: "Bàn số đã kín.", score: score });
       }
     }
 
@@ -85,7 +95,7 @@
     });
     add();
     add();
-    options.onHint("Vuốt để gộp các ô cùng số. Tạo ô " + target + ".");
+    options.onHint("Vuốt để gộp số. Chơi càng lâu, ô 4 xuất hiện càng thường xuyên.");
     render();
     return {};
   });

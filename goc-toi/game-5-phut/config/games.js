@@ -24,7 +24,7 @@ window.GAME_CATALOG = [
     steps: ["Quan sát hình dạng và màu của các khối.", "Kéo khối tới vị trí phù hợp.", "Hoàn thành mục tiêu trước khi hết chỗ."]
   },
   {
-    id: "ghep-trai-cay", name: "Ghép Trái Cây", category: "Ghép nối", icon: "fa-apple-whole", color: "coral", badge: "new", status: "mvp",
+    id: "ghep-trai-cay", name: "Ghép Trái Cây", category: "Ghép nối", icon: "fa-apple-whole", color: "coral", badge: "new", status: "mvp", mode: "endless",
     summary: "Thả và ghép những trái cây giống nhau thành loại lớn hơn.",
     objective: "Tạo trái cây lớn nhất mà không để hộp bị đầy.",
     steps: ["Chọn vị trí rồi thả trái cây xuống.", "Hai trái giống nhau chạm vào sẽ hợp nhất.", "Giữ trái cây dưới vạch giới hạn."]
@@ -54,10 +54,10 @@ window.GAME_CATALOG = [
     steps: ["Chọn quân có đầu khớp với một đầu trên bàn.", "Đặt quân vào phía phù hợp.", "Nếu không còn quân hợp lệ, bạn phải bỏ lượt."]
   },
   {
-    id: "cat-roi", name: "Cát Rơi", category: "Phản xạ", icon: "fa-hourglass-half", color: "amber", badge: "new", status: "mvp",
+    id: "cat-roi", name: "Cát Rơi", category: "Phản xạ", icon: "fa-hourglass-half", color: "amber", badge: "new", status: "mvp", mode: "endless",
     summary: "Xoay và xếp những cụm cát màu đang rơi xuống.",
     objective: "Tạo dải màu liền để xóa cát và giữ bàn không bị đầy.",
-    steps: ["Vuốt ngang để di chuyển, vuốt lên để xoay.", "Vuốt xuống để thả nhanh cụm cát.", "Xóa đủ hàng để giữ khoảng trống."]
+    steps: ["Vuốt ngang để di chuyển, vuốt lên để xoay.", "Vuốt xuống để thả nhanh cụm cát.", "Xóa hàng liên tục khi tốc độ rơi tăng dần."]
   },
   {
     id: "lap-day-khoi", name: "Lấp Đầy Khối", category: "Giải đố", icon: "fa-border-all", color: "mint",
@@ -204,9 +204,9 @@ window.GAME_CATALOG = [
     steps: ["Chạm một vật đang nhìn thấy để đưa vào khay.", "Ba vật giống nhau trong khay sẽ biến mất.", "Tính thứ tự chọn để không dùng hết chỗ trống."]
   },
   {
-    id: "truot-so", name: "Trượt Số", category: "Ghép nối", icon: "fa-grip-vertical", color: "amber", status: "mvp",
+    id: "truot-so", name: "Trượt Số", category: "Ghép nối", icon: "fa-grip-vertical", color: "amber", status: "mvp", mode: "endless",
     summary: "Trượt toàn bộ ô số và gộp những cặp có cùng giá trị.",
-    objective: "Tạo ô số mục tiêu trước khi lưới bị lấp kín.",
+    objective: "Tạo ô số lớn nhất và ghi thật nhiều điểm trước khi lưới bị kín.",
     steps: ["Vuốt lên, xuống, trái hoặc phải.", "Hai ô cùng số chạm nhau sẽ hợp nhất.", "Giữ ô lớn ở một góc để dễ kiểm soát bàn."]
   },
   {
@@ -246,7 +246,7 @@ window.GAME_CATALOG = [
     steps: ["Chọn một trong ba khối đang có.", "Kéo khối vào vùng trống vừa hình.", "Lấp kín hàng hoặc cột để xóa chúng."]
   },
   {
-    id: "ran-san-moi", name: "Rắn Săn Mồi", category: "Phản xạ", icon: "fa-staff-snake", color: "mint", status: "mvp",
+    id: "ran-san-moi", name: "Rắn Săn Mồi", category: "Phản xạ", icon: "fa-staff-snake", color: "mint", status: "mvp", mode: "endless",
     summary: "Điều khiển chú rắn ăn quà và dài thêm qua từng lượt.",
     objective: "Ăn được nhiều quà nhất mà không va vào thân hoặc tường.",
     steps: ["Vuốt để đổi hướng di chuyển.", "Đi tới món quà để tăng điểm và chiều dài.", "Chừa đường quay đầu khi thân rắn dài dần."]

@@ -95,7 +95,7 @@ async function run() {
       .filter((game) => game.mode === "endless")
       .map((game) => game.id)
       .sort(),
-    ["chim-vuot-gio", "xep-thap"]
+    ["cat-roi", "chim-vuot-gio", "ghep-trai-cay", "ran-san-moi", "truot-so", "xep-thap"]
   );
   assert.deepEqual(
     Array.from(sandbox.window.GAME_CATALOG)
