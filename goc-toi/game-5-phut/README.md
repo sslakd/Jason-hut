@@ -17,9 +17,10 @@ Static app chạy tại `/goc-toi/game-5-phut/`.
 - `styles.css`: theme xanh lá, responsive và giao diện toàn màn hình mobile.
 - `app.js`: luồng tìm kiếm, lọc, hướng dẫn, chọn độ khó và màn chơi demo.
 
-14 game hiện có thể chơi: Thoát Bãi Xe, Phân Loại Nước, Cát Rơi, Đấu Màu,
+20 game hiện có thể chơi: Thoát Bãi Xe, Phân Loại Nước, Cát Rơi, Đấu Màu,
 Ô Ăn Quan, Chim Vượt Gió, Caro 3×3, Bốn Quân Liền, Trượt Số, Dò Mìn,
-Lật Hình, Tranh Trượt, Rắn Săn Mồi và Xếp Tháp. Khi tiếp tục mở rộng, tách
+Lật Hình, Tranh Trượt, Rắn Săn Mồi, Xếp Tháp, Xếp Đai Ốc, Sơn Mê Cung,
+Khối Sắc Màu, Ghép Trái Cây, Tô Đủ Màu và Domino. Khi tiếp tục mở rộng, tách
 từng game thành `games/<game-id>/` để quản lý engine, UI, AI và asset độc lập.
 Game mới phải đăng ký qua `GamePlatform.register()` và dùng `options.runtime`
 để quản lý timeout, interval, event listener và gesture.

@@ -43,6 +43,7 @@ function wait(delay) {
 }
 
 async function run() {
+  load("config/games.js");
   load("config/difficulty.js");
   load("games/core/platform.js");
   load("games/mvp-games.js");
@@ -55,6 +56,12 @@ async function run() {
     "tranh-truot",
     "ran-san-moi",
     "xep-thap"
+    ,"xep-dai-oc"
+    ,"son-me-cung"
+    ,"khoi-sac-mau"
+    ,"ghep-trai-cay"
+    ,"to-du-mau"
+    ,"domino"
   ].forEach((id) => load(`games/${id}/game.js`));
 
   const expectedIds = [
@@ -72,9 +79,22 @@ async function run() {
     "tranh-truot",
     "ran-san-moi",
     "xep-thap"
+    ,"xep-dai-oc"
+    ,"son-me-cung"
+    ,"khoi-sac-mau"
+    ,"ghep-trai-cay"
+    ,"to-du-mau"
+    ,"domino"
   ];
   assert.deepEqual(
     Array.from(sandbox.window.GamePlatform.registeredIds()).sort(),
+    expectedIds.sort()
+  );
+  assert.deepEqual(
+    Array.from(sandbox.window.GAME_CATALOG)
+      .filter((game) => game.status === "mvp")
+      .map((game) => game.id)
+      .sort(),
     expectedIds.sort()
   );
   assert.equal(sandbox.window.getDifficultyMultiplier(2, 2), 2.1);

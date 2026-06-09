@@ -16,7 +16,13 @@
     "lat-hinh",
     "tranh-truot",
     "ran-san-moi",
-    "xep-thap"
+    "xep-thap",
+    "xep-dai-oc",
+    "son-me-cung",
+    "khoi-sac-mau",
+    "ghep-trai-cay",
+    "to-du-mau",
+    "domino"
   ];
 
   window.GAME_ASSETS = {

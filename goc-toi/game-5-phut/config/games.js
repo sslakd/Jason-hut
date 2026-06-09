@@ -6,31 +6,31 @@ window.GAME_CATALOG = [
     steps: ["Chạm và kéo xe theo chiều xe có thể di chuyển.", "Quan sát khoảng trống trước khi dịch chuyển.", "Mở một đường thông từ xe chính tới lối ra."]
   },
   {
-    id: "xep-dai-oc", name: "Xếp Đai Ốc", category: "Sắp xếp", icon: "fa-screwdriver-wrench", color: "amber",
+    id: "xep-dai-oc", name: "Xếp Đai Ốc", category: "Sắp xếp", icon: "fa-screwdriver-wrench", color: "amber", status: "mvp",
     summary: "Chuyển các khối màu giữa những cột để sắp xếp chúng.",
     objective: "Đưa toàn bộ khối cùng màu về chung một cột.",
     steps: ["Chọn khối nằm trên cùng của một cột.", "Chọn cột còn chỗ để chuyển khối sang.", "Hoàn thành khi mỗi cột chỉ còn một màu."]
   },
   {
-    id: "son-me-cung", name: "Sơn Mê Cung", category: "Giải đố", icon: "fa-paint-roller", color: "sky",
+    id: "son-me-cung", name: "Sơn Mê Cung", category: "Giải đố", icon: "fa-paint-roller", color: "sky", status: "mvp",
     summary: "Lăn quả bóng qua mê cung và phủ màu mọi lối đi.",
     objective: "Sơn kín toàn bộ ô trống mà không bỏ sót đường nào.",
     steps: ["Vuốt theo bốn hướng để bóng lăn.", "Bóng chỉ dừng khi gặp tường.", "Tính đường đi để sơn được mọi ô."]
   },
   {
-    id: "khoi-sac-mau", name: "Khối Sắc Màu", category: "Giải đố", icon: "fa-shapes", color: "coral",
+    id: "khoi-sac-mau", name: "Khối Sắc Màu", category: "Giải đố", icon: "fa-shapes", color: "coral", status: "mvp",
     summary: "Sắp các khối màu vào đúng vị trí trong một bàn chơi gọn gàng.",
     objective: "Ghép và dọn các khối theo yêu cầu của từng màn.",
     steps: ["Quan sát hình dạng và màu của các khối.", "Kéo khối tới vị trí phù hợp.", "Hoàn thành mục tiêu trước khi hết chỗ."]
   },
   {
-    id: "ghep-trai-cay", name: "Ghép Trái Cây", category: "Ghép nối", icon: "fa-apple-whole", color: "coral", badge: "new",
+    id: "ghep-trai-cay", name: "Ghép Trái Cây", category: "Ghép nối", icon: "fa-apple-whole", color: "coral", badge: "new", status: "mvp",
     summary: "Thả và ghép những trái cây giống nhau thành loại lớn hơn.",
     objective: "Tạo trái cây lớn nhất mà không để hộp bị đầy.",
     steps: ["Chọn vị trí rồi thả trái cây xuống.", "Hai trái giống nhau chạm vào sẽ hợp nhất.", "Giữ trái cây dưới vạch giới hạn."]
   },
   {
-    id: "to-du-mau", name: "Tô Đủ Màu", category: "Giải đố", icon: "fa-fill-drip", color: "violet",
+    id: "to-du-mau", name: "Tô Đủ Màu", category: "Giải đố", icon: "fa-fill-drip", color: "violet", status: "mvp",
     summary: "Lan màu từ các điểm bắt đầu để phủ kín bàn chơi.",
     objective: "Lấp đầy mọi ô mà các vùng màu không chồng lên nhau.",
     steps: ["Chạm một điểm màu để bắt đầu.", "Kéo đường màu qua các ô trống.", "Phủ kín bàn chơi bằng tất cả màu đã cho."]
@@ -48,7 +48,7 @@ window.GAME_CATALOG = [
     steps: ["Kéo ống muốn rót sang ống nhận.", "Chỉ rót lên lớp cùng màu hoặc ống trống.", "Sắp để mỗi ống hoàn chỉnh một màu."]
   },
   {
-    id: "domino", name: "Domino", category: "Cờ bàn", icon: "fa-dice-two", color: "ink",
+    id: "domino", name: "Domino", category: "Cờ bàn", icon: "fa-dice-two", color: "ink", status: "mvp",
     summary: "Nối những quân domino có cùng số chấm trên bàn.",
     objective: "Đánh hết quân trước đối thủ hoặc đạt điểm cao nhất.",
     steps: ["Chọn quân có đầu khớp với một đầu trên bàn.", "Đặt quân vào phía phù hợp.", "Nếu không còn quân hợp lệ, bạn phải bỏ lượt."]
