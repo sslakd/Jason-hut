@@ -301,7 +301,9 @@ async function cloudRequest(path, options = {}) {
 
 async function initializeCloud() {
   if (!cloud.enabled) {
-    setCloudStatus("Đã lưu trên thiết bị này", "offline");
+    setCloudStatus("Bản local — mở web để lưu cloud", "offline");
+    UI.cloudBadgeText.textContent = "MỞ WEB ĐỂ LƯU CLOUD";
+    UI.openLinkButton.textContent = "Mở bản web có lưu cloud";
     return;
   }
   const credentials = readCloudCredentials();
@@ -1386,6 +1388,10 @@ UI.swapButton.addEventListener("click", event => {
   swapAmmo();
 });
 UI.openLinkButton.addEventListener("click", () => {
+  if (!cloud.enabled) {
+    location.href = "https://sslakd.com/panda/?source=local";
+    return;
+  }
   UI.linkMessage.textContent = "";
   UI.familyCodeInput.value = "";
   UI.linkOverlay.classList.remove("hidden");
@@ -1395,6 +1401,10 @@ UI.openLinkButton.addEventListener("click", () => {
   });
 });
 UI.cloudBadge.addEventListener("click", () => {
+  if (!cloud.enabled) {
+    location.href = "https://sslakd.com/panda/?source=local";
+    return;
+  }
   if (cloud.familyCode && state.playing && !state.paused) {
     togglePause(true);
     return;
