@@ -1,528 +1,478 @@
 # KỲ VƯƠNG
 
+*Không phải ai sinh ra cũng là kỳ vương. Nhưng ai cũng có thể bước lên con đường đó.*
+
 ---
 
-## Chương 1: Người Không Biết Chữ
+## Chương 1: Một Nước Cờ
 
-Sài Gòn, 5h chiều. Ngã tư Nguyễn Trãi – Trần Hưng Đạo.
+Sài Gòn. 5h chiều. Ngã tư Nguyễn Trãi – Trần Hưng Đạo.
 
-Dòng xe cộ đông nghịt. Xe máy, ô tô, xe buýt, xích lô — tất cả chen nhau trong một mớ hỗn độn có tổ chức. Đèn xanh. Đèn đỏ. Tiếng còi. Tiếng người chửi nhau. Một bà lão đội nón lá chở một chục ổ bánh mì lao qua ngã tư như thể không có luật giao thông nào tồn tại.
+Trong cái nắng chiều chói chang của Sài Gòn, Thiên ngồi trên bậc thềm một tiệm tạp hóa, nhìn ra ngã tư. Trước mặt nó — một xấp vé số chưa bán hết. Hôm nay nó kiếm được 45 nghìn — không đủ.
 
-Thiên 17 tuổi, ngồi ở bậc thềm một tiệm tạp hoá, nhìn ra ngã tư.
+Mẹ nó nằm bệnh viện. Hóa đơn 3 ngày nữa đến hạn. Cần 2 triệu.
 
-Nó mặc áo phông cũ, quần short lửng, chân dép tổ ong. Trước mặt — một xấp vé số. Hôm nay nó bán được 12 tờ — tạm ổn, nhưng chưa đủ.
+Thiên 17 tuổi. Nó chưa từng đi học. Nó không biết đọc, không biết viết. Nhưng nó có một tài năng lạ — nó thấy được những thứ người khác không thấy.
 
-Mẹ nó nằm bệnh viện. Viện phí 3 ngày nữa đến hạn. Nó cần 2 triệu.
+Dòng xe trên đường — với nó — không phải một mớ hỗn độn. Nó là một dòng chảy có quy luật. Mỗi chiếc xe máy là một chấm di động. Mỗi ngã rẽ là một nước đi. Mỗi lần đèn xanh đỏ chuyển là một nhịp — và Thiên thấy trước được nhịp đó.
 
-Thiên không đi học. Nó không biết đọc, không biết viết. Nhưng nó có một thứ — thứ mà không ai dạy nó, và không ai biết nó có.
+Nó không biết giải thích. Nó chỉ thấy.
 
-Nó nhìn vào dòng xe và thấy... pattern.
+Ở vỉa hè đối diện, hai ông già đang chơi cờ tướng. Một đám đông 5-6 người đứng xem. Thiên không để ý — cho đến khi một giọng nói vang lên:
 
-Không phải nghĩa bóng. Nghĩa đen.
+*"Mã chết rồi! Mày đi Mã là thua!"*
 
-Mỗi chiếc xe máy — một chấm di động. Mỗi làn đường — một ô bàn cờ. Đèn xanh — một nước đi. Đèn đỏ — một nước dừng. Dòng xe chuyển động như những quân cờ — vô tri, nhưng tuân theo một quy luật ngầm.
+*"Không đi Mã thì đi gì? Pháo cũng chết!"*
 
-Thiên không giải thích được. Nó chỉ thấy.
+Thiên đứng dậy. Không hiểu sao nó lại đi qua đường. Nó đứng sau đám đông, nhìn vào bàn cờ.
 
-Chiếc xe tải màu xanh sẽ rẽ phải sau 3 giây — vì tài xế đã xi nhan từ lâu, và đèn phía trước sắp chuyển vàng. Chiếc xe máy sau nó sẽ vượt lên — vì nó chở hàng, và hàng sẽ đổ nếu xe dừng gấp. Dòng người đi bộ sẽ chờ thêm 5 giây — vì người đàn ông mặc áo sơ mi đang nghe điện thoại, và hắn sẽ không nhìn đường.
+Lần đầu tiên trong đời, nó thấy một bàn cờ tướng.
 
-Thiên thấy tất cả. Mà không cần nghĩ.
+32 quân. Đỏ và đen. Trên một bàn vuông 8×8.
 
-Nó đứng dậy. Đi về phía ngã tư — nơi có hai ông già đang chơi cờ tướng trên vỉa hè.
+Và trong đầu nó — dòng xe lại hiện ra. Nhưng lần này — chúng nằm im. Có quy luật. Có mục đích.
 
-Một ông mặc áo sơ mi kẻ, đầu đội nón, tay cầm quân Mã do dự. Ông kia ngồi xổm, cười: *"Đi Mã đi. Mày không đi Mã là thua."*
+Nó không biết luật. Nhưng nó thấy con đường.
 
-*"Mã chết. Đi Mã ăn Pháo — nó lộ Xe."*
+Một quân Tốt — ở cuối bàn, bị lãng quên — đang nhìn về phía trước. Nếu Tốt lên một ô, nó sẽ chết ngay. Nhưng cái chết của nó — sẽ mở đường cho Xe lao vào.
 
-*"Thì mày đi Pháo."*
+*"Đi Tốt."*
 
-*"Pháo cũng chết. Tới lượt nó."*
+Cả đám quay lại. Một thằng nhỏ bán vé số, ốm nhom, mặt mũi lem nhem.
 
-Hai ông già cãi nhau. Một đám đông 5-6 người đứng xem. Không ai dám nói — vì ai nói cũng sai.
+Ông già cầm quân Đỏ: *"Mày biết chơi cờ?"*
 
-Thiên đứng sau, nhìn bàn cờ.
+*"Không ạ."*
 
-Nó không biết chơi cờ. Nó chưa bao giờ chơi. Nhưng nó nhìn bàn cờ — và nó thấy.
+*"Sao kêu đi Tốt?"*
 
-Dòng xe trên đường. Các ô vuông. Các quân cờ di động. Một pattern — rõ ràng, đơn giản, như thể bàn cờ đang nói chuyện với nó.
+*"Cháu... cháu thấy Tốt phải đi. Tốt chết — nhưng mở đường cho Xe. Rồi Pháo từ góc kia — chiếu. Hết."*
 
-Nó buột miệng: *"Đi Tốt."*
+Đám đông im. Ông già nhìn bàn cờ. Một lúc. Rồi ông đưa Tốt lên.
 
-Cả đám quay lại nhìn. Một thằng nhỏ bán vé số, quần áo lấm lem, mặt mũi lem nhem.
-
-Ông già đội nón: *"Mày biết chơi cờ?"*
-
-*"Không."*
-
-*"Thế sao kêu đi Tốt?"*
-
-*"Cháu không biết. Nhưng Tốt... cháu thấy Tốt phải đi."*
-
-Ông già kia cười: *"Thằng nhỏ nói đi Tốt kìa. Tốt đang ở cuối bàn, đi Tốt là chết."*
-
-Thiên: *"Tốt chết — nhưng nó mở đường. Xe sau đó vô — bắt Tượng. Rồi Pháo từ góc kia — chiếu. Hết."*
-
-Đám đông im lặng.
-
-Ông già đội nón từ từ đưa quân Tốt lên một ô. Quân Tốt bị ăn ngay. Xe từ phía sau lao vào — bắt Tượng. Pháo từ góc — chiếu.
+Tốt bị ăn. Xe lao vào. Pháo từ góc — chiếu.
 
 9 nước sau — checkmate.
 
-Ông già đội nón thắng. Ổng nhìn Thiên — không phải kiểu nhìn ngạc nhiên. Là kiểu nhìn của một người vừa tìm thấy thứ gì đó.
+Đám đông ồ lên. Ông già đội nón thắng — nhưng ông không nhìn bàn cờ. Ông nhìn Thiên.
 
 *"Mày tên gì?"*
 
-*"Dạ Thiên."*
+*"Thiên."*
 
 *"Bao nhiêu tuổi?"*
 
 *"17."*
 
-*"Biết chơi cờ không?"*
+*"Có muốn học chơi cờ không?"*
 
-*"Dạ không."*
+Thiên nhìn bàn cờ. 32 quân. Một thế giới mới vừa mở ra trước mắt nó — và lần đầu tiên, nó cảm thấy mình không phải là đứa bán vé số vô dụng.
 
-*"Vậy sao mày thấy nước đó?"*
-
-Thiên: *"Cháu... cháu thấy nó. Trong đầu cháu — bàn cờ giống dòng xe ngoài đường. Mỗi quân là một chiếc xe. Mỗi nước là một ngã rẽ. Cháu thấy trước được — nó sẽ đi đâu."*
-
-Ông già bỏ nón xuống. Mắt ông — sâu, già, nhưng sáng.
-
-*"Tao là Bảy. Và tao sẽ dạy mày chơi cờ."*
+*"...Dạ muốn."*
 
 ---
 
-## Chương 2: Ông Bảy
+## Chương 2: Mở Mắt
 
-Ông Bảy 68 tuổi. Ổng sống một mình trong một căn nhà nhỏ ở quận 8 — gần kênh, mùi nước đen, mùi cá. Trong nhà — không có gì ngoài một cái giường, một cái bàn, và một bộ cờ tướng bằng đồng — bộ cờ duy nhất ổng mang theo suốt 40 năm.
+Ông Bảy dẫn Thiên về căn nhà nhỏ ở quận 8 — gần kênh, mùi nước, mùi cá. Trong nhà không có gì ngoài một cái giường, một cái bàn, và một bộ cờ tướng bằng đồng đã cũ.
 
-Hồi trẻ, Bảy từng là kiện tướng cờ tướng quốc gia. Ổng từng vô địch giải toàn quốc năm 28 tuổi. Ổng từng đại diện Việt Nam thi đấu ở Trung Quốc, Hồng Kông, Đài Loan.
+Ông Bảy 68 tuổi. 40 năm trước, ông từng là niềm tự hào của làng cờ Việt Nam. Vô địch toàn quốc năm 28 tuổi. Đi Trung Quốc, Hồng Kông, Đài Loan. Rồi một ngày — ông biến mất.
 
-Rồi một ngày, ổng biến mất. Khỏi làng cờ. Khỏi giải đấu. Khỏi tất cả.
+Không ai biết tại sao.
 
-Không ai biết tại sao. Một số người nói ổng bán độ. Một số nói ổng bị xã hội đen đe doạ. Một số nói ổng nghiện — nhưng đó là chuyện 30 năm trước, không ai còn nhớ rõ.
+*"Cờ tướng — không phải là thắng thua."*
 
-Ông Bảy chưa bao giờ kể.
+Ông Bảy đặt 32 quân cờ lên bàn.
 
-Nhưng ổng cầm bộ cờ đồng lên, đặt trước mặt Thiên:
+*"Cờ tướng là một thế giới. Mỗi quân là một con người. Mỗi nước đi là một quyết định. Mỗi ván cờ là một cuộc đời."*
 
-*"Mỗi quân cờ có một cách đi. Mày thuộc lòng trước khi học bất cứ thứ gì khác."*
+Ông cầm quân Tướng lên — quân quan trọng nhất trên bàn:
 
-Thiên nhìn 32 quân cờ — 16 đỏ, 16 đen.
+*"Đây là Tướng. Vua của cả ván cờ. Nếu Tướng mất — mày thua. Nhưng Tướng không thể đi lung tung — nó chỉ quanh quẩn trong cung, có Sĩ và Tượng bảo vệ."*
 
-*"Tướng — ở trong cung, được Sĩ và Tượng bảo vệ. Nếu Tướng mất — mày thua."*
+Thiên nhìn quân Tướng. Một ông vua yếu ớt, phải dựa vào người khác. Nó thấy mẹ nó trong đó.
 
-*"Sĩ — đi chéo trong cung. Bảo vệ Tướng."*
+*"Sĩ — đi chéo trong cung. Trung thành. Bảo vệ Tướng đến cùng."*
 
-*"Tượng — đi chéo lớn, không qua sông. Bảo vệ lãnh thổ."*
+*"Tượng — đi chéo lớn, không được qua sông. Tượng là người giữ đất, không xâm lăng."*
 
-*"Mã — đi hình chữ L. Linh hoạt. Khó đoán."*
+*"Mã — đi hình chữ L. Linh hoạt. Khó đoán. Nguy hiểm."*
 
-*"Xe — đi thẳng, không ai cản. Mạnh nhất."*
+*"Xe — mạnh nhất. Đi thẳng, không ai cản. Nhưng chính vì mạnh — nó luôn là mục tiêu đầu tiên của đối thủ."*
 
-*"Pháo — đi thẳng nhưng phải có quân làm bệ để ăn. Tấn công từ xa."*
+*"Pháo — đi thẳng, nhưng không thể ăn trực tiếp. Phải có một quân khác làm bệ — rồi bắn qua. Pháo tấn công từ xa, bất ngờ, không ai thấy trước."*
 
-*"Tốt — đi thẳng, mỗi nước một ô. Khi qua sông — có thể đi ngang. Nguy hiểm không ngờ."*
+*"Tốt — nhỏ nhất, yếu nhất. Đi thẳng, mỗi lần một ô. Nhưng khi qua sông — nó có thể đi ngang. Và nó trở thành một trong những quân nguy hiểm nhất trên bàn."*
 
-Thiên nhìn bàn cờ. 32 quân. 7 loại. Nó nhắm mắt — và trong đầu, dòng xe lại hiện ra. Nhưng lần này — chúng xếp thành hàng. Có quy luật. Có mục đích.
+Ông Bảy ngừng. Nhìn Thiên:
 
-*"Cháu nhớ rồi."*
+*"Mỗi quân cờ đều có điểm mạnh, điểm yếu. Cũng như mỗi con người. Cờ tướng không dạy mày thắng — nó dạy mày hiểu."*
 
-*"Hết?"*
+*"Hiểu gì ạ?"*
 
-*"Hết."*
+*"Hiểu chính mày. Và hiểu đối thủ."*
 
-Ông Bảy nhìn nó. 30 năm dạy cờ — chưa ai thuộc 7 loại quân trong 5 phút.
+Thiên nhìn 32 quân cờ trước mặt. Nó nhắm mắt. Trong đầu — dòng xe không còn hỗn loạn nữa. Chúng xếp thành hàng. Có quy luật. Có ý nghĩa.
 
----
+*"Cháu nhớ hết rồi."*
 
-## Chương 3: Ván Đầu
+*"Hả?"*
 
-Một tuần trôi qua.
+*"7 loại quân. Cách đi của từng loại. Cháu nhớ."*
 
-Mỗi ngày, sau khi bán vé số, Thiên đến nhà ông Bảy. Học 2 tiếng. Chơi 3 ván. Lúc đầu — thua 20 nước. Sau đó — thua 15 nước. 10 nước. 5 nước.
-
-Ngày thứ 7 — Thiên thắng.
-
-Ông Bảy nhìn bàn cờ. Tay ổng run — lần đầu tiên sau 30 năm, ổng thua một người mới học 7 ngày.
-
-*"Mày có tài."*
-
-*"Cháu hên."*
-
-*"Hên là không đủ. Nhưng tài — là có thật."*
-
-Ông Bảy cất bộ cờ. Mở tủ — lấy ra một tấm ảnh cũ. Ảnh chụp ổng thời trẻ — đang cầm cúp vô địch.
-
-*"Tao từng là số 1. Rồi tao bỏ. Vì tao sợ."*
-
-Thiên: *"Sợ gì?"*
-
-*"Sợ thua. Khi mày lên đỉnh — không còn chỗ nào để lên nữa. Chỉ có chỗ xuống."*
-
-Ông Bảy nhìn tấm ảnh — rồi cất đi.
-
-*"Tao không muốn mày trở thành tao. Cho nên tao sẽ dạy mày tất cả — để mày có thể lên cao hơn tao."*
+Ông Bảy nhìn nó. Chưa ai thuộc 7 loại quân trong 5 phút.
 
 ---
 
-## Chương 4: Thế Giới Ngầm
+## Chương 3: Người Đầu Tiên
 
-1 tháng sau. Thiên đã chơi được 100 ván — thắng 30, thua 70 — và học được nhiều hơn tất cả những năm nó sống trên đường phố.
+Thiên ngồi trên chiếc ghế gỗ ọp ẹp. Trước mặt — ông Bảy, tay cầm quân Đỏ.
 
-Ông Bảy nói: *"Đã đến lúc mày gặp thế giới thật."*
-
-*"Thế giới nào?"*
-
-*"Thế giới cờ ngầm."*
-
-Thế giới cờ ngầm của Sài Gòn — không phải giải đấu. Không phải câu lạc bộ. Là những căn nhà trong hẻm sâu, nơi đại gia ngồi với nhau, đặt cọc cả trăm triệu cho mỗi ván.
-
-Người chơi — không phải kiện tướng. Là những tay cờ khét tiếng, những cựu vô địch đã về hưu, những tay nghiệp dư có máu mặt.
-
-Tiền đặt trên bàn. Ai thắng — lấy hết. Ai thua — có thể mất nhà, mất xe, mất cả cuộc đời.
-
-Ông Bảy dẫn Thiên đến một căn nhà trong hẻm Nguyễn Cư Trinh. Bên ngoài — im lìm. Bên trong — 20 người, khói thuốc mù mịt, một bàn cờ ở giữa.
-
-Một người đàn ông 50 tuổi ngồi ở bàn — tay trái đeo 3 cái nhẫn vàng, tay phải xoay điếu xì gà.
-
-*"Bảy. 30 năm không gặp. Còn sống à?"*
-
-*"Còn. Và tao có một đệ tử."*
-
-Người đàn ông nhìn Thiên: *"Cái thằng nhỏ này á?"*
-
-*"Nó."*
-
-*"Mày bao nhiêu tuổi?"* — người đàn ông hỏi Thiên.
-
-*"17."*
-
-*"Mày biết chơi cờ?"*
-
-Thiên: *"Biết tí."*
-
-*"Biết tí không đủ. Ở đây, mày phải biết tất cả. Mày thắng — mày lấy tiền. Mày thua — mày mất tiền. Đơn giản."*
-
-Người đàn ông xoa xoa điếu xì gà: *"Tao sẽ cho mày một ván. Thắng — mày có 10 triệu. Thua — mày không được xu nào. Và mày cút khỏi đây."*
-
-Ông Bảy không nói gì. Nhìn Thiên.
-
-Thiên nhìn bàn cờ. 32 quân. Nhưng không giống bàn cờ của ông Bảy — bàn cờ này có mùi tiền, mùi khói, mùi máu.
-
-*"Được."*
-
----
-
-## Chương 5: Ván Đầu Tiên
-
-Đối thủ của Thiên — một người đàn ông 40 tuổi, tên Hải, tay cờ chuyên nghiệp ở thế giới ngầm. Hắn chơi 15 năm, thắng hơn 200 ván, chưa từng thua ai dưới 20 tuổi.
+*"Ván đầu tiên. Hai bên đều có 16 quân. Mục tiêu — chiếu Tướng đối thủ. Đi."*
 
 Thiên cầm quân Đen — phòng thủ.
 
-Hải đi trước. Nước Pháo — tấn công ngay từ đầu.
+3 nước đầu, nó đi như một đứa mới học — lung tung, không mục đích.
 
-5 nước đầu — Thiên mất một Mã. 10 nước — mất thêm Tượng. Đám đông bắt đầu cười khẩy: *"Thằng nhỏ sắp chết rồi."*
+Nước thứ 4, nó nhắm mắt.
 
-Ông Bảy đứng im.
+Khi mở ra — nó không còn thấy căn nhà ọp ẹp nữa. Nó thấy ngã tư. Thấy dòng xe. Mỗi quân cờ — một chiếc xe. Mỗi nước đi — một ngã rẽ.
 
-Nước thứ 15 — Thiên nhắm mắt.
+*"Thằng nhỏ này... mày đang làm gì thế?"*
 
-Không phải vì sợ. Mà vì trong đầu nó — dòng xe lại hiện ra. Ngã tư Nguyễn Trãi – Trần Hưng Đạo. Hàng ngàn chiếc xe di chuyển.
+Thiên không trả lời. Nó đưa Xe lên một ô — nước đi không có trong bất kỳ sách cờ nào.
 
-Đèn xanh. Đèn đỏ. Ai rẽ. Ai dừng. Ai đi thẳng.
+Ông Bảy nhìn nước đó. Một lúc. Rồi cười:
 
-Mỗi quân cờ — một chiếc xe. Mỗi nước đi — một ngã rẽ.
+*"Thiên ơi, mày vừa mở ra một cánh cửa."*
 
-Và Thiên thấy — con đường của Hải.
+*"Cửa gì ạ?"*
 
-Nó mở mắt. Đi một nước — Tốt.
-
-Hải cười: *"Tốt? Mày sắp thua mà đi Tốt?"*
-
-Nước thứ 16 — Tốt bị ăn. Nhưng Xe của Thiên vô — bắt Pháo của Hải.
-
-Nước thứ 18 — Xe bị ăn. Nhưng Mã của Thiên nhảy qua — chiếu Tướng.
-
-Nước thứ 22 — Hải mất Xe. Nước 25 — mất Tượng. Nước 28 — Tướng của Hải bị Mã + Pháo kẹp cứng.
-
-Nước 30 — checkmate.
-
-Đám đông im lặng. 10 triệu được đặt trước mặt Thiên.
-
-Người đàn ông xì gà: *"Mày có thể quay lại bất cứ lúc nào."*
-
-Thiên cầm 10 triệu. Nó có thể trả viện phí cho mẹ.
-
-Nhưng nó biết — 10 triệu chỉ là khởi đầu.
+*"Cửa của người có thể nhìn thấy thế cờ — mà không cần học."*
 
 ---
 
-## Chương 6: Đối Thủ
+## Chương 4: Mỗi Người Một Câu Chuyện
 
-Tin về thằng nhỏ 17 tuổi thắng 10 triệu trong một ván — lan nhanh trong thế giới cờ ngầm.
+Một tháng trôi qua. Thiên đến nhà ông Bảy mỗi ngày. Học 3 tiếng. Chơi 5 ván.
 
-Một người nghe được. Ở một căn biệt thự quận 2.
+Thắng 2. Thua 3.
 
-**Hoàng** — 22 tuổi. Con trai một đại gia bất động sản. Hoàng là kiện tướng trẻ tuổi nhất Việt Nam. Nó được đào tạo từ năm 5 tuổi — bởi các kiện tướng quốc tế. Nó chưa thua một ván chính thức nào trong 2 năm.
+Nhưng mỗi ván — nó học được một bài học.
 
-Hoàng đang ngồi chơi cờ với cha — trên bàn cờ bằng ngà voi, trong phòng khách điều hoà mát lạnh.
+*"Mày thấy anh Hải không?"* — Ông Bảy chỉ một người đàn ông 40 tuổi ngồi trong quán cóc đối diện, đang chơi cờ với một người khác.
 
-*"Ba nghe nói có thằng nhỏ bán vé số thắng 10 triệu ở thế giới ngầm."*
+*"Anh ấy là thợ hồ. Làm việc dưới nắng 10 tiếng mỗi ngày. Nhưng tối nào cũng dành 2 tiếng để chơi cờ. Vợ anh ấy bảo — 'Cờ không nuôi sống mày.' Nhưng anh ấy nói — 'Cờ nuôi sống tâm hồn tao.'"*
 
-Cha Hoàng: *"Thì sao?"*
+Thiên nhìn anh Hải. Tay anh đầy chai sạn, chân lấm bê tông. Nhưng khi cầm quân cờ — tay anh không run.
 
-*"Nó mới học 1 tháng."*
+*"Chú Bảy — sao ai cũng chơi cờ vậy?"*
 
-Cha Hoàng ngừng tay: *"Ai dạy?"*
+*"Vì ai cũng muốn tìm một thứ gì đó. Có người tìm sự yên tĩnh. Có người tìm thử thách. Có người tìm bạn."*
 
-*"Ông Bảy."*
+*"Còn chú?"*
 
-Tên ông Bảy — làm cha Hoàng im lặng. 30 năm trước, ông Bảy từng là người duy nhất thắng cha Hoàng.
-
-*"Mời thằng nhỏ đó đến đây. Nói chơi một ván."*
-
-Hoàng cười. Nó muốn thử — thằng nhỏ bán vé số có gì đặc biệt.
+Ông Bảy im. Một lúc sau mới nói: *"Tao tìm sự tha thứ."*
 
 ---
 
-## Chương 7: Quận 2
+## Chương 5: Thế Giới Ngầm
 
-3 ngày sau, một chiếc xe hơi đen dừng trước căn nhà của ông Bảy ở quận 8. Tài xế bước xuống — mặc vest đen, đeo kính đen:
+Ông Bảy dẫn Thiên đến một căn nhà trong hẻm Nguyễn Cư Trinh. Tối. Khói thuốc mù mịt. 20 người đàn ông ngồi quanh một bàn cờ.
 
-*"Cậu chủ mời ông Bảy và bé Thiên đến chơi một ván."*
+Đây là thế giới cờ ngầm của Sài Gòn — nơi những con người không thuộc về giải đấu chính thức tìm đến nhau.
 
-Ông Bảy nhìn tài xế — và biết đó là nhà họ Hoàng.
+Có anh tài xế xe ôm ngồi cạnh một ông chủ tiệm vàng. Có anh bảo vệ ngồi đối diện một người đàn ông mặc vest. Ở đây — không ai hỏi ai làm gì. Họ chỉ hỏi: *"Chơi không?"*
 
-*"Tao không đi."*
+Một người đàn ông 50 tuổi, đeo 3 cái nhẫn vàng — tên Đại — ngồi ở bàn chính. Ông ta là chủ của thế giới ngầm này.
 
-Tài xế: *"Cậu chủ không thích bị từ chối."*
+*"Bảy, nghe nói ông có đệ tử mới."* — Đại nhìn Thiên — *"Thằng nhỏ này hả?"*
 
-*"Tao không quan tâm."*
+*"Nó. Và nó sẽ chơi với ai đó ở đây."*
 
-Tài xế im một lúc. Rồi lấy từ túi trong ra một tờ giấy — một tấm ảnh cũ. 30 năm trước — ảnh chụp ông Bảy và cha Hoàng cùng nhau. Hai người đang bắt tay sau một trận đấu.
+Đại cười: *"Mới học 1 tháng mà dám vào đây?"*
 
-*"Cậu chủ nói: 'Nếu Bảy không quên — hãy cho nó xem cái này.'"*
+*"Dám."*
 
-Ông Bảy nhìn tấm ảnh. Mặt ổng biến sắc.
+Đại nhìn Thiên: *"Mày thắng — mày có 5 triệu. Mày thua — mày không được xu nào. Và mày phải rửa chén cho quán này 1 tháng."*
 
-*"...Được. Tao đi."*
+Thiên không trả lời. Nó ngồi xuống trước bàn cờ. Đối diện — một người đàn ông trung niên, tên Mạnh — tay cờ kỳ cựu của thế giới ngầm.
 
----
+*"Mày còn nhỏ. Tao cho mày đi trước."*
 
-Biệt thự quận 2. 3 tầng. Hồ bơi. Sân vườn. Phòng khách rộng — nơi một bàn cờ bằng ngà voi đặt ở giữa.
+Thiên cầm Đỏ. Nhắm mắt.
 
-Hoàng ngồi sẵn. Trắng, cao, mặc áo sơ mi trắng, tay đeo đồng hồ Rolex. Nhìn Thiên — và cười:
-
-*"Chắc mày chưa bao giờ ngồi trên ghế như thế này."*
-
-Thiên không trả lời. Nó ngồi xuống. Trước mặt — bàn cờ ngà voi. Những quân cờ bằng xương. Mùi giàu sang.
-
-*"Tao muốn đánh với mày. Một ván. 50 triệu."*
-
-*"Tao không có 50 triệu."*
-
-*"Mày có thể nợ. Nếu mày thua — mày sẽ làm việc cho tao cho đến khi trả hết nợ."*
-
-Hoàng không muốn thắng. Hắn muốn sở hữu.
-
-Thiên nhìn bàn cờ. 32 quân. Nhưng lần này — không giống dòng xe ngoài đường. Nó giống một cái bẫy.
-
-Ông Bảy đứng sau, im lặng. Ông nhìn tấm ảnh cũ — và nhớ lại 30 năm trước. Cha Hoàng đã thắng ông một ván — và sau đó, ông mất tất cả.
-
-*"Chơi."* — Thiên nói.
+Khi mở — nó đi Pháo.
 
 ---
 
-## Chương 8: Ván Cờ Với Quỷ
+Ván đó kéo dài 47 nước.
 
-Hoàng cầm quân Đỏ — tấn công. Thiên cầm quân Đen — phòng thủ.
+Thiên thắng.
 
-Nước đầu — Hoàng tấn công ngay. Pháo thẳng vào trung lộ. Nước thứ 3 — Mã nhảy lên. Nước thứ 5 — Xe vô.
+5 triệu được đặt trước mặt nó. Lần đầu tiên trong đời — nó cầm 5 triệu trong tay. Đủ trả viện phí cho mẹ. Đủ để nó không phải bán vé số.
 
-Hoàng không chơi — Hoàng nghiền nát.
+Nhưng trước khi nó kịp cất tiền — Đại nói:
 
-Thiên cố phòng thủ. Nhưng Hoàng mạnh hơn Hải — mạnh hơn bất cứ ai nó từng đánh.
+*"Mày có tài. Nhưng tài thôi không đủ. Ở đây, có thằng còn tài hơn mày."*
 
-Nước thứ 20 — Thiên mất một Xe. Nước 25 — mất Pháo. Nước 30 — mất Sĩ.
+*"Ai?"*
 
-Tàn cuộc sắp đến. Hoàng cười:
+*"Hoàng. 22 tuổi. Kiện tướng. Chưa thua ai trong 2 năm."*
 
-*"Mày giỏi đấy — cho một thằng bán vé số. Nhưng không đủ."*
+Thiên không biết Hoàng là ai. Nhưng trong đầu nó — một cái tên vừa xuất hiện. Giống như một quân cờ mới trên bàn.
 
-Thiên nhắm mắt.
+---
 
-Dòng xe. Ngã tư. Nhưng lần này — dòng xe hỗn loạn. Không có pattern. Không có quy luật. Hoàng phá vỡ mọi quy luật — hắn chơi không theo sách, không theo lý thuyết.
+## Chương 6: Đối Thủ Đầu Tiên
 
-Thiên mở mắt. Nhìn bàn cờ. Và thấy — một đường đi duy nhất.
+Hoàng ngồi trong biệt thự quận 2, tay cầm quân cờ bằng ngà voi. Trước mặt — cha hắn, một người đàn ông 60 tuổi, mặc áo dài, đang nhìn bàn cờ.
 
-Xe xuống. Tốt qua sông. Pháo lui.
+*"Ba nghe nói có thằng nhỏ 17 tuổi thắng Mạnh trong một ván."*
 
-Nước 31 — tất cả đều cười. Thiên đi nước vô lý — lui Pháo về cuối bàn.
+Cha Hoàng: *"Ừ."*
 
-Hoàng: *"Mày bỏ cuộc à?"*
+*"Mới học 1 tháng."*
 
-Nước 35 — Pháo của Thiên bất ngờ chiếu từ xa — một đường chéo mà Hoàng không để ý. Nước 37 — Mã nhảy vào. Nước 40 — checkmate.
+*"Ừ."*
 
-Hoàng nhìn bàn cờ. Tay hắn ngừng lại trên không.
+*"Ba nghĩ nó thế nào?"*
+
+Cha Hoàng nhìn con trai: *"Giống tao ngày xưa."*
+
+---
+
+Ngày hôm sau, Thiên nhận được lời mời đến biệt thự quận 2.
+
+Hoàng ngồi ở bàn cờ, mặc áo sơ mi trắng, tay đeo đồng hồ Rolex. Lịch sự, lạnh lùng, và xa cách.
+
+*"Mày là Thiên?"*
+
+*"Ừ."*
+
+*"Tao là Hoàng. Tao muốn đánh với mày."*
+
+*"Để làm gì?"*
+
+Hoàng im một lúc: *"Vì tao chưa bao giờ thấy ai như mày. Và tao muốn biết — mày là thật hay may mắn."*
+
+Thiên ngồi xuống.
+
+Hai người trẻ nhất — nhưng mạnh nhất — của làng cờ Sài Gòn, lần đầu tiên gặp nhau trong một ván đấu không có khán giả.
+
+---
+
+## Chương 7: Ván Cờ Với Thiên Tài
+
+Hoàng cầm Đỏ. Thiên cầm Đen.
+
+Nước thứ 1 — Hoàng đi Pháo. Nước thứ 3 — Mã nhảy. Nước thứ 5 — Xe vô.
+
+Hoàng chơi như một cỗ máy — chính xác, sắc bén, không cảm xúc.
+
+Thiên cố phòng thủ, nhưng Hoàng mạnh hơn bất cứ ai nó từng đánh.
+
+Nước thứ 20 — Thiên mất Xe. Nước 25 — mất Pháo. Nước 30 — thế cờ của nó sắp sụp.
+
+*"Mày giỏi đấy. Giỏi hơn tao tưởng. Nhưng chưa đủ."*
+
+Thiên nhắm mắt. Dòng xe hiện ra — nhưng lần này, chúng di chuyển hỗn loạn. Nó không thấy con đường.
+
+—*
+
+*Chú Bảy ơi. Sao có người không có đường?"*
+
+*"Người nào?"*
+
+*"Người chơi quá hoàn hảo. Họ không sai. Họ không sơ hở."*
+
+*"Vậy mày phải tạo ra sơ hở."*
+
+*"Tạo bằng cách nào?"*
+
+*"Bằng cách cho họ thấy — họ sắp thắng. Khi một người nghĩ mình sắp thắng — họ bắt đầu lơ là."*
+
+—*
+
+Thiên mở mắt. Nó đi một nước có vẻ vô lý — lui Xe về cuối bàn, để lộ Tướng.
+
+Hoàng cười: *"Mày bỏ cuộc à?"*
+
+Hắn lao Xe vào tấn công. Và trong khoảnh khắc đó — hắn để lộ một sơ hở.
+
+Thiên không bỏ lỡ.
+
+Tốt lên. Xe ngang. Mã nhảy. Pháo chiếu.
+
+4 nước — liên tiếp — như một dòng chảy.
+
+Nước thứ 41 — checkmate.
+
+Hoàng nhìn bàn cờ. Tay hắn lơ lửng trên không.
 
 Lần đầu tiên sau 2 năm — hắn thua.
 
-Thiên đứng dậy. 50 triệu.
+*"...Mày tên gì?"*
 
-*"Cảm ơn."*
+*"Thiên."*
 
-Hoàng nhìn nó. Không cười nữa:
-
-*"Mày không phải thằng bán vé số. Mày là thứ mà tao chưa từng thấy."*
-
-*"Tao chỉ thấy đường. Mày không thấy."*
-
-Thiên đi ra khỏi biệt thự. 50 triệu — đủ để mẹ nó nằm viện. Đủ để nó không phải bán vé số nữa.
-
-Nhưng nó biết — Hoàng sẽ không tha cho nó.
+*"Thiên. Tao sẽ nhớ tên mày."*
 
 ---
 
-## Chương 9: Người Cũ
+## Chương 8: Con Đường
 
-Tối đó, ông Bảy ngồi trước hiên nhà, nhìn kênh nước đen. Tay ổng cầm tấm ảnh cũ.
+Sau ván đấu với Hoàng, Thiên có 5 triệu. Đủ viện phí. Nhưng nó không dừng lại.
 
-*"Cha thằng Hoàng — tên Lân. 30 năm trước, hắn là bạn của tao."*
+Nó tiếp tục đến nhà ông Bảy. Tiếp tục học. Tiếp tục chơi.
 
-Thiên: *"Bạn?"*
+Nhưng nó học được điều quan trọng nhất — từ Hoàng.
 
-*"Bạn thân. Hai đứa học cùng thầy. Hai đứa cùng đi thi. Hai đứa cùng vô địch. Rồi một ngày — hắn bảo tao thua một ván để hắn ăn tiền độ. Hắn nợ — hắn cần tiền trả."*
+Hoàng không phải kẻ thù. Hoàng là tấm gương. Mỗi lần đánh với Hoàng — nó thấy được điểm yếu của chính mình.
 
-*"Thầy... thua không?"*
+*"Chú Bảy — sao mỗi lần thua Hoàng, cháu lại muốn chơi tiếp?"*
 
-*"Tao không thua. Tao thắng. Và hắn mất tất cả — nhà cửa, vợ con, danh dự. Hắn trách tao — và tao trốn khỏi làng cờ vì mặc cảm tội lỗi."*
+*"Vì mày yêu cờ rồi đó."*
 
-Ông Bảy cất ảnh:
+*"Yêu?"*
 
-*"Hoàng không biết chuyện đó. Nó chỉ biết — tao là người đã hủy hoại đời cha nó."*
-
-Thiên im lặng. Nó không ngờ — đằng sau một ván cờ là cả một cuộc đời.
-
-*"Sao thầy không nói với nó?"*
-
-*"Nói gì? 'Cha mày từng bán độ'? Tao không thể. Dù hắn sai — tao vẫn giữ hình ảnh của hắn trong mắt con hắn."*
-
-*"Vậy thầy chịu làm người xấu?"*
-
-*"Đôi khi — làm người xấu là cách duy nhất để bảo vệ người khác."*
+*"Đúng. Khi mày thua mà vẫn muốn chơi tiếp — đó là lúc mày không còn chơi vì tiền nữa. Mày chơi vì mày muốn khám phá. Khám phá bàn cờ. Khám phá đối thủ. Và khám phá chính mày."*
 
 ---
 
-## Chương 10: Đại Hội
+Những ngày sau đó, Thiên gặp những con người khác nhau qua bàn cờ:
 
-Một tháng sau. Giải vô địch cờ tướng toàn quốc — lần đầu tiên sau 30 năm không có tên ông Bảy trong danh sách tham dự.
+Anh Hải — thợ hồ — người dạy nó sự kiên nhẫn. Mỗi ván với anh Hải kéo dài 3 tiếng — vì anh không bao giờ vội. *"Cờ không phải cuộc đua. Cờ là cuộc dạo chơi."*
 
-Nhưng có một cái tên mới — **Thiên — 17 tuổi — không CLB — không huấn luyện viên.**
+Chú Tám — bán hủ tiếu gõ — người dạy nó sự quan sát. Chú có thể nhìn vào mắt đối thủ và biết họ sắp đi nước gì. *"Cờ không chỉ chơi bằng tay. Cờ chơi bằng mắt."*
 
-Tin tức lan nhanh: thằng nhỏ bán vé số từng thắng 50 triệu trong một ván sẽ thi đấu chính thức.
+Cô Năm — chủ tiệm tạp hóa — người dạy nó sự tinh tế. Cô không bao giờ tấn công — cô chỉ phòng thủ, chờ đối thủ tự giết mình. *"Đôi khi — nước đi mạnh nhất là không đi gì cả."*
 
-Hoàng cũng tham gia — với tư cách hạt giống số 1.
-
-Hai người nằm cùng nhánh. Họ sẽ gặp nhau ở bán kết — nếu cả hai thắng tất cả các vòng trước.
-
-Thiên thắng vòng 1 — 2 ván. Vòng 2 — 2 ván. Tứ kết — 3 ván.
-
-Hoàng cũng thắng — dễ dàng hơn.
-
-Bán kết. Một bàn cờ. Hai con người. Một quá khứ chưa được nói ra.
+Mỗi người — một bài học. Mỗi ván cờ — một cuộc đời.
 
 ---
 
-## Chương 11: Trận Đấu
+## Chương 9: Giải Đấu
 
-Hội trường 500 người. Máy quay. Báo chí.
+Một tháng sau, giải cờ tướng toàn quốc được tổ chức ở Hà Nội. Thiên nhận được lời mời — qua ông Bảy.
 
-Thiên và Hoàng ngồi đối diện nhau. Hoàng cầm Đỏ:
+*"Đây là cơ hội của mày."*
 
-*"Lần này — tao sẽ không thua."*
+*"Cháu chưa sẵn sàng."*
 
-Thiên không nói gì. Nó nhìn bàn cờ. 32 quân. 32 chiếc xe trên đường. Nhưng lần này — nó không chỉ thấy pattern. Nó thấy câu chuyện.
+*"Không ai sẵn sàng cả. Mày cứ đi. Và học."*
 
-Quân cờ của Hoàng — giống cha hắn. Tấn công. Hung hãn. Bỏ qua phòng thủ. Nhưng ẩn sau đó là một nỗi sợ — sợ thua, sợ mất tất cả, như cha hắn đã mất.
+Thiên đi Hà Nội. Lần đầu tiên đi xa. Lần đầu tiên lên máy bay. Lần đầu tiên thấy một thành phố không phải Sài Gòn.
 
-Thiên không chơi — nó đọc.
+*Vòng 1:* Thiên thắng 2-0. Đối thủ — một kỳ thủ trung niên, chơi hay, nhưng nóng vội.
 
-Nước 1-10: Hoàng tấn công. Thiên phòng thủ.
-Nước 11-20: Hoàng dồn ép. Thiên lùi.
-Nước 21-30: Hoàng thấy thắng. Thiên thấy — sơ hở.
+*Vòng 2:* Thiên thắng 2-1. Đối thủ — một sinh viên đại học, chơi thông minh, nhưng thiếu kinh nghiệm.
 
-Nước 31 — Thiên đi Xe thẳng vào tử địa. Hoàng cười: *"Xe chết rồi."*
+*Tứ kết:* Thiên thắng 3-2. Đối thủ — một kiện tướng 40 tuổi, người đã chơi cờ từ năm 5 tuổi. Sau ván đấu, ông ta nói: *"Mày có tài. Nhưng tài không bằng đam mê. Và tao thấy mày có đam mê."*
 
-Nước 33 — Mã của Thiên chiếu Tướng từ bên hông. Hoàng kéo Tướng lên.
+*Bán kết:* Thiên gặp lại Hoàng.
 
-Nước 35 — Pháo từ xa — chiếu.
+Hai người nhìn nhau qua bàn cờ. Lần này — không còn biệt thự. Không còn ngà voi. Chỉ còn một bàn cờ, 32 quân, và 500 khán giả đang xem.
 
-Nước 37 — Mã thứ hai — chiếu.
+Hoàng: *"Lần này — tao không thua."*
 
-Nước 39 — Tốt qua sông — chiếu cuối.
-
-Hoàng nhìn bàn cờ. Tay hắn run. Môi hắn trắng bệch.
-
-Hắn cầm quân Tướng của mình — và đặt nó nằm ngang.
-
-Đầu hàng.
-
-Cả hội trường vỡ òa. Thiên — 17 tuổi, bán vé số — vô địch toàn quốc.
+Thiên: *"Ai cũng nói vậy."*
 
 ---
 
-## Chương 12: Cờ Còn Người Còn
+## Chương 10: Trận Chung Kết Trong Lòng
 
-Sau giải đấu, Thiên đến bệnh viện.
+Ván đó kéo dài 3 tiếng.
 
-Mẹ nó nằm trên giường. Mắt bà mở — lần đầu tiên sau nhiều tháng, bà tỉnh.
+Nước thứ 1-20: Cả hai thăm dò. Không ai dám tấn công.
 
-*"Mẹ."*
+Nước thứ 21-50: Hoàng tấn công — dữ dội, liên tiếp, như một cơn bão. Thiên phòng thủ — từng li từng tí.
 
-Bà nhìn nó: *"Con... là ai?"*
+Nước thứ 51: Thiên mất Xe. Khán giả ồ lên.
 
-*"Con là Thiên. Con của mẹ."*
+Nước thứ 60: Thiên mất Pháo. Ông Bảy, ngồi ở hàng ghế đầu, nắm chặt tay.
 
-*"Thiên... con lớn quá."*
+Nước thứ 70: Thiên chỉ còn 3 quân — Tướng, Sĩ, Tốt. Hoàng còn 8 quân.
 
-Thiên nắm tay mẹ. Trong tay nó — chiếc cúp vô địch. Cảm giác nặng hơn bất cứ thứ gì nó từng cầm.
+Ai cũng nghĩ Thiên thua.
 
-*"Mẹ ơi. Con có thể trả viện phí rồi. Mẹ không phải lo nữa."*
+Nhưng Thiên nhắm mắt.
 
-Mẹ nó nhắm mắt — nhưng miệng cười.
+Trong đầu nó — dòng xe không còn nữa. Chỉ còn một bàn cờ trống. Một con Tốt. Và một con đường.
+
+Tốt lên một ô. Hoàng cười: *"Tốt? Mày sắp thua mà đi Tốt?"*
+
+Tốt lên ô thứ hai. Tốt qua sông. Tốt đi ngang.
+
+Hoàng đuổi theo — nhưng Tốt nhỏ, nhanh, linh hoạt. Mỗi lần Hoàng sắp bắt được — nó lại trốn.
+
+Nước thứ 80: Tốt đến cuối bàn. Nó không thể đi tiếp. Nhưng nó đã hoàn thành nhiệm vụ — kéo hết quân của Hoàng về một góc.
+
+Và ở góc kia — Sĩ của Thiên mở đường cho Tướng.
+
+Nước thứ 83: Tướng của Thiên — yếu ớt, nhỏ bé — bước ra khỏi cung. Và chiếu.
+
+Checkmate.
+
+Hoàng nhìn bàn cờ. Một lúc lâu. Rồi hắn cười — lần đầu tiên Thiên thấy hắn cười thật sự:
+
+*"Mày không chỉ thắng tao. Mày dạy tao một điều."*
+
+*"Điều gì?"*
+
+*"Rằng — con Tốt nhỏ nhất, khi qua sông, cũng có thể thay đổi cả ván cờ."*
 
 ---
 
-Sau đó, Thiên gặp ông Bảy ở quán cà phê vỉa hè.
+## Chương 11: Kỳ Vương
 
-*"Thầy. Cháu thắng rồi."*
+Thiên vô địch toàn quốc. Tin tức lan nhanh — thằng bé bán vé số trở thành kỳ vương.
 
-*"Tao biết."*
+Nhưng với Thiên — danh hiệu không quan trọng.
 
-*"Sao thầy không đến xem?"*
+Quan trọng là mẹ nó — đã thấy nó trên tivi. Mẹ nó khóc. Thiên cũng khóc.
 
-Ông Bảy uống một ngụm trà:
+Quan trọng là ông Bảy — người đã dạy nó tất cả — ngồi ở ghế cuối hội trường, mỉm cười, không nói gì.
 
-*"Tao không cần xem. Tao biết mày sẽ thắng."*
+Và quan trọng là — hàng trăm đứa trẻ khác, sau khi xem giải đấu trên tivi, đã hỏi cha mẹ: *"Mua cho con một bộ cờ tướng đi."*
 
-*"Sao thầy biết?"*
+Đó mới là điều Thiên muốn.
 
-*"Vì mày không chơi vì tiền. Mày không chơi vì danh. Mày chơi vì — mày thấy con đường. Khi mày thấy con đường — không ai có thể ngăn mày."*
+Không phải chiến thắng. Mà là — khơi dậy một ngọn lửa trong những người khác. Cũng như ông Bảy đã khơi dậy trong nó.
 
-Thiên im lặng. Nhìn ra ngã tư — nơi dòng xe vẫn chạy, vô tư, vô tận.
+---
 
-*"Thầy ơi, còn gì để học nữa không?"*
+## Chương 12: Nước Cờ Không Bao Giờ Kết Thúc
 
-Ông Bảy cười — lần đầu tiên sau rất lâu:
+1 năm sau.
 
-*"Cờ không bao giờ hết. Nhưng tao đã dạy mày tất cả những gì tao biết. Phần còn lại — mày tự học."*
+Thiên 18 tuổi. Nó mở một câu lạc bộ cờ tướng nhỏ trong một con hẻm ở quận 8. Không biển hiệu. Không quảng cáo. Chỉ có 5 cái bàn, 5 bộ cờ, và một câu nói viết trên tường:
 
-Thiên nhìn bàn cờ trước mặt. 32 quân. Không người chơi.
+*"Cờ tướng không dạy người ta thắng. Cờ tướng dạy người ta nghĩ."*
 
-Nó cầm quân Tướng lên. Đặt xuống nước đầu tiên.
+Mỗi ngày, trẻ em trong khu đến chơi. Có đứa giỏi. Có đứa dở. Có đứa chỉ ngồi nhìn.
 
-Và bắt đầu chơi một mình.
+Thiên dạy tất cả — như ông Bảy đã dạy nó.
+
+Hoàng thỉnh thoảng ghé qua. Hai người ngồi chơi một ván, uống trà đá, nói chuyện về cờ, về đời, về những thứ không ai khác hiểu được.
+
+Ông Bảy già hơn. Nhưng vẫn khỏe. Thi thoảng ông ghé clb, ngồi nhìn tụi nhỏ chơi, không nói gì, chỉ cười.
+
+Một buổi chiều, một đứa bé 10 tuổi — con của anh Hải thợ hồ — đến hỏi Thiên:
+
+*"Anh ơi. Con mới học. Con không biết đi nước nào."*
+
+Thiên nhìn bàn cờ. 32 quân. Một thế giới đang chờ được khám phá.
+
+*"Đi Tốt đi."*
+
+*"Tốt nào ạ?"*
+
+*"Tốt nào cũng được. Chỉ cần con đi. Vì cờ — không bắt đầu bằng nước đi đúng. Cờ bắt đầu bằng dám đi."*
+
+Đứa bé đưa Tốt lên một ô.
+
+Và một hành trình mới lại bắt đầu.
 
 ---
 
