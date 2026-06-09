@@ -34,11 +34,15 @@
           cells.push('<span class="game-maze-paint__cell' +
             (walls.has(key) ? " is-wall" : "") +
             (painted.has(key) ? " is-painted" : "") +
-            (position.row === row && position.col === col ? " is-ball" : "") + '"></span>');
+            '" data-motion-key="maze-cell-' + key + '" data-motion-state="' + Number(painted.has(key)) + '">' +
+            (position.row === row && position.col === col
+              ? '<i class="game-maze-paint__ball" data-motion-key="maze-ball"></i>'
+              : "") + "</span>");
         }
       }
-      root.innerHTML = '<div class="game-maze-paint" style="--maze-size:' + size + '">' +
-        cells.join("") + '</div><div class="game-progress">Đã sơn ' + painted.size + "/" + openCount + " ô</div>";
+      window.GamePlatform.motion.render(root, '<div class="game-maze-paint" style="--maze-size:' + size + '">' +
+        cells.join("") + '</div><div class="game-progress">Đã sơn ' + painted.size + "/" + openCount + " ô</div>",
+      { duration: 260 });
     }
 
     window.GamePlatform.gesture(root, {

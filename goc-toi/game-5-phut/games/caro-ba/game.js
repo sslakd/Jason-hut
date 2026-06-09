@@ -27,10 +27,11 @@
     }
 
     function render() {
-      root.innerHTML = '<div class="game-caro">' + cells.map(function (value, index) {
-        return '<button type="button" data-cell="' + index + '" class="game-caro__cell game-caro__cell--' +
+      window.GamePlatform.motion.render(root, '<div class="game-caro">' + cells.map(function (value, index) {
+        return '<button type="button" data-cell="' + index + '" data-motion-key="caro-' + index +
+          '" data-motion-state="' + value + '" class="game-caro__cell game-caro__cell--' +
           value.toLowerCase() + '" aria-label="Ô ' + (index + 1) + '">' + value + "</button>";
-      }).join("") + "</div>";
+      }).join("") + "</div>");
     }
 
     function aiTurn() {

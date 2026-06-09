@@ -853,6 +853,7 @@ footer {
   cursor: pointer;
   font-size: 18px;
   transition: box-shadow .14s ease, transform .14s ease;
+  will-change: transform;
   touch-action: none;
 }
 
@@ -925,6 +926,8 @@ footer {
   display: block;
   height: 25%;
   border-top: 1px solid rgba(255, 255, 255, .36);
+  transform-origin: bottom;
+  will-change: transform, opacity;
 }
 
 .canvas-game {
@@ -1038,6 +1041,7 @@ footer {
   cursor: pointer;
   transition: transform .14s ease;
   touch-action: none;
+  will-change: transform;
 }
 
 .color-card:hover { transform: translateY(-10px); }
@@ -1068,6 +1072,7 @@ footer {
   min-height: 86px;
   padding: 8px;
   place-items: center;
+  will-change: transform, opacity;
   border: 1px solid #bcd0b8;
   border-radius: 22px;
   color: var(--brand-deep);
@@ -1107,6 +1112,7 @@ footer {
   background: var(--surface-strong);
   font-weight: 700;
   touch-action: none;
+  will-change: transform, opacity;
 }
 
 .game-caro__cell { font-size: clamp(32px, 12vw, 64px); }
@@ -1130,6 +1136,7 @@ footer {
   border-radius: 50%;
   background: var(--surface-strong);
   box-shadow: inset 0 2px 7px rgba(54, 83, 59, .12);
+  will-change: transform, opacity;
 }
 
 .game-connect-four__disc--p1 { background: #d7a959; }
@@ -1165,6 +1172,7 @@ footer {
   font-size: clamp(10px, 3vw, 16px);
   font-weight: 700;
   touch-action: none;
+  will-change: transform, opacity;
 }
 
 .game-mines__cell--open { background: var(--surface-strong); }
@@ -1259,6 +1267,7 @@ footer {
   height: 34px;
   border-radius: 10px;
   box-shadow: inset 0 -5px rgba(0, 0, 0, .08);
+  will-change: transform;
 }
 
 .game-nut-sort__post.is-selected { transform: translateY(-10px); }
@@ -1286,13 +1295,14 @@ footer {
 
 .game-maze-paint__cell.is-wall { background: #54705a; }
 .game-maze-paint__cell.is-painted { background: #b8d9df; }
-.game-maze-paint__cell.is-ball::after {
+.game-maze-paint__ball {
   position: absolute;
   inset: 18%;
+  display: block;
   border-radius: 50%;
   background: #d7a959;
   box-shadow: 0 3px 8px rgba(49, 85, 58, .25);
-  content: "";
+  will-change: transform;
 }
 
 .game-color-blocks {
@@ -1308,6 +1318,7 @@ footer {
   border: 0;
   border-radius: 9px;
   box-shadow: inset 0 -4px rgba(0, 0, 0, .07);
+  will-change: transform, opacity;
 }
 
 .game-color-blocks__cell--coral { background: #d8736c; }
@@ -1354,6 +1365,7 @@ footer {
   aspect-ratio: 1;
   border-radius: 50%;
   box-shadow: inset -5px -6px rgba(0, 0, 0, .08);
+  will-change: transform;
 }
 
 .game-fruit-next .game-fruit { width: 24px; }
@@ -1372,7 +1384,10 @@ footer {
   gap: 2px;
 }
 
-.game-color-fill__cell { border-radius: 4px; }
+.game-color-fill__cell {
+  border-radius: 4px;
+  will-change: transform, opacity;
+}
 .game-color-fill__cell--coral,
 .game-color-fill__choice--coral { background: #d8736c; }
 .game-color-fill__cell--amber,
@@ -1429,6 +1444,13 @@ footer {
   border-radius: 8px;
   color: var(--brand-deep);
   background: #fffdf6;
+  will-change: transform, opacity;
+}
+
+.tap-zone:active,
+.mini-control:active,
+.game-color-fill__choice:active {
+  transform: scale(.94);
 }
 
 .game-domino__tile.is-table {

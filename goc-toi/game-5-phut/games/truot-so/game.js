@@ -32,11 +32,12 @@
     }
 
     function render() {
-      root.innerHTML = '<div class="game-live-score" aria-live="polite">Điểm ' + score +
-        ' · Nhịp ' + difficulty().stage + '</div><div class="game-number-slide">' + board.map(function (value) {
-        return '<div class="game-number-slide__cell game-number-slide__cell--n' + value + '">' +
+      window.GamePlatform.motion.render(root, '<div class="game-live-score" aria-live="polite">Điểm ' + score +
+        ' · Nhịp ' + difficulty().stage + '</div><div class="game-number-slide">' + board.map(function (value, index) {
+        return '<div data-motion-key="number-cell-' + index + '" data-motion-state="' + value +
+          '" class="game-number-slide__cell game-number-slide__cell--n' + value + '">' +
           (value || "") + "</div>";
-      }).join("") + "</div>";
+      }).join("") + "</div>", { duration: 190 });
     }
 
     function move(direction) {

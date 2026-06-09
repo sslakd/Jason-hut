@@ -21,6 +21,7 @@
     var score = 0;
     var ended = false;
     var cancelTick;
+    var motionFrame;
 
     function difficulty() {
       return options.getEndlessDifficulty(score);
@@ -52,14 +53,15 @@
       direction = { x: x, y: y };
     }
 
-    function draw() {
+    function draw(visibleSnake) {
+      visibleSnake = visibleSnake || snake;
       context.fillStyle = "#f7fbf5";
       context.fillRect(0, 0, 360, 480);
       context.fillStyle = "#d7a959";
       context.beginPath();
       context.arc(food.x * cellSize + 12, food.y * cellSize + 12, 8, 0, Math.PI * 2);
       context.fill();
-      snake.forEach(function (part, index) {
+      visibleSnake.forEach(function (part, index) {
         context.fillStyle = index ? "#78a67e" : "#3f6948";
         context.fillRect(part.x * cellSize + 2, part.y * cellSize + 2, 20, 20);
       });
@@ -73,6 +75,7 @@
 
     function tick() {
       if (ended) return;
+      var previousSnake = snake.map(function (part) { return { x: part.x, y: part.y }; });
       var head = {
         x: snake[0].x + direction.x,
         y: snake[0].y + direction.y
@@ -91,7 +94,35 @@
       } else {
         snake.pop();
       }
-      draw();
+      animateSnake(previousSnake);
+    }
+
+    function animateSnake(previousSnake) {
+      if (window.GamePlatform.motion.reduced()) {
+        draw();
+        return;
+      }
+      if (motionFrame) window.cancelAnimationFrame(motionFrame);
+      var startedAt = Date.now();
+      var duration = Math.min(125, tickDelay() * .72);
+      function frame() {
+        var progress = Math.min(1, (Date.now() - startedAt) / duration);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var visible = snake.map(function (part, index) {
+          var before = previousSnake[index] || previousSnake[previousSnake.length - 1] || part;
+          return {
+            x: before.x + (part.x - before.x) * eased,
+            y: before.y + (part.y - before.y) * eased
+          };
+        });
+        draw(visible);
+        if (progress < 1) motionFrame = window.requestAnimationFrame(frame);
+        else {
+          motionFrame = null;
+          draw();
+        }
+      }
+      frame();
     }
 
     window.GamePlatform.gesture(canvas, {
@@ -118,6 +149,7 @@
     return {
       destroy: function () {
         if (cancelTick) cancelTick();
+        if (motionFrame) window.cancelAnimationFrame(motionFrame);
       }
     };
   });

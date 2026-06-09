@@ -37,3 +37,7 @@ Trượt Số và Rắn Săn Mồi.
 
 Input của game ưu tiên mobile: kéo, vuốt và chạm bằng Pointer Events. Chuột,
 bàn phím và các nút điều khiển chỉ là phương án dự phòng trên desktop.
+
+Các game DOM dùng `GamePlatform.motion.render()` với `data-motion-key` ổn định
+để nội suy vị trí giữa hai trạng thái. Motion tự giảm về gần như tức thì khi
+thiết bị bật `prefers-reduced-motion`.

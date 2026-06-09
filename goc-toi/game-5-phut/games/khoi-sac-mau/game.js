@@ -8,6 +8,7 @@
     var target = 18 + Math.min(options.level * 2, 10);
     var removed = 0;
     var board;
+    var blockId = 0;
 
     function neighbors(index) {
       var row = Math.floor(index / cols);
@@ -19,13 +20,13 @@
     }
 
     function group(start) {
-      var color = board[start];
-      if (!color) return [];
+      var block = board[start];
+      if (!block) return [];
       var found = new Set([start]);
       var queue = [start];
       while (queue.length) {
         neighbors(queue.shift()).forEach(function (index) {
-          if (board[index] === color && !found.has(index)) {
+          if (board[index] && board[index].color === block.color && !found.has(index)) {
             found.add(index);
             queue.push(index);
           }
@@ -52,7 +53,8 @@
 
     do {
       board = Array.from({ length: rows * cols }, function () {
-        return colors[Math.floor(Math.random() * colors.length)];
+        blockId += 1;
+        return { id: "block-" + blockId, color: colors[Math.floor(Math.random() * colors.length)] };
       });
     } while (!hasMove());
 
@@ -69,10 +71,12 @@
     }
 
     function render() {
-      root.innerHTML = '<div class="game-color-blocks">' + board.map(function (color, index) {
-        return '<button data-block="' + index + '" class="game-color-blocks__cell' +
-          (color ? " game-color-blocks__cell--" + color : " is-empty") + '"></button>';
-      }).join("") + '</div><div class="game-progress">Đã dọn ' + removed + "/" + target + " khối</div>";
+      window.GamePlatform.motion.render(root, '<div class="game-color-blocks">' + board.map(function (block, index) {
+        return '<button data-block="' + index + '" data-motion-key="' +
+          (block ? block.id : "empty-" + index) + '" class="game-color-blocks__cell' +
+          (block ? " game-color-blocks__cell--" + block.color : " is-empty") + '"></button>';
+      }).join("") + '</div><div class="game-progress">Đã dọn ' + removed + "/" + target + " khối</div>",
+      { duration: 230 });
     }
 
     options.runtime.listen(root, "click", function (event) {

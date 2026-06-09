@@ -2,6 +2,63 @@
   "use strict";
 
   var factories = Object.create(null);
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  function fallbackMotion(element, from, duration, easing) {
+    element.style.transition = "none";
+    if (from.transform) element.style.transform = from.transform;
+    if (from.opacity !== undefined) element.style.opacity = from.opacity;
+    element.getBoundingClientRect();
+    window.requestAnimationFrame(function () {
+      element.style.transition = "transform " + duration + "ms " + easing +
+        ", opacity " + duration + "ms " + easing;
+      element.style.removeProperty("transform");
+      element.style.removeProperty("opacity");
+      window.setTimeout(function () {
+        element.style.removeProperty("transition");
+      }, duration + 30);
+    });
+  }
+
+  function motionRender(root, html, options) {
+    options = options || {};
+    var previous = Object.create(null);
+    root.querySelectorAll("[data-motion-key]").forEach(function (element) {
+      previous[element.dataset.motionKey] = {
+        rect: element.getBoundingClientRect(),
+        state: element.dataset.motionState || element.className + "|" + element.textContent
+      };
+    });
+    var hasPrevious = Object.keys(previous).length > 0;
+    root.innerHTML = html;
+    if (reduceMotion && reduceMotion.matches) return;
+    root.querySelectorAll("[data-motion-key]").forEach(function (element) {
+      var before = previous[element.dataset.motionKey];
+      var state = element.dataset.motionState || element.className + "|" + element.textContent;
+      var duration = Number(options.duration) || 240;
+      if (!before) {
+        if (!hasPrevious) return;
+        var enterFrom = element.dataset.motionEnter === "drop"
+          ? { opacity: .35, transform: "translateY(-120%) scale(.82)" }
+          : { opacity: .35, transform: "scale(.86)" };
+        var enterDuration = Math.min(duration, 220);
+        fallbackMotion(element, enterFrom, enterDuration, "cubic-bezier(.2,.8,.2,1)");
+        return;
+      }
+      var after = element.getBoundingClientRect();
+      var deltaX = before.rect.left - after.left;
+      var deltaY = before.rect.top - after.top;
+      if (Math.abs(deltaX) > .5 || Math.abs(deltaY) > .5) {
+        var moveFrom = { transform: "translate(" + deltaX + "px," + deltaY + "px)" };
+        var moveEasing = options.easing || "cubic-bezier(.2,.8,.2,1)";
+        fallbackMotion(element, moveFrom, duration, moveEasing);
+      } else if (before.state !== state) {
+        var changeFrom = { transform: "scale(.88)", opacity: .58 };
+        var changeDuration = Math.min(duration, 180);
+        fallbackMotion(element, changeFrom, changeDuration, "cubic-bezier(.2,.8,.2,1)");
+      }
+    });
+  }
 
   function createRuntime(root, callbacks) {
     var destroyed = false;
@@ -219,6 +276,10 @@
     has: function (id) { return Boolean(factories[id]); },
     mount: mount,
     gesture: gesture,
+    motion: {
+      render: motionRender,
+      reduced: function () { return Boolean(reduceMotion && reduceMotion.matches); }
+    },
     registeredIds: function () { return Object.keys(factories); }
   };
 }());

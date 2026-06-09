@@ -4,7 +4,7 @@
   window.GamePlatform.register("domino", function (root, options) {
     var deck = [];
     for (var left = 0; left <= 6; left += 1) {
-      for (var right = left; right <= 6; right += 1) deck.push([left, right]);
+      for (var right = left; right <= 6; right += 1) deck.push([left, right, "d-" + left + "-" + right]);
     }
     deck.sort(function () { return Math.random() - .5; });
     var player = deck.splice(0, 7);
@@ -21,9 +21,9 @@
       var first = chain[0][0];
       var last = chain[chain.length - 1][1];
       if (tile[0] === last) chain.push(tile);
-      else if (tile[1] === last) chain.push([tile[1], tile[0]]);
+      else if (tile[1] === last) chain.push([tile[1], tile[0], tile[2]]);
       else if (tile[1] === first) chain.unshift(tile);
-      else if (tile[0] === first) chain.unshift([tile[1], tile[0]]);
+      else if (tile[0] === first) chain.unshift([tile[1], tile[0], tile[2]]);
       else return false;
       return true;
     }
@@ -64,16 +64,19 @@
     }
 
     function tile(tile, index) {
-      return '<button class="game-domino__tile" data-domino="' + index + '">' +
+      return '<button class="game-domino__tile" data-domino="' + index +
+        '" data-motion-key="' + tile[2] + '">' +
         dots(tile[0]) + dots(tile[1]) + "</button>";
     }
 
     function render() {
-      root.innerHTML = '<div class="game-domino__meta">Máy còn ' + ai.length + ' quân · Nọc ' + deck.length +
+      window.GamePlatform.motion.render(root, '<div class="game-domino__meta">Máy còn ' + ai.length + ' quân · Nọc ' + deck.length +
         '</div><div class="game-domino__chain">' + chain.map(function (item) {
-          return '<span class="game-domino__tile is-table">' + dots(item[0]) + dots(item[1]) + "</span>";
+          return '<span class="game-domino__tile is-table" data-motion-key="' + item[2] + '">' +
+            dots(item[0]) + dots(item[1]) + "</span>";
         }).join("") + '</div><div class="game-domino__hand">' +
-        player.map(tile).join("") + '</div><button class="mini-control game-domino__draw" data-domino-draw>Rút quân</button>';
+        player.map(tile).join("") + '</div><button class="mini-control game-domino__draw" data-domino-draw>Rút quân</button>',
+      { duration: 280 });
     }
 
     options.runtime.listen(root, "click", function (event) {

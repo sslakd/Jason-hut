@@ -35,12 +35,14 @@
     }
 
     function render() {
-      root.innerHTML = '<div class="game-connect-four">' + board.map(function (row) {
+      window.GamePlatform.motion.render(root, '<div class="game-connect-four">' + board.map(function (row, rowIndex) {
         return row.map(function (value, col) {
-          return '<button data-column="' + col + '" class="game-connect-four__disc game-connect-four__disc--p' +
+          return '<button data-column="' + col + '" data-motion-key="disc-' + rowIndex + "-" + col +
+            '" data-motion-state="' + value + '"' + (value ? ' data-motion-enter="drop"' : "") +
+            ' class="game-connect-four__disc game-connect-four__disc--p' +
             value + '" aria-label="Cột ' + (col + 1) + '"></button>';
         }).join("");
-      }).join("") + "</div>";
+      }).join("") + "</div>", { duration: 220 });
     }
 
     function playerDrop(col) {

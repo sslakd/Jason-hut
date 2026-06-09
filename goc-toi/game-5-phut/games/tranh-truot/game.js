@@ -20,11 +20,11 @@
     }
 
     function render() {
-      root.innerHTML = '<div class="game-slide-puzzle" style="--slide-side:' + side + '">' +
+      window.GamePlatform.motion.render(root, '<div class="game-slide-puzzle" style="--slide-side:' + side + '">' +
         board.map(function (value, index) {
-          return '<button data-slide="' + index + '" class="game-slide-puzzle__cell' +
+          return '<button data-slide="' + index + '" data-motion-key="slide-' + value + '" class="game-slide-puzzle__cell' +
             (!value ? " game-slide-puzzle__cell--empty" : "") + '">' + (value || "") + "</button>";
-        }).join("") + "</div>";
+        }).join("") + "</div>", { duration: 210 });
     }
 
     options.runtime.listen(root, "click", function (event) {

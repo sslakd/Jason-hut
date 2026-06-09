@@ -41,14 +41,15 @@
     }
 
     function render() {
-      root.innerHTML = '<div class="game-color-fill" style="--fill-size:' + size + '">' +
-        board.map(function (color) {
-          return '<span class="game-color-fill__cell game-color-fill__cell--' + colors[color] + '"></span>';
+      window.GamePlatform.motion.render(root, '<div class="game-color-fill" style="--fill-size:' + size + '">' +
+        board.map(function (color, index) {
+          return '<span data-motion-key="fill-' + index + '" data-motion-state="' + color +
+            '" class="game-color-fill__cell game-color-fill__cell--' + colors[color] + '"></span>';
         }).join("") + '</div><div class="game-color-fill__controls">' +
         colors.slice(0, colorCount).map(function (color, index) {
           return '<button data-fill-color="' + index + '" class="game-color-fill__choice game-color-fill__choice--' +
             color + '" aria-label="Chọn màu ' + (index + 1) + '"></button>';
-        }).join("") + '</div><div class="game-progress">Lượt ' + moves + "/" + limit + "</div>";
+        }).join("") + '</div><div class="game-progress">Lượt ' + moves + "/" + limit + "</div>");
     }
 
     options.runtime.listen(root, "click", function (event) {

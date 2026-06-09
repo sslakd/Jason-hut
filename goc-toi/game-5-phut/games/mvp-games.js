@@ -63,7 +63,7 @@
     }
 
     function render() {
-      root.innerHTML = [
+      window.GamePlatform.motion.render(root, [
         '<div class="escape-wrap"><div class="escape-board">',
         '<span class="escape-exit">Lối ra <i class="fa-solid fa-arrow-right"></i></span>',
         vehicles.map(function (car) {
@@ -72,7 +72,8 @@
             "%;height:" + ((car.axis === "v" ? car.length : 1) / size * 100) +
             "%;background:" + car.color;
           return '<button class="escape-car ' + (selected === car.id ? "selected" : "") +
-            '" data-car="' + car.id + '" style="' + style + '" aria-label="Chọn xe">' +
+            '" data-car="' + car.id + '" data-motion-key="car-' + car.id +
+            '" data-motion-state="' + car.x + "-" + car.y + '" style="' + style + '" aria-label="Chọn xe">' +
             '<i class="fa-solid fa-car-side"></i></button>';
         }).join(""),
         '</div><div class="mini-panel"><span>Chọn xe rồi di chuyển</span><div>',
@@ -81,7 +82,7 @@
         button('<i class="fa-solid fa-arrow-down"></i>', "plus"),
         button('<i class="fa-solid fa-arrow-right"></i>', "plus"),
         "</div></div></div>"
-      ].join("");
+      ].join(""), { duration: 260 });
     }
 
     root.onclick = function (event) {
@@ -113,24 +114,32 @@
   }
 
   function waterSortGame(root, options) {
+    var waterId = 0;
     var tubes = [
       [0, 1, 2, 0], [2, 3, 1, 3], [1, 0, 3, 2], [3, 2, 0, 1], [], []
-    ];
+    ].map(function (tube) {
+      return tube.map(function (color) {
+        waterId += 1;
+        return { id: "water-" + waterId, color: color };
+      });
+    });
     var selected = null;
     var moves = 0;
 
     function isComplete() {
       return tubes.every(function (tube) {
-        return tube.length === 0 || (tube.length === 4 && tube.every(function (c) { return c === tube[0]; }));
+        return tube.length === 0 || (tube.length === 4 && tube.every(function (layer) {
+          return layer.color === tube[0].color;
+        }));
       });
     }
 
     function pour(from, to) {
       if (from === to || tubes[from].length === 0 || tubes[to].length === 4) return;
-      var color = tubes[from][tubes[from].length - 1];
-      if (tubes[to].length && tubes[to][tubes[to].length - 1] !== color) return;
+      var color = tubes[from][tubes[from].length - 1].color;
+      if (tubes[to].length && tubes[to][tubes[to].length - 1].color !== color) return;
       var amount = 0;
-      for (var i = tubes[from].length - 1; i >= 0 && tubes[from][i] === color; i -= 1) amount += 1;
+      for (var i = tubes[from].length - 1; i >= 0 && tubes[from][i].color === color; i -= 1) amount += 1;
       amount = Math.min(amount, 4 - tubes[to].length);
       while (amount > 0) {
         tubes[to].push(tubes[from].pop());
@@ -144,14 +153,16 @@
     }
 
     function render() {
-      root.innerHTML = '<div class="sort-game"><div class="tube-grid">' +
+      window.GamePlatform.motion.render(root, '<div class="sort-game"><div class="tube-grid">' +
         tubes.map(function (tube, index) {
           return '<button class="tube ' + (selected === index ? "selected" : "") +
-            '" data-tube="' + index + '" aria-label="Ống ' + (index + 1) + '">' +
-            '<span class="tube-liquid">' + tube.map(function (color) {
-              return '<i style="background:' + COLORS[color] + '"></i>';
+            '" data-tube="' + index + '" data-motion-key="tube-' + index +
+            '" data-motion-state="' + tube.map(function (layer) { return layer.color; }).join("-") +
+            '" aria-label="Ống ' + (index + 1) + '">' +
+            '<span class="tube-liquid">' + tube.map(function (layer) {
+              return '<i data-motion-key="' + layer.id + '" style="background:' + COLORS[layer.color] + '"></i>';
             }).reverse().join("") + "</span></button>";
-        }).join("") + '</div><p>Chạm ống nguồn rồi chạm ống đích.</p></div>';
+        }).join("") + '</div><p>Chạm ống nguồn rồi chạm ống đích.</p></div>');
     }
 
     root.onclick = function (event) {
@@ -207,6 +218,8 @@
     var paused = false;
     var ended = false;
     var cancelDrop;
+    var pieceMotion = null;
+    var motionFrame = null;
     var scoreLabel = root.querySelector(".game-live-score");
 
     function difficulty() {
@@ -274,13 +287,21 @@
 
     function drop() {
       if (paused || ended) return;
-      if (!collides(0, 1, piece.shape)) piece.y += 1;
-      else lock();
-      draw();
+      if (!collides(0, 1, piece.shape)) {
+        var fromY = piece.y;
+        piece.y += 1;
+        animatePiece(piece.x, fromY);
+      } else {
+        lock();
+        draw();
+      }
     }
 
     function move(action) {
       if (ended || paused) return;
+      var activePiece = piece;
+      var fromX = piece.x;
+      var fromY = piece.y;
       if (action === "rotate") rotate();
       if (action === "left" && !collides(-1, 0, piece.shape)) piece.x -= 1;
       if (action === "right" && !collides(1, 0, piece.shape)) piece.x += 1;
@@ -290,7 +311,33 @@
         lock();
       }
       window.GameAudio.tap();
-      draw();
+      if (piece === activePiece && (piece.x !== fromX || piece.y !== fromY)) animatePiece(fromX, fromY);
+      else draw();
+    }
+
+    function animatePiece(fromX, fromY) {
+      if (window.GamePlatform.motion.reduced()) {
+        pieceMotion = null;
+        draw();
+        return;
+      }
+      if (motionFrame) window.cancelAnimationFrame(motionFrame);
+      var deltaX = fromX - piece.x;
+      var deltaY = fromY - piece.y;
+      var startedAt = Date.now();
+      function frame() {
+        var progress = Math.min(1, (Date.now() - startedAt) / 110);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        pieceMotion = { x: deltaX * (1 - eased), y: deltaY * (1 - eased) };
+        draw();
+        if (progress < 1) motionFrame = window.requestAnimationFrame(frame);
+        else {
+          pieceMotion = null;
+          motionFrame = null;
+          draw();
+        }
+      }
+      frame();
     }
 
     function draw() {
@@ -308,7 +355,11 @@
       });
       if (piece) piece.shape.forEach(function (row, y) {
         row.forEach(function (value, x) {
-          if (value) drawCell(piece.x + x, piece.y + y, piece.color);
+          if (value) drawCell(
+            piece.x + x + (pieceMotion ? pieceMotion.x : 0),
+            piece.y + y + (pieceMotion ? pieceMotion.y : 0),
+            piece.color
+          );
         });
       });
       ctx.fillStyle = "#294a31";
@@ -354,6 +405,7 @@
       setPaused: function (value) { paused = value; },
       destroy: function () {
         cancelDrop();
+        if (motionFrame) window.cancelAnimationFrame(motionFrame);
         unbindGesture();
         window.removeEventListener("keydown", onKey);
         root.onclick = null;
@@ -379,20 +431,22 @@
 
     function cardHtml(card, index, owner) {
       return '<button class="color-card" data-owner="' + owner + '" data-index="' + index +
+        '" data-motion-key="color-card-' + card.color + "-" + card.number +
         '" style="--card-color:' + COLORS[card.color] + '" aria-label="' + COLOR_NAMES[card.color] +
         " " + card.number + '"><span>' + card.number + "</span></button>";
     }
 
     function render() {
-      root.innerHTML = [
+      window.GamePlatform.motion.render(root, [
         '<div class="card-game"><div class="ai-hand"><span>Máy · ', ai.length, " lá</span>",
         ai.map(function () { return '<i class="card-back"></i>'; }).join(""), "</div>",
         '<div class="card-table"><button class="draw-pile" data-draw="true"><i class="fa-solid fa-layer-group"></i><span>Rút</span></button>',
-        '<div class="discard-card" style="--card-color:', COLORS[discard.color], '"><span>', discard.number, "</span></div></div>",
+        '<div class="discard-card" data-motion-key="color-card-', discard.color, "-", discard.number,
+        '" style="--card-color:', COLORS[discard.color], '"><span>', discard.number, "</span></div></div>",
         '<div class="player-hand">', player.map(function (card, index) {
           return cardHtml(card, index, "player");
         }).join(""), "</div></div>"
-      ].join("");
+      ].join(""), { duration: 260 });
     }
 
     function aiTurn() {
@@ -517,12 +571,13 @@
 
     function pit(index, owner, large) {
       return '<button class="quan-pit ' + (large ? "large" : "") + '" data-pit="' + index +
+        '" data-motion-key="pit-' + index + '" data-motion-state="' + pits[index] +
         '" ' + (owner !== "player" ? "disabled" : "") + '><span>' + pits[index] +
         "</span>" + (large ? "<small>Quan</small>" : "") + "</button>";
     }
 
     function render() {
-      root.innerHTML = [
+      window.GamePlatform.motion.render(root, [
         '<div class="quan-game"><div class="score-row"><span>Bạn <strong>', playerScore,
         '</strong></span><span>Máy <strong>', aiScore, "</strong></span></div>",
         '<div class="quan-board">', pit(0, "large", true),
@@ -531,7 +586,7 @@
         '</div><div class="quan-row">',
         [1, 2, 3, 4, 5].map(function (i) { return pit(i, "player", false); }).join(""),
         "</div></div>", pit(6, "large", true), "</div></div>"
-      ].join("");
+      ].join(""));
     }
 
     root.onclick = function (event) {

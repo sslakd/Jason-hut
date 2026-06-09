@@ -90,6 +90,7 @@ async function run() {
     Array.from(sandbox.window.GamePlatform.registeredIds()).sort(),
     expectedIds.sort()
   );
+  assert.equal(typeof sandbox.window.GamePlatform.motion.render, "function");
   assert.deepEqual(
     Array.from(sandbox.window.GAME_CATALOG)
       .filter((game) => game.mode === "endless")

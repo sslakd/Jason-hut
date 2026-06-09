@@ -49,15 +49,16 @@
     }
 
     function render() {
-      root.innerHTML = '<div class="game-mines" style="--mine-size:' + size + '">' +
+      window.GamePlatform.motion.render(root, '<div class="game-mines" style="--mine-size:' + size + '">' +
         cells.map(function (cell, index) {
           var content = cell.open
             ? (cell.mine ? '<i class="fa-solid fa-bomb"></i>' : (cell.count || ""))
             : (cell.flag ? '<i class="fa-solid fa-flag"></i>' : "");
-          return '<button data-mine="' + index + '" class="game-mines__cell' +
+          return '<button data-mine="' + index + '" data-motion-key="mine-' + index +
+            '" data-motion-state="' + Number(cell.open) + "-" + Number(cell.flag) + '" class="game-mines__cell' +
             (cell.open ? " game-mines__cell--open" : "") +
             (cell.mine && cell.open ? " game-mines__cell--boom" : "") + '">' + content + "</button>";
-        }).join("") + "</div>";
+        }).join("") + "</div>");
     }
 
     function open(index) {

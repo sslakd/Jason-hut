@@ -64,12 +64,13 @@
     }
 
     function render() {
-      root.innerHTML = '<div class="game-live-score" aria-live="polite">Điểm ' + score +
+      window.GamePlatform.motion.render(root, '<div class="game-live-score" aria-live="polite">Điểm ' + score +
         ' · Nhịp ' + difficulty().stage + '</div><div class="game-fruit-next">Tiếp theo: <i class="game-fruit game-fruit--' +
         nextFruit + '"></i></div><div class="game-fruit-merge">' + board.map(function (value, cell) {
-        return '<button data-fruit-column="' + (cell % cols) + '" class="game-fruit-merge__cell">' +
+        return '<button data-fruit-column="' + (cell % cols) + '" data-motion-key="fruit-cell-' + cell +
+          '" data-motion-state="' + value + '" class="game-fruit-merge__cell">' +
           (value ? '<i class="game-fruit game-fruit--' + value + '"></i>' : "") + "</button>";
-      }).join("") + "</div>";
+      }).join("") + "</div>", { duration: 200 });
     }
 
     options.runtime.listen(root, "click", function (event) {

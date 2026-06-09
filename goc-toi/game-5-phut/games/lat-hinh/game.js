@@ -12,14 +12,15 @@
     var moves = 0;
 
     function render() {
-      root.innerHTML = '<div class="game-memory">' + deck.map(function (symbol, index) {
+      window.GamePlatform.motion.render(root, '<div class="game-memory">' + deck.map(function (symbol, index) {
         var shown = open.includes(index) || matched[index];
-        return '<button data-memory="' + index + '" class="game-memory__card' +
+        return '<button data-memory="' + index + '" data-motion-key="memory-' + index +
+          '" data-motion-state="' + Number(shown) + "-" + Number(matched[index]) + '" class="game-memory__card' +
           (shown ? " game-memory__card--shown" : "") +
           (matched[index] ? " game-memory__card--matched" : "") + '">' +
           (shown ? '<i class="fa-solid ' + symbol + '"></i>' : '<i class="fa-solid fa-question"></i>') +
           "</button>";
-      }).join("") + "</div>";
+      }).join("") + "</div>");
     }
 
     function flip(index) {
