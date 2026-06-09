@@ -41,3 +41,6 @@ bàn phím và các nút điều khiển chỉ là phương án dự phòng trê
 Các game DOM dùng `GamePlatform.motion.render()` với `data-motion-key` ổn định
 để nội suy vị trí giữa hai trạng thái. Motion tự giảm về gần như tức thì khi
 thiết bị bật `prefers-reduced-motion`.
+
+Sơn Mê Cung biến đổi layout và điểm xuất phát theo `level`; các phép xoay/lật
+giữ nguyên cấu trúc có thể giải của mê cung gốc nhưng tránh lặp giữa các màn kế.

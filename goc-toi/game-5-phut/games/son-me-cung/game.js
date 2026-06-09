@@ -3,11 +3,32 @@
 
   window.GamePlatform.register("son-me-cung", function (root, options) {
     var size = options.difficulty.multiplier >= 2 ? 7 : 6;
-    var walls = new Set(size === 7
+    var baseWalls = size === 7
       ? ["0,1", "6,3", "2,1", "3,6", "0,2", "1,3", "2,6", "5,2", "6,0", "1,5", "6,2", "6,6"]
-      : ["0,1", "0,2", "5,3", "3,1", "5,0", "1,5", "5,4", "2,1"]);
-    var position = { row: 0, col: 0 };
-    var painted = new Set(["0,0"]);
+      : ["0,1", "0,2", "5,3", "3,1", "5,0", "1,5", "5,4", "2,1"];
+    var variant = (options.level - 1) % 8;
+
+    function transform(row, col) {
+      var rotations = variant % 4;
+      var mirrored = variant >= 4;
+      if (mirrored) col = size - 1 - col;
+      while (rotations > 0) {
+        var nextRow = col;
+        col = size - 1 - row;
+        row = nextRow;
+        rotations -= 1;
+      }
+      return { row: row, col: col };
+    }
+
+    var walls = new Set(baseWalls.map(function (key) {
+      var parts = key.split(",").map(Number);
+      var cell = transform(parts[0], parts[1]);
+      return cell.row + "," + cell.col;
+    }));
+    var position = transform(0, 0);
+    var startKey = position.row + "," + position.col;
+    var painted = new Set([startKey]);
     var openCount = size * size - walls.size;
 
     function move(deltaRow, deltaCol) {
