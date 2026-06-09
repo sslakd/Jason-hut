@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" crossorigin href="./assets/index-BC8pOSEo.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-Dv15Wayw.css">
   </head>
   <body>
     <main class="game-shell">
@@ -75,6 +75,20 @@
           <div class="modal">
             <h2>Tạm dừng</h2>
             <p>Màn <span id="pausedLevel">1</span> · <span id="pausedScore">0</span> điểm</p>
+            <div class="cloud-card">
+              <div class="cloud-state">
+                <span class="cloud-dot" id="cloudDot"></span>
+                <div>
+                  <small>LƯU TIẾN TRÌNH</small>
+                  <strong id="cloudStatus">Đang kiểm tra...</strong>
+                </div>
+              </div>
+              <div class="family-code hidden" id="familyCodeWrap">
+                <small>MÃ GIA ĐÌNH</small>
+                <strong id="familyCode">------</strong>
+              </div>
+              <button class="cloud-link-button" id="openLinkButton">Dùng mã từ điện thoại cũ</button>
+            </div>
             <button class="primary-button compact" id="resumeButton">TIẾP TỤC</button>
             <button class="secondary-button" id="restartButton">CHƠI LẠI MÀN</button>
             <button class="text-button" id="soundButton">Âm thanh: Bật</button>
@@ -96,6 +110,25 @@
             <h2>Chọn một trợ lực</h2>
             <p id="powerSummary">Chỉ dùng trong màn kế tiếp. Không dùng sẽ mất.</p>
             <div class="power-grid" id="powerChoices"></div>
+          </div>
+        </div>
+
+        <div class="overlay glass hidden" id="linkOverlay">
+          <div class="modal link-modal">
+            <button class="modal-close" id="closeLinkButton" aria-label="Đóng">×</button>
+            <h2>Khôi phục trò chơi</h2>
+            <p>Nhập mã 6 số đang hiện trên điện thoại cũ.</p>
+            <input
+              id="familyCodeInput"
+              class="family-code-input"
+              inputmode="numeric"
+              autocomplete="one-time-code"
+              maxlength="7"
+              placeholder="000 000"
+              aria-label="Mã gia đình 6 số"
+            />
+            <p class="link-message" id="linkMessage"></p>
+            <button class="primary-button compact" id="linkDeviceButton">KHÔI PHỤC</button>
           </div>
         </div>
       </section>

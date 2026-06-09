@@ -7,10 +7,14 @@ const UI = Object.fromEntries([
   "startOverlay", "pauseOverlay", "resultOverlay", "playButton", "newGameButton", "pauseButton",
   "resumeButton", "restartButton", "soundButton", "nextButton", "pausedLevel", "pausedScore",
   "resultTitle", "resultText", "resultStars", "saveNote", "powerButton", "powerIcon",
-  "powerName", "powerOverlay", "powerChoices", "powerSummary", "swapButton"
+  "powerName", "powerOverlay", "powerChoices", "powerSummary", "swapButton",
+  "cloudDot", "cloudStatus", "familyCodeWrap", "familyCode", "openLinkButton",
+  "linkOverlay", "closeLinkButton", "familyCodeInput", "linkMessage", "linkDeviceButton"
 ].map(id => [id, document.querySelector(`#${id}`)]));
 
 const STORAGE_KEY = "bamboo-pop-save-v1";
+const CLOUD_KEY = "bamboo-pop-cloud-v1";
+const CLOUD_API = "https://api.sslakd.com";
 const TAU = Math.PI * 2;
 const storage = {
   get() {
@@ -26,6 +30,32 @@ const storage = {
     catch { /* No saved state to remove. */ }
   }
 };
+
+const cloud = {
+  enabled: location.protocol === "https:" && (location.hostname === "sslakd.com" || location.hostname === "www.sslakd.com"),
+  token: null,
+  familyCode: null,
+  revision: 0,
+  timer: null,
+  syncing: false,
+  initialized: false,
+  lastPayload: ""
+};
+
+function readCloudCredentials() {
+  try { return JSON.parse(localStorage.getItem(CLOUD_KEY)) || {}; }
+  catch { return {}; }
+}
+
+function writeCloudCredentials() {
+  try {
+    localStorage.setItem(CLOUD_KEY, JSON.stringify({
+      token: cloud.token,
+      familyCode: cloud.familyCode,
+      revision: cloud.revision
+    }));
+  } catch { /* Local-only play remains available. */ }
+}
 const COLORS = [
   { main: "#ff665c", light: "#ffd0b6", dark: "#bd3737" },
   { main: "#ffcf48", light: "#fff5a5", dark: "#d28a26" },
@@ -236,6 +266,111 @@ function updatePowerUI() {
   UI.powerName.textContent = power.name;
 }
 
+function setCloudStatus(text, mode = "") {
+  UI.cloudStatus.textContent = text;
+  UI.cloudDot.classList.toggle("online", mode === "online");
+  UI.cloudDot.classList.toggle("offline", mode === "offline");
+  UI.familyCodeWrap.classList.toggle("hidden", !cloud.familyCode);
+  if (cloud.familyCode) {
+    UI.familyCode.textContent = `${cloud.familyCode.slice(0, 3)} ${cloud.familyCode.slice(3)}`;
+  }
+}
+
+function saveProgressRank(save) {
+  if (!save) return 0;
+  const level = Number(save.nextLevel || save.level || 1);
+  const score = Number(save.score || 0);
+  const rescued = Number(save.rescued || 0);
+  return level * 1_000_000_000 + score * 1_000 + rescued;
+}
+
+async function cloudRequest(path, options = {}) {
+  const headers = { "Content-Type": "application/json", ...(options.headers || {}) };
+  if (cloud.token) headers.Authorization = `Bearer ${cloud.token}`;
+  const response = await fetch(`${CLOUD_API}${path}`, { ...options, headers });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) throw Object.assign(new Error(data.error || "cloud_error"), { status: response.status, data });
+  return data;
+}
+
+async function initializeCloud() {
+  if (!cloud.enabled) {
+    setCloudStatus("Đã lưu trên thiết bị này", "offline");
+    return;
+  }
+  const credentials = readCloudCredentials();
+  cloud.token = credentials.token || null;
+  cloud.familyCode = credentials.familyCode || null;
+  cloud.revision = Number(credentials.revision || 0);
+  setCloudStatus("Đang kết nối...");
+  try {
+    if (!cloud.token) {
+      const created = await cloudRequest("/v1/devices/register", {
+        method: "POST",
+        body: JSON.stringify({ deviceLabel: navigator.userAgent.slice(0, 70) })
+      });
+      cloud.token = created.token;
+      cloud.familyCode = created.familyCode;
+      cloud.revision = 0;
+      writeCloudCredentials();
+    }
+    const remote = await cloudRequest("/v1/save");
+    cloud.revision = Number(remote.revision || 0);
+    writeCloudCredentials();
+    const localSave = JSON.parse(storage.get() || "null");
+    if (remote.save && saveProgressRank(remote.save) > saveProgressRank(localSave)) {
+      storage.set(JSON.stringify(remote.save));
+      location.reload();
+      return;
+    }
+    cloud.initialized = true;
+    setCloudStatus(remote.save ? "Đã đồng bộ" : "Sẵn sàng sao lưu", "online");
+    if (localSave) scheduleCloudSync(localSave, 50);
+  } catch {
+    cloud.initialized = true;
+    setCloudStatus("Đang lưu trên máy", "offline");
+  }
+}
+
+function scheduleCloudSync(save, delay = 1200) {
+  if (!cloud.enabled || !cloud.token || !save) return;
+  clearTimeout(cloud.timer);
+  cloud.timer = setTimeout(() => syncToCloud(save), delay);
+}
+
+async function syncToCloud(save) {
+  if (cloud.syncing) return scheduleCloudSync(save, 700);
+  const payload = JSON.stringify(save);
+  if (payload === cloud.lastPayload) return;
+  cloud.syncing = true;
+  setCloudStatus("Đang lưu...");
+  try {
+    const result = await cloudRequest("/v1/save", {
+      method: "PUT",
+      body: JSON.stringify({ baseRevision: cloud.revision, save })
+    });
+    cloud.revision = result.revision;
+    cloud.lastPayload = payload;
+    writeCloudCredentials();
+    setCloudStatus("Đã lưu lên Mac mini", "online");
+  } catch (error) {
+    if (error.status === 409 && error.data?.save) {
+      const remoteSave = error.data.save;
+      cloud.revision = error.data.revision;
+      if (saveProgressRank(remoteSave) > saveProgressRank(save)) {
+        storage.set(JSON.stringify(remoteSave));
+        location.reload();
+        return;
+      }
+      cloud.syncing = false;
+      return scheduleCloudSync(save, 100);
+    }
+    setCloudStatus("Mất mạng, vẫn lưu trên máy", "offline");
+  } finally {
+    cloud.syncing = false;
+  }
+}
+
 function saveGame() {
   if (!state.playing) return;
   const save = {
@@ -250,6 +385,7 @@ function saveGame() {
     powerUsed: state.powerUsed, powerArmed: state.powerArmed, frozen: state.frozen
   };
   storage.set(JSON.stringify(save));
+  scheduleCloudSync(save);
 }
 
 function loadGame() {
@@ -676,11 +812,13 @@ function finishLevel(won) {
     UI.powerSummary.textContent = `${"★".repeat(stars)}${"☆".repeat(3 - stars)} · Hiệu suất ${state.lastPerformance}% · +${bonus.toLocaleString("vi-VN")} điểm`;
     playSound("win");
     state.pendingNextLevel = state.level + 1;
-    storage.set(JSON.stringify({
+    const pendingSave = {
       version: 2, awaitingPower: true, nextLevel: state.pendingNextLevel, score: state.score,
       skillRating: state.skillRating, lastPerformance: state.lastPerformance,
       lastSelectedPowerUp: state.lastSelectedPowerUp, sound: state.sound
-    }));
+    };
+    storage.set(JSON.stringify(pendingSave));
+    scheduleCloudSync(pendingSave, 100);
     updateUI();
     showPowerSelection();
     return;
@@ -1232,6 +1370,61 @@ UI.swapButton.addEventListener("click", event => {
   event.stopPropagation();
   swapAmmo();
 });
+UI.openLinkButton.addEventListener("click", () => {
+  UI.linkMessage.textContent = "";
+  UI.familyCodeInput.value = "";
+  UI.linkOverlay.classList.remove("hidden");
+  requestAnimationFrame(() => {
+    UI.linkOverlay.classList.add("visible");
+    UI.familyCodeInput.focus();
+  });
+});
+UI.closeLinkButton.addEventListener("click", () => {
+  UI.linkOverlay.classList.remove("visible");
+  setTimeout(() => UI.linkOverlay.classList.add("hidden"), 220);
+});
+UI.familyCodeInput.addEventListener("input", () => {
+  const digits = UI.familyCodeInput.value.replace(/\D/g, "").slice(0, 6);
+  UI.familyCodeInput.value = digits.length > 3 ? `${digits.slice(0, 3)} ${digits.slice(3)}` : digits;
+});
+UI.linkDeviceButton.addEventListener("click", async () => {
+  const familyCode = UI.familyCodeInput.value.replace(/\D/g, "");
+  if (familyCode.length !== 6) {
+    UI.linkMessage.textContent = "Vui lòng nhập đủ 6 số.";
+    return;
+  }
+  UI.linkDeviceButton.disabled = true;
+  UI.linkMessage.textContent = "Đang tìm tiến trình...";
+  try {
+    const linked = await cloudRequest("/v1/devices/link", {
+      method: "POST",
+      body: JSON.stringify({ familyCode, deviceLabel: navigator.userAgent.slice(0, 70) })
+    });
+    cloud.token = linked.token;
+    cloud.familyCode = linked.familyCode;
+    cloud.revision = 0;
+    writeCloudCredentials();
+    const remote = await cloudRequest("/v1/save");
+    cloud.revision = Number(remote.revision || 0);
+    writeCloudCredentials();
+    if (remote.save) storage.set(JSON.stringify(remote.save));
+    UI.linkMessage.textContent = remote.save ? "Đã tìm thấy! Đang mở trò chơi..." : "Đã ghép thiết bị.";
+    setTimeout(() => location.reload(), 450);
+  } catch (error) {
+    UI.linkMessage.textContent = error.status === 429
+      ? "Đã thử quá nhiều lần. Vui lòng chờ 10 phút."
+      : "Không tìm thấy mã này. Hãy kiểm tra lại.";
+  } finally {
+    UI.linkDeviceButton.disabled = false;
+  }
+});
+UI.familyCodeWrap.addEventListener("click", async () => {
+  if (!cloud.familyCode) return;
+  try {
+    await navigator.clipboard.writeText(cloud.familyCode);
+    showToast("Đã sao chép mã gia đình");
+  } catch { /* Clipboard can be unavailable in embedded browsers. */ }
+});
 UI.nextButton.addEventListener("click", () => {
   UI.resultOverlay.classList.remove("visible");
   setTimeout(() => UI.resultOverlay.classList.add("hidden"), 240);
@@ -1276,3 +1469,4 @@ if (hasSave) {
   } catch {}
 }
 requestAnimationFrame(frame);
+initializeCloud();
