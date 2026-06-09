@@ -39,6 +39,7 @@ const cloud = {
   timer: null,
   syncing: false,
   initialized: false,
+  recovering: false,
   lastPayload: ""
 };
 
@@ -315,6 +316,7 @@ async function initializeCloud() {
       writeCloudCredentials();
     }
     const remote = await cloudRequest("/v1/save");
+    cloud.recovering = false;
     cloud.revision = Number(remote.revision || 0);
     writeCloudCredentials();
     const localSave = JSON.parse(storage.get() || "null");
@@ -326,7 +328,15 @@ async function initializeCloud() {
     cloud.initialized = true;
     setCloudStatus(remote.save ? "Đã đồng bộ" : "Sẵn sàng sao lưu", "online");
     if (localSave) scheduleCloudSync(localSave, 50);
-  } catch {
+  } catch (error) {
+    if (error.status === 401 && !cloud.recovering) {
+      cloud.recovering = true;
+      cloud.token = null;
+      cloud.familyCode = null;
+      cloud.revision = 0;
+      try { localStorage.removeItem(CLOUD_KEY); } catch {}
+      return initializeCloud();
+    }
     cloud.initialized = true;
     setCloudStatus("Đang lưu trên máy", "offline");
   }
