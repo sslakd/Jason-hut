@@ -78,7 +78,7 @@ Huy mở tủ. Lấy ra một bức ảnh cũ, ố vàng — chụp 3 người: 
 
 Cha hắn — một người đàn ông vũ phu, nghiện rượu. Mẹ hắn — một người phụ nữ cam chịu, sợ chồng hơn sợ chết.
 
-Huy 7 tuổi, lần đầu tiên cầm quân cờ — là một quân cờ bằng nhựa rẻ tiền, mua ngoài chợ. Mẹ hắn mua cho hắn. Bà nói: *"Con giỏi, con sẽ thắng. Thắng là thoát."*
+Huy 7 tuổi, lần đầu tiên cầm quân cờ — là một quân cờ bằng nhựa rẻ tiền, mua ngoài chợ. Mẹ hắn mua cho hắn. Bà nói: *"Con giỏi, con sẽ thắng. Thắng làm vua."*
 
 Huy không hiểu câu đó lúc 7 tuổi. Đến năm 20 tuổi hắn mới hiểu.
 
@@ -358,7 +358,7 @@ Trên bìa — chữ ký tay: *"Phong"*.
 
 *Hai đứa vào phòng Huy — căn phòng nhỏ nhất trong nhà, nhưng gọn gàng, ngăn nắp. Trên tường — một bàn cờ vẽ bằng bút bi trực tiếp lên tường. Và một câu viết bằng bút đỏ:*
 
-> *"Thắng là thoát."*
+> *"Thắng làm vua."*
 
 *Lâm: "Ai viết?"*
 
