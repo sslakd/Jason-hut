@@ -106,6 +106,14 @@ async function run() {
   );
   assert.equal(sandbox.window.getDifficultyMultiplier(2, 2), 2.1);
   assert.equal(sandbox.window.getDifficultyMultiplier(2, 3), 2.205);
+  assert.deepEqual(
+    JSON.parse(JSON.stringify(sandbox.window.getEndlessDifficulty(1, 0))),
+    { stage: 1, factor: 1, multiplier: 1 }
+  );
+  assert.equal(sandbox.window.getEndlessDifficulty(1, 5).stage, 2);
+  assert.equal(sandbox.window.getEndlessDifficulty(2, 25).stage, 6);
+  assert.ok(sandbox.window.getEndlessDifficulty(2, 25).multiplier > 2);
+  assert.ok(sandbox.window.getEndlessDifficulty(3, 100000).factor <= 2.75);
 
   assert.throws(
     () => sandbox.window.GamePlatform.register("caro-ba", () => ({})),

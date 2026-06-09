@@ -29,5 +29,9 @@ Game phá kỷ lục khai báo `mode: "endless"` trong catalog. Khi kết thúc,
 gọi `options.onLose({ message, score })`; app tự lưu kỷ lục và chỉ hiện nút
 chơi lại, không tạo màn tiếp theo.
 
+Trong ván endless, dùng `options.getEndlessDifficulty(progress)` để lấy
+`stage`, `factor` và `multiplier`. Mỗi engine ánh xạ đường cong chung này sang
+tốc độ, mật độ chướng ngại hoặc độ phức tạp phù hợp với luật riêng.
+
 Input của game ưu tiên mobile: kéo, vuốt và chạm bằng Pointer Events. Chuột,
 bàn phím và các nút điều khiển chỉ là phương án dự phòng trên desktop.

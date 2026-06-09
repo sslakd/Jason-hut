@@ -1215,6 +1215,11 @@ footer {
   font-weight: 700;
 }
 
+.game-live-score--right {
+  right: 14px;
+  left: auto;
+}
+
 .game-nut-sort {
   display: grid;
   width: min(92vw, 620px);

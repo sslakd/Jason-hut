@@ -559,8 +559,10 @@
     canvas.className = "arcade-canvas flappy-canvas";
     canvas.width = 360;
     canvas.height = 520;
-    root.innerHTML = '<div class="canvas-game flappy-wrap"></div><button class="tap-zone" type="button">Chạm để bay</button>';
+    root.innerHTML = '<div class="game-live-score game-live-score--right" aria-live="polite">Nhịp 1</div>' +
+      '<div class="canvas-game flappy-wrap"></div><button class="tap-zone" type="button">Chạm để bay</button>';
     root.querySelector(".canvas-game").appendChild(canvas);
+    var stageLabel = root.querySelector(".game-live-score");
     var ctx = canvas.getContext("2d");
     var bird = { x: 80, y: 240, vy: 0 };
     var pipes = [];
@@ -571,12 +573,20 @@
     var animation;
     var nextPipeAt = 90;
 
+    function difficulty() {
+      return options.getEndlessDifficulty(score);
+    }
+
     function currentGap() {
-      return Math.max(92, 172 - options.difficulty.multiplier * 9 - score * 1.4);
+      return Math.max(84, 178 - difficulty().multiplier * 14 - score * .45);
     }
 
     function currentSpeed() {
-      return Math.min(4.7, 2.15 + options.difficulty.multiplier * .12 + score * .025);
+      return Math.min(5.4, 2.05 + difficulty().multiplier * .3);
+    }
+
+    function currentSpawnDelay() {
+      return Math.max(62, 110 - difficulty().factor * 13 - score * .15);
     }
 
     function flap() {
@@ -599,7 +609,7 @@
             gap: gap,
             passed: false
           });
-          nextPipeAt = frame + Math.max(68, 105 - Math.floor(score * .8));
+          nextPipeAt = frame + currentSpawnDelay();
         }
         pipes.forEach(function (pipe) { pipe.x -= currentSpeed(); });
         pipes = pipes.filter(function (pipe) { return pipe.x > -60; });
@@ -607,6 +617,7 @@
           if (!pipe.passed && pipe.x + 54 < bird.x) {
             pipe.passed = true;
             score += 1;
+            stageLabel.textContent = "Nhịp " + difficulty().stage;
           }
           var hitX = bird.x + 13 > pipe.x && bird.x - 13 < pipe.x + 54;
           var hitY = bird.y - 13 < pipe.top || bird.y + 13 > pipe.top + pipe.gap;
@@ -640,6 +651,8 @@
       ctx.textAlign = "right";
       ctx.fillText("Kỷ lục " + Math.max(options.bestScore, score), canvas.width - 16, 26);
       ctx.textAlign = "left";
+      ctx.font = "500 11px sans-serif";
+      ctx.fillText("Tốc độ ×" + difficulty().factor.toFixed(2), 16, 46);
     }
 
     root.onpointerdown = function (event) {

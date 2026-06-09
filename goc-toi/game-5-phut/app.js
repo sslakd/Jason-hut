@@ -170,6 +170,10 @@
     }
     state.selectedGame = game;
     document.getElementById("difficulty-game-name").textContent = game.name + " · " + game.summary;
+    document.getElementById("difficulty-note").innerHTML = icon("fa-arrow-trend-up") +
+      (game.mode === "endless"
+        ? " Độ khó tăng dần ngay trong ván theo tốc độ và độ phức tạp."
+        : " Mỗi màn tiếp theo sẽ khó hơn 5%.");
     document.getElementById("difficulty-list").innerHTML = difficulties.map(function (difficulty) {
       return [
         '<button class="difficulty-option" type="button" data-difficulty="', difficulty.id, '">',
@@ -266,6 +270,9 @@
         }),
         mode: state.selectedGame.mode || "levels",
         bestScore: getBestScore(state.selectedGame.id),
+        getEndlessDifficulty: function (progress) {
+          return window.getEndlessDifficulty(state.difficulty.multiplier, progress);
+        },
         onHint: function (text) {
           document.getElementById("game-hint").textContent = text;
         },

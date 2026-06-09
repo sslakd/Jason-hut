@@ -18,6 +18,11 @@
     var ended = false;
     var paused = false;
     var animation;
+    var directionChanges = 0;
+
+    function difficulty() {
+      return options.getEndlessDifficulty(score);
+    }
 
     function draw() {
       context.fillStyle = "#f7fbf5";
@@ -34,6 +39,8 @@
       context.textAlign = "right";
       context.fillText("Kỷ lục " + Math.max(options.bestScore, score), 348, 22);
       context.textAlign = "left";
+      context.font = "500 11px sans-serif";
+      context.fillText("Nhịp " + difficulty().stage + " · ×" + difficulty().factor.toFixed(2), 12, 42);
     }
 
     function drop() {
@@ -50,22 +57,30 @@
       moving.width = right - left;
       blocks.push({ x: moving.x, width: moving.width, y: moving.y });
       score += 1;
-      scoreLabel.textContent = "Tầng " + score;
+      scoreLabel.textContent = "Tầng " + score + " · Nhịp " + difficulty().stage;
       if (moving.y < 155) {
         blocks.forEach(function (block) { block.y += 38; });
       }
       moving = {
-        x: 0,
-        width: moving.width,
+        x: score % 2 ? 360 - moving.width : 0,
+        width: Math.max(28, moving.width - Math.min(4, difficulty().stage - 1)),
         y: moving.y - 38,
-        speed: Math.min(8, (2.2 + score * .1) * options.difficulty.multiplier)
+        speed: (score % 2 ? -1 : 1) * Math.min(9, 2.05 + difficulty().multiplier * .75)
       };
+      directionChanges = 0;
     }
 
     function loop() {
       if (!ended && !paused) {
         moving.x += moving.speed;
-        if (moving.x < 0 || moving.x + moving.width > 360) moving.speed *= -1;
+        if (moving.x < 0 || moving.x + moving.width > 360) {
+          moving.speed *= -1;
+          moving.x = Math.max(0, Math.min(360 - moving.width, moving.x));
+          directionChanges += 1;
+          if (difficulty().stage >= 3 && directionChanges % Math.max(2, 5 - difficulty().stage) === 0) {
+            moving.speed *= 1.04;
+          }
+        }
       }
       draw();
       if (!ended) animation = window.requestAnimationFrame(loop);

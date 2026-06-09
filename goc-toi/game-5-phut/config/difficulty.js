@@ -8,3 +8,13 @@ window.GAME_DIFFICULTIES = [
 window.getDifficultyMultiplier = function (baseMultiplier, level) {
   return baseMultiplier * Math.pow(1.05, level - 1);
 };
+
+window.getEndlessDifficulty = function (baseMultiplier, progress) {
+  var stage = Math.floor(Math.max(0, progress) / 5) + 1;
+  var factor = Math.min(2.75, 1 + Math.log1p(Math.max(0, progress)) * 0.22);
+  return {
+    stage: stage,
+    factor: factor,
+    multiplier: baseMultiplier * factor
+  };
+};
