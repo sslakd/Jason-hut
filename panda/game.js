@@ -9,7 +9,8 @@ const UI = Object.fromEntries([
   "resultTitle", "resultText", "resultStars", "saveNote", "powerButton", "powerIcon",
   "powerName", "powerOverlay", "powerChoices", "powerSummary", "swapButton",
   "cloudDot", "cloudStatus", "familyCodeWrap", "familyCode", "openLinkButton",
-  "linkOverlay", "closeLinkButton", "familyCodeInput", "linkMessage", "linkDeviceButton"
+  "linkOverlay", "closeLinkButton", "familyCodeInput", "linkMessage", "linkDeviceButton",
+  "cloudBadge", "cloudBadgeText"
 ].map(id => [id, document.querySelector(`#${id}`)]));
 
 const STORAGE_KEY = "bamboo-pop-save-v1";
@@ -275,6 +276,10 @@ function setCloudStatus(text, mode = "") {
   if (cloud.familyCode) {
     UI.familyCode.textContent = `${cloud.familyCode.slice(0, 3)} ${cloud.familyCode.slice(3)}`;
   }
+  UI.cloudBadge.classList.toggle("offline", mode === "offline");
+  UI.cloudBadgeText.textContent = cloud.familyCode
+    ? `MÃ ${cloud.familyCode.slice(0, 3)} ${cloud.familyCode.slice(3)}`
+    : text.toUpperCase();
 }
 
 function saveProgressRank(save) {
@@ -1388,6 +1393,15 @@ UI.openLinkButton.addEventListener("click", () => {
     UI.linkOverlay.classList.add("visible");
     UI.familyCodeInput.focus();
   });
+});
+UI.cloudBadge.addEventListener("click", () => {
+  if (cloud.familyCode && state.playing && !state.paused) {
+    togglePause(true);
+    return;
+  }
+  cloud.recovering = false;
+  setCloudStatus("Đang tạo mã...");
+  initializeCloud();
 });
 UI.closeLinkButton.addEventListener("click", () => {
   UI.linkOverlay.classList.remove("visible");
