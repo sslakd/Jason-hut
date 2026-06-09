@@ -58,7 +58,7 @@ Gầy. 36 tuổi nhưng trông như 50. Tóc muối tiêu. Mắt trũng. Hai bà
 
 Ánh nắng tháng Chín chiếu thẳng vào mặt. Lâm nhắm mắt lại, không phải vì chói — vì ổng quên mất cảm giác ấm áp của mặt trời trên da mình.
 
-Một người phụ nữ trẻ đứng đợi. Gần 30, mặc vest công sở, tay cầm một tập tài liệu.
+Một người đàn ông trẻ đứng đợi. Gần 30, mặc vest công sở, tay cầm một tập tài liệu.
 
 *"Anh Lâm. Tôi là luật sư của anh. Bảo. Nguyễn Đức Bảo."*
 
@@ -80,7 +80,7 @@ Bảo rút từ cốp xe một hộp quà nhỏ. Đưa ra sau.
 
 *"Cái này, cháu không biết có nên đưa anh không. Nhưng Mai bảo... đưa cho anh."*
 
-Lâm mở hộp. Một bàn cờ tướng bằng gỗ mun. Đẹp. Từng quân cờ được chạm khắc tinh xảo.
+Lâm mở hộp. Một bàn cờ tướng bằng gỗ mun. Đẹp. Từng quân cờ được chạm khắc tinh xảo — nhưng quân Mã bị gãy rời, nằm riêng trong một ngăn nhỏ.
 
 Trong hộp — một tờ giấy. Chữ viết tay:
 
@@ -92,7 +92,7 @@ Lâm đọc. Đọc lại. Tay ổng ngừng run.
 
 Huy.
 
-Bảo: *"Có vấn đề gì không anh?"*
+Bảo thấy mặt Lâm biến sắc: *"Có vấn đề gì không anh?"*
 
 Lâm: *"Đưa tôi đến quán cà phê. Tôi cần gặp Mai."*
 
@@ -102,9 +102,9 @@ Lâm: *"Đưa tôi đến quán cà phê. Tôi cần gặp Mai."*
 
 Quán cà phê nhỏ trên phố Nguyễn Khuyến. Vắng. 4h chiều.
 
-Mai ngồi ở góc trong cùng — cái bàn sát tường. Trước mặt cô là một laptop, một cuốn sổ, và một ly cà phê đã uống hết từ lâu.
+Mai ngồi ở góc trong cùng — cái bàn sát tường, mắt nhìn ra cửa. Trước mặt cô là một laptop mở sẵn, một cuốn sổ dày, và một ly cà phê đã uống hết từ lâu.
 
-Cô mặc áo phông trắng, quần jean, giày bata. Nhìn qua không ai nghĩ cô là sinh viên cảnh sát — nhưng cách cô ngồi, cách cô quan sát cửa trước khi người bước vào — tất cả đều là cảnh sát.
+Cô mặc áo phông trắng, quần jean, giày bata. Nhìn qua không ai nghĩ cô là sinh viên cảnh sát — nhưng cách cô ngồi, cách cô quan sát cửa trước khi người bước vào, cách tay cô đặt gần túi quần (nơi có con dao gấp) — tất cả đều là cảnh sát.
 
 Lâm bước vào. Hai cha con nhìn nhau 3 giây. Không ai nói gì.
 
@@ -116,13 +116,15 @@ Lâm: *"Ba xin lỗi."*
 
 Mai: *"Ngồi đi. Con kể ba nghe."*
 
+Cô không nói "không sao" hay "con tha thứ cho ba". Cô chỉ nói: "Ngồi đi." Đã là nhiều.
+
 Mai mở laptop. Trên màn hình — 9 thư mục. Mỗi thư mục mang một cái tên: *VuAn_01, VuAn_02... VuAn_09.*
 
 *"12 năm ba ở tù. 12 năm con lớn lên. Và 12 năm — những vụ án này xảy ra."*
 
-Mai click vào thư mục đầu tiên. Hàng tá ảnh hiện ra.
+Cô click vào thư mục đầu tiên. Hàng tá ảnh hiện ra — hiện trường, nạn nhân, bàn cờ.
 
-*"Vụ đầu tiên — xảy ra 3 tháng sau khi ba vào tù. Nạn nhân: Nguyễn Văn Hùng, 45 tuổi, luật sư. Chết trong phòng ngủ. Trên bàn — một bàn cờ với thế Mã Hậu Pháo."*
+*"Vụ đầu tiên — 3 tháng sau khi ba vào tù. Nạn nhân: Nguyễn Văn Hùng, 45 tuổi, luật sư. Chết vì ngạt trong phòng ngủ. Trên bàn — một bàn cờ với thế Mã Hậu Pháo."*
 
 Lâm nhìn ảnh. Nhìn kỹ.
 
@@ -132,57 +134,31 @@ Lâm nhìn ảnh. Nhìn kỹ.
 
 *"Học bao lâu?"*
 
-*"3 năm. Từ năm nhất đến năm ba thì chơi được."*
+*"3 năm. Từ năm nhất đến năm ba — chơi được, nhưng chưa đủ để hiểu hết."*
 
 Lâm nhìn con gái. 12 năm. Ổng không thể dạy nó bất cứ điều gì. Nhưng nó đã tự học — để hiểu cái bẫy đã cướp mất cha nó.
 
-*"9 vụ. Tất cả đều có 1 thế cờ ở hiện trường. Tất cả đều có 1 dấu vết thừa — một thứ không liên quan đến thế cờ. Một dấu hiệu tình dục. Nhỏ. Tinh tế. Cố ý."*
+*"9 vụ. Tất cả đều có 1 thế cờ ở hiện trường. Tất cả đều có 1 dấu vết thừa — một thứ không liên quan đến thế cờ. Một dấu hiệu..."* Cô ngừng. *"...tình dục. Nhỏ. Tinh tế. Cố ý."*
 
-Lâm gật đầu. Ổng biết đó là của Huy. Huy không thể không để lại chữ ký. Đó là điểm yếu của hắn — và cũng là cách duy nhất để tìm ra hắn.
+Lâm gật đầu. Ổng biết đó là của Huy.
 
-*"Và có một vụ thứ 10 sắp xảy ra."*
+*"Con đã kết nối chúng chưa?"*
 
-Mai nhìn Lâm: *"Sao ba biết?"*
+*"Con có một bảng chỉ đỏ ở phòng trọ. 9 vụ. 9 mảnh giấy. 9 sợi chỉ. Nhưng con chưa thấy được toàn bộ bức tranh."*
 
-Lâm rút tờ giấy trong túi. Đặt lên bàn.
+*"Tại sao?"*
 
-Mai đọc. Mặt cô tái đi.
+Mai nhìn thẳng vào cha:
 
-*"Ai gửi?"*
-
-*"Huy."*
-
-Mai lặng người một lúc. Rồi cô nói:
-
-*"Người đã thua ba trong trận chung kết 12 năm trước."*
-
-Lâm: *"Con biết hắn?"*
-
-*"Con biết tất cả. Con đã điều tra 3 năm. Con biết về Huy. Con biết hắn là bạn thân của ba. Con biết hắn thua ba — và 3 tháng sau ba bị bắt. Con biết tất cả đều xoay quanh một bàn cờ."*
-
-Mai ngừng. Uống một ngụm cà phê đã nguội.
-
-*"Nhưng con không biết — tại sao? Tại sao hắn làm vậy? Tại sao hắn giết 9 người? Và tại sao — hắn nhắm vào con?"*
-
-Lâm: *"Hắn không nhắm vào con. Hắn nhắm vào ba."*
-
-Mai: *"Nhưng con là mục tiêu — tờ giấy đó nói rõ."*
-
-Lâm: *"Vì hắn muốn ba phải mất thứ quý giá nhất — một lần nữa. 12 năm trước, hắn lấy mất tự do của ba. Lần này..."*
-
-Lâm không nói hết câu.
-
-Mai hiểu. Lần này, Huy muốn lấy mạng cô.
+*"Vì con thiếu một thứ — một người từng chơi cờ với hắn. Một người hiểu hắn. Ba — đó là ba."*
 
 ---
 
-## Chương 3: Chín Bàn Cờ
+## Chương 3: Bảng Chỉ Đỏ
 
-Mai đưa Lâm về căn hộ của cô — một phòng trọ nhỏ gần Học viện. 15 mét vuông. Giường, bàn học, tủ quần áo — và một góc dành riêng cho... điều tra.
+Phòng trọ của Mai — 15 mét vuông gần Học viện.
 
-Trên tường — một bảng liên kết với 9 mảnh giấy, 9 tấm ảnh, 9 sợi chỉ đỏ nối nhau.
-
-*"Đây là 9 vụ. Con đã dành 3 năm để kết nối chúng. Nhưng con chưa bao giờ nhìn thấy — toàn bộ bức tranh."*
+Trên tường — một bảng liên kết với 9 tấm ảnh, 9 mảnh giấy ghi chú, 9 sợi chỉ đỏ nối nhau thành một mạng nhện chằng chịt.
 
 Lâm đứng trước bảng. 12 năm không chơi cờ. Nhưng mắt ổng vẫn nhìn ra pattern ngay lập tức.
 
@@ -192,395 +168,540 @@ Mai: *"Ý ba là?"*
 
 Lâm chỉ vào tấm ảnh đầu tiên — vụ 1, thế Mã Hậu Pháo.
 
-*"Mỗi vụ là một thế chiếu bí. Mỗi thế chiếu bí là một cách để ăn một quân cờ."*
+*"Mỗi vụ là một thế chiếu bí. Mỗi thế chiếu bí là một cách để ăn một quân cờ. Huy không giết người ngẫu nhiên. Hắn thu thập quân cờ."*
 
 Ổng lấy bút, vẽ nhanh lên một tờ giấy:
 
-*"Cờ tướng có 7 loại quân. Huy đã ăn 9 quân — nhưng thực ra chỉ có 5 loại: Tốt, Sĩ, Tượng, Mã, Pháo. Hắn chưa ăn Xe và chưa ăn Tướng."*
+*"Cờ tướng có 7 loại quân. Huy đã giết 9 người — nhưng về mặt giá trị quân cờ, hắn mới ăn được 5 loại: Tốt, Sĩ, Tượng, Mã, Pháo. Xe và Tướng — hắn chưa ăn."*
 
-Mai: *"Xe là con. Và..."*
+Mai: *"Xe là con."*
 
 *"Và Tướng là ba."*
 
-Lâm đặt quân Mã gãy lên bàn — quân cờ trong hộp quà.
+Lâm đặt quân Mã gãy lên bàn — quân cờ trong hộp quà. Quân Mã gãy không thể di chuyển. Nó nằm im, bất động.
 
-*"Hắn gửi quân Mã gãy. Mã gãy không thể di chuyển. Hắn đang nói: 'Nước cuối — mày sẽ không thể đi đâu được.'"*
+*"Hắn gửi quân Mã gãy. Mã là quân linh hoạt nhất — đi đường cong, khó bị chặn. Nhưng khi gãy, nó không thể đi đâu. Hắn nói: 'Nước cuối — mày sẽ bất động.'"*
 
-Mai nhìn cha. 12 năm. Lần đầu tiên — họ cùng đứng trước một bàn cờ — dù chỉ là bàn cờ trên tường.
+Mai: *"Vậy phải làm gì?"*
 
-*"Vậy phải làm gì?"*
-
-Lâm: *"Phải hiểu hắn. 9 vụ — 9 quân cờ bị ăn. Mỗi vụ cho chúng ta một mảnh ghép về Huy. Càng hiểu hắn, càng biết hắn sẽ ra tay ở đâu và khi nào."*
+Lâm: *"Phải hiểu hắn. 9 vụ — 9 quân cờ bị ăn. Mỗi vụ cho chúng ta một lớp hiểu về Huy. Càng hiểu hắn, càng biết hắn sẽ ra tay ở đâu, khi nào, và bằng cách nào."*
 
 Mai: *"Bắt đầu từ đâu?"*
 
-Lâm: *"Từ đầu. Vụ 1. Mã Hậu Pháo."*
+Lâm: *"Vụ 1. Mã Hậu Pháo. Và lần này — con phải cho ba xem tất cả. Không giấu gì. Kể cả nguồn tin của con."*
+
+Mai im lặng một lúc. Rồi cô mở tủ, lấy ra một tập hồ sơ dày, bìa đã cũ.
+
+Trên bìa — chữ ký tay: *"Phong"*.
 
 ---
 
 ## Chương 4: Vụ 1 — Mã Hậu Pháo
 
-Mai mở thư mục đầu tiên.
+Mai mở tập hồ sơ. Bên trong — ảnh hiện trường, bản khám nghiệm, kết luận điều tra — tất cả đều có dấu "MẬT" đóng đỏ.
 
-Ảnh hiện trường: một căn phòng ngủ. Nạn nhân — Nguyễn Văn Hùng, 45 tuổi, luật sư — nằm trên giường, một tay buông thõng, một tay đặt trên ngực. Chết vì ngạt. Trên bàn cạnh giường — một bàn cờ với thế Mã Hậu Pháo.
+*"Nguồn tin của con là Thượng úy Phong. Điều tra viên chính thức của vụ 9."*
 
-Mai: *"Vụ này xảy ra 3 tháng sau khi ba vào tù. Cảnh sát kết luận: hung thủ đột nhập, siết cổ nạn nhân, để lại thế cờ. Không tìm thấy dấu vân tay. Không có nhân chứng."*
+Lâm: *"Tại sao hắn cho con hồ sơ?"*
 
-Lâm: *"Nhưng con thấy gì khác?"*
+*"Vì hắn không tin hung thủ chỉ có một mình. Hắn nghĩ có đồng phạm. Và hắn cần con — người hiểu cờ — để kiểm tra giả thuyết đó."*
 
-Mai: *"Có một chi tiết — trên cổ nạn nhân có một vết son môi. Mờ. Như thể hung thủ đã hôn nạn nhân."*
+Lâm nhìn ảnh hiện trường — căn phòng ngủ. Nạn nhân nằm trên giường, một tay buông thõng, một tay đặt trên ngực. Chết vì ngạt. Dây thắt lưng quấn quanh cổ — loại dây da đen, không có nhãn hiệu.
 
-Lâm gật đầu. Đó là Huy. Hắn không thể không để lại dấu vết.
+Trên bàn cạnh giường — bàn cờ với thế Mã Hậu Pháo: Mã ở ô chặn đường chéo của Tướng. Pháo ở xa, sẵn sàng chiếu.
 
-*"Dấu vết đó — không ai biết ngoài cảnh sát. Con có nó từ đâu?"*
+*"Hung thủ đột nhập, siết cổ nạn nhân, để lại thế cờ. Không dấu vân tay. Không nhân chứng. Kết luận: giết người có tổ chức."*
 
-Mai: *"Con có một nguồn."*
+Lâm: *"Còn gì nữa?"*
 
-*"Ai?"*
+Mai do dự. Rồi cô rút một tấm ảnh khác — chụp cận cảnh cổ nạn nhân.
 
-*"Một người trong cuộc. Con không thể nói tên."*
+*"Trên cổ — vết son môi. Mờ. Đã được lau qua, nhưng vẫn còn dấu. Lab xác định: MAC Ruby Woo."*
 
-Lâm im lặng. 12 năm. Con gái ổng có nguồn tin riêng. Ổng không biết nên tự hào hay lo lắng.
+Lâm: *"Son môi — trên cổ một người đàn ông."*
 
-*"Vụ 1 dùng thế Mã Hậu Pháo. Mã chặn đường thoát, Pháo chiếu từ xa. Huy giết nạn nhân, hôn lên cổ — đó là nước thừa. Đó là điểm yếu của hắn."*
+*"Và không phải của vợ nạn nhân. Cảnh sát kiểm tra tủ đồ của vợ. Không có màu này."*
 
-Mai: *"Điểm yếu?"*
+*"Đây là nước thừa."*
 
-*"Trong thế cờ này, không có nước hôn. Huy thêm nó vào vì hắn không thể không thêm. Đó là chữ ký — và cũng là cái sẽ khiến hắn bị bắt."*
+Mai: *"Nước thừa?"*
 
-Mai ghi chép. Lâm nhìn ảnh nạn nhân. Một người đàn ông 45 tuổi, bị giết vì...
+*"Trong thế Mã Hậu Pháo, không có nước hôn. Không có quân nào làm việc đó. Huy thêm vào vì hắn không thể không thêm. Đó là chữ ký — và cũng là điểm yếu của hắn."*
 
-*"Nạn nhân này — Hùng — có liên quan gì đến Huy?"*
+Lâm nhìn bàn cờ trong ảnh. Một quân Tượng bị lật úp ở góc bàn, ngoài thế cờ.
 
-Mai: *"Hùng là luật sư của Huy. Họ từng làm việc cùng nhau trong một vụ kiện năm 2013."*
+*"Quân Tượng lật úp. Huy thêm nó vào. Tại sao?"*
 
-Lâm: *"Huy giết luật sư của mình. Tại sao?"*
+Mai: *"Tượng đi chéo. Tượng bảo vệ. Lật úp — như thể nói: 'Người bảo vệ đã ngã.'"*
 
-Mai: *"Con không biết."*
+Lâm gật đầu: *"Con học nhanh."*
 
-Lâm nhìn lại bàn cờ trong ảnh. Thế Mã Hậu Pháo — nhưng có một quân Tượng lật úp ở góc bàn. Huy thêm quân Tượng đó vào. Tại sao?
-
-*"Quân Tượng lật úp — nó không có trong thế cờ. Huy thêm vào. Có thể là thông điệp."*
-
-Mai: *"Thông điệp gì?"*
-
-Lâm: *"Tượng chỉ có thể đi chéo. Trong cờ, Tượng là người bảo vệ. Huy lật úp nó — như thể nói: 'Người bảo vệ của mày đã ngã rồi.'"*
-
-Mai rùng mình. 9 vụ. 9 thông điệp. 9 lần Huy nói chuyện với Lâm qua những bàn cờ.
+Lần đầu tiên, Mai không trả lời — nhưng khóe miệng cô hơi nhếch lên.
 
 ---
 
-## Chương 5: Vụ 2 & 3 — Song Xa Toạ & Thiết Môn Soan
+## Chương 5: Tầng Lớp Của Một Vụ Án
 
-Tuần đầu tiên sau khi Lâm ra tù trôi qua nhanh.
+Đêm đó, Lâm ngồi trước bảng chỉ đỏ. Ổng vẽ một sơ đồ mới — không phải sơ đồ kết nối các vụ án, mà là sơ đồ của **một vụ án duy nhất**.
 
-Mỗi ngày, Lâm đến phòng trọ của Mai. Hai cha con ngồi trước bảng chỉ đỏ. Mỗi ngày, họ giải một vụ.
+*"Đây là cách Huy vận hành. Sáu lớp."*
 
-**Vụ 2 — Song Xa Toạ.** Nạn nhân nữ, 30 tuổi, tiếp viên hàng không. Hai vết đâm — một dao bầu, một dao bếp. Giữa hai vết đâm, nạn nhân được thay đồ từ đồ ngủ sang váy đỏ.
+Ổng viết:
 
-Mai: *"Hắn thay đồ cho nạn nhân. Tại sao?"*
+```
+Lớp 1 — CHỌN QUÂN: Huy chọn nạn nhân. Không ngẫu nhiên. Có tiêu chí.
+Lớp 2 — CÔ LẬP: Huy tiếp cận, tạo lòng tin, tách nạn nhân khỏi vòng an toàn.
+Lớp 3 — TẤN CÔNG: Huy ra tay. Bằng vũ lực, bằng thuốc, bằng thao túng.
+Lớp 4 — CHỮ KÝ: Huy để lại dấu vết tình dục. Không thể không làm.
+Lớp 5 — KẾT LIỄU: Huy giết. Và để lại thế cờ.
+Lớp 6 — NHIỄU: Huy tạo ra manh mối giả, dẫn đi hướng khác.
+```
 
-Lâm: *"Vì hắn muốn nạn nhân đẹp khi chết. Vì hắn không thể không can thiệp vào cảnh vật. Vì..."* Ổng ngừng. *"...vì hắn không muốn nạn nhân chết trong bộ đồ ngủ — một cái chết quá... tầm thường."*
+Mai: *"Lớp nào quan trọng nhất?"*
+
+Lâm: *"Lớp 2 và Lớp 4. Nếu hiểu được Huy tiếp cận nạn nhân thế nào, và tại sao hắn chọn chữ ký đó — chúng ta sẽ hiểu hắn."*
+
+Mai: *"Vậy bắt đầu từ vụ 1."*
+
+Lâm: *"Vụ 1 là vụ duy nhất chúng ta có nhiều thông tin nhất — vì nó đã được điều tra 12 năm trước. Bắt đầu từ nguồn tin của con — Phong. Hắn còn giữ gì nữa không?"*
+
+Mai: *"Có. Hắn bảo con đến Cục gặp hắn."*
+
+---
+
+## Chương 6: Phong
+
+Cục Cảnh sát Hình sự. 9h sáng.
+
+Phong ngồi trong phòng làm việc — bàn bừa bộn giấy tờ, tàn thuốc đầy gạt. 38 tuổi, mặt hốc hác, mắt đỏ vì thiếu ngủ. Một điều tra viên 15 năm kinh nghiệm, từng tham gia vụ 1 và bây giờ là chủ công vụ 9.
+
+Lâm và Mai bước vào. Phong nhìn Lâm — không chào, không bắt tay.
+
+*"12 năm. Mày béo hơn trong hồ sơ."*
+
+Lâm: *"Ở tù không có phòng gym."*
+
+Phong: *"Tao không tin mày vô tội. Nhưng tao tin — có một kẻ khác ngoài kia, và hắn giỏi hơn tất cả chúng ta."*
+
+Hắn mở tủ, lấy ra một tập hồ sơ dày — bìa ghi *"VU_AN_01 — BO SUNG"*.
+
+*"Đây là những thứ không có trong hồ sơ chính thức. Vì cấp trên không cho đưa vào. Sợ làm rối vụ án."*
+
+Lâm mở ra. Bên trong — một bức ảnh chụp nạn nhân vụ 1, Nguyễn Văn Hùng, lúc còn sống. Trong bức ảnh, Hùng đang ngồi ở một quán cà phê — và một người đàn ông khác ngồi đối diện, lưng quay về máy ảnh.
+
+Phong: *"Bức ảnh này được chụp 2 ngày trước khi hắn chết. Người ngồi đối diện — không ai xác định được danh tính."*
+
+Lâm nhìn bức ảnh. Cái lưng đó. Cái cách người đó ngồi — thẳng, không dựa vào ghế.
+
+12 năm, nhưng ổng nhận ra ngay.
+
+*"Để tao nói cho mày biết người đó là ai."*
+
+Phong: *"Ai?"*
+
+Lâm: *"Huy."*
+
+Phong và Mai nhìn nhau. Phong: *"Mày chắc?"*
+
+*"Cách hắn ngồi. Khuỷu tay đặt trên bàn, hai bàn tay chắp lại — đó là tư thế chơi cờ của hắn. Ngồi ở quán cà phê mà vẫn giữ tư thế đó — hắn đã ở thế sẵn sàng."*
+
+Phong im lặng một lúc. Rồi hắn mở thêm một tập nữa:
+
+*"Vậy mày giải thích cái này."*
+
+Một bức ảnh chụp bàn cờ trong vụ 1 — thế Mã Hậu Pháo. Nhưng ở góc cao hơn, có một chi tiết mà ảnh hiện trường thường không chụp — dưới gầm giường nạn nhân, có một tờ giấy.
+
+Lâm nhìn kỹ. Tờ giấy viết tay:
+
+> *"Lâm ơi, sao mày làm vậy?"*
+
+Phong: *"Chữ này — giám định xác nhận là của nạn nhân. Hùng viết tờ giấy đó — và giấu dưới gầm giường trước khi chết. Như thể... hắn biết mày là hung thủ."*
+
+Mai nhìn cha. Mặt cô tái đi.
+
+Nhưng Lâm lắc đầu:
+
+*"Không. Mày nhìn sai rồi."*
+
+Phong: *"Sai thế nào?"*
+
+*"Chữ 'Lâm' — nếu Hùng viết khi đang sợ hãi, nét chữ sẽ run. Nhưng chữ này — nét nào cũng đều, cũng chắc. Hùng viết tờ giấy này trước khi Huy đến. Hắn viết để cảnh báo tao — và Huy tìm thấy, để lại dưới gầm giường."*
+
+Mai: *"Một manh mối giả."*
+
+*"Lớp 6. Nhiễu. Huy để tờ giấy đó ở hiện trường để đánh lạc hướng — và nó đã thành công, vì nó góp phần đưa tao vào tù."*
+
+Phong im lặng hồi lâu. Hắn nhìn Lâm bằng ánh mắt khác — không còn khinh miệt, mà là... tôn trọng.
+
+*"12 năm. Mày đã thấy cái này chưa?"*
+
+*"Chưa. Tao chưa từng thấy hồ sơ bổ sung. Vụ của tao, tao không được xem."*
+
+Phong gật đầu, như thể hiểu ra điều gì đó.
+
+---
+
+## Chương 7: Vụ 2 & 3 — Song Xa Toạ & Thiết Môn Soan
+
+Tuần đầu tiên trôi qua nhanh.
+
+Mỗi ngày, Lâm đến phòng trọ của Mai. Hai cha con ngồi trước bảng chỉ đỏ. Lâm yêu cầu Mai — mỗi vụ, phải kể lại THEO ĐÚNG THỨ TỰ mà cô phát hiện, không bỏ qua chi tiết nào.
+
+**Vụ 2 — Song Xa Toạ.**
+
+Nạn nhân: Hoàng Thị Mỹ, 30 tuổi, tiếp viên hàng không.
+
+Mai: *"Cái này con tự tìm được. Không có trong hồ sơ chính thức."*
+
+Cô mở một thư mục riêng — ảnh chụp từ điện thoại, từ những lần cô đến hiện trường sau khi vụ án đã được dọn dẹp.
+
+*"Chị Mỹ chết trong căn hộ riêng. Hai vết đâm — một dao bầu ở ngực trái, một dao bếp ở bụng. Giữa hai vết đâm, nạn nhân được thay đồ — từ đồ ngủ sang váy đỏ."*
+
+Lâm: *"Khoảng cách giữa hai vết đâm?"*
+
+*"Khoảng 20 phút. Đủ để thay đồ, sửa tóc, trang điểm lại."*
+
+*"Ai phát hiện ra việc thay đồ?"*
+
+*"Con. Cảnh sát nghĩ nạn nhân mặc váy đỏ khi chết — nhưng có một tấm ảnh chụp tủ đồ mở, và một bộ đồ ngủ vắt trên ghế. Con hỏi gia đình — họ bảo chị Mỹ không bao giờ mặc váy đỏ đi ngủ."*
+
+Lâm gật đầu: *"Song Xa Toạ — hai Xe luân phiên. Hai vết đâm, hai vũ khí, hai lần. Huy giống như đang chơi một thế cờ mà hắn phải di chuyển quân hai lần."*
+
+*"Tại sao hắn thay đồ?"*
+
+*"Vì hắn muốn nạn nhân đẹp khi chết. Vì hắn không thể không can thiệp. Vì..."* Lâm ngừng. *"...vì hắn không muốn nạn nhân chết trong bộ đồ ngủ — quá tầm thường."*
 
 Mai: *"Hắn nghĩ mình là nghệ sĩ."*
 
-Lâm: *"Đúng. Và đó là lý do hắn sẽ bị bắt — vì nghệ sĩ không thể không ký tên."*
-
-**Vụ 3 — Thiết Môn Soan.** Nạn nhân nam, 55 tuổi, giám đốc ngân hàng. Chết trong phòng tắm khoá trái. Vết son môi trên cổ — MAC Ruby Woo.
-
-Mai: *"Son môi. Hắn hôn nạn nhân nam."*
-
-Lâm: *"Hắn không có giới tính trong tội ác. Hắn chỉ có... sự ngưỡng mộ. Ngắm nghía. Trang trí."*
-
-Mai im lặng. Cô nhận ra: cha cô hiểu Huy hơn bất kỳ ai. Và điều đó — thật đáng sợ.
+Lâm: *"Đúng. Và đó là cách hắn sẽ bị bắt — vì nghệ sĩ không thể không ký tên."*
 
 ---
 
-## Chương 6: Thầy Bửu
+**Vụ 3 — Thiết Môn Soan.**
 
-Giữa tuần thứ hai, một ông già xuất hiện ở quán cà phê gần nhà Mai.
+Nạn nhân: Trần Văn Bình, 55 tuổi, giám đốc ngân hàng.
 
-65 tuổi. Áo bà ba. Một bộ cờ tướng bằng gỗ mun dưới nách.
+Mai: *"Chết trong phòng tắm khoá trái. Từ bên trong. Cảnh sát phải phá cửa."*
+
+Lâm: *"Phòng tắm khoá trái. Không lối thoát. Thế Thiết Môn Soan — chốt chặn đường lui."*
+
+*"Trên cổ nạn nhân có vết son môi. Cũng MAC Ruby Woo. Giám định khẳng định: cùng một loại với vụ 1."*
+
+Lâm: *"Huy hôn nạn nhân. Một người đàn ông 55 tuổi."*
+
+*"Không có dấu hiệu tình dục nào khác. Chỉ một nụ hôn. Như thể..."*
+
+*"Như thể?"*
+
+Mai do dự: *"Như thể hắn tạm biệt họ."*
+
+Lâm nhìn con gái. 12 năm. Ổng không dạy nó điều này — nhưng nó đã tự học được cách nhìn vào một vụ án và thấy con người bên trong.
+
+*"Con nói đúng. Huy không giết vì thù. Huy giết như một nghi lễ. Và mỗi nụ hôn — là lời tạm biệt."*
+
+Mai: *"Tạm biệt ai?"*
+
+Lâm: *"Không phải nạn nhân. Mà là tạm biệt phần người trong hắn. Sau mỗi vụ, hắn càng ít người hơn."*
+
+---
+
+## Chương 8: Thầy Bửu
+
+Giữa tuần thứ hai, một ông già xuất hiện ở quán cà phê gần nhà Mai. Áo bà ba. Một bộ cờ tướng bằng gỗ mun dưới nách.
 
 *"Nghe nói mày ra tù. Tao mang quà."*
 
-Thầy Bửu. Người đã dạy Lâm và Huy. 20 năm trước.
+Thầy Bửu. 65 tuổi. Cựu kiện tướng. Người duy nhất từng dạy Lâm và Huy.
 
-Lâm nhìn bộ cờ. Cùng loại với bộ trong hộp quà Huy gửi — gỗ mun, quân cờ bằng ngà voi.
+Lâm mời thầy ngồi. Thầy Bửu đặt bộ cờ lên bàn — gỗ mun, ngà voi — giống hệt bộ cờ Huy gửi.
 
-*"Huy đã tìm tao trước khi mày ra tù. Hắn hỏi tao — về thế Thí Hậu Cứu Vua."*
+*"Huy đã tìm tao trước khi mày ra tù."*
 
-Lâm lặng người: *"Thầy nói với hắn?"*
+Lâm: *"Khi nào?"*
 
-*"Tao nói: 'Đó là thế cờ nguy hiểm nhất. Vì nó đòi hỏi hy sinh thứ mày yêu quý nhất.'"*
+*"Cách đây 3 tháng. Hắn đến quán, ngồi chơi với tao 3 ván. Thắng cả 3. Rồi hắn hỏi về thế Thí Hậu Cứu Vua."*
 
-Mai từ trong quán bước ra. Cô nghe được cuộc nói chuyện. Cô nhìn ông già bằng ánh mắt dò xét.
+*"Thầy nói gì?"*
 
-*"Sao ông biết nó?"*
+*"Tao nói: 'Đó là thế cờ nguy hiểm nhất. Vì nó không phải để thắng — nó để kết thúc. Người chơi nó phải chấp nhận mất mát.'"*
 
-Thầy Bửu: *"Con là Mai? 12 năm rồi. Hồi đó con mới cao tới đầu gối tao."*
+Mai nghe từ trong quán bước ra: *"Sao ông biết Huy?"*
 
-Mai không trả lời. Cô vẫn nhìn ông già. Trong đầu cô — rất nhiều câu hỏi.
+*"Con là Mai?"* Thầy Bửu nhìn cô. *"Hồi đó con mới cao tới đầu gối tao. Lâm bế con đến quán cờ, đặt con trên bàn, vừa giữ con vừa chơi cờ. Mày nhớ không Lâm?"*
 
-Tại sao ông già này lại có một bộ cờ giống hệt bộ cờ Huy gửi? Tại sao ông biết Huy tìm ông — và không báo cảnh sát? Tại sao ông xuất hiện đúng lúc này?
+Lâm im lặng. Ổng nhớ. Nhưng chưa bao giờ kể với Mai.
 
-*"Thầy có biết Huy đang ở đâu không?"* — Lâm hỏi.
+*"Thầy có biết Huy đang ở đâu không?"*
 
 *"Biết cũng như không. Nó như bóng ma."*
 
-Nói xong, thầy Bửu đặt bộ cờ xuống bàn, đứng dậy. Trước khi đi, ông nói:
+Thầy Bửu đứng dậy. Trước khi đi, ổng nói:
 
-*"Coi chừng nước thứ 10. Nước đó — nó không chơi để thắng. Nó chơi để hủy diệt."*
+*"Coi chừng nước thứ 10. Nước đó — nó không chơi để thắng. Nó chơi để hủy diệt. Và nó sẽ dùng thứ mày yêu quý nhất làm quân cờ."*
 
-Ông đi. Lâm nhìn bộ cờ trên bàn. Gỗ mun. Ngà voi.
+Thầy đi. Lâm nhìn bộ cờ trên bàn.
 
 Mai: *"Ba tin ông ta không?"*
 
 Lâm: *"Không biết."*
 
-Cả hai đều không nói ra — nhưng cùng nghĩ một câu: *Thầy Bửu nói thật, hay thầy cũng là một quân cờ trong tay Huy?*
+*"Ông ta biết quá nhiều. Xuất hiện đúng lúc. Lại có bộ cờ giống hệt."*
+
+*"Đó là lý do — ta không biết có nên tin hay không."*
+
+Cả hai đều nghĩ một câu không nói ra: *Thầy Bửu — già, cô đơn, có kiến thức cờ, và biết quá rõ về Huy — có thể là hung thủ không?*
 
 ---
 
-## Chương 7: Vụ 4 & 5 — Hải Để Lao Nguyệt & Song Pháo Tướng
+## Chương 9: Vụ 4 & 5 — Hải Để Lao Nguyệt & Song Pháo Tướng
 
 **Vụ 4 — Hải Để Lao Nguyệt.**
 
-Nạn nhân: cô gái 22 tuổi, bán hoa. Chết trong phòng trọ — siết cổ.
+Nạn nhân: Nguyễn Thị Hồng, 22 tuổi, bán hoa.
 
-Trên ngực nạn nhân — một quân Sĩ. Quân Sĩ duy nhất được lấy ra khỏi bàn cờ và đặt trên người cô.
+Mai: *"Đây là vụ con thấy ghê nhất."*
 
-Mai: *"Sao lại là Sĩ?"*
+*"Tại sao?"*
 
-Lâm: *"Sĩ là quân bảo vệ Vua. Trong thế Hải Để Lao Nguyệt, Sĩ là bệ đỡ cho Pháo — mà không có Sĩ, Pháo không thể chiếu."*
+*"Vì nạn nhân không phải người ngẫu nhiên. Con điều tra — cô ấy từng là người yêu của một tên tội phạm. Làm nhân chứng trong một vụ án. Sau đó bị bỏ rơi, không ai bảo vệ."*
 
-Mai: *"Ý hắn là: nạn nhân này từng bảo vệ ai đó?"*
+*"Và?"*
 
-Lâm nhìn hồ sơ. Cô gái 22 tuổi — từng là người yêu của một tên tội phạm. Cô làm nhân chứng trong một vụ án. Và sau đó — cô bị bỏ rơi, không ai bảo vệ.
+*"Và Huy chọn cô ấy vì điều đó."*
 
-*"Huy không chọn nạn nhân ngẫu nhiên. Hắn chọn những người từng ở bên ai đó — và bị bỏ rơi. Cũng như hắn — hắn từng ở bên tao... và hắn nghĩ tao đã bỏ rơi hắn."*
+Lâm nhìn ảnh. Nạn nhân chết trong phòng trọ — siết cổ. Trên ngực — một quân Sĩ bằng ngà voi.
 
-Mai: *"Bằng cách thắng hắn?"*
+*"Thế Hải Để Lao Nguyệt — Pháo lấy Sĩ làm bệ để chiếu. Không có Sĩ, Pháo không thể chiếu. Huy đang nói: 'Cô gái này từng là bệ đỡ cho ai đó. Khi bệ đỡ mất, cô ấy vô dụng.'"*
 
-Lâm không trả lời.
+Mai: *"Huy không chọn nạn nhân ngẫu nhiên. Hắn chọn những người từng ở bên ai đó — và bị bỏ rơi. Cũng như..."*
+
+Cô ngừng. Lâm nói tiếp:
+
+*"...cũng như hắn. Hắn từng ở bên tao. Và hắn nghĩ tao đã bỏ rơi hắn."*
+
+---
 
 **Vụ 5 — Song Pháo Tướng.**
 
-Hai nạn nhân: một nam (doanh nhân 45 tuổi), một nữ (trợ lý 28 tuổi). Chết cùng thời điểm, hai địa điểm khác nhau. Trên cả hai — cùng một mùi nước hoa: Chanel N°5.
+Hai nạn nhân. Một nam — Hoàng Văn Đức, 45 tuổi, doanh nhân. Một nữ — Phạm Thùy Trang, 28 tuổi, trợ lý.
 
-Mai: *"Hắn xức nước hoa giống nhau cho cả hai. Tại sao?"*
+Cùng thời điểm, khác địa điểm. Trên cả hai — cùng một mùi nước hoa: Chanel N°5.
 
-Lâm: *"Để tạo ra một kết nối. Để bắt chúng ta nghĩ chúng có liên quan — trong khi thực ra, người nữ là mồi nhử. Người nam mới là mục tiêu."*
+Mai: *"Con mất 6 tháng để hiểu vụ này. Cảnh sát nghĩ có hai hung thủ, vì hai địa điểm quá xa nhau. Nhưng thời gian chết — đồng nhất."*
 
-Mai: *"Tại sao nam là mục tiêu?"*
+Lâm: *"Song Pháo Tướng. Hai Pháo từ hai hướng. Một quân trước — mồi nhử. Một quân sau — thật."*
 
-Lâm: *"Vì trong túi nữ nạn nhân có tờ giấy — 'Em thơm lắm.' Huy đã gặp cô ấy. Tán tỉnh cô ấy. Dùng cô ấy để tiếp cận người nam."*
+*"Vậy ai là mồi?"*
 
-Mai: *"Huy tán tỉnh nạn nhân nữ?"*
+*"Người nữ. Huy gặp cô ấy — trong túi cô có tờ giấy 'Em thơm lắm'. Hắn tán tỉnh, lấy lòng, dùng cô để tiếp cận người nam."*
 
-Lâm: *"Huy có thể làm bất cứ điều gì để đạt mục đích. Hắn từng là người quyến rũ nhất trong số chúng tao. Ở trường đại học, ai cũng thích Huy."*
+Mai: *"Và người nam?"*
+
+Lâm: *"Có tiền án. Tội tình dục. Huy giết hắn vì..."* Ổng ngừng. *"...vì hắn xứng đáng."*
+
+*"Huy tự cho mình quyền phán xét?"*
+
+*"Huy luôn cho mình quyền đó. Từ khi còn nhỏ, hắn đã nghĩ mình là người duy nhất thấy rõ đúng sai. Cờ tướng dạy hắn: có nước đúng, có nước sai. Không có nước 'có thể'."*
 
 Mai im lặng. Cô đang vẽ dần chân dung một con người — vừa thiên tài, vừa quyến rũ, vừa chết chóc.
 
 ---
 
-## Chương 8: Thượng Úy Phong
-
-Cuối tuần thứ hai, Mai nhận được một cuộc gọi.
-
-*"Mai. Lên Cục gặp tôi."*
-
-Phong.
-
-Thượng úy Phong — 38 tuổi — điều tra viên chính thức của vụ án 9 người (Bát Diện Uy Phong). Hắn là người phụ trách. Hắn biết Mai đang điều tra riêng. Và hắn không thích điều đó.
-
-Mai đến Cục. Phong ngồi trong phòng làm việc — bàn bừa bộn giấy tờ, tàn thuốc đầy gạt.
-
-*"Tôi biết cô đang điều tra vụ này với cha cô."*
-
-*"Đúng."*
-
-*"Tôi không cản. Nhưng tôi muốn biết — các người tìm thấy gì?"*
-
-Mai nhìn Phong. Hắn có vết bỏng trên cổ tay. Mùi thuốc lá. Mắt đỏ vì thiếu ngủ. Hắn có vẻ như cũng đang điều tra — nhưng theo một hướng khác.
-
-*"Anh có thể cho tôi xem hồ sơ vụ 9 không?"*
-
-*"Không."*
-
-*"Tại sao?"*
-
-*"Vì tôi không tin cô. Cô là sinh viên. Cha cô là tội phạm từng bị kết án. Hai người không có thẩm quyền."*
-
-Mai: *"Cha tôi bị oan."*
-
-Phong: *"Toà đã tuyên. 12 năm. Không oan."*
-
-Mai đứng dậy. Trước khi ra về, cô nói:
-
-*"Anh có một bộ cờ tướng trong cốp xe. Tôi thấy hôm anh đậu ở bãi xe Cục."*
-
-Phong mặt lạnh đi.
-
-*"Đó là của cha tôi. Ông mất vì ung thư. Tôi giữ làm kỷ niệm."*
-
-*"Anh biết chơi cờ?"*
-
-*"Biết."*
-
-Mai không nói gì thêm. Cô ra về. Nhưng trong đầu, một câu hỏi cứ quanh quẩn:
-
-*Tại sao một điều tra viên hình sự lại giấu một bộ cờ trong cốp xe — và không bao giờ nói với ai?*
-
----
-
-## Chương 9: Vụ 6 & 7 — Ngoạ Tào Mã & Trắc Diện Hổ
+## Chương 10: Vụ 6 & 7 — Ngoạ Tào Mã & Trắc Diện Hổ
 
 **Vụ 6 — Ngoạ Tào Mã.**
 
-Nạn nhân: trung tá công an, 50 tuổi — bạn thân của Phong. Chết trong phòng làm việc tại trụ sở. Không có dấu hiệu đột nhập. Cửa từ bên trong.
+Nạn nhân: Trung tá Đỗ Văn Minh, 50 tuổi — bạn thân của Phong. Chết trong phòng làm việc tại trụ sở cảnh sát. Cửa khóa từ bên trong. Camera hành lang không thấy ai ra vào.
 
-Mai: *"Đây là vụ duy nhất nạn nhân là cảnh sát. Huy giết người trong chính trụ sở."*
+Phong mặt nặng như chì khi kể về vụ này. Hắn nói với Lâm:
 
-Lâm: *"Ngoạ Tào Mã — con Mã ở ngay cạnh Vua. Huy đang nói: 'Tao có thể vào bất cứ đâu. Ngay cả chỗ của mày.'"*
+*"Mày biết cảm giác mất người bạn thân nhất không? Mà không thể làm gì?"*
 
-Mai: *"Dưới bàn làm việc của nạn nhân — một USB. Trong đó là..."*
+Lâm: *"Tao biết."*
 
-Cô ngừng.
+Phong nhìn Lâm. Lần đầu tiên, giữa hai người đàn ông — một cảnh sát và một tội phạm từng bị kết án — có một sự đồng cảm im lặng.
 
-Lâm: *"Là gì?"*
+Mai: *"Dưới bàn làm việc của trung tá — một USB. Trong đó — ảnh chụp con."*
 
-Mai: *"Ảnh chụp con. Ảnh con ở nhà, ở trường, trên đường."*
+Cô bật laptop. Trên màn hình — những bức ảnh chụp cô từ xa: ở cổng Học viện, ở quán cà phê, trên đường đi chợ.
 
-Lâm im lặng. Huy đang theo dõi Mai. Huy biết cô đang điều tra. Và Huy không ngại cho cô biết.
+*"Huy đã theo dõi con. Hắn biết con đang điều tra."*
+
+Lâm im lặng. Huy không chỉ giết. Huy đang nói chuyện với họ — qua từng vụ án.
+
+*"Ngoạ Tào Mã — con Mã ở ngay cạnh Vua. Huy đang nói: 'Tao có thể vào bất cứ đâu. Ngay cả chỗ của mày.'"*
+
+---
 
 **Vụ 7 — Trắc Diện Hổ.**
 
-Hiện trường giả. Cảnh sát nhận được tin báo — ập vào một căn hộ trống. Trên bàn — một bàn cờ với thế Trắc Diện Hổ. Và một phong bì. Trong phong bì — ảnh mẹ của Mai.
+Không có nạn nhân. Hiện trường giả. Cảnh sát nhận được tin báo, ập vào một căn hộ trống. Trên bàn — bàn cờ với thế Trắc Diện Hổ. Và một phong bì.
 
-Mai: *"Hắn chụp ảnh mộ mẹ con."*
+Trong phong bì — ảnh chụp mộ mẹ của Mai.
 
 Lâm đưa tay lên mặt. Lần đầu tiên Mai thấy cha mình khóc — khóc cho người vợ đã mất 10 năm trước, người mà ổng không được gặp lần cuối vì đang ở trong tù.
 
-*"Huy đang nói: 'Mày biết đau chưa? Tao cũng đau.'"*
+Mai: *"Tại sao hắn gửi ảnh đó?"*
 
-Mai im lặng. Cô đặt tay lên vai cha. 12 năm. 12 năm không có cảm giác này — một bàn tay ấm áp trên vai.
+Lâm: *"Vì hắn muốn tao biết — hắn có thể chạm vào bất cứ thứ gì của tao. Ngay cả nỗi đau xa nhất."*
+
+Mai đặt tay lên vai cha. 12 năm. 12 năm không có cảm giác này. Một bàn tay ấm áp, một người cha bên cạnh.
+
+*"Tao sẽ không để hắn chạm vào con."*
+
+Mai: *"Con cũng vậy. Con sẽ không để hắn chạm vào ba thêm lần nào nữa."*
 
 ---
 
-## Chương 10: Chị Lan
+## Chương 11: Chị Lan
 
-Giữa tuần thứ ba, Lâm ghé lại quán cà phê "Bàn Cờ" trên phố Lãn Ông. Quán cũ. Vẫn những cái bàn gỗ cũ. Vẫn những bàn cờ trên mặt bàn. Vẫn — chị Lan.
+Giữa tuần thứ ba, Lâm ghé lại quán cà phê "Bàn Cờ" trên phố Lãn Ông — nơi 20 năm trước ổng và Huy từng ngồi hàng giờ.
 
-Chị Lan 42 tuổi — nhưng trông già hơn. Tóc đã điểm bạc. Mắt có quầng thâm. Chị mặc áo dài tím, tay thoăn thoắt pha trà.
+Quán vẫn vậy. Bàn gỗ cũ. Những bàn cờ trên mặt bàn. Và chị Lan — 42 tuổi, tóc điểm bạc, mắt có quầng thâm — vẫn ở đó.
 
-*"Chị biết tôi sẽ quay lại."*
+Chị Lan đặt tách trà trước mặt Lâm: *"Tao biết mày sẽ quay lại."*
 
-*"Tao cũng biết."*
+*"Huy đến đây."*
 
-Chị đặt tách trà trước mặt Lâm. Ngồi xuống đối diện.
+*"Đúng."*
 
-*"Huy có đến đây. Hai tháng trước. Hắn hỏi về mày."*
+*"Khi nào?"*
 
-*"Hỏi gì?"*
+*"Cách đây 2 tháng. Hắn hỏi về mày."*
+
+Lâm: *"Hỏi gì?"*
+
+Chị Lan nhìn ra ngoài đường. Một lúc lâu mới nói:
 
 *"Hỏi mày có từng quay lại quán không. Hỏi mày có nhắc đến hắn không. Hỏi..."* Chị ngừng. *"...hỏi mày có còn coi hắn là bạn không."*
 
-Lâm uống một ngụm trà. Đắng.
+*"Chị nói với cảnh sát?"*
 
-*"Chị có nói gì với cảnh sát không?"*
+*"Không."*
 
-*"Không. Tao sợ."*
+*"Sao không?"*
 
-*"Sợ gì?"*
+Chị Lan nhìn thẳng vào Lâm:
 
-*"Sợ hắn giết tao."*
+*"Vì tao sợ. Tao biết Huy sẽ quay lại. Và tao biết — nếu tao mở miệng, tao sẽ là vụ tiếp theo."*
 
-Chị Lan nhìn Lâm — và lần đầu tiên, Lâm thấy mắt chị có nước.
+Mai lúc này mới lên tiếng: *"Chị biết bao nhiêu về các vụ án?"*
 
-*"Tao biết các vụ án. Tao có cả cuốn sổ. 12 năm, tao cắt báo, ghi chép, phân tích. Tao muốn hiểu — tại sao thằng Huy ngày xưa hiền lành, hay cười, lại trở thành quái vật."*
+Chị Lan im lặng. Rồi chị rút từ trong tủ ra một cuốn sổ tay dày — bìa ố vàng, ốc xước, các trang đã cũ.
 
-*"Chị cho tôi xem cuốn sổ."*
+*"Tất cả."*
 
-Chị Lan lấy từ trong tủ ra một cuốn sổ tay dày. Bìa đã ố vàng. Bên trong — từng trang, từng vụ án, từng chi tiết nhỏ nhất.
+Mai mở cuốn sổ. 12 năm. Từng vụ. Từng chi tiết. Có cả những thứ không có trên báo — vết son môi, nước hoa Chanel, quân Sĩ trên ngực nạn nhân.
 
-Lâm đọc. Mai cũng đọc.
+Mai: *"Sao chị biết những thứ này? Chi tiết chỉ có cảnh sát biết."*
 
-Và họ nhận ra — chị Lan biết những chi tiết KHÔNG CÓ trên báo chí. Chi tiết chỉ hung thủ và cảnh sát biết.
+Chị Lan: *"Tao có người trong lực lượng."*
 
-Mai nhìn chị Lan: *"Sao chị biết những điều này?"*
-
-Chị Lan: *"Tao có một người bạn trong lực lượng điều tra. Hắn kể cho tao."*
-
-*"Tên?"*
+*"Ai?"*
 
 *"Tao không thể nói."*
 
-Mai và Lâm nhìn nhau. Một người phụ nữ bình thường — chủ quán cà phê — nhưng biết quá nhiều. Đủ để trở thành tình nghi. Hoặc nạn nhân tiếp theo.
+Lâm nhìn chị Lan. 20 năm quen biết. Một người phụ nữ hiền lành. Hay cười. Nhưng giờ đây — trong mắt Mai — chị ta là tình nghi.
+
+Và trong mắt Lâm — chị ta là một nạn nhân đang chờ đến lượt.
 
 ---
 
-## Chương 11: Vụ 8 & 9 — Thiên Địa Pháo & Bát Diện Uy Phong
+## Chương 12: Vụ 8 & 9 — Thiên Địa Pháo & Bát Diện Uy Phong
 
 **Vụ 8 — Thiên Địa Pháo.**
 
-Hai nạn nhân — trai, gái — chết trên giường. Nằm cạnh nhau, như ngủ. Cả hai có vết cắt nhỏ ở ngón tay trỏ — như thể cùng ký vào một tờ giấy.
+Hai nạn nhân: một nam, một nữ. Chết trên giường. Nằm cạnh nhau. Tay trong tay.
 
-Mai: *"Hắn bắt họ ký vào thứ gì đó trước khi chết. Một hợp đồng. Một sự đồng thuận."*
+Không có dấu hiệu bạo lực. Họ chết vì thuốc độc trong ly rượu — cùng uống, cùng chết.
 
-Lâm: *"Thiên Địa Pháo — hai Pháo từ trên và dưới kẹp Vua. Hai nạn nhân — từ hai phía — bị kẹp trong cùng một cái bẫy."*
+Trên tường — thế Thiên Địa Pháo được vẽ bằng son môi. Hai quân Pháo — một trên, một dưới — kẹp quân Vua ở giữa.
 
-Mai: *"Tại sao hắn lại bắt họ ký?"*
+Mai: *"Cả hai có vết cắt nhỏ ở ngón tay trỏ. Như thể..."*
 
-Lâm: *"Vì hắn muốn họ đồng ý. Hắn không chỉ giết — hắn thuyết phục nạn nhân chấp nhận cái chết."*
+*"...như thể họ đã ký vào một tờ giấy."*
 
-Mai rùng mình. Huy không chỉ là kẻ giết người. Hắn là kẻ thao túng — thao túng cả nạn nhân lẫn người điều tra.
+Lâm nhìn ảnh cận cảnh. Vết cắt nhỏ, sạch, chính xác. Huy dùng dao mổ — chứ không phải dao thường.
 
-**Vụ 9 — Bát Diện Uy Phong.**
+*"Huy bắt họ ký vào thứ gì đó trước khi chết. Một hợp đồng. Một lời thề. Một sự đồng thuận."*
 
-8 người. Một văn phòng. Cùng một chất độc — khí gas. Không ai sống sót. Ngoại trừ lễ tân — một cô gái 24 tuổi.
+Mai: *"Sao họ chịu ký?"*
 
-Mai: *"Hắn tha cho lễ tân. Cô ấy kể: 'Một người đàn ông đến ngồi ở ghế chờ cả buổi sáng. Nhìn tôi. Cười. Rồi đi vào phòng họp.'"*
+Lâm không trả lời. Ổng nhìn ảnh nạn nhân nam — và nhận ra một điều:
 
-Lâm: *"Hắn tha cho cô ấy vì cô ấy đẹp. Vì hắn muốn có khán giả."*
+*"Người đàn ông này — có quen Huy không?"*
 
-Mai: *"Đây là vụ lớn nhất — 8 người. Hắn công khai thách thức."*
+Mai: *"Không. Con đã kiểm tra. Họ không có liên quan gì."*
 
-Lâm: *"Và cũng là vụ cuối cùng trước khi hắn nhắm vào con."*
+*"Nhưng họ có một điểm chung — cả hai đều từng có ý định tự tử. Hồ sơ bệnh viện, tư vấn tâm lý. Họ đã từng muốn chết."*
 
-Mai: *"Tại sao?"*
+Mai: *"Vậy Huy..."*
 
-Lâm: *"Bát Diện Uy Phong — con Mã ở trung tâm uy hiếp 8 hướng. Hắn đang nói: 'Tao có thể giết bất cứ ai, bất cứ lúc nào. Các mày không thể ngăn tao.'"*
-
-Mai nhìn bảng chỉ đỏ. 9 vụ. 9 quân cờ.
-
-Còn thiếu 1 quân — **Xe** — quân mạnh nhất.
-
-Quân đó là cô.
+*"...đã cho họ thứ họ muốn. Một cái chết êm, đẹp, cùng nhau. Thiên Địa Pháo — ép từ hai phía. Nhưng họ không bị ép. Họ đồng ý."*
 
 ---
 
-## Chương 12: Trước Nước Thứ 10
+**Vụ 9 — Bát Diện Uy Phong.**
+
+8 người. Một văn phòng. Cùng một chất độc — khí gas — qua hệ thống điều hòa trung tâm.
+
+Không ai sống sót. Ngoại trừ lễ tân — một cô gái 24 tuổi tên Linh.
+
+Phong mời Linh lên Cục làm việc. Cô ngồi trong phòng họp, tay cầm ly nước, vẫn còn run.
+
+*"Chị kể lại đi."*
+
+Linh: *"Sáng hôm đó, em đến làm như thường. Khoảng 8h30, có một người đàn ông đến. Ngồi ở ghế chờ. Không nói gì. Nhìn em. Cười. Rồi đi vào phòng họp."*
+
+*"Nhìn chị thế nào?"*
+
+*"Như thể... em quen hắn. Nhưng em chưa gặp hắn bao giờ."*
+
+*"Sau đó?"*
+
+*"Sau đó mọi người đến. Đông đủ. Họp. Khoảng 10h, em ra ngoài mua nước. Khi về — cửa phòng họp đóng. Em gõ. Không ai trả lời. Em mở ra — và..."*
+
+Linh không nói tiếp được. Mai đặt tay lên vai cô.
+
+Sau khi Linh ra về, Lâm nói:
+
+*"Hắn tha cho cô ấy."*
+
+Phong: *"Tại sao?"*
+
+*"Vì cô ấy đẹp. Vì hắn muốn có người kể lại. Vì..."* Lâm nhìn lên bảng chỉ đỏ. *"...vì đây là vụ cuối cùng trước khi hắn nhắm vào mục tiêu thật."*
+
+Mai: *"Mục tiêu thật?"*
+
+*"Bát Diện Uy Phong — con Mã ở trung tâm uy hiếp 8 hướng. Huy nói: 'Tao có thể giết bất cứ ai. Các mày không thể ngăn tao.'"*
+
+Phong: *"Vậy mục tiêu tiếp theo là ai?"*
+
+Lâm nhìn Mai. Mai nhìn Lâm.
+
+Cả hai đều biết câu trả lời.
+
+---
+
+## Chương 13: Trước Nước Thứ 10
 
 Ngày thứ 21 sau khi Lâm ra tù.
 
-Mai và Lâm ngồi trong phòng trọ. Trước mặt họ — bảng chỉ đỏ với 9 vụ án. Họ đã giải được tất cả. Họ hiểu Huy — hiểu cách hắn chọn nạn nhân, cách hắn ra tay, cách hắn để lại dấu vết.
-
-Nhưng họ không biết — khi nào hắn ra tay lần thứ 10.
+Bảng chỉ đỏ đã có 9 vụ. 9 quân cờ. 9 lớp hiểu về Huy.
 
 Điện thoại Mai reo. Một số lạ.
 
-Cô nghe máy. Một giọng nói — lạnh, bình thản — vang lên từ đầu dây bên kia:
+Cô nghe máy. Một giọng nói — lạnh, bình thản:
 
 *"Chào cháu. Bác là Huy. Bác xin lỗi vì gọi muộn."*
 
 Mai đơ người. Lâm nhìn cô.
 
-*"Bác muốn gặp cháu và ba cháu. Tối nay. Số 12 ngõ 245 phố... Căn nhà hoang gần bến xe. Đến một mình. Nếu dẫn thêm ai — cháu biết hậu quả."*
+*"Bác muốn gặp cháu và ba cháu. Tối nay. Căn nhà số 12, ngõ 245 phố Lò Đúc. Đến một mình."*
 
 Mai: *"Tôi không sợ ông."*
 
-Huy cười. Một tiếng cười khô, lạnh:
+Huy cười — một tiếng cười khô, lạnh:
 
 *"Cháu không sợ bác. Nhưng ba cháu — chắc chắn sợ. Vì ổng biết — bác sẽ làm gì nếu ổng không đến."*
 
@@ -598,7 +719,7 @@ Mai: *"Con đi với ba."*
 
 *"Huy nói đến một mình."*
 
-*"Con không quan tâm hắn nói gì. Con đi với ba."*
+*"Con không quan tâm hắn nói gì."*
 
 Lâm nhìn con gái. Ổng thấy mẹ nó trong mắt nó. Và ổng biết — không thể cản.
 
@@ -606,104 +727,91 @@ Lâm nhìn con gái. Ổng thấy mẹ nó trong mắt nó. Và ổng biết —
 
 ---
 
-## Chương 13: Căn Nhà Số 12
+## Chương 14: Căn Nhà Số 12
 
-Căn nhà nằm trong ngõ sâu, tối om. Tường rêu phong. Cửa sắt đã rỉ. Một căn nhà bỏ hoang từ lâu.
+Căn nhà nằm cuối ngõ, tối om. Tường rêu phong. Cửa sắt rỉ. Một căn nhà đã bỏ hoang từ lâu — nhưng trước cửa không có bụi. Ai đó đã vào đây gần đây.
 
-Lâm đẩy cửa. Tiếng bản lề kêu lên. Bên trong — tối.
+Lâm đẩy cửa. Tiếng bản lề kêu lên.
 
 Đèn bật sáng.
 
-Một hành lang dài. Cuối hành lang — hai căn phòng, cửa kính trong suốt. Phòng A và Phòng B.
+Một hành lang dài. Hai căn phòng cuối hành lang — cửa kính trong suốt. Phòng A và Phòng B.
 
-Giữa hành lang — một công tắc hai chiều. Trên công tắc có một tờ giấy dán:
+Giữa hành lang — một công tắc hai chiều, với tờ giấy dán:
 
-*"Trái: Phòng A mở. Phòng B đóng.
-Phải: Phòng B mở. Phòng A đóng."*
+*"Trái: Phòng A mở, Phòng B đóng. Phải: Phòng B mở, Phòng A đóng."*
 
 Điện thoại Lâm reo.
 
-*"Đến rồi à? Nghe kỹ luật chơi."*
+*"Đến rồi à?"*
 
 Giọng Huy. 12 năm rồi Lâm mới nghe lại. Vẫn vậy. Vẫn lạnh lùng. Vẫn bình thản.
 
-*"Mai đang ở phòng A. Con nhỏ đó đã được ta cho uống thuốc ngủ nhẹ. Nó sẽ tỉnh trong 15 phút. Nếu mày bật công tắc sang phải — cửa phòng A mở, con gái mày chạy ra. Cửa phòng B đóng, và gas bắt đầu vào."*
+*"Mai ở phòng A. Nó sẽ tỉnh trong 15 phút. Nếu mày bật công tắc sang phải — cửa phòng A mở, con gái mày chạy ra. Cửa phòng B đóng, gas bắt đầu vào. Mày chết. Nó sống."*
 
 Im lặng.
 
-*"Nếu mày bật công tắc sang trái — cửa phòng A đóng, cửa phòng B mở. Con gái mày chết ngạt. Mày sống."*
+*"Nếu bật trái — cửa phòng A đóng, phòng B mở. Con gái mày chết ngạt. Mày sống. Đây là thế thí hậu cứu vua. Xe hy sinh để cứu Tướng. Hoặc Tướng hy sinh để cứu Xe."*
 
-Lâm: *"Mày muốn tao chọn ai chết?"*
+Lâm: *"Mày muốn tao chọn?"*
 
-*"Không. Tao muốn mày hiểu — cảm giác khi mất thứ quý giá nhất là như thế nào."*
+*"Không. Tao muốn mày hiểu — cảm giác khi mất thứ quý giá nhất là thế nào."*
 
-Lâm nhìn công tắc. Nhìn hai cánh cửa.
+15 phút.
 
-*"15 phút, Lâm. Đếm ngược từ bây giờ."*
+Lâm nhìn công tắc. Trái. Phải.
 
-Điện thoại tắt.
+Ổng nhìn vào phòng A. Mai đã tỉnh — cô nhìn ra, thấy cha. Cô gào lên, nhưng cách âm.
 
-Mai ở trong phòng A — qua cánh cửa kính, cô đã tỉnh. Cô nhìn ra, thấy cha. Cô gào lên, nhưng cách âm — không ai nghe thấy.
+Lâm đưa tay lên công tắc.
 
-Lâm nhìn con gái. 12 năm trước, ổng để nó lại một mình. 12 năm, ổng không ở bên nó. Bây giờ — ổng có một cơ hội để sửa sai.
+Trong đầu ổng — 12 năm tù, 9 mạng người, và một người bạn đã mất.
 
-Ổng nhìn công tắc. Bên trái. Bên phải.
+12 năm trước, Huy đầu hàng. Giờ ổng hiểu tại sao. Huy không thua. Huy đang chơi một nước cờ dài hạn — để 12 năm sau, Lâm phải đứng trước lựa chọn này.
 
-Trong cờ, thí hậu cứu vua là nước đi đúng. Hy sinh Xe để cứu Tướng. Mai là Xe. Lâm là Tướng.
+Nhưng Huy quên một điều — trong cờ, không có tình cha con.
 
-Nhưng đây không phải cờ.
+Lâm bật công tắc sang **phải**.
 
-Lâm đưa tay lên công tắc. Bật sang **phải**.
+Cửa phòng A mở. Mai chạy ra.
 
-Cửa phòng A mở.
+Cửa phòng B đóng sập. Tiếng gas rít.
 
-Mai chạy ra.
+Mai đập cửa: *"BA ƠI! KHÔNG!"*
 
-Cửa phòng B đóng sập. Gas bắt đầu rít lên.
-
-Mai đập cửa phòng B: *"BA ƠI! KHÔNG!"*
-
-Lâm bình thản ngồi xuống sàn. Nhìn con gái qua cánh cửa kính.
+Lâm bình thản ngồi xuống sàn, nhìn con qua kính:
 
 *"12 năm ba không ở bên con. Để ba làm điều này."*
 
-Mai khóc. Cô đập cửa đến rách cả tay.
+Gas vào đầy phòng. Lâm ho. Nhưng ổng cười.
 
-*"Con ơi. Đừng khóc. Ba không đau. Ba chỉ muốn con biết — ba tự hào về con. 12 năm, con đã lớn lên và trở thành một người tốt hơn ba rất nhiều."*
-
-Gas vào đầy phòng. Lâm bắt đầu ho.
-
-*"Nước cờ cuối — không phải để thắng. Nước cờ cuối — là để hiểu."*
+*"Nước cờ cuối — không phải để thắng. Để hiểu."*
 
 Mai gục xuống trước cửa.
 
-Bên trong — Lâm nhắm mắt. Trong đầu ổng — trận chung kết 12 năm trước. Nước cuối. Huy đầu hàng.
+Bên ngoài — Huy ngồi trên mái nhà đối diện, nhìn qua ống nhòm. Hắn thấy Lâm chọn phải. Hắn thấy Mai chạy ra. Hắn thấy Lâm ngồi xuống, bình thản chờ chết.
 
-Giờ ổng hiểu tại sao Huy làm vậy. Huy đầu hàng không phải vì thua. Huy đầu hàng vì muốn Lâm thắng — để Lâm biết cảm giác chiến thắng là gì, trước khi Huy cướp đi tất cả.
-
-Đó KHÔNG phải sự đầu hàng. Đó là nước cờ dài hạn nhất mà Huy từng chơi. Một nước kéo dài 12 năm, 9 mạng người, và kết thúc bằng cái chết của Lâm.
-
-Và Lâm — lần này — ổng không hối hận.
+Huy hạ ống nhòm xuống. Lần đầu tiên sau 12 năm, hắn không biết mình vừa thắng hay vừa thua.
 
 ---
 
-## Chương 14: Một Tháng Sau
+## Chương 15: Một Tháng Sau
 
-Huy bị bắt ngay tại hiện trường. Hắn không trốn. Hắn ngồi trên mái nhà đối diện, nhìn cảnh sát đưa thi thể Lâm ra.
+Huy bị bắt ngay tại hiện trường. Hắn không trốn. Không chống cự.
 
 Khi Mai bước ra — mặt mũi bầm dập vì đập cửa, tay rách, mắt đỏ — Huy nhìn cô từ xa.
 
-Cảnh sát tóm hắn. Hắn không chống cự. Chỉ nói một câu:
+Cảnh sát tóm hắn. Hắn chỉ nói một câu:
 
 *"Nó đã thắng tao lần thứ hai."*
 
 ---
 
-Một tháng sau. Trại giam số 2 — Hoà Lạc. Đúng cái trại mà 12 năm trước Lâm bị giam.
+Một tháng sau. Trại giam số 2 — Hoà Lạc. Đúng cái trại Lâm từng bị giam.
 
 Mai ngồi trước tấm kính. Huy ngồi bên kia.
 
-Hắn già hơn trong trí nhớ của cô. Tóc đã bạc. Mắt vẫn lạnh. Nhưng có gì đó — một tia gì đó — như thể hắn đã chờ cuộc gặp này.
+Hắn già hơn trong trí nhớ của cô. Tóc bạc. Mắt vẫn lạnh. Nhưng có gì đó — một tia gì đó — như thể hắn đã chờ cuộc gặp này.
 
 *"Cháu muốn gì?"*
 
@@ -723,4 +831,4 @@ Huy im lặng. Hắn cầm quân Tướng lên. Đặt xuống nước đầu ti
 
 ---
 
-HẾT
+**HẾT**
