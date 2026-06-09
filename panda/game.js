@@ -58,7 +58,7 @@ function freshMetrics() {
 const state = {
   width: 540, height: 960, dpr: 1, radius: 23, rowH: 39.8, cols: 11,
   level: 1, score: 0, levelScore: 0, rescued: 0, target: 1, shots: 8,
-  maxShots: 8, colors: 4, misses: 0, pressureEvery: 6, grid: [], particles: [], floaters: [], falling: [],
+  maxShots: 8, colors: 4, misses: 0, pressureEvery: 6, grid: [], particles: [], floaters: [], falling: [], impacts: [],
   shooter: { x: 270, y: 866, angle: -Math.PI / 2, color: 0, next: 1 },
   projectile: null, aiming: false, pointer: { x: 270, y: 300 },
   playing: false, paused: false, resolving: false, sound: true, combo: 0,
@@ -156,6 +156,7 @@ function createLevel(level, keepScore = true) {
   state.particles = [];
   state.falling = [];
   state.floaters = [];
+  state.impacts = [];
   state.projectile = null;
   state.combo = 0;
   state.resolving = false;
@@ -291,6 +292,7 @@ function restoreSnapshot() {
   state.particles = [];
   state.falling = [];
   state.floaters = [];
+  state.impacts = [];
   state.resolving = false;
   state.playing = true;
   state.metrics = { ...freshMetrics(), ...state.metrics };
@@ -321,7 +323,8 @@ function playSound(type) {
   const presets = {
     shoot: [420, 260, .08, "sine"], pop: [650, 980, .13, "sine"],
     drop: [310, 170, .25, "triangle"], win: [520, 1050, .42, "sine"],
-    lose: [260, 120, .45, "triangle"], swap: [360, 520, .08, "sine"]
+    lose: [260, 120, .45, "triangle"], swap: [360, 520, .08, "sine"],
+    tap: [230, 360, .07, "sine"]
   };
   const [start, end, duration, wave] = presets[type] || presets.pop;
   osc.type = wave;
@@ -440,17 +443,51 @@ function nearestEmptyCell(x, y) {
 
 function attachProjectile(impact = null) {
   const p = state.projectile;
+  const hitX = p.x;
+  const hitY = p.y;
   const cell = nearestEmptyCell(p.x, p.y);
   if (!cell) {
     state.projectile = null;
     return;
   }
   const color = p.power === "rainbow" && impact && !impact.stone ? impact.color : p.color;
-  const bubble = { row: cell.row, col: cell.col, color, stone: false, baby: false, pulse: 0 };
+  const bubble = {
+    row: cell.row, col: cell.col, color, stone: false, baby: false,
+    pulse: 0, settle: 1, bump: 0
+  };
   const power = p.power;
   state.grid.push(bubble);
   state.projectile = null;
+  spawnImpact(hitX, hitY, color, "attach");
+  pulseNeighbors(bubble);
+  playSound("tap");
+  navigator.vibrate?.(8);
   resolveShot(bubble, impact, power);
+}
+
+function pulseNeighbors(center) {
+  for (const [row, col] of neighbors(center.row, center.col)) {
+    const bubble = getCell(row, col);
+    if (bubble) bubble.bump = Math.max(bubble.bump || 0, .72);
+  }
+}
+
+function spawnImpact(x, y, colorIndex, type = "soft") {
+  const palette = COLORS[colorIndex] || COLORS[0];
+  const duration = type === "wall" ? .3 : .46;
+  state.impacts.push({ x, y, life: duration, maxLife: duration, color: palette.light, type });
+  const count = type === "wall" ? 4 : 9;
+  for (let i = 0; i < count; i++) {
+    const angle = Math.random() * TAU;
+    const speed = 35 + Math.random() * (type === "wall" ? 70 : 120);
+    state.particles.push({
+      x, y, vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed - 12,
+      life: .28 + Math.random() * .26, maxLife: .54,
+      size: 1.5 + Math.random() * 3.2,
+      color: i % 3 ? palette.light : "#ffffff",
+      sparkle: true
+    });
+  }
 }
 
 function collectCluster(start, sameColor = true) {
@@ -783,8 +820,18 @@ function update(dt) {
     p.trail = p.trail.filter(t => (t.life -= dt) > 0).slice(0, 8);
     p.x += p.vx * dt;
     p.y += p.vy * dt;
-    if (p.x < state.radius) { p.x = state.radius; p.vx = Math.abs(p.vx); state.screenShake = 2; }
-    if (p.x > state.width - state.radius) { p.x = state.width - state.radius; p.vx = -Math.abs(p.vx); state.screenShake = 2; }
+    if (p.x < state.radius) {
+      p.x = state.radius;
+      p.vx = Math.abs(p.vx);
+      state.screenShake = 1.1;
+      spawnImpact(p.x, p.y, p.color, "wall");
+    }
+    if (p.x > state.width - state.radius) {
+      p.x = state.width - state.radius;
+      p.vx = -Math.abs(p.vx);
+      state.screenShake = 1.1;
+      spawnImpact(p.x, p.y, p.color, "wall");
+    }
     if (p.y <= 105 + state.radius) attachProjectile();
     else {
       for (const b of [...state.grid]) {
@@ -815,6 +862,12 @@ function update(dt) {
     particle.y += particle.vy * dt;
   });
   state.particles = state.particles.filter(particle => particle.life > 0);
+  state.impacts.forEach(impact => { impact.life -= dt; });
+  state.impacts = state.impacts.filter(impact => impact.life > 0);
+  state.grid.forEach(bubble => {
+    if (bubble.settle > 0) bubble.settle = Math.max(0, bubble.settle - dt * 4.8);
+    if (bubble.bump > 0) bubble.bump = Math.max(0, bubble.bump - dt * 5.5);
+  });
   state.floaters.forEach(f => { f.life -= dt; f.y -= 45 * dt; });
   state.floaters = state.floaters.filter(f => f.life > 0);
   state.falling.forEach(f => {
@@ -829,26 +882,40 @@ function drawBubble(x, y, radius, colorIndex, options = {}) {
   ctx.translate(x, y);
   if (options.rotation) ctx.rotate(options.rotation);
   const squash = options.squash || 1;
-  ctx.scale(1, squash);
+  const scale = options.scale || 1;
+  ctx.scale(scale / Math.sqrt(squash), scale * squash);
   ctx.shadowColor = "rgba(12,55,50,.34)";
-  ctx.shadowBlur = options.shadow === false ? 0 : radius * .35;
-  ctx.shadowOffsetY = radius * .18;
+  ctx.shadowBlur = options.shadow === false ? 0 : radius * .48;
+  ctx.shadowOffsetY = radius * .22;
   const grad = ctx.createRadialGradient(-radius * .35, -radius * .45, radius * .06, 0, 0, radius);
   grad.addColorStop(0, palette.light);
-  grad.addColorStop(.25, palette.main);
-  grad.addColorStop(.83, palette.main);
+  grad.addColorStop(.2, palette.light);
+  grad.addColorStop(.38, palette.main);
+  grad.addColorStop(.8, palette.main);
   grad.addColorStop(1, palette.dark);
   ctx.fillStyle = grad;
   ctx.beginPath();
   ctx.arc(0, 0, radius, 0, TAU);
   ctx.fill();
   ctx.shadowColor = "transparent";
-  ctx.strokeStyle = "rgba(255,255,255,.28)";
-  ctx.lineWidth = Math.max(1, radius * .07);
+  ctx.strokeStyle = "rgba(255,255,255,.5)";
+  ctx.lineWidth = Math.max(1.2, radius * .075);
   ctx.stroke();
+  const rim = ctx.createLinearGradient(0, -radius, 0, radius);
+  rim.addColorStop(0, "rgba(255,255,255,.14)");
+  rim.addColorStop(.6, "rgba(255,255,255,0)");
+  rim.addColorStop(1, "rgba(33,30,48,.3)");
+  ctx.fillStyle = rim;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius * .94, 0, TAU);
+  ctx.fill();
   ctx.fillStyle = "rgba(255,255,255,.72)";
   ctx.beginPath();
   ctx.ellipse(-radius * .36, -radius * .44, radius * .18, radius * .29, -.65, 0, TAU);
+  ctx.fill();
+  ctx.fillStyle = "rgba(255,255,255,.52)";
+  ctx.beginPath();
+  ctx.arc(-radius * .1, -radius * .67, radius * .07, 0, TAU);
   ctx.fill();
   ctx.restore();
 }
@@ -1001,6 +1068,29 @@ function drawAimGuide() {
   ctx.restore();
 }
 
+function drawImpacts() {
+  for (const impact of state.impacts) {
+    const progress = 1 - impact.life / impact.maxLife;
+    const alpha = Math.pow(1 - progress, 1.5);
+    const radius = state.radius * (.45 + progress * (impact.type === "wall" ? 1.25 : 1.8));
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.strokeStyle = impact.color;
+    ctx.shadowColor = impact.color;
+    ctx.shadowBlur = 12 * alpha;
+    ctx.lineWidth = Math.max(1, 4 * (1 - progress));
+    ctx.beginPath();
+    ctx.arc(impact.x, impact.y, radius, 0, TAU);
+    ctx.stroke();
+    ctx.globalAlpha = alpha * .22;
+    ctx.fillStyle = impact.color;
+    ctx.beginPath();
+    ctx.arc(impact.x, impact.y, radius * .7, 0, TAU);
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
 function draw() {
   ctx.clearRect(0, 0, state.width, state.height);
   ctx.save();
@@ -1014,8 +1104,14 @@ function draw() {
 
   for (const b of state.grid) {
     const p = cellPosition(b.row, b.col);
-    if (b.stone) drawStone(p.x, p.y, state.radius);
-    else drawBubble(p.x, p.y, state.radius, b.color);
+    const settle = b.settle || 0;
+    const bump = b.bump || 0;
+    const settleWave = settle ? Math.sin((1 - settle) * Math.PI * 3.2) * settle : 0;
+    const bumpWave = bump ? Math.sin(bump * Math.PI * 2.2) * bump : 0;
+    const scale = 1 - settle * .22 + settleWave * .09 + bumpWave * .055;
+    const squash = 1 - settle * .2 + Math.abs(settleWave) * .08 - bumpWave * .035;
+    if (b.stone) drawStone(p.x, p.y, state.radius * scale);
+    else drawBubble(p.x, p.y, state.radius, b.color, { scale, squash });
     if (b.baby) {
       ctx.fillStyle = "rgba(255,244,179,.38)";
       ctx.beginPath(); ctx.arc(p.x, p.y, state.radius * .75, 0, TAU); ctx.fill();
@@ -1030,20 +1126,42 @@ function draw() {
   }
 
   drawAimGuide();
+  drawImpacts();
   if (state.projectile) {
     state.projectile.trail.forEach((t, i) => {
       ctx.globalAlpha = t.life * 1.8;
       drawBubble(t.x, t.y, state.radius * Math.max(.2, .55 - i * .04), state.projectile.color, { shadow: false });
     });
     ctx.globalAlpha = 1;
-    drawBubble(state.projectile.x, state.projectile.y, state.radius, state.projectile.color);
+    drawBubble(state.projectile.x, state.projectile.y, state.radius, state.projectile.color, {
+      rotation: Math.atan2(state.projectile.vy, state.projectile.vx),
+      squash: .88
+    });
   }
   drawShooter();
 
   state.particles.forEach(p => {
     ctx.globalAlpha = Math.max(0, p.life / p.maxLife);
     ctx.fillStyle = p.color;
-    ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, TAU); ctx.fill();
+    if (p.sparkle) {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(state.elapsed * 4 + p.x);
+      ctx.beginPath();
+      ctx.moveTo(0, -p.size * 1.7);
+      ctx.lineTo(p.size * .45, -p.size * .45);
+      ctx.lineTo(p.size * 1.7, 0);
+      ctx.lineTo(p.size * .45, p.size * .45);
+      ctx.lineTo(0, p.size * 1.7);
+      ctx.lineTo(-p.size * .45, p.size * .45);
+      ctx.lineTo(-p.size * 1.7, 0);
+      ctx.lineTo(-p.size * .45, -p.size * .45);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    } else {
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, TAU); ctx.fill();
+    }
   });
   ctx.globalAlpha = 1;
   state.floaters.forEach(f => {
@@ -1135,7 +1253,9 @@ window.BambooPop = {
     currentPowerUp: state.currentPowerUp, lastSelectedPowerUp: state.lastSelectedPowerUp,
     powerUsed: state.powerUsed, powerArmed: state.powerArmed, frozen: state.frozen,
     metrics: state.metrics, stoneCount: state.grid.filter(b => b.stone).length,
-    shooterColor: state.shooter.color, nextColor: state.shooter.next
+    shooterColor: state.shooter.color, nextColor: state.shooter.next,
+    impactCount: state.impacts.length,
+    animatedBubbleCount: state.grid.filter(b => (b.settle || 0) > 0 || (b.bump || 0) > 0).length
   })
 };
 
