@@ -24,7 +24,7 @@ window.GAME_CATALOG = [
     steps: ["Quan sát hình dạng và màu của các khối.", "Kéo khối tới vị trí phù hợp.", "Hoàn thành mục tiêu trước khi hết chỗ."]
   },
   {
-    id: "ghep-trai-cay", name: "Ghép Trái Cây", category: "Ghép nối", icon: "fa-apple-whole", color: "coral", badge: "new", status: "mvp", mode: "endless",
+    id: "ghep-trai-cay", name: "Ghép Trái Cây", category: "Ghép nối", icon: "fa-apple-whole", color: "coral", status: "mvp", mode: "endless",
     summary: "Thả và ghép những trái cây giống nhau thành loại lớn hơn.",
     objective: "Tạo trái cây lớn nhất mà không để hộp bị đầy.",
     steps: ["Chọn vị trí rồi thả trái cây xuống.", "Hai trái giống nhau chạm vào sẽ hợp nhất.", "Giữ trái cây dưới vạch giới hạn."]
@@ -54,7 +54,7 @@ window.GAME_CATALOG = [
     steps: ["Chọn quân có đầu khớp với một đầu trên bàn.", "Đặt quân vào phía phù hợp.", "Nếu không còn quân hợp lệ, bạn phải bỏ lượt."]
   },
   {
-    id: "cat-roi", name: "Cát Rơi", category: "Phản xạ", icon: "fa-hourglass-half", color: "amber", badge: "new", status: "mvp", mode: "endless",
+    id: "cat-roi", name: "Cát Rơi", category: "Phản xạ", icon: "fa-hourglass-half", color: "amber", status: "mvp", mode: "endless",
     summary: "Xoay và xếp những cụm cát màu đang rơi xuống.",
     objective: "Tạo dải màu liền để xóa cát và giữ bàn không bị đầy.",
     steps: ["Vuốt ngang để di chuyển, vuốt lên để xoay.", "Vuốt xuống để thả nhanh cụm cát.", "Xóa hàng liên tục khi tốc độ rơi tăng dần."]
@@ -108,15 +108,15 @@ window.GAME_CATALOG = [
     steps: ["Kéo để chọn hướng và lực ném.", "Thả tay để phi tiêu bay tới bảng.", "Nhắm các vòng nhân điểm để tiến nhanh hơn."]
   },
   {
-    id: "gop-so", name: "Gộp Số", category: "Ghép nối", icon: "fa-hashtag", color: "violet",
+    id: "gop-so", name: "Gộp Số", category: "Ghép nối", icon: "fa-hashtag", color: "violet", badge: "new", status: "mvp",
     summary: "Ghép những ô số giống nhau để tạo giá trị lớn hơn.",
     objective: "Tạo số mục tiêu trước khi bàn không còn chỗ.",
     steps: ["Chọn hoặc kéo các ô số giống nhau.", "Các ô hợp lệ sẽ nhập thành số lớn hơn.", "Giữ khoảng trống để tiếp tục tạo chuỗi."]
   },
   {
-    id: "noi-so", name: "Nối Số", category: "Ghép nối", icon: "fa-code-branch", color: "sky",
+    id: "noi-so", name: "Nối Số", category: "Ghép nối", icon: "fa-code-branch", color: "sky", status: "mvp",
     summary: "Nối các số theo thứ tự để tạo một đường đi liên tục.",
-    objective: "Kết nối đủ chuỗi số mà không để các đường giao nhau.",
+    objective: "Nối hết dãy số theo đúng thứ tự trên một đường liên tục.",
     steps: ["Chạm số bắt đầu của một chuỗi.", "Kéo qua các ô theo thứ tự tăng dần.", "Hoàn tất mọi chuỗi trên bàn."]
   },
   {
@@ -126,9 +126,9 @@ window.GAME_CATALOG = [
     steps: ["Kéo lá cùng màu hoặc cùng ký hiệu lên bàn.", "Chạm chồng bài khi không có nước đi.", "Đánh hết bài trên tay trước đối thủ."]
   },
   {
-    id: "noi-mau", name: "Nối Màu", category: "Giải đố", icon: "fa-bezier-curve", color: "violet",
+    id: "noi-mau", name: "Nối Màu", category: "Giải đố", icon: "fa-bezier-curve", color: "violet", status: "mvp",
     summary: "Nối từng cặp điểm cùng màu bằng những đường không giao nhau.",
-    objective: "Kết nối mọi cặp và phủ kín bàn chơi.",
+    objective: "Kết nối mọi cặp mà các đường màu không chạm nhau.",
     steps: ["Chạm một điểm màu để bắt đầu.", "Kéo đường tới điểm còn lại cùng màu.", "Điều chỉnh để các đường không chạm nhau."]
   },
   {
@@ -162,7 +162,7 @@ window.GAME_CATALOG = [
     steps: ["Đổ xúc xắc và di chuyển quanh bàn.", "Cân nhắc mua địa điểm bạn dừng chân.", "Thu phí, trao đổi và quản lý tiền mặt hợp lý."]
   },
   {
-    id: "sudoku", name: "Sudoku", category: "Giải đố", icon: "fa-table-cells", color: "ink",
+    id: "sudoku", name: "Sudoku", category: "Giải đố", icon: "fa-table-cells", color: "ink", badge: "new", status: "mvp",
     summary: "Điền số vào lưới bằng suy luận, không cần tính toán phức tạp.",
     objective: "Mỗi hàng, cột và vùng đều có đủ số mà không trùng lặp.",
     steps: ["Chọn một ô trống trên bảng.", "Điền số hợp lệ hoặc ghi chú các khả năng.", "Dùng các số đã có để loại trừ và hoàn thiện lưới."]

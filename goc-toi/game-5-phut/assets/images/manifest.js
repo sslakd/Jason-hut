@@ -26,7 +26,11 @@
     "lap-day-khoi",
     "tim-tu",
     "ban-cung",
-    "phi-tieu"
+    "phi-tieu",
+    "gop-so",
+    "noi-so",
+    "noi-mau",
+    "sudoku"
   ];
 
   window.GAME_ASSETS = {
