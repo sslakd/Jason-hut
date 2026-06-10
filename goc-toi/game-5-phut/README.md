@@ -35,6 +35,9 @@ tốc độ, mật độ chướng ngại hoặc độ phức tạp phù hợp v
 Các game endless hiện có: Chim Vượt Gió, Xếp Tháp, Cát Rơi, Ghép Trái Cây,
 Trượt Số và Rắn Săn Mồi.
 
+Nhóm game chơi được hiện có 24 game; đợt mới gồm Lấp Đầy Khối, Tìm Từ,
+Bắn Cung và Phi Tiêu.
+
 Input của game ưu tiên mobile: kéo, vuốt và chạm bằng Pointer Events. Chuột,
 bàn phím và các nút điều khiển chỉ là phương án dự phòng trên desktop.
 

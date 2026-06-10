@@ -60,7 +60,7 @@ window.GAME_CATALOG = [
     steps: ["Vuốt ngang để di chuyển, vuốt lên để xoay.", "Vuốt xuống để thả nhanh cụm cát.", "Xóa hàng liên tục khi tốc độ rơi tăng dần."]
   },
   {
-    id: "lap-day-khoi", name: "Lấp Đầy Khối", category: "Giải đố", icon: "fa-border-all", color: "mint",
+    id: "lap-day-khoi", name: "Lấp Đầy Khối", category: "Giải đố", icon: "fa-border-all", color: "mint", status: "mvp",
     summary: "Đặt những mảnh hình học vào bảng để lấp kín khoảng trống.",
     objective: "Dùng đủ các mảnh để hoàn thiện hình của mỗi màn.",
     steps: ["Chọn một mảnh bên ngoài bàn.", "Kéo và xoay mảnh nếu màn cho phép.", "Đặt mọi mảnh vừa khít, không chồng nhau."]
@@ -90,19 +90,19 @@ window.GAME_CATALOG = [
     steps: ["Xếp lá nhỏ hơn lên lá lớn hơn một bậc.", "Ưu tiên tạo chuỗi cùng chất để di chuyển.", "Lật lá úp và dùng lượt chia bài thật hợp lý."]
   },
   {
-    id: "tim-tu", name: "Tìm Từ", category: "Từ ngữ", icon: "fa-font", color: "mint",
+    id: "tim-tu", name: "Tìm Từ", category: "Từ ngữ", icon: "fa-font", color: "mint", status: "mvp",
     summary: "Tìm những từ tiếng Việt đang ẩn trong bảng chữ cái.",
     objective: "Tìm đủ danh sách từ trước khi thời gian kết thúc.",
     steps: ["Đọc danh sách từ cần tìm.", "Kéo qua các chữ theo hàng, cột hoặc đường chéo.", "Từ đúng sẽ được đánh dấu khỏi danh sách."]
   },
   {
-    id: "ban-cung", name: "Bắn Cung", category: "Thể thao", icon: "fa-bullseye", color: "coral",
+    id: "ban-cung", name: "Bắn Cung", category: "Thể thao", icon: "fa-bullseye", color: "coral", status: "mvp",
     summary: "Canh hướng và lực để đưa mũi tên vào gần tâm bia.",
     objective: "Ghi số điểm cao nhất qua một số lượt bắn giới hạn.",
     steps: ["Giữ để ngắm và điều chỉnh lực bắn.", "Tính hướng gió hiển thị trên màn hình.", "Thả tay đúng lúc để bắn tên."]
   },
   {
-    id: "phi-tieu", name: "Phi Tiêu", category: "Thể thao", icon: "fa-location-crosshairs", color: "coral",
+    id: "phi-tieu", name: "Phi Tiêu", category: "Thể thao", icon: "fa-location-crosshairs", color: "coral", status: "mvp",
     summary: "Ném phi tiêu vào những vùng điểm trên bảng tròn.",
     objective: "Đạt điểm mục tiêu với ít lượt ném nhất.",
     steps: ["Kéo để chọn hướng và lực ném.", "Thả tay để phi tiêu bay tới bảng.", "Nhắm các vòng nhân điểm để tiến nhanh hơn."]

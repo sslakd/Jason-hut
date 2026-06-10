@@ -22,7 +22,11 @@
     "khoi-sac-mau",
     "ghep-trai-cay",
     "to-du-mau",
-    "domino"
+    "domino",
+    "lap-day-khoi",
+    "tim-tu",
+    "ban-cung",
+    "phi-tieu"
   ];
 
   window.GAME_ASSETS = {

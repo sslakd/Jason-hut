@@ -62,6 +62,10 @@ async function run() {
     ,"ghep-trai-cay"
     ,"to-du-mau"
     ,"domino"
+    ,"lap-day-khoi"
+    ,"tim-tu"
+    ,"ban-cung"
+    ,"phi-tieu"
   ].forEach((id) => load(`games/${id}/game.js`));
 
   const expectedIds = [
@@ -85,6 +89,10 @@ async function run() {
     ,"ghep-trai-cay"
     ,"to-du-mau"
     ,"domino"
+    ,"lap-day-khoi"
+    ,"tim-tu"
+    ,"ban-cung"
+    ,"phi-tieu"
   ];
   assert.deepEqual(
     Array.from(sandbox.window.GamePlatform.registeredIds()).sort(),

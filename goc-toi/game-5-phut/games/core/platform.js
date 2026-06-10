@@ -207,6 +207,10 @@
         handlers.swipe({
           dx: dx,
           dy: dy,
+          startX: start.x,
+          startY: start.y,
+          endX: event.clientX,
+          endY: event.clientY,
           startTarget: start.target,
           endTarget: endTarget
         });

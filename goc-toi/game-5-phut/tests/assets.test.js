@@ -13,7 +13,7 @@ vm.runInContext(
 
 const manifest = sandbox.window.GAME_ASSETS;
 assert.ok(manifest);
-assert.equal(Object.keys(manifest.games).length, 20);
+assert.equal(Object.keys(manifest.games).length, 24);
 
 Object.entries(manifest.games).forEach(([gameId, roles]) => {
   ["cover", "background", "primary"].forEach((role) => {
