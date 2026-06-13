@@ -1638,7 +1638,7 @@ footer {
 .game-merge-grid { grid-template-columns: repeat(5, 1fr); }
 .game-number-connect,
 .game-color-connect { grid-template-columns: repeat(var(--connect-size), 1fr); }
-.game-sudoku-grid { grid-template-columns: repeat(6, 1fr); gap: 2px; padding: 4px; }
+.game-sudoku-grid { grid-template-columns: repeat(9, 1fr); gap: 2px; padding: 4px; }
 
 .game-merge-cell,
 .game-number-connect__cell,
@@ -1700,8 +1700,8 @@ footer {
 .game-color-connect__cell.color-sky { color: #5d8f9f; background: #d4e5e8; }
 
 .game-sudoku-cell {
-  border-radius: 5px;
-  font-size: clamp(15px, 5vw, 25px);
+  border-radius: 4px;
+  font-size: clamp(11px, 3.5vw, 20px);
 }
 .game-sudoku-cell.is-given { color: #405044; background: #e8eee5; }
 .game-sudoku-cell.is-selected { outline: 3px solid var(--brand); z-index: 1; }
@@ -1714,15 +1714,15 @@ footer {
   bottom: 14px;
   left: 16px;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 7px;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 5px;
 }
 
 .game-sudoku-pad button {
-  min-height: 44px;
+  min-height: 42px;
   padding: 0;
   border: 0;
-  border-radius: 12px;
+  border-radius: 10px;
   color: var(--brand-deep);
   background: #e3ede0;
   font-weight: 800;

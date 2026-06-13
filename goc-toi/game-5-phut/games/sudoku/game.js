@@ -2,8 +2,8 @@
   "use strict";
 
   window.GamePlatform.register("sudoku", function (root, options) {
-    var size = 6;
-    var boxRows = 2;
+    var size = 9;
+    var boxRows = 3;
     var boxCols = 3;
     var shift = (options.level - 1) % size;
     var solution = Array.from({ length: size * size }, function (_, index) {
@@ -11,7 +11,10 @@
       var col = index % size;
       return ((row * boxCols + Math.floor(row / boxRows) + col + shift) % size) + 1;
     });
-    var hiddenCount = Math.min(25, 13 + Math.round(options.difficulty.multiplier * 3) + options.level % 4);
+    var hiddenCount = Math.min(
+      58,
+      32 + Math.round(options.difficulty.multiplier * 6) + options.level % 5
+    );
     var hidden = new Set();
     var values = solution.slice();
     var selected = null;
@@ -45,7 +48,7 @@
       selected = null;
       window.GameAudio.open();
       render();
-      if (!hidden.size) options.onWin("Bạn đã hoàn thành bảng Sudoku 6×6.");
+      if (!hidden.size) options.onWin("Bạn đã hoàn thành bảng Sudoku 9×9.");
     }
 
     function render() {
@@ -74,7 +77,7 @@
       if (cell) chooseCell(Number(cell.dataset.sudokuCell));
       if (number) enter(Number(number.dataset.sudokuNumber));
     });
-    options.onHint("Chọn ô trống rồi chạm số. Mỗi hàng, cột và vùng 2×3 không được trùng.");
+    options.onHint("Chọn ô trống rồi chạm số từ 1 đến 9. Mỗi hàng, cột và vùng 3×3 không được trùng.");
     render();
     return {};
   });
