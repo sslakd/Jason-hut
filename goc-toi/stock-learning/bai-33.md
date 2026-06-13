@@ -1,205 +1,99 @@
-# Bài 33: Pivot Intraday — R1, R2, R3, S1, S2, S3 Chi Tiết
+# Bài 33: Pivot Intraday — R1-R3, S1-S3 Chi Tiết
 
-## 📌 Mở đầu
-
-Các bài trước BG dạy pivot Daily. Hôm nay xuống cấp độ **intraday** — trade trong ngày, canh từng mức R1, R2, R3 và S1, S2, S3.
-
-Đây là nơi pivot **phát huy sức mạnh nhất**. Vì trong ngày, các mức pivot là "kim chỉ nam" cho price action.
+Các bài trước dùng pivot Daily. Giờ xuống cấp độ intraday — trade trong ngày, canh từng mức R1, R2, R3 và S1, S2, S3.
 
 ---
 
-## 1. Pivot Intraday Khác Gì Pivot Daily?
+## Pivot intraday khác gì pivot daily?
 
-| Pivot Daily | Pivot Intraday |
-|-------------|----------------|
-| Tính từ H/L/C **hôm qua** | Tính từ H/L/C của **phiên/khung giờ trước** |
-| Dùng 1 lần/ngày | Có thể tính lại mỗi khung (1h, 4h) |
-| Cho cái nhìn tổng thể | Cho điểm vào/thoát cụ thể |
-| Hợp với swing trade (vài ngày) | Hợp với day trade (trong phiên) |
+Pivot daily: tính từ High/Low/Close hôm qua, dùng cho cả phiên hôm nay.
 
-**Cách dùng phổ biến:**
-- **Pivot Daily** = xác định vùng lớn cho cả ngày
-- **Pivot 1h/15m** = xác định điểm vào/thoát cụ thể trong ngày
+Pivot intraday: có thể tính từ High/Low/Close phiên trước đó (khung 30m, 1h), dùng cho phiên hiện tại. Cũng có thể dùng daily pivot để trade intraday — đây là cách phổ biến nhất.
+
+Khung thời gian nhỏ hơn → biến động nhiễu nhiều hơn. Cần kỷ luật chặt hơn.
 
 ---
 
-## 2. Cách Tính Pivot Intraday
+## Vai trò cụ thể của từng mức
 
-**Công thức vẫn y chang** — chỉ thay đổi dữ liệu đầu vào.
+**PP (Pivot Point) — 10h sáng:**
+Sau 30 phút khớp lệnh ATO và 30 phút đầu phiên, PP thường là vùng giá dao động chính. Nếu giá trên PP → ưu tiên long. Dưới PP → ưu tiên short.
 
-### Pivot 1h
-```
-Mỗi đầu giờ, tính từ 1 tiếng trước:
-PP(1h) = (High_1h + Low_1h + Close_1h) / 3
-R1(1h) = 2 × PP - Low_1h
-S1(1h) = 2 × PP - High_1h
-```
+**R1 — Kháng cự đầu tiên:**
+Mức quan trọng nhất. Giá chạm R1 thường chững 15-30 phút. Volume tại R1 quyết định: volume cao + nến xanh → phá R1. Volume thấp + nến đỏ/yếu → quay đầu.
 
-### Pivot 15m
-```
-Tương tự, dùng dữ liệu 15 phút trước.
-```
+Khi giá chạm R1: đây là lúc phe mua và phe bán đối đầu trực tiếp. Giá không phá được trong 2 lần chạm → R1 càng mạnh.
 
-**Lưu ý:** TradingView tự tính pivot intraday — chỉ cần chọn timeframe.
+**R2 — Kháng cự mạnh:**
+Phiên mạnh mới tới R2. Khi tới R2: thường xảy ra 1 trong 2: giá quay đầu mạnh hoặc tiếp tục đến R3. Momentum là chìa khóa.
 
----
+**R3 — Kháng cự cuối:**
+Hiếm khi chạm. Nếu chạm R3 → ngày giao dịch cực kỳ biến động. Đa số quay đầu từ R3.
 
-## 3. Vai Trò Cụ Thể Của Từng Mức
+**S1 — Hỗ trợ đầu tiên:**
+Đối xứng với R1. Giá chạm S1 thường hồi phục ít nhất về PP.
 
-### R1 — Kháng cự đầu tiên
-- Mức **dễ chạm nhất** trong ngày
-- Thường giá chạm R1 trong 1-2h đầu phiên
-- Nếu giá mở cửa dưới R1 → R1 là mục tiêu
+**S2 — Hỗ trợ mạnh:**
+Tương tự R2. Giá tới S2 trong ngày yếu.
 
-**Cách trade R1 intraday:**
-```
-Giá đang tăng → chạm R1:
-- Nến 15m đóng cửa yếu (bấc trên dài) → short
-- Nến 15m đóng cửa mạnh (xanh to) → có thể lên R2
-```
-
-### R2 — Kháng cự thứ hai
-- Xa hơn, chỉ chạm trong phiên biến động mạnh
-- **Khoảng cách R2 - R1** = range của khung trước
-- Nếu giá chạm R2 → thường quay đầu rất nhanh
-
-### R3 — Mức xa nhất
-- Hiếm chạm — thường trong ngày có tin tức lớn
-- Nếu chạm R3 → overshoot → quay đầu mạnh
-
-### S1 — Hỗ trợ đầu tiên
-- Quan trọng nhất bên dưới
-- Nếu giá mở cửa gần S1 → có thể bật lên
-
-### S2 — Hỗ trợ thứ hai
-- Đáy của phiên biến động mạnh
-- Kết hợp S2 + RSI < 30 = cơ hội mua
-
-### S3 — Mức xa nhất dưới
-- Cảnh báo: thị trường đang quá yếu
-- Có thể là điểm mua mạo hiểm
+**S3 — Hỗ trợ cuối:**
+Hiếm khi chạm. Nếu chạm → phiên rất biến động.
 
 ---
 
-## 4. Cấu Trúc Phiên Intraday Với Pivot
+## Cấu trúc phiên intraday với pivot
 
-Một ngày giao dịch VN thường có 3 phần:
+**9:00-9:15 — ATO:**
+Giá thường vol cao, có thể vượt pivot ngay hoặc gap. Chưa vội trade — chờ xác nhận.
 
-### 9:00 - 10:00 — Phiên sáng sớm
-```
-Giá chạy về pivot sau ATO
-→ Thường chạm PP, R1 hoặc S1 đầu tiên
-→ Khối lượng cao
-```
+**9:15-10:00 — Khởi động:**
+Giá tìm vùng cân bằng quanh PP. Đây là thời điểm để xác định xu hướng ngày.
 
-**Hành động:** Quan sát. Đừng vội vào lệnh trong 30 phút đầu. Chờ giá ổn định quanh PP.
+**10:00-11:30 — Phiên sáng:**
+Giá thường chạm ít nhất R1 hoặc S1. Volume giảm dần.
 
-### 10:00 - 11:30 — Phiên sáng chính
-```
-Giá xác định xu hướng trong ngày
-→ Nếu giá trên PP: ưu tiên long
-→ Nếu giá dưới PP: ưu tiên short
-```
+**13:00-14:30 — Phiên chiều:**
+Tiếp diễn xu hướng sáng hoặc đảo chiều. Volume thấp. Nếu giá chưa chạm pivot nào → có thể chạm trong phiên này.
 
-**Hành động:** Trade theo hướng đã xác định.
-
-### 13:00 - 14:30 — Phiên chiều
-```
-Tiếp diễn hoặc đảo chiều
-→ Volume thường thấp hơn sáng
-→ Các mức pivot R2/S2 thường chạm ở đây
-```
-
-**Hành động:** Cẩn thận. Fakeout nhiều vào giờ này.
-
-### 14:30 - 14:45 — Phiên ATC
-```
-15 phút cuối — định giá đóng cửa
-→ Giá có thể biến động mạnh
-→ Nếu giá quanh pivot → khớp lệnh ATC có thể đẩy giá
-```
+**14:30-14:45 — ATC:**
+Đột biến mạnh. Nhiều big money vào/ra 15 phút cuối.
 
 ---
 
-## 5. Ví Dụ Cụ Thể — Một Ngày Giao Dịch
+## Ví dụ một ngày giao dịch
 
-### Giả sử FPT hôm nay
+HPG: PP = 28.000, R1 = 28.700, R2 = 29.500, S1 = 27.300.
 
-Pivot daily:
-- PP = 130,000
-- R1 = 132,000, R2 = 134,000, R3 = 136,000
-- S1 = 128,000, S2 = 126,000, S3 = 124,000
+9:15: giá mở 28.200 (trên PP). 10:00: giá lên 28.500. 10:30: chạm R1 28.700 với volume cao → phá R1. 11:00: lên 29.200. 14:00: chạm R2 29.500 → quay đầu. Đóng cửa 29.000.
 
-### 9:15 — Sau ATO
-```
-Giá mở 130,500 → trên PP
-→ Xu hướng trong ngày nghiêng về tăng
-→ Tìm cơ hội long
-```
-
-### 9:45
-```
-Giá lên 131,500 → gần R1 (132,000)
-→ Nến 15m: đang xanh nhưng volume giảm
-→ Chờ chạm R1
-```
-
-### 10:00 — Chạm R1
-```
-Giá chạm 132,000 → nến 15m: shooting star
-→ RSI 15m = 72
-→ Short tại 131,800, stop 132,500, TP 130,000 (PP)
-```
-
-### 11:00
-```
-Giá về 130,200 → chạm PP
-→ Nến 15m: hammer (bấc dưới dài)
-→ Chốt short lời 1,600đ/cp
-```
-
-### 13:30 (nếu chưa chốt)
-```
-Giá xuống 129,500 → dưới PP
-→ Xu hướng trong ngày chuyển bear
-→ Có thể cân nhắc short tiếp hoặc chờ S1
-```
+Giá đi theo cấu trúc gần như textbook.
 
 ---
 
-## 6. Lưu Ý Cho Pivot Intraday Thị Trường VN
+## Lưu ý cho thị trường VN
 
-### Biên độ HOSE 7%
-Trong ngày bình thường, giá chạy 1-3% là nhiều. Pivot intraday phù hợp.
+HOSE biên độ ±7%. Với cổ > 50.000, R3 và S3 thường nằm ngoài biên độ. Với cổ < 20.000, các mức trong biên độ.
 
-### Tránh tin tức
-Khi có tin bất ngờ (lãi suất, CPI, chính sách), pivot intraday mất hiệu quả. Giá có thể phá mọi mức.
+Giá gap qua R1/S1 qua đêm: cẩn thận khi trade. Gap thường được lấp trong 1-2 giờ đầu.
 
-### Chọn timeframe phù hợp
-- **Day trade pro:** Pivot 15m
-- **Swing intraday:** Pivot 1h
-- **Tổng quan:** Pivot Daily
+Spread intraday rộng hơn daily nhất là đầu phiên và cuối phiên. Tính spread vào stop loss.
 
 ---
 
-## 🎯 Kết Luận
+## Bảng tóm tắt
 
-**Nhớ:**
-- R1, S1 — quan trọng nhất trong intraday
-- Phân biệt 3 giai đoạn phiên: sáng sớm, chính, chiều
-- Đừng trade 30 phút đầu — chờ giá ổn định
-- Kết hợp pivot + RSI/MACD/volume intraday
-- ATC 15 phút cuối có thể thay đổi mọi thứ
+| Mức | Độ mạnh | Khả năng chạm | Hành động |
+|-----|---------|---------------|-----------|
+| R3 | Rất mạnh | Rất hiếm | Coi chừng đảo chiều |
+| R2 | Mạnh | Trung bình | Chốt lời / canh short |
+| R1 | Trung bình | Cao | Canh short nếu có tín hiệu |
+| PP | Linh hoạt | Rất cao | Chờ xác nhận |
+| S1 | Trung bình | Cao | Canh long nếu có tín hiệu |
+| S2 | Mạnh | Trung bình | Canh long |
+| S3 | Rất mạnh | Rất hiếm | Mua mạo hiểm |
 
 ---
 
-**Bài tập nhỏ:**
-Ngày mai, trong giờ giao dịch:
-1. Lúc 9:30 — giá đang ở đâu so với PP?
-2. Lúc 10:30 — giá có chạm R1/S1 không? Phản ứng thế nào?
-3. Lúc 14:00 — giá đang ở đâu? Có cơ hội nào không?
-4. Ghi lại kết quả — đúng hay sai so với dự đoán.
+Chuẩn bị khung Daily + khung 15m hoặc 1h. Xác định PP, R1, S1 trước giờ mở cửa. Quan sát 30 phút đầu để xác định xu hướng. Trade theo kế hoạch, không trade theo cảm xúc.
 
-Bài sau: Pivot weekly/monthly — tầm nhìn lớn hơn.
-
-— BG 🏠
+Bài 33: Pivot Intraday

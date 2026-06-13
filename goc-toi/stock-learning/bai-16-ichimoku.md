@@ -1,49 +1,31 @@
-# 📈 Bài 16: Ichimoku Cloud — Tổng Quan
+# Bài 16: Ichimoku Cloud
 
-## Một chart là đủ — 5 chỉ báo trong 1
-
-Jason, Ichimoku Kinko Hyo nghe Nhật rợn người, nhưng thực ra là 1 bộ 5 chỉ báo gộp lại. Một chart đã cho em xu hướng, S/R, momentum, tín hiệu mua bán.
+5 thành phần: Tenkan-sen, Kijun-sen, Senkou A, Senkou B, Chikou Span.
 
 ---
 
-## 1. 5 Thành Phần
+## Cách đọc
 
-| Thành phần | Công thức | Ý nghĩa |
-|------------|-----------|---------|
-| Tenkan-sen | (Cao nhất 9 + Thấp nhất 9) / 2 | Đường nhanh, giống EMA9 |
-| Kijun-sen | (Cao nhất 26 + Thấp nhất 26) / 2 | Đường chậm, giống EMA26 |
-| Senkou A (Chikou A) | (Tenkan + Kijun) / 2, dịch lên 26 | 1 cạnh của đám mây |
-| Senkou B (Chikou B) | (Cao nhất 52 + Thấp nhất 52) / 2, dịch lên 26 | Cạnh kia của đám mây |
-| Chikou Span | Giá đóng cửa, dịch lùi 26 | Xác nhận xu hướng |
+**Mây (Kumo):**
+- Giá trên mây → uptrend
+- Giá trong mây → sideway, không trade
+- Giá dưới mây → downtrend
+- Mây dày → S/R mạnh, mây mỏng → dễ break
 
-## 2. Cách Đọc Nhanh
+**Cross Tenkan-Kijun:** Tenkan cắt lên Kijun → mua. Tenkan cắt xuống Kijun → bán.
 
-### Mây (Kumo) — Tương Lai
-- **Giá trên mây** → uptrend (màu xanh)
-- **Giá trong mây** → sideway, không trade
-- **Giá dưới mây** → downtrend (màu đỏ)
-- Mây **dày** → S/R mạnh, mây **mỏng** → dễ break
+**Chikou Span:** Trên giá 26 ngày trước → xác nhận uptrend. Dưới → xác nhận downtrend.
 
-### Cross Tenkan-Kijun
-- Tenkan cắt lên Kijun → mua (nhưng chậm hơn MACD cross)
-- Tenkan cắt xuống Kijun → bán
+## Dùng tối giản
 
-### Chikou Span
-- Chikou trên giá 26 ngày trước → xác nhận uptrend
-- Chikou dưới giá 26 ngày trước → xác nhận downtrend
-
-## 3. VN30 Với Ichimoku
-
-Setting mặc định (9, 26, 52) khung D1 trên VN30 hoạt động khá tốt vì thị trường VN không quá nhanh.
-
-**Cách dùng tối giản:**
 1. Giá trên mây → chỉ mua
 2. Chikou trên giá → xác nhận
 3. Tenkan > Kijun → momentum tăng
-→ **Cả 3 đồng thuận = trade**
+
+Cả 3 đồng thuận = trade.
+
+Setting mặc định (9, 26, 52) khung D1 trên VN30 khá tốt.
 
 ---
 
-**Bài tập:** Mở chart VNINDEX, thêm Ichimoku. Nhìn xem giá đang ở đâu so với mây? Mây màu gì?
-
-**Bài sau:** Fibonacci Retracement — vùng hồi phục.
+**Bài 17:** Fibonacci Retracement

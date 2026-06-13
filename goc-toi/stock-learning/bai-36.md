@@ -1,225 +1,90 @@
 # Bài 36: Stop Loss Cho Pivot Trade
 
-## 📌 Mở đầu
+Thoát lệnh khi sai quan trọng hơn vào lệnh. Trong trading, đúng tầm 40-50% số lần. Nếu biết cắt lỗ đúng, vẫn có lợi nhuận cuối tháng. Nếu không, 1 lần sai xoá sạch 10 lần đúng.
 
-Bài trước BG dạy vào lệnh. Bài này dạy **thoát lệnh khi sai** — còn quan trọng hơn vào lệnh.
-
-Trong trading, cậu sẽ đúng tầm 40-50% số lần. Nhưng nếu biết cắt lỗ đúng, cậu vẫn có lợi nhuận cuối tháng. Nếu không biết cắt lỗ, 1 lần sai có thể xoá sạch 10 lần đúng.
-
-Đặc biệt với pivot trade — vì chúng ta canh tại các mức giá cụ thể, nên stop loss cũng phải cụ thể.
+Với pivot trade, stop loss phải cụ thể như các mức pivot.
 
 ---
 
-## 1. Nguyên Tắc Vàng: Đặt Stop Loss Trước Entry
+## Nguyên tắc vàng: stop trước entry
 
-**Luật bất di bất dịch:**
-> Trước khi đặt lệnh entry, cậu phải biết stop loss ở đâu.
-
-Không "để xem sao". Không "chờ thêm tí nữa". Không "chắc nó sẽ quay lại".
-
-Stop loss là **bảo hiểm** — không có bảo hiểm thì đừng lái xe.
+Trước khi đặt entry, phải biết stop ở đâu. Không "để xem sao", không "chờ thêm tí nữa".
 
 ---
 
-## 2. Stop Loss Cho Long (Mua Tại Support)
+## Stop loss cho long (mua tại support)
 
-### Nguyên tắc: Dưới mức pivot 1 vùng
+Vào lệnh long tại S1 → stop dưới S1. Cụ thể: nếu S1 = 128.000, stop tại 126.500 (cách S1 1.2%). Dưới S1 1-2% là khoảng cách hợp lý với HOSE.
 
-Khi long tại S1, S2, hoặc PP:
+Vào lệnh tại PP (mua khi giá hồi về PP từ trên xuống) → stop dưới PP 0.5-1%. PP gần hơn nên stop hẹp hơn.
 
-**Stop loss cơ bản:**
-```
-Long tại S1 = 128,000
-→ Stop loss = dưới S1 0.5-1.5% 
-→ Cụ thể: 126,500 - 127,400
-```
-
-**Tại sao không đặt ngay dưới S1?**
-Vì giá có thể chạm S1 rồi "cắt xuống 1 tí" để quét stop trước khi bật lên — gọi là **liquidity sweep**. Cần cho 1 khoảng an toàn.
-
-### Các mức stop cụ thể:
-
-| Vào lệnh tại | Stop loss |
-|-------------|-----------|
-| S1 | Dưới S1 0.5-1.5% hoặc dưới S2 |
-| PP (từ dưới lên) | Dưới PP 1% hoặc S1 |
-| S2 | Dưới S2 0.5-1% hoặc S3 |
-
-### Ví dụ:
-```
-MWG long tại S1 = 54,500
-Stop loss = 53,800 (dưới S1 ~1.3%)
-Hoặc chặt hơn: 54,000 (dưới S1 ~0.9%)
-```
+Vào lệnh tại S2 → stop dưới S2 1.5-2.5%. S2 xa hơn nên cần stop rộng hơn.
 
 ---
 
-## 3. Stop Loss Cho Short (Bán Tại Kháng Cự)
+## Stop loss cho short (bán tại kháng cự)
 
-### Nguyên tắc: Trên mức pivot 1 vùng
+Vào lệnh short tại R1 → stop trên R1 1-2%. Nếu R1 = 132.000, stop tại 133.500.
 
-Khi short tại R1, R2:
+Vào lệnh tại PP (short khi giá hồi về PP từ dưới lên) → stop trên PP 0.5-1%.
 
-**Stop loss cơ bản:**
-```
-Short tại R1 = 132,000
-→ Stop loss = trên R1 0.5-1.5%
-→ Cụ thể: 132,700 - 134,000
-```
-
-### Các mức stop cụ thể:
-
-| Vào lệnh tại | Stop loss |
-|-------------|-----------|
-| R1 | Trên R1 0.5-1.5% hoặc R2 |
-| PP (từ trên xuống) | Trên PP 1% hoặc R1 |
-| R2 | Trên R2 0.5-1% hoặc R3 |
-
-### Ví dụ:
-```
-FPT short tại R1 = 132,000
-Stop loss = 133,000 (trên R1 ~0.75%)
-Hoặc chặt hơn: 132,500 (trên R1 ~0.38%)
-```
+Vào lệnh tại R2 → stop trên R2 1.5-2.5%.
 
 ---
 
-## 4. Độ Rộng Stop Loss — Khoa Học Hay Nghệ Thuật?
+## Độ rộng stop loss
 
-### Yếu tố 1: ATR — Average True Range
+Stop hẹp (< 1%): rủi ro thấp nhưng dễ bị quét. Stop rộng (2-3%): ít bị quét nhưng rủi ro cao hơn.
 
-ATR đo biến động trung bình của cổ phiếu. Stop loss nên dựa trên ATR.
-
-**Công thức:**
-```
-Stop loss = Pivot +/- (ATR × 1.5)
-```
-
-**Ví dụ:**
-```
-HPG ATR = 800
-Long tại S1 = 26,800
-Stop loss = 26,800 - (800 × 1.5) = 26,800 - 1,200 = 25,600
-```
-
-### Yếu tố 2: Cấu trúc thị trường
-
-Nếu gần S1 có đáy cũ:
-```
-S1 = 50,000
-Đáy cũ gần nhất = 49,500
-→ Stop loss = 49,400 (dưới đáy cũ 1 tí)
-```
-
-### Yếu tố 3: Risk trên mỗi lệnh
-
-Đừng để stop loss quá rộng làm mất quá nhiều % tài khoản.
-
-**Nguyên tắc:**
-```
-1 lệnh rủi ro tối đa = 1-2% tài khoản
-Ví dụ: TK 50 triệu → rủi ro tối đa 500k-1tr/lệnh
-```
+Công thức tham khảo: stop = ATR(14) × 1.5. ATR là Average True Range — đo biến động trung bình. Nếu ATR 14 của FPT là 1.500đ, stop tối thiểu = 1.500 × 1.5 = 2.250đ (~1.7%).
 
 ---
 
-## 5. Các Loại Stop Loss Cho Pivot Trade
+## Các loại stop loss
 
-### Loại 1: Fixed Stop — Cố định từ đầu
+**Stop theo giá tuyệt đối:** đặt stop tại giá cụ thể. Đơn giản, dễ thực hiện.
 
-Đặt stop loss ngay khi vào lệnh, không thay đổi.
+**Trailing stop để bảo vệ lợi nhuận:** khi giá đi đúng hướng, kéo stop theo. Sẽ học chi tiết ở bài sau.
 
-**Dùng khi:** Cậu không thể theo dõi chart liên tục, hoặc trade khung Daily.
-
-### Loại 2: Trailing Stop — Kéo theo giá
-
-Khi giá đi đúng hướng, kéo stop loss lên/xuống theo.
-
-**Dùng khi:** Trade intraday, có thể theo dõi.
-
-### Loại 3: Volatility Stop — Dựa trên ATR
-
-Stop loss = entry +/- (ATR × hệ số)
-
-**Dùng khi:** Cổ phiếu biến động mạnh, cần stop rộng hơn.
+**Thời gian stop:** nếu giá không đi đúng hướng trong 3-5 phiên → đóng lệnh. Dùng cho swing trade, tránh nằm vùng.
 
 ---
 
-## 6. Khi Nào Nên Chấp Nhận Stop Loss Rộng Hơn?
+## Khi nào nên chấp nhận stop rộng hơn?
 
-### Trường hợp 1: Pivot weekly/monthly
-Weekly/monthly pivot có biên độ lớn → stop rộng tự nhiên.
+Trước tin tức lớn (báo cáo tài chính, họp ĐHCĐ, quyết định lãi suất) → biến động cao hơn bình thường 1.5-2x. Stop loss có thể nới rộng gấp 1.5 lần.
 
-### Trường hợp 2: Tin tức quan trọng
-Trước tin tức (lãi suất, CPI, ĐHCĐ), biến động cao → stop rộng hơn hoặc không trade.
+Cổ phiếu biến động cao (HPG, các cổ thép, chứng khoán) → stop rộng hơn cổ phiếu ít biến động (VNM, các cổ ngành điện, nước).
 
-### Trường hợp 3: Cổ phiếu biến động mạnh
-Cổ VN30 thường 1-2%/ngày. Cổ penny có thể 5-7%. Stop rộng tương ứng.
+Khung thời gian dài hơn (weekly vs daily) → stop rộng hơn.
 
 ---
 
-## 7. Sai Lầm Stop Loss Thường Gặp
+## Sai lầm thường gặp
 
-### Sai lầm 1: Stop quá hẹp
-```
-Long S1 = 50,000, stop 49,800 (0.4%)
-→ Giá xuống 49,900 rồi bật lên 51,000
-→ Bị quét stop — mất cơ hội
-```
+Không đặt stop: lý do số 1 cháy tài khoản.
 
-### Sai lầm 2: Stop quá rộng
-```
-Long S1 = 50,000, stop 45,000 (10%)
-→ Nếu sai → mất 10% tài khoản
-→ Mất nhiều hơn lãi của 3-4 lệnh đúng
-```
+Stop quá hẹp: bị quét bởi nhiễu thị trường, mất cơ hội.
 
-### Sai lầm 3: Dời stop xa hơn khi đang lỗ
-```
-"Ủa, stop ở 49,800 nhưng giá xuống 49,700..."
-→ Dời stop xuống 49,000
-→ "Chắc nó bật lên mà..."
-→ Giá xuống 48,000
-```
-
-**Hành vi này gọi là "hope trading" — đang hi vọng thay vì hành động. Đây là cách nhanh nhất để cháy tài khoản.**
+Dời stop ra xa khi giá đi ngược: sợ thua lỗ → càng thua thêm. Nếu giá chạm stop, ra. Đừng hy vọng.
 
 ---
 
-## 8. Bảng Stop Loss Tham Khảo
+## Bảng stop loss tham khảo
 
-| Mức pivot | Hướng | Stop loss (%) | Ghi chú |
-|-----------|-------|---------------|---------|
-| S1 | Long | 0.5-1.5% dưới S1 | Tiêu chuẩn |
-| S2 | Long | 0.5-1% dưới S2 | Chặt hơn vì xa hơn |
-| PP | Long | 1% dưới PP | Đợi breakout xác nhận |
-| R1 | Short | 0.5-1.5% trên R1 | Tiêu chuẩn |
-| R2 | Short | 0.5-1% trên R2 | Chặt hơn |
-| PP | Short | 1% trên PP | Đợi breakdown xác nhận |
-
----
-
-## 🎯 Kết Luận
-
-**Cốt lõi:**
-- Stop loss đặt TRƯỚC entry — không có ngoại lệ
-- Stop dưới pivot 0.5-1.5% tuỳ ATR và cổ phiếu
-- Cho stop 1 khoảng an toàn — tránh liquidity sweep
-- Đừng stop quá hẹp (dễ bị quét) hay quá rộng (mất nhiều)
-- Không dời stop xa hơn khi đang lỗ — cắt và sống để trade ngày khác
+| Vào lệnh tại | Stop | Khoảng cách gợi ý |
+|-------------|------|-------------------|
+| S3 | Dưới S3 | 2-3% |
+| S2 | Dưới S2 | 1.5-2.5% |
+| S1 | Dưới S1 | 1-2% |
+| PP (long) | Dưới PP | 0.5-1% |
+| PP (short) | Trên PP | 0.5-1% |
+| R1 | Trên R1 | 1-2% |
+| R2 | Trên R2 | 1.5-2.5% |
+| R3 | Trên R3 | 2-3% |
 
 ---
 
-**Bài tập nhỏ:**
-Với HPG:
-- Long tại S1 = 26,800
-- HPG ATR = 800
-- Tài khoản: 50 triệu, rủi ro tối đa 1% mỗi lệnh
+Biết stop loss trước khi vào lệnh. Stop cách pivot 1-2%. Dùng ATR để tính stop phù hợp với biến động. Không dời stop ra xa. Cắt lỗ nhanh, còn tiền đánh trận khác.
 
-1. Stop loss hợp lý là bao nhiêu? (% và giá)
-2. Tính số cổ có thể mua để rủi ro không quá 1% TK
-3. Nếu HPG ATR = 1,200 (biến động cao) — stop thay đổi thế nào?
-
-Bài sau: Take profit cho pivot trade.
-
-— BG 🏠
+Bài 36: Stop Loss Cho Pivot Trade

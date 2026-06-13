@@ -1,185 +1,63 @@
-# Bài 31: Pivot Với MACD — Momentum Confirmation
+# Bài 31: Pivot + MACD — Xác Nhận Momentum
 
-## 📌 Mở đầu
+Đã có volume (bài 29) và RSI (bài 30). Thêm MACD — bộ ba hoàn hảo xác nhận tín hiệu pivot.
 
-Đã có volume (bài 29), đã có RSI (bài 30). Hôm nay thêm **MACD** — bộ ba hoàn hảo để xác nhận tín hiệu pivot.
-
-Nếu RSI đo "tốc độ quá mua/quá bán", thì MACD đo **momentum tổng thể** — cơn gió đang thổi mạnh hay yếu.
+RSI đo tốc độ quá mua/quá bán. MACD đo momentum tổng thể — cơn gió đang thổi mạnh hay yếu.
 
 ---
 
-## 1. MACD Nhắc Nhanh
+## MACD nhắc nhanh
 
-MACD có 3 thành phần:
-- **MACD line** = EMA12 - EMA26 — momentum nhanh
-- **Signal line** = EMA9 của MACD line — momentum chậm hơn
-- **Histogram** = MACD - Signal — chênh lệch giữa 2 đường
+MACD line = EMA12 - EMA26 (momentum nhanh). Signal line = EMA9 của MACD (momentum chậm). Histogram = MACD - Signal.
 
-**Cách đọc cơ bản:**
-- MACD trên Signal = bullish momentum
-- MACD dưới Signal = bearish momentum
-- Histogram dương và mở rộng = momentum mạnh lên
-- Histogram âm và mở rộng = momentum yếu đi
-
-(Chi tiết bài 14 — quay lại nếu quên.)
+MACD trên Signal = bullish momentum. MACD dưới Signal = bearish momentum. Histogram dương và mở rộng = momentum mạnh lên. Histogram âm và mở rộng = momentum yếu đi.
 
 ---
 
-## 2. Bốn Kịch Bản Pivot + MACD
+## 4 kịch bản pivot + MACD
 
-### Kịch bản 1: Giá chạm R1 + MACD dương nhưng thu hẹp
+**1. Giá chạm R1 + MACD dương nhưng thu hẹp**
+MACD vẫn trên 0 (xu hướng tăng) nhưng histogram đang thu hẹp. Momentum yếu dần tại kháng cự. Khả năng quay đầu. Canh short. Chờ xác nhận bằng nến đảo chiều.
 
-```
-Giá lên R1, MACD trên 0 (dương) nhưng histogram đang thu nhỏ
-→ Momentum đuối dần
-→ Khả năng quay đầu tại R1
-```
+**2. Giá chạm R1 + MACD dương và mở rộng**
+MACD trên 0, histogram mở rộng. Momentum mạnh tại kháng cự. Breakout có thể tiếp diễn. Chờ volume xác nhận. Nếu có volume, long theo breakout.
 
-**Hành động:** Canh short. Stop trên R1.
+**3. Giá chạm S1 + MACD âm nhưng thu hẹp**
+MACD dưới 0 (xu hướng giảm) nhưng histogram đang thu hẹp. Momentum giảm yếu dần tại hỗ trợ. Khả năng bật lên. Canh long nếu có tín hiệu nến đảo chiều.
 
-### Kịch bản 2: Giá chạm R1 + MACD dương và mở rộng
-
-```
-Giá lên R1, MACD trên 0, histogram đang mở rộng
-→ Momentum còn mạnh
-→ Breakout qua R1 khả thi
-```
-
-**Hành động:** Chờ xác nhận volume. Có thể mua nếu breakout thật.
-
-### Kịch bản 3: Giá chạm S1 + MACD âm nhưng thu hẹp
-
-```
-Giá xuống S1, MACD dưới 0, histogram đang thu nhỏ
-→ Lực bán yếu dần
-→ Có thể bật lên từ S1
-```
-
-**Hành động:** Canh long. Stop dưới S1.
-
-### Kịch bản 4: Giá chạm S1 + MACD âm và mở rộng
-
-```
-Giá xuống S1, MACD dưới 0, histogram đang mở rộng (xuống sâu hơn)
-→ Momentum bán còn mạnh
-→ S1 có thể bị thủng
-```
-
-**Hành động:** Chờ. Đừng vội long.
+**4. Giá chạm S1 + MACD âm và mở rộng**
+MACD dưới 0, histogram mở rộng. Momentum giảm mạnh. Khả năng thủng S1. Không long. Chờ hoặc canh short.
 
 ---
 
-## 3. Bảng Tổng Quan Nhanh
+## MACD crossover tại pivot
 
-| Giá | MACD vs 0 | Histogram | Ý nghĩa | Hành động |
-|-----|-----------|-----------|---------|-----------|
-| R1 | Trên 0 | Thu hẹp | Momentum yếu | Short |
-| R1 | Trên 0 | Mở rộng | Momentum mạnh | Chờ/ Long nếu breakout |
-| S1 | Dưới 0 | Thu hẹp | Lực bán yếu | Long |
-| S1 | Dưới 0 | Mở rộng | Lực bán mạnh | Chờ |
-| PP | Chuyển dương | Bắt đầu mở rộng | Xu hướng mới | Long theo trend |
-| PP | Chuyển âm | Bắt đầu mở rộng | Xu hướng xuống | Short |
+MACD cắt lên Signal ngay tại PP hoặc S1 = tín hiệu mua mạnh. MACD cắt xuống Signal tại R1 hoặc PP = tín hiệu bán mạnh.
 
 ---
 
-## 4. MACD Crossover Tại Pivot
+## Ví dụ cụ thể
 
-Đây là tín hiệu mạnh hơn — khi MACD line cắt signal line **ngay tại vùng pivot**.
+**FPT tại R1 + MACD thu hẹp:**
+R1 = 132.000. MACD dương (trên 0) nhưng histogram âm dần (thu hẹp). Giá chạm R1, nến doji. Short tại 131.800, stop 132.500.
 
-### Bullish crossover tại S1
-
-```
-Tình huống:
-- Giá chạm S1
-- MACD line cắt lên signal line (bullish crossover)
-- Nằm dưới 0 hoặc gần 0
-
-→ Momentum đảo chiều tăng ngay tại vùng hỗ trợ
-→ Rất mạnh — có thể long
-```
-
-### Bearish crossover tại R1
-
-```
-Tình huống:
-- Giá chạm R1
-- MACD line cắt xuống signal line (bearish crossover)
-- Nằm trên 0 hoặc gần 0
-
-→ Momentum đảo chiều giảm ngay tại vùng kháng cự
-→ Có thể short
-```
+**MWG tại S1 + MACD crossover:**
+S1 = 54.500. MACD cắt lên Signal ngay tại S1. Nến hammer. Long tại 54.500, stop 53.800.
 
 ---
 
-## 5. Ví Dụ Cụ Thể
+## Sai lầm thường gặp
 
-### Ví dụ: MWG tại R1
+Dùng MACD mặc định 12-26-9 cho pivot intraday là chậm. Với khung nhỏ hơn 1h, dùng MACD cải tiến 5-35-5.
 
-```
-MWG: PP = 56,000, R1 = 57,500
-MACD: Line = 1.2, Signal = 1.0 (trên 0)
-Histogram: 0.2 đang thu hẹp (tuần trước là 0.8)
+Histogram đang thu hẹp chưa chắc đã đảo chiều ngay. Chờ thêm 1-2 nến xác nhận.
 
-Phân tích:
-- MACD còn trên 0 (momentum dương)
-- Nhưng histogram thu hẹp rõ (momentum yếu)
-- Tại R1 57,500
-
-→ Cân nhắc short, stop 58,000
-```
-
-### Ví dụ: SSI tại PP
-
-```
-SSI: PP = 25,000
-MACD: Line vừa cắt lên Signal (bullish crossover)
-Histogram bắt đầu dương
-
-Phân tích:
-- Vừa vượt PP (dưới lên) + MACD vừa crossover
-- Crossover càng gần PP càng tốt
-
-→ Long tại 25,100, stop dưới PP 24,500
-```
+Một chỉ báo không đủ. Luôn 3 lớp: Pivot + Volume + RSI/MACD.
 
 ---
 
-## 6. Sai Lầm Thường Gặp
+MACD tại pivot cho biết momentum ủng hộ hay chống lại breakout. MACD dương + mở rộng = ủng hộ. MACD dương + thu hẹp = cảnh báo. Histogram là thước đo nhạy nhất.
 
-### Sai lầm 1: MACD lag — đừng dùng một mình
-MACD là chỉ báo lag (dựa trên EMA). Đừng chỉ dùng MACD để quyết định — cần pivot làm mức giá, cần volume xác nhận.
+Mở TradingView, chọn cổ VN30. Tìm lần giá chạm R1 hoặc S1. Nhìn MACD: histogram đang làm gì? MACD ở trên hay dưới Signal? Có crossover không?
 
-### Sai lầm 2: Nhìn histogram mở rộng rồi mua
-Histogram mở rộng nói "momentum đang mạnh" — nhưng nếu giá đã chạy xa pivot, cậu mua đỉnh.
-
-### Sai lầm 3: Không phân biệt daily vs intraday
-MACD daily có độ tin cậy cao hơn MACD 15 phút. Nếu trade pivot daily — dùng MACD daily. Nếu trade pivot intraday — dùng MACD 1h hoặc 15m.
-
----
-
-## 🎯 Kết Luận
-
-**Bộ ba hoàn chỉnh:**
-
-| Lớp | Công cụ | Xác nhận |
-|-----|---------|----------|
-| 1 | Pivot Point | Vùng giá |
-| 2 | Volume | Sức mạnh breakout |
-| 3 | RSI | Quá mua/quá bán |
-| 4 | MACD | Momentum tổng thể |
-
-Càng nhiều lớp trùng khớp → tín hiệu càng mạnh.
-
----
-
-**Bài tập nhỏ:**
-Mở TradingView, chọn bất kỳ cổ VN30 nào.
-1. Thêm Pivot Point Standard + MACD
-2. Tìm lần giá chạm R1 gần nhất — MACD đang ở đâu? Histogram mở rộng hay thu hẹp?
-3. Tìm lần giá chạm S1 gần nhất — giống câu 2
-4. Có lần nào MACD crossover ngay tại pivot không?
-
-Bài sau: Pivot với Fibonacci — kết hợp mạnh mẽ.
-
-— BG 🏠
+Bài 31: Pivot Với MACD

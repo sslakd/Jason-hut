@@ -1,131 +1,61 @@
-# Bài 25: Ôn Tập Phase 2 — Kiểm Tra Nhỏ (Bài 11-24)
+# Bài 25: Ôn Tập Phase 2 — Tổng Kết PTKT Cơ Bản
 
-## 📌 Mở đầu
-
-Chào Jason, hết Phase 2 rồi đó!
-
-Phase 1 là làm quen — sàn nào, lệnh gì, EPS/P/E là sao, nến ra làm sao. Phase 2 là lúc cậu bắt đầu biết **"nhìn chart có chủ đích"** — không còn nhìn như người mù trong đêm tối nữa.
-
-Bài này BG sẽ không dạy mới. Mà là **đố lại** — kiểm tra nhanh xem cậu đã ngấm được bao nhiêu. Làm nghiêm túc nha, không lướt qua đâu.
+Phase 2 gồm 14 bài (11-24) bao phủ các chỉ báo và mô hình phân tích kỹ thuật cốt lõi. Bài này tổng kết nhanh và kiểm tra mức độ nắm vững.
 
 ---
 
-## 🧠 Phần 1: Trắc Nghiệm Nhanh
+## Những gì đã học
 
-Trả lời trước khi đọc đáp án.
+**Moving Average (Bài 11-12)**
+SMA và EMA. EMA phản ứng nhanh hơn vì ưu tiên giá gần đây. Golden cross (EMA 50 cắt lên 200) báo uptrend dài hạn, death cross báo downtrend. Dùng EMA kết hợp: khi EMA 9, 20, 50 xếp theo thứ tự từ cao xuống thấp là bull aligned.
 
-**1. SMA với EMA khác nhau chỗ nào?**
-- A. SMA nhanh hơn EMA
-- B. EMA ưu tiên giá gần đây hơn SMA
-- C. Cả 2 giống nhau
-- D. SMA chỉ dùng cho daily chart
+**RSI (Bài 13)**
+Chỉ số sức mạnh tương đối. Trên 70 là quá mua, dưới 30 là quá bán. Tuy nhiên trên thị trường VN, RSI có thể nằm trên 70 nhiều ngày trong xu hướng tăng mạnh. Divergence (giá tạo đỉnh cao hơn nhưng RSI tạo đỉnh thấp hơn) mới là tín hiệu đảo chiều đáng tin.
 
-**2. Golden cross là gì?**
-- A. EMA 50 cắt lên EMA 200
-- B. EMA 200 cắt lên EMA 50
-- C. Giá cắt lên RSI 70
-- D. Volume tăng đột biến
+**MACD (Bài 14)**
+EMA 12 - EMA 26 = đường MACD. Đường signal là EMA 9 của MACD. Histogram là chênh lệch giữa 2 đường. MACD cắt lên signal là mua, cắt xuống là bán. MACD trên 0 là xu hướng tăng. MACD cải thiện có thể dùng 5-35-5 để nhạy hơn với thị trường VN.
 
-**3. RSI bao nhiêu là quá mua trên thị trường VN?**
-- A. Trên 50
-- B. Trên 70
-- C. Trên 80
-- D. Trên 30
+**Bollinger Bands (Bài 15)**
+Dải giữa là SMA 20, dải trên và dưới là ±2 độ lệch chuẩn. Bands thu hẹp (squeeze) báo sắp có biến động mạnh. Giá chạm dải dưới rồi bật lên là oversold bounce. Giá chạm dải trên trong uptrend có thể tiếp tục đi theo dải (BB walk).
 
-**4. Divergence là gì?**
-- A. Giá tăng, RSI cũng tăng
-- B. Giá tạo đỉnh cao hơn nhưng RSI tạo đỉnh thấp hơn
-- C. MACD cắt lên signal
-- D. Volume tăng cùng giá
+**Ichimoku (Bài 16)**
+Cloud (Kumo) là vùng hỗ trợ/kháng cự động. Giá trên mây là uptrend. Span A > Span B là mây xanh. Tenkan-sen cắt lên Kijun-sen là tín hiệu mua. Lagging span ở trên giá là xác nhận.
 
-**5. Mô hình Wyckoff có mấy phase?**
-- A. 2
-- B. 3
-- C. 4
-- D. 5
+**Fibonacci (Bài 17)**
+Retracement: các mức 0.382, 0.5, 0.618, 0.786. Mức 0.618 là golden ratio — giá thường hồi về đây rồi tiếp diễn xu hướng. Mở rộng: 1.272, 1.618 cho target.
 
----
+**Mô hình nâng cao (Bài 18-19)**
+2 đỉnh/2 đáy: báo đảo chiều, cần volume xác nhận. Đầu vai (H&S): 3 đỉnh — đỉnh giữa cao nhất, đáng tin hơn 2 đỉnh. Flag/Pennant: tiếp diễn xu hướng. Cờ đẹp là cờ dốc ngược với trend chính.
 
-## ✅ Đáp Án
+**Gaps (Bài 20)**
+Breakaway gap: đầu xu hướng, volume mạnh. Runaway gap: giữa xu hướng. Exhaustion gap: cuối xu hướng, volume thấp. Ở VN, gap thường được lấp trong 3-5 phiên.
 
-**1. B — EMA ưu tiên giá gần đây hơn SMA.**  
-SMA tính đều tất cả — giá hôm qua và giá 50 ngày trước quan trọng như nhau. EMA cho giá mới nhất trọng số cao hơn, phản ứng nhanh hơn.
+**Divergence (Bài 21-22)**
+Các dạng: Regular (đảo chiều), Hidden (tiếp diễn). Bearish divergence: giá đỉnh cao hơn, RSI đỉnh thấp hơn. Bullish divergence: giá đáy thấp hơn, RSI đáy cao hơn. Divergence không phải tín hiệu vào lệnh ngay — cần chờ xác nhận.
 
-**2. A — EMA 50 cắt lên EMA 200.**  
-Đây là tín hiệu uptrend dài hạn. Ngược lại là death cross (EMA 50 cắt xuống EMA 200) = downtrend.
+**Wyckoff (Bài 23)**
+4 phase: Accumulation → Markup → Distribution → Markdown. Hiểu được big money đang làm gì. Spring (phá đáy rồi hồi nhanh) báo accumulation sắp kết thúc. Upthrust (lên đỉnh rồi rơi) báo distribution.
 
-**3. B — Trên 70.**  
-Lý thuyết cổ điển: RSI > 70 quá mua, < 30 quá bán. Nhưng thực tế VN có thể trôi trên 70 cả tuần nếu uptrend mạnh — đừng bán chỉ vì thấy >70.
-
-**4. B — Giá tạo đỉnh cao hơn, RSI tạo đỉnh thấp hơn.**  
-Đó là bearish divergence — giá vẫn lên nhưng momentum yếu dần. Báo hiệu sắp đảo chiều. Cực kỳ quan trọng — bài 22.
-
-**5. C — 4 phase.**  
-Accumulation → Markup → Distribution → Markdown.  
-Hiểu cái này là hiểu được "big money đang làm gì".
+**Market Structure (Bài 24)**
+HH/HL = uptrend. LH/LL = downtrend. Break of Structure (BOS) là giá phá vỡ đáy cũ trong uptrend hoặc đỉnh cũ trong downtrend. Change of Character (ChoCH) là khi cấu trúc thay đổi hoàn toàn.
 
 ---
 
-## 📝 Phần 2: Câu Hỏi Ngắn
+## Kiểm tra nhanh
 
-Trả lời bằng 1-2 câu — không dài dòng.
-
-**6. Bollinger Bands nới rộng báo hiệu gì?**
-
-→ Biến động sắp tăng. Giá sắp chạy mạnh — theo hướng nào thì chưa biết.
-
-**7. Fibonacci 0.618 có ý nghĩa gì trong retracement?**
-
-→ Vùng hồi phục vàng (golden ratio) — giá thường quay lại đây rồi tiếp diễn xu hướng. Nếu giá thủng 0.618, khả năng cao sẽ về test 0.786 hoặc đảo chiều luôn.
-
-**8. Mô hình 2 đỉnh khác đầu vai chỗ nào?**
-
-2 đỉnh = 2 đỉnh ngang nhau, báo hiệu đảo chiều từ uptrend sang downtrend. Đầu vai = 3 đỉnh (vai trái > đầu > vai phải), cũng báo đảo chiều. Đầu vai đáng tin hơn vì có 3 lần test.
-
-**9. Flag pattern khác pennant chỗ nào?**
-
-Flag có thân cờ (body) dạng kênh song song. Pennant có thân cờ dạng tam giác. Cả 2 đều báo hiệu tiếp diễn xu hướng.
-
-**10. Market Structure (higher high, higher low) cho biết gì?**
-
-→ Uptrend. Nếu giá liên tục tạo đỉnh cao hơn và đáy cao hơn → xu hướng tăng còn nguyên vẹn. Nếu phá vỡ cấu trúc này → trend có thể đảo chiều.
+1. EMA khác SMA thế nào? → EMA ưu tiên giá gần đây hơn, phản ứng nhanh hơn
+2. Golden cross là gì? → EMA 50 cắt lên EMA 200
+3. RSI bao nhiêu là quá mua? → Trên 70 (lý thuyết), nhưng VN có thể trôi trên 70 nhiều ngày
+4. MACD divergence là gì? → Giá tạo đỉnh cao hơn, MACD tạo đỉnh thấp hơn
+5. Bollinger squeeze báo gì? → Sắp có biến động mạnh
+6. Mô hình Wyckoff có mấy phase? → 4: Accumulation → Markup → Distribution → Markdown
 
 ---
 
-## 🎯 Phần 3: Bài Tập Vận Dụng
+## Trước khi sang Phase 3
 
-**Bài 11 (mới, không hỏi lại): Mở TradingView, tìm bất kỳ cổ VN30 nào (FPT, HPG, MWG...), chọn khung Daily và trả lời:**
+Nếu còn chưa rõ khái niệm nào, quay lại bài đó. Phase 3 sẽ dùng Pivot Point — kết hợp tất cả những gì đã học để xác định điểm vào lệnh chính xác.
 
-1. Giá đang ở trend gì? (dùng SMA 50 & 200 hoặc market structure)
-2. RSI bao nhiêu? Có divergence không?
-3. MACD đang ở đâu? Chin trên/dưới 0?
-4. Nếu vẽ Fibonacci từ đáy gần nhất lên đỉnh gần nhất, giá đang ở vùng nào?
-5. Có mô hình 2 đỉnh/đầu vai/cờ nào không?
+Phase 3: Pivot Point — không lý thuyết suông, toàn thực chiến.
 
----
-
-## 💡 Tổng Kết Phase 2
-
-Sau 14 bài (11-24), cậu đã biết:
-
-| Chủ đề | Đã học |
-|--------|--------|
-| Moving Average | SMA, EMA, Golden/Death cross |
-| RSI | Quá mua, quá bán, divergence |
-| MACD | Trend, momentum, signal, histogram |
-| Bollinger Bands | Biên động, squeeze, breakout |
-| Ichimoku | Cloud, span, lagging (overview) |
-| Fibonacci | Retracement 0.382-0.886 |
-| Mô hình | 2 đỉnh/đáy, H&S, flag/pennant |
-| Gap | Breakaway, runaway, exhaustion |
-| Divergence | RSI/MACD với giá — lọc tín hiệu |
-| Wyckoff | 4 phase — theo dấu big money |
-| Market Structure | HH/HL, LH/LL |
-
-**Nếu còn lơ mơ cái nào — quay lại đọc bài đó trước khi sang Phase 3.**
-
-Phase 3 tới: **Sneaky Pivot Trading** — đây là thứ thực chiến. Không lý thuyết suông nữa. Cậu sẽ học cách xác định điểm vào lệnh chính xác dựa trên Pivot Point, kết hợp với những gì đã học.
-
-Sẵn sàng chưa? Bài 26 bắt đầu.
-
-— BG 🏠
+Bài 25: Ôn Tập Phase 2

@@ -1,216 +1,76 @@
 # Bài 37: Take Profit Cho Pivot Trade
 
-## 📌 Mở đầu
+Thoát lệnh khi sai (stop loss) đã biết. Giờ học thoát lệnh khi đúng (take profit).
 
-Bài trước: biết thoát lệnh khi sai (stop loss). Bài này: biết **thoát lệnh khi đúng** (take profit).
+Nhiều trader biết vào lệnh, biết đặt stop, nhưng không biết chốt lời — hoặc chốt quá sớm, hoặc để lợi nhuận chạy rồi quay đầu.
 
-Nhiều trader biết cách vào lệnh, biết đặt stop, nhưng **không biết chốt lời** — hoặc chốt quá sớm, hoặc để lợi nhuận chạy rồi quay đầu.
-
-Với pivot trade, các mục tiêu lợi nhuận rất rõ ràng: chính là các mức pivot tiếp theo.
+Với pivot trade, mục tiêu lợi nhuận rất rõ ràng: các mức pivot tiếp theo.
 
 ---
 
-## 1. Mục Tiêu Lợi Nhuận Tự Nhiên
+## Mục tiêu lợi nhuận tự nhiên
 
-Khi vào lệnh tại pivot này, mục tiêu là pivot tiếp theo.
+Vào lệnh tại pivot này, mục tiêu là pivot tiếp theo.
 
-### Long — Mục tiêu:
+Long: vào S3 → TP S2, S1, PP. Vào S2 → TP S1, PP, R1. Vào S1 → TP PP, R1, R2. Vào PP → TP R1, R2, R3.
 
-| Vào lệnh tại | TP1 (ngắn) | TP2 (trung) | TP3 (dài) |
-|-------------|-----------|------------|-----------|
-| S3 | S2 | S1 | PP |
-| S2 | S1 | PP | R1 |
-| S1 | PP | R1 | R2 |
-| PP (từ dưới lên) | R1 | R2 | R3 |
+Short: vào R3 → TP R2, R1, PP. Vào R2 → TP R1, PP, S1. Vào R1 → TP PP, S1, S2. Vào PP → TP S1, S2, S3.
 
-### Short — Mục tiêu:
-
-| Vào lệnh tại | TP1 (ngắn) | TP2 (trung) | TP3 (dài) |
-|-------------|-----------|------------|-----------|
-| R3 | R2 | R1 | PP |
-| R2 | R1 | PP | S1 |
-| R1 | PP | S1 | S2 |
-| PP (từ trên xuống) | S1 | S2 | S3 |
+Luôn có ít nhất 2 mức TP: TP1 an toàn (gần), TP2 tham vọng (xa).
 
 ---
 
-## 2. Phương Pháp Chốt Lời
+## Phương pháp chốt lời
 
-### Cách 1: Chốt 1 lần tại TP duy nhất
+**Chốt 100% tại TP1:** vào S1, TP tại PP. An toàn, ít rủi ro quay đầu. Nhưng bỏ lỡ nếu giá đi xa hơn. Phù hợp khi spread rộng hoặc thị trường do dự.
 
-Đơn giản nhất: vào lệnh, đặt TP tại mức pivot tiếp theo.
+**Chốt một phần (scaling out):** 50% tại TP1, 50% tại TP2. Cân bằng giữa an toàn và tham vọng. Cách phổ biến nhất.
 
-**Ví dụ:**
-```
-Long tại S1 = 128,000
-TP tại PP = 130,000
-→ Lời 2,000đ/cp (~1.56%)
-```
-
-**Khi nào dùng:** Trade đơn giản, khung Daily, không muốn phức tạp.
-
-### Cách 2: Chia TP làm 2 phần (Khuyến nghị)
-
-50% TP1 (gần), 50% TP2 (xa hơn).
-
-**Ví dụ:**
-```
-Long 1,000 FPT tại S1 = 128,000
-- TP1: 500cp tại PP = 130,000 (lời 2,000/cp)
-- TP2: 500cp tại R1 = 132,000 (lời 4,000/cp)
-→ Trung bình lời 3,000/cp
-```
-
-**Tại sao nên làm vậy?**
-- TP1 giúp cậu có lợi nhuận ngay — giảm áp lực tâm lý
-- TP2 cho cậu cơ hội lời nhiều hơn nếu trend tiếp diễn
-
-### Cách 3: Trailing TP — Kéo theo ATR
-
-Không đặt TP cố định. Khi giá chạm R1, kéo stop loss lên breakeven và để giá chạy.
-
-**Ví dụ:**
-```
-Long tại S1 = 128,000
-→ Giá lên 130,500 (trên PP) → kéo SL lên 129,000 (lời 1,000/cp)
-→ Giá lên 131,500 → kéo SL lên 130,500 (lời 2,500/cp)
-→ Giá lên 133,000 → kéo SL lên 132,000 (lời 4,000/cp)
-```
-
-**Khi nào dùng:** Khi trend rất mạnh, volume lớn, khả năng giá tiếp tục lên R2/R3.
+**Trailing stop:** không chốt TP cố định — kéo stop theo giá. Để lợi nhuận chạy tối đa trong xu hướng mạnh. Rủi ro: lợi nhuận có thể bị thu hẹp khi giá quay đầu.
 
 ---
 
-## 3. Tính RR (Risk-Reward) Cho Pivot Trade
+## Tính RR (Risk-Reward) cho pivot trade
 
-Mỗi lệnh phải có RR rõ ràng trước khi vào.
+RR = (TP - Entry) / (Entry - Stop). Với short: RR = (Entry - TP) / (Stop - Entry).
 
-### Công thức:
-```
-RR = (TP - Entry) / (Entry - SL) đối với Long
-RR = (Entry - TP) / (SL - Entry) đối với Short
-```
+Mỗi pivot trade nên có RR tối thiểu 1:2. Có nghĩa là lời gấp đôi rủi ro.
 
-### Ví dụ Long:
-```
-Entry: 128,000 (S1)
-SL: 126,500 (dưới S1 1.5%)
-TP1: 130,000 (PP) — lời 2,000
-TP2: 132,000 (R1) — lời 4,000
+Ví dụ: long S1 = 128.000, stop 126.500 (rủi ro 1.500đ). TP1 = PP = 130.000 (lời 2.000đ). RR = 2.000 / 1.500 = 1:1.33.
 
-RR (TP1): 2,000 / 1,500 = 1:1.33
-RR (TP2): 4,000 / 1,500 = 1:2.67
-RR trung bình (50/50): 3,000 / 1,500 = 1:2
-```
-
-### RR tối thiểu:
-
-| Loại trade | RR tối thiểu | Khuyến nghị |
-|-----------|-------------|-------------|
-| Trend mạnh | 1:1.5 | 1:2 |
-| Sideways | 1:2 | 1:3 |
-| Reversal (đảo chiều) | 1:2 | 1:3 |
-
-**Luật:** Không trade nếu RR < 1:1.5. Càng thấp, càng dễ thua về lâu dài.
+RR này thấp. Cần thêm TP2 = R1 = 132.000 (lời 4.000đ). Nếu scaling out 50-50: RR trung bình = (0.5 × 2.000 + 0.5 × 4.000) / 1.500 = 1:2. RR chấp nhận được.
 
 ---
 
-## 4. Yếu Tố Ảnh Hưởng Đến TP
+## Yếu tố ảnh hưởng đến TP
 
-### Volume
-- Volume cao → khả năng giá tiếp cận TP xa hơn (R2/R3)
-- Volume thấp → chốt sớm tại TP gần (PP/R1)
+Volume: nếu volume yếu khi đến TP1 → chốt sớm. Volume mạnh → có thể giữ đến TP2.
 
-### ATR
-- ATR lớn → giá dễ chạy đến mục tiêu xa
-- ATR nhỏ → có thể giá không đủ động lực
+Momentum: nếu MACD histogram còn mở rộng, RSI < 70 → giá còn dư địa. Nếu histogram thu hẹp, RSI > 70 → chốt sớm.
 
-### Thời gian
-- Đầu tháng: mục tiêu xa hơn (weekly/monthly pivot)
-- Cuối tuần: chốt sớm, không giữ qua cuối tuần
+Thời gian: còn nhiều thời gian trong phiên → có thể chờ TP xa. Gần cuối phiên → chốt sớm.
 
 ---
 
-## 5. Ví Dụ Hoàn Chỉnh — Từ Entry Đến TP
+## Ví dụ hoàn chỉnh
 
-### Case: FPT Long từ S1
+**HPG — long từ S1:**
+Entry: S1 = 27.300. Stop: 26.800 (dưới S1 1.8%). TP1: PP = 28.000 (lời 700đ, RR = 700/500 = 1:1.4). TP2: R1 = 28.700 (lời 1.400đ, RR = 1.400/500 = 1:2.8).
 
-```
-Entry: LO mua 1,000 FPT giá 128,000 (S1)
-SL: 126,500 (dưới S1 ~1.17%)
-
-Kế hoạch TP:
-- TP1: 500cp tại 130,000 (PP) — lời 2,000/cp = 1,000,000
-- TP2: 500cp tại 132,000 (R1) — lời 4,000/cp = 2,000,000
-
-RR:
-- TP1: 2,000 / 1,500 = 1:1.33
-- TP2: 4,000 / 1,500 = 1:2.67
-- TB: 3,000 / 1,500 = 1:2
-
-Diễn biến:
-Hôm 1: Giá chạm 128,000 → khớp → xuống 127,200 → bật lên 129,000
-Hôm 2: Giá lên 130,000 → chốt 500cp → kéo SL cho 500cp còn lại lên 128,500
-Hôm 3: Giá lên 132,000 → chốt 500cp còn lại
-Kết quả: Lời 3 củ, thua lỗ nếu SL chạm: 1.5 củ
-```
+Giá chạm S1 → nến hammer + volume 1.5x TB. Long 2.000 cổ. Giá lên PP sau 2 phiên → chốt 1.000 cổ (TP1). Giá tiếp lên R1 → chốt 1.000 cổ còn lại (TP2).
 
 ---
 
-## 6. Sai Lầm TP Thường Gặp
+## Sai lầm thường gặp
 
-### Sai lầm 1: Chốt quá sớm (khi chưa đến TP)
-```
-"Ôi lời 500đ rồi, chốt đi cho lành"
-→ Giá lên tiếp 3,000đ
-→ FOMO mua lại ở giá cao
-```
+Chốt lời quá sớm vì sợ: không có TP cố định, thấy lời 1% là chốt. Cần kỷ luật.
 
-**Cách khắc phục:** Có kế hoạch TP từ trước. Không chốt sớm trừ khi có tín hiệu đảo chiều rõ ràng.
+Không chốt lời vì tham: giá lên R1 xong quay đầu về PP, mất hết lợi nhuận. Luôn có TP.
 
-### Sai lầm 2: Không chốt khi đến TP
-```
-"R1 mới là mục tiêu, nhưng giá đến PP rồi, thôi chờ thêm tí"
-→ Giá quay đầu xuống S1
-→ Lời hoá lỗ
-```
-
-**Cách khắc phục:** Tôn trọng kế hoạch. Nếu muốn để chạy, ít nhất kéo SL lên breakeven.
-
-### Sai lầm 3: Tham lam — đợi R3 khi chỉ nên lấy R1
-```
-Vào long tại S1
-Mục tiêu ban đầu: R1
-"Thấy volume mạnh, chờ R3 luôn"
-→ Giá quay đầu tại R2 → lời ít hơn
-```
-
-**Cách khắc phục:** Chốt 50% tại TP1, để 50% chạy.
+Chốt lời rồi nhảy vào lại: ra ở R1, thấy giá lên tiếp → mua đuổi ở R2 → dính đỉnh. Đã chốt là xong.
 
 ---
 
-## 🎯 Kết Luận
+Luôn xác định TP trước khi vào lệnh. PP, R1, R2, S1, S2 là các mục tiêu tự nhiên. Dùng scaling out để cân bằng an toàn và lợi nhuận. RR tối thiểu 1:2.
 
-**Cốt lõi:**
-1. TP tự nhiên của pivot trade = pivot tiếp theo
-2. Chia làm 2 phần: TP1 gần (50%), TP2 xa (50%)
-3. RR tối thiểu 1:1.5, khuyến nghị 1:2 trở lên
-4. Volume, ATR, thời gian ảnh hưởng đến TP
-5. Tôn trọng kế hoạch — đừng tham lam, đừng sợ hãi
-
----
-
-**Bài tập nhỏ:**
-HPG:
-- Long tại S1 = 26,800
-- SL = 26,000 (dưới S1 3%)
-- PP = 28,000, R1 = 29,200, R2 = 30,500
-
-1. TP1 và TP2 nên đặt ở đâu?
-2. Tính RR cho cả 2 TP
-3. Nếu TP1 chốt 50%, TP2 chốt 50% — RR trung bình là bao nhiêu?
-4. Giải thích tại sao cậu chọn TP đó (dựa vào volume/ATR?)
-
-Bài sau: Fakeout pivot — cách nhận biết.
-
-— BG 🏠
+Bài 37: Take Profit Cho Pivot Trade

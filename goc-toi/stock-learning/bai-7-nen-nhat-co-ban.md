@@ -1,67 +1,44 @@
-# 📈 Bài 7: Nến Nhật Cơ Bản
+# Bài 7: Nến Nhật Cơ Bản
 
-## Doji, Marubozu, Spinning Top — đọc nến trong 5 phút
-
-Jason, mỗi cây nến trên chart là câu chuyện 1 phiên giao dịch. Biết đọc nến là biết **tâm lý người chơi trong phiên đó**.
+Mỗi cây nến = câu chuyện 1 phiên giao dịch. 4 thông tin: Open, Close, High, Low.
 
 ---
 
-## 1. Cấu Trúc 1 Cây Nến
-
-1 cây nến Nhật có 4 thông tin: **Mở cửa (Open), Đóng cửa (Close), Cao nhất (High), Thấp nhất (Low).**
+## Cấu Trúc 1 Cây Nến
 
 ```
        High
     ┌─────┐
-    │     │  Bấc trên (upper wick)
+    │     │  Upper wick
     │     │
- ───┤     ├─── Close (nến xanh = giá đóng > giá mở)
+ ───┤     ├─── Close (xanh: đóng > mở)
     │     │
     │     │  Thân nến (real body)
     │     │
  ───┤     ├─── Open
-    │     │
-    │     │  Bấc dưới (lower wick)
+    │     │  Lower wick
     └─────┘
        Low
 ```
 
-Nến **xanh** (bullish) = Close > Open → giá lên trong phiên
-Nến **đỏ** (bearish) = Close < Open → giá xuống trong phiên
+Nến xanh = Close > Open. Nến đỏ = Close < Open.
 
-## 2. Ba Loại Nến Cơ Bản
+## 3 Loại Nến Cơ Bản
 
-### Doji — Sự do dự
-- Thân rất nhỏ hoặc không có, bấc 2 bên
-- Giá mở ≈ giá đóng → thị trường đang phân vân
-- **Xuất hiện sau 1 trend mạnh → có thể sắp đảo chiều**
+**Doji** — Thân rất nhỏ, bấc 2 bên. Giá mở ≈ giá đóng. Thị trường đang phân vân. Xuất hiện sau trend mạnh → có thể đảo chiều.
 
-### Marubozu — Sự quyết tâm
-- Không có bấc hoặc bấc rất nhỏ
-- Nến xanh Marubozu: mở = thấp, đóng = cao → bull áp đảo
-- Nến đỏ Marubozu: mở = cao, đóng = thấp → bear áp đảo
-- **Thể hiện sức mạnh xu hướng**
+**Marubozu** — Không có bấc hoặc bấc rất nhỏ. Nến xanh: mở = thấp, đóng = cao → bull áp đảo. Nến đỏ: mở = cao, đóng = thấp → bear áp đảo.
 
-### Spinning Top — Sự lưỡng lự
-- Thân nhỏ, bấc dài 2 bên
-- Giá dao động nhiều trong phiên nhưng cuối cùng gần như không đổi
-- **Cho thấy thị trường chưa quyết định hướng**
+**Spinning Top** — Thân nhỏ, bấc dài 2 bên. Giá dao động nhiều nhưng cuối phiên gần như không đổi.
 
-## 3. Đọc Nến Kết Hợp Với S/R
+## Đọc Nến Với S/R
 
-- Nến **Marubozu xanh** break qua resistance → breakout mạnh
-- Nến **Doji** ở vùng support → có thể sắp hồi phục
-- Chuỗi **Spinning Top** → đang tích luỹ, chuẩn bị bùng nổ
-- Nến **đỏ Marubozu** phá support → breakdown thật sự
+- Marubozu xanh break resistance → breakout mạnh
+- Doji ở support → có thể sắp hồi phục
+- Nến đỏ Marubozu phá support → breakdown thật
 
-## Mẹo Cho Jason
-
-- Không trade chỉ dựa vào 1 cây nến — cần 2-3 nến liên tiếp
-- Nến càng lớn → tín hiệu càng mạnh
-- Nến đóng vai trò xác nhận cho S/R, không phải thay thế
+Không trade chỉ dựa 1 cây nến. Cần 2-3 nến liên tiếp.
 
 ---
 
-**Bài tập:** Mở chart HPG khung Daily trên TradingView, tìm 1 Doji, 1 Marubozu, 1 Spinning Top. Ghi lại ngày và xem điều gì xảy ra sau đó.
-
-**Bài sau:** Mô hình nến đảo chiều — hammer, engulfing, morning/evening star.
+**Bài 8:** Mô hình nến đảo chiều

@@ -1,59 +1,44 @@
-# 📈 Bài 11: Đường Trung Bình Động — SMA, EMA
+# Bài 11: SMA và EMA
 
-## Chỉ báo đơn giản nhưng hiệu quả nhất cho người mới
-
-Jason, Moving Average (MA) là chỉ báo kỹ thuật đầu tiên em nên học. Nó đơn giản, dễ hiểu, và thực sự hiệu quả.
+Moving Average = trung bình giá đóng cửa X ngày.
 
 ---
 
-## 1. SMA — Simple Moving Average
-Trung bình giá đóng cửa X ngày gần nhất.
+## SMA (Simple Moving Average)
 
-- SMA20 = tổng giá đóng 20 ngày / 20
-- Phản ứng chậm với biến động giá mới
-- Thường dùng: SMA20 (ngắn), SMA50 (trung), SMA200 (dài)
+SMA20 = tổng giá đóng 20 ngày / 20.
+Phản ứng chậm. Dùng SMA20 (ngắn), SMA50 (trung), SMA200 (dài).
 
-## 2. EMA — Exponential Moving Average
-Giống SMA nhưng **ưu tiên giá gần đây hơn** — chậm hơn giá thật nhưng nhanh hơn SMA.
+## EMA (Exponential Moving Average)
 
-- **SMA** = chậm, ít nhiễu → dùng cho xu hướng dài
-- **EMA** = nhanh, nhạy hơn → dùng cho giao dịch ngắn
+Ưu tiên giá gần đây — nhanh hơn SMA.
 
-## 3. Cách Dùng MA (3 cách cơ bản)
-
-### A) MA làm Support/Resistance động
-- EMA20 là S/R mạnh cho trend ngắn (intraday/swing)
-- SMA50 là S/R cho trend trung hạn
-- SMA200 là "sống lưng" của thị trường
-
-**Cách trade:** Mua khi giá chạm MA trong uptrend, bán khi chạm MA trong downtrend.
-
-### B) MA Cross — 2 đường MA cắt nhau
-- **Golden Cross:** EMA50 cắt lên EMA200 → tín hiệu mua dài hạn
-- **Death Cross:** EMA50 cắt xuống EMA200 → tín hiệu bán dài hạn
-
-### C) Giá so với MA
-- Giá trên MA200 → thị trường bull dài hạn
-- Giá dưới MA200 → thị trường bear dài hạn
-- Giá xa MA quá → quá mua/quá bán, có thể hồi về MA
-
-## 4. MA Trong Thực Tế VN
-
-Bộ MA yêu thích của chị cho swing trade VN30:
-- **EMA9** — động lực ngắn
-- **EMA20** — xu hướng chính
-- **SMA50** — xác nhận trend
-
-**Ví dụ HPG:** EMA20 đang dốc lên, giá vừa chạm EMA20 và bật lên → entry ngon.
-
-## Mẹo Cho Jason
-
-- **Đừng dùng quá nhiều MA** — 2-3 đường là đủ
-- MA là **công cụ xác nhận**, không phải tín hiệu mua/bán độc lập
-- Luôn dùng MA với S/R và volume
+SMA = chậm, ít nhiễu → xu hướng dài.
+EMA = nhanh, nhạy → giao dịch ngắn.
 
 ---
 
-**Bài tập:** Mở chart FPT, thêm EMA20 và SMA50. Tìm 1 lần giá chạm EMA20 và bật lên trong uptrend. Vẽ đường trendline hỗ trợ.
+## 3 Cách Dùng MA
 
-**Bài sau:** Golden Cross & Death Cross.
+**1. MA làm S/R động**
+- EMA20: S/R cho trend ngắn
+- SMA50: S/R cho trung hạn
+- SMA200: "sống lưng" thị trường
+
+**2. MA Cross**
+- EMA50 cắt lên SMA200 → Golden Cross (mua dài hạn)
+- EMA50 cắt xuống SMA200 → Death Cross (bán dài hạn)
+
+**3. Giá so với MA**
+- Trên MA200 → bull dài hạn
+- Dưới MA200 → bear dài hạn
+
+---
+
+Bộ MA cho swing trade VN30: EMA9 (động lực), EMA20 (xu hướng), SMA50 (xác nhận).
+
+Không dùng quá nhiều MA. 2-3 đường là đủ.
+
+---
+
+**Bài 12:** Golden Cross & Death Cross

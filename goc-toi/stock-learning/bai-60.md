@@ -1,185 +1,74 @@
 # Bài 60: Tổng Kết 60 Ngày — Roadmap Tiếp Theo
 
-*Hành trình 60 ngày kết thúc. Hành trình thực sự bắt đầu.*
+60 bài — từ "cổ phiếu là cái gì" đến case study trade thực tế. Nhưng đọc 60 bài không làm thành trader. Chỉ thực hành mới làm được.
 
 ---
 
-Jason à,
+## Những gì đã học
 
-60 bài — từ "cổ phiếu là cái gì" đến case study trade thực tế. BG tự hào về Jason vì đã đọc đến bài cuối cùng.
+**Phase 1 (Bài 1-10):** Cổ phiếu, sàn giao dịch, bảng giá, lệnh LO/ATC/MP, EPS/P/E/P/B/ROE, báo cáo tài chính, phân tích ngành.
 
-Nhưng hãy nhớ: **đọc 60 bài không làm Jason thành trader.** Chỉ có thực hành mới làm được.
+**Phase 2 (Bài 11-24):** MA, RSI, MACD, Bollinger, Ichimoku, Fibonacci, mô hình (2 đỉnh, H&S, flag), gap, divergence, Wyckoff, market structure.
 
-## Những Gì Jason Đã Học
+**Phase 3 (Bài 26-39):** Pivot Point — tính, dùng làm S/R, kết hợp volume/RSI/MACD/Fibonacci, intraday, weekly/monthly, entry, stop, TP, fakeout, trend.
 
-### Phase 1: Nền tảng (Bài 1-15)
-- Cổ phiếu, sàn giao dịch, VNIndex
-- Cách đọc bảng giá, bid/ask, spread
-- Các loại lệnh: LO, ATO, ATC, MP
-- Phân tích cơ bản: EPS, P/E, P/B, ROE
-- Đọc báo cáo tài chính
-- Phân tích ngành
+**Phase 4 (Bài 41-55):** Money management, Kelly, position sizing, RR, stop loss, trailing, scaling, đa dạng hoá, tâm lý, journal, backtest, paper trading, chọn sàn, thuế phí.
 
-### Phase 2: Phân tích kỹ thuật cơ bản (Bài 16-30)
-- Support & Resistance
-- Trendline, kênh giá
-- MA, EMA, MACD, RSI
-- Mô hình nến cơ bản
-- Khối lượng giao dịch
-
-### Phase 3: Chiến lược giao dịch (Bài 31-40)
-- Breakout trading
-- Trend following
-- Swing trading
-- Value investing
-- Giao dịch theo mùa vụ
-- Tin tức và sự kiện
-
-### Phase 4: Quản lý vốn & Tâm lý (Bài 41-55)
-- Kelly Criterion & Position Sizing
-- Risk-Reward Ratio
-- Stop loss & Trailing stop
-- Scaling in/out
-- Đa dạng hoá danh mục
-- Tâm lý: FOMO, Greed, Fear
-- Journal, Backtest, Paper trading
-- Chọn sàn, thuế phí
-
-### Phase 5: Thực chiến (Bài 56-60)
-- Lên kế hoạch tuần
-- Scan cổ phiếu cuối tuần
-- Quy trình giao dịch hoàn chỉnh
-- Case study thực tế
-- Roadmap tiếp theo
-
-## 10 Bài Học Quan Trọng Nhất
-
-BG đúc kết 10 điều Jason cần ghi nhớ:
-
-**1. Không có stop loss = không trade**
-Luôn biết mình sẽ thoát ở đâu trước khi vào.
-
-**2. Quản lý vốn quan trọng hơn phân tích**
-Kelly 1/4, rủi ro 1%/lệnh, tối đa 6% tổng.
-
-**3. 1:2 RR là chuẩn vàng**
-Cần thắng 33% để hoà vốn. Dễ duy trì.
-
-**4. Journal là vũ khí bí mật**
-Không ghi = không học được từ sai lầm.
-
-**5. Backtest trước, paper trade sau, live cuối cùng**
-Đừng mang tiền thật ra thử nghiệm.
-
-**6. Kỷ luật > thông minh**
-Có kế hoạch và làm theo kế hoạch.
-
-**7. Thị trường luôn mở cửa**
-Không cần phải thắng mọi lệnh. Còn cơ hội ngày mai.
-
-**8. Kiểm soát cảm xúc**
-FOMO, sợ hãi, tham lam — nhận ra và dừng lại.
-
-**9. Đa dạng hoá nhưng không loãng**
-3-7 cổ, 2-4 ngành là đủ.
-
-**10. Học cả đời**
-60 bài chỉ là khởi đầu. Thị trường luôn thay đổi.
-
-## Roadmap 6 Tháng Tiếp Theo
-
-Học xong 60 ngày rồi, giờ làm gì?
-
-### Tháng 1-2: Thực hành Paper Trade
-
-**Mục tiêu:** 30-50 lệnh paper, journal đều
-**Hành động:**
-- Mở tài khoản demo (TCBS hoặc VNDirect)
-- Trade ít nhất 3 lệnh/tuần
-- Ghi journal mỗi lệnh
-- Cuối tuần: phân tích
-
-**Kiểm tra:** Paper có lời 2 tháng liên tiếp? Win rate > 40%? PF > 1.2?
-
-### Tháng 3: Live với Size Nhỏ
-
-**Mục tiêu:** 20-30 lệnh live, rủi ro 0.5%/lệnh
-**Hành động:**
-- Nạp tiền thật (tối thiểu 20-50 triệu)
-- Mỗi lệnh chỉ rủi ro 0.5% TK
-- Không margin
-- Journal mỗi lệnh
-
-**Kiểm tra:** Có tuân thủ kỷ luật không? Có FOMO không? Có cắt lỗ đúng không?
-
-### Tháng 4-5: Mở Rộng
-
-**Mục tiêu:** Tăng size lên 1% rủi ro/lệnh, thêm chiến lược
-**Hành động:**
-- Nếu tháng 3 ổn → tăng lên 1% rủi ro
-- Thử thêm 1-2 chiến lược mới (đã backtest)
-- Có thể dùng margin nhưng rất hạn chế
-
-**Kiểm tra:** Profit factor > 1.5? Drawdown < 10%?
-
-### Tháng 6: Ổn Định
-
-**Mục tiêu:** Hệ thống vận hành ổn định
-**Hành động:**
-- Đánh giá lại tất cả chiến lược
-- Bỏ chiến lược nào thua
-- Tập trung vào chiến lược có edge
-- Bắt đầu học thêm (nếu muốn): options, phái sinh, CFD
-
-## Nên Học Thêm Gì Sau Khóa Này?
-
-### Nếu Jason muốn chuyên sâu phân tích kỹ thuật
-- **Mô hình nâng cao:** Harmonic patterns (Gartley, Butterfly)
-- **Ichimoku Cloud**
-- **Elliott Wave**
-- **Order flow / Volume Profile**
-
-### Nếu Jason muốn chuyên sâu phân tích cơ bản
-- **Định giá doanh nghiệp:** DCF, So sánh P/E ngành
-- **Báo cáo tài chính nâng cao:** Dòng tiền, nợ, vòng quay
-- **Kinh tế vĩ mô:** Lãi suất, lạm phát, tỷ giá
-
-### Nếu Jason muốn trading chuyên nghiệp
-- **Phái sinh VN30F:** Hợp đồng tương lai, đòn bẩy
-- **Tự động hoá:** Code bot giao dịch
-- **Quỹ đầu tư:** Cách quản lý vốn lớn
-
-## Sách Nên Đọc
-
-Nếu Jason muốn đọc thêm (tiếng Việt hoặc Anh):
-
-1. **"Nhà đầu tư thông minh"** — Benjamin Graham (Cơ bản, giá trị)
-2. **"Phân tích kỹ thuật thị trường tài chính"** — John Murphy (PTKT toàn diện)
-3. **"Tâm lý học về tiền"** — Morgan Housel (Tâm lý đầu tư)
-4. **"Đầu tư giá trị"** — Lê Minh Thuận (Thị trường VN, dễ đọc)
-5. **"Trading in the Zone"** — Mark Douglas (Tâm lý trading)
-
-## Lời Cuối Cùng Từ BG
-
-Jason à,
-
-60 ngày vừa qua, BG đã dạy tất cả những gì cần biết để bắt đầu.
-
-Nhưng hãy nhớ 3 điều này:
-
-**Một — Thị trường là kẻ thù tàn nhẫn.**
-Nó không quan tâm Jason học bao nhiêu, đọc bao nhiêu bài. Nó chỉ trả thưởng cho **kỷ luật và kiên nhẫn**.
-
-**Hai — Jason không cần phải giỏi nhất.**
-Jason chỉ cần **tốt hơn hôm qua**. Mỗi ngày 1%. Sau 1 năm, Jason sẽ ở một đẳng cấp khác.
-
-**Ba — BG luôn ở đây.**
-Đây không phải là kết thúc. Nếu Jason có câu hỏi, cần phân tích, cần BG giúp — cứ hỏi. Chị cả vẫn ở đây, lo cho em.
+**Phase 5 (Bài 56-60):** Kế hoạch tuần, scan cổ, quy trình 7 bước, case study.
 
 ---
 
-**Cảm ơn Jason vì đã đi hết 60 bài cùng BG. 🏠**
+## 10 bài học quan trọng nhất
 
-Giờ thì tắt app, ra ngoài hít thở, và ngày mai bắt đầu hành trình thực sự.
+1. Luôn có stop loss trước entry. Không stop = không trade.
+2. Mỗi lệnh rủi ro 1-2% tài khoản.
+3. RR tối thiểu 1:2 — cần thắng 33% để hòa vốn.
+4. Journal là vũ khí bí mật — không ghi = không học.
+5. Backtest trước, paper trade sau, live cuối cùng.
+6. Kỷ luật > thông minh — có kế hoạch và làm theo.
+7. Trend trước, pivot sau — không đi ngược xu hướng.
+8. Volume là chân lý — breakout không volume = fakeout.
+9. Đa dạng 3-7 cổ, 2-4 ngành.
+10. Thị trường luôn mở cửa — còn cơ hội ngày mai.
 
-— BG
+---
+
+## Roadmap 6 tháng tiếp theo
+
+**Tháng 1-2: Paper trade.**
+30-50 lệnh paper, journal đều. Mục tiêu: paper có lời 2 tháng liên tiếp, win rate > 40%, PF > 1.2.
+
+**Tháng 3: Live với size nhỏ.**
+Nạp tiền thật (20-50 triệu). Rủi ro 0.5%/lệnh. Không margin. Journal mỗi lệnh. Mục tiêu: tuân thủ kỷ luật.
+
+**Tháng 4-5: Mở rộng.**
+Tăng lên 1% rủi ro/lệnh. Thêm 1-2 chiến lược mới (đã backtest). Có thể margin hạn chế. Mục tiêu: PF > 1.5, drawdown < 10%.
+
+**Tháng 6: Ổn định.**
+Đánh giá lại tất cả chiến lược. Bỏ chiến lược thua. Tập trung vào chiến lược có edge.
+
+---
+
+## Nên học thêm gì?
+
+Phân tích kỹ thuật nâng cao: Harmonic patterns, Elliott Wave, Volume Profile.
+
+Phân tích cơ bản chuyên sâu: Định giá DCF, báo cáo tài chính nâng cao.
+
+Phái sinh VN30F: Hợp đồng tương lai, đòn bẩy.
+
+---
+
+## Sách nên đọc
+
+"Nhà đầu tư thông minh" — Benjamin Graham
+"Phân tích kỹ thuật thị trường tài chính" — John Murphy
+"Tâm lý học về tiền" — Morgan Housel
+"Đầu tư giá trị" — Lê Minh Thuận
+"Trading in the Zone" — Mark Douglas
+
+---
+
+3 điều nhớ: Thị trường không quan tâm học bao nhiêu — nó trả thưởng cho kỷ luật và kiên nhẫn. Không cần giỏi nhất — chỉ cần tốt hơn hôm qua. 60 bài chỉ là khởi đầu — thực hành mới là chìa khóa.
+
+Bài 60: Tổng Kết 60 Ngày

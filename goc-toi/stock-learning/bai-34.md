@@ -1,200 +1,88 @@
-# Bài 34: Pivot Weekly/Monthly — Tầm Nhìn Lớn Hơn
+# Bài 34: Pivot Weekly/Monthly — Tầm Nhìn Lớn
 
-## 📌 Mở đầu
+Đã học pivot Daily và Intraday. Giờ lên tầm cao hơn: pivot Weekly và Monthly.
 
-Mấy bài trước cậu học pivot Daily và pivot Intraday. Hôm nay lên một tầm cao hơn: **pivot Weekly và Monthly**.
+Pivot daily = phản ứng trong 1 ngày. Pivot weekly = xu hướng 1 tuần. Pivot monthly = xu hướng 1 tháng.
 
-Tại sao cần? Vì:
-
-- Pivot daily = phản ứng trong 1 ngày
-- Pivot weekly = xu hướng 1 tuần
-- Pivot monthly = xu hướng 1 tháng
-
-Khi cậu biết monthly/weekly pivot nằm ở đâu, cậu sẽ biết **các vùng giá quan trọng nhất** — nơi thị trường có thể quay đầu hoặc breakout mạnh.
+Biết monthly/weekly pivot nằm ở đâu → biết vùng giá quan trọng nhất — nơi thị trường có thể quay đầu hoặc breakout mạnh.
 
 ---
 
-## 1. Cách Tính Pivot Weekly/Monthly
+## Cách tính
 
-**Công thức vẫn y chang** — chỉ thay đổi timeframe đầu vào.
+Công thức vẫn y chang, chỉ thay đổi đầu vào:
 
-### Pivot Weekly
-Dùng dữ liệu **tuần trước**:
-```
-PP(weekly) = (High_tuan + Low_tuan + Close_tuan) / 3
-R1(weekly) = 2 × PP - Low_tuan
-S1(weekly) = 2 × PP - High_tuan
-```
+Pivot Weekly: dùng High, Low, Close của tuần trước.
+Pivot Monthly: dùng High, Low, Close của tháng trước.
 
-### Pivot Monthly
-Dùng dữ liệu **tháng trước**:
-```
-PP(monthly) = (High_thang + Low_thang + Close_thang) / 3
-R1(monthly) = 2 × PP - Low_thang
-S1(monthly) = 2 × PP - High_thang
-```
+PP = (High + Low + Close) / 3
+R1 = (2 × PP) - Low, S1 = (2 × PP) - High
+R2 = PP + (High - Low), S2 = PP - (High - Low)
 
 ---
 
-## 2. Tại Sao Pivot Weekly/Monthly Quan Trọng?
+## Tại sao quan trọng?
 
-### Vì 1: Nó là vùng "cứng"
+**Weekly pivot — cản lớn trong tuần.**
+PP weekly là mức quan trọng nhất tuần. Giá đóng cửa trên PP weekly → tuần tăng điểm. R1 weekly: nếu giá chạm R1 weekly → thường là đỉnh tuần. S1 weekly: nếu giá chạm → thường là đáy tuần.
 
-Pivot daily thay đổi mỗi ngày. Nhưng pivot weekly tồn tại cả tuần — 5 phiên giao dịch có cùng một mức.
+**Monthly pivot — xu hướng tháng.**
+PP monthly quyết định xu hướng tháng. R1 và S1 monthly là vùng đảo chiều mạnh. Big money đặt lệnh quanh các mức này.
 
-Nếu giá chạm weekly R1 → đó là **kháng cự đáng tin cậy hơn** daily R1.
-
-### Vì 2: Institution dùng nó
-
-Các quỹ, ngân hàng, tổ chức thường nhìn vào pivot weekly/monthly. Họ không trade daily — họ trade theo tuần/tháng.
-
-Khi họ đặt lệnh, họ đặt ở các mức này. Đây là nơi có **thanh khoản lớn nhất**.
-
-### Vì 3: Tạo khung cho daily
-
-Biết weekly pivot giúp cậu trả lời: *"Hôm nay daily chạm R1 — nhưng weekly đang ở đâu?"*
-
-- Nếu daily R1 gần weekly PP → R1 yếu hơn (weekly PP là hỗ trợ)
-- Nếu daily R1 = weekly R1 → kháng cự cực mạnh
+**Trong thực tế:**
+Chạm weekly pivot (daily chart) và monthly pivot (weekly chart) → phản ứng mạnh hơn hẳn daily pivot. Nếu daily R1 trùng weekly R1 → vùng cực kỳ mạnh.
 
 ---
 
-## 3. Ví Dụ Cụ Thể
+## Ví dụ
 
-### Ví dụ: HPG — Weekly + Daily
+**FPT weekly:**
+Tuần trước: High 135.000, Low 128.000, Close 132.000.
 
-**Weekly pivot tuần này:**
-```
-PP(w) = 28,500
-R1(w) = 30,000
-S1(w) = 27,000
-```
+PP weekly = (135 + 128 + 132) / 3 = 131.700
+R1 weekly = (2 × 131.7) - 128 = 135.400
 
-**Daily pivot thứ Hai:**
-```
-PP(d) = 28,200
-R1(d) = 29,000
-```
+Tuần này: giá chạm 135.400, RSI 68, volume thấp. Phản ứng mạnh: quay đầu về 132.000 trong 2 phiên. Short tại 135.000, stop 136.000.
 
-**Phân tích:**
-- Daily R1 = 29,000, nhưng Weekly R1 = 30,000
-- → Daily R1 29,000 nằm trong vùng **không có weekly pivot**
-- → Kháng cự daily R1 yếu hơn bình thường
-- → Nếu giá vượt 29,000, khả năng lên 30,000 (weekly R1) cao
+**HPG monthly:**
+Tháng trước: High 30.000, Low 25.000, Close 28.000.
 
-**Kịch bản:**
-Giá chạm daily R1 29,000:
-- Chưa vội short — weekly chưa có kháng cự ở đây
-- Chờ xem giá có phá được không
-- Nếu phá → mục tiêu weekly R1 30,000
+PP monthly = (30 + 25 + 28) / 3 = 27.700
+S1 monthly = (2 × 27.7) - 30 = 25.400
+
+Tháng này: giá xuống 25.500 (gần S1 monthly = 25.400). Nến hammer + volume cao. Long tại 25.500.
 
 ---
 
-## 4. Cách Kết Hợp 3 Tầng Pivot
+## Kết hợp 3 tầng pivot
 
-| Tầng | Timeframe | Dùng để |
-|------|-----------|---------|
-| 1 | Monthly | Biên lớn nhất trong tháng — vùng "cứng" |
-| 2 | Weekly | Xu hướng tuần — nơi institution đặt lệnh |
-| 3 | Daily | Điểm vào/thoát cụ thể trong ngày |
+Dùng monthly cho xu hướng tổng thể. Dùng weekly cho vùng quan trọng. Dùng daily cho entry.
 
-### Quy trình mỗi sáng:
+Ví dụ: Monthly cho biết thị trường đang uptrend (giá trên PP monthly). Weekly R1 cho biết tuần này kháng cự ở đâu. Daily cho biết hôm nay nên mua hay bán.
 
-**Bước 1: Check Monthly Pivot**
-```
-Monthly PP: 1,250 (VNIndex)
-→ Thị trường đang trên hay dưới?
-→ Nếu trên → xu hướng tháng là tăng
-```
-
-**Bước 2: Check Weekly Pivot**
-```
-Weekly PP: 1,270
-→ Giá 1,280 > weekly PP → tuần này nghiêng tăng
-→ Weekly R1: 1,300 — mục tiêu trong tuần
-```
-
-**Bước 3: Trade Daily**
-```
-Dựa vào weekly/monthly để biết:
-- Đang đi theo trend nào
-- Cơ hội cao ở daily R1/S1 nào là thật
-```
+Cách dùng:
+1. Mở monthly, xác định PP monthly, R1/S1 monthly
+2. Mở weekly, xác định PP weekly, R1/S1 weekly
+3. Chỉ trade khi có sự đồng thuận ít nhất 2 tầng
 
 ---
 
-## 5. Khi Weekly Và Daily Pivot Trùng Nhau
+## Khi weekly và daily trùng nhau
 
-Đây là tình huống **mạnh nhất** — cần chú ý đặc biệt.
-
-### Trùng R1
-
-```
-Weekly R1 = 130,000
-Daily R1 = 130,000
-
-→ Cả tuần và hôm nay đều cho thấy 130,000 là kháng cự
-→ Cực kỳ mạnh
-```
-
-**Hành động:** Short tại 130,000. Stop trên 130,500.
-
-### Trùng S1
-
-```
-Weekly S1 = 125,000
-Daily S1 = 125,000
-
-→ Hỗ trợ 2 tầng
-→ Rất khó thủng
-```
-
-**Hành động:** Long tại 125,000. Stop dưới 124,500.
+Daily R1 = 28.700, Weekly R1 = 28.800. Sai số chỉ 100đ (~0.35%). Vùng 28.700-28.800 là vùng rất mạnh. Nếu giá chạm vùng này:
+- Volume > 1.5x TB, RSI < 60 → có thể breakout
+- Volume < TB, RSI > 70 → khả năng quay đầu
 
 ---
 
-## 6. Lưu Ý Khi Dùng Pivot Weekly/Monthly
+## Lưu ý
 
-### ⚠️ Chỉ tính đầu tuần/đầu tháng
-Pivot weekly chỉ thay đổi 1 lần/tuần (đầu tuần) — không thay đổi giữa tuần. Pivot monthly chỉ thay đổi 1 lần/tháng.
+Pivot weekly/monthly ít thay đổi — ổn định để lập kế hoạch. Kết hợp với market structure (bài 24). Nếu weekly PP đang là hỗ trợ mạnh, giá trên đó → chỉ long, không short.
 
-### ⚠️ Đừng dùng pivot weekly cho day trade
-Weekly pivot cho cậu biên lớn (có thể 5-10% cho cổ VN). Nếu day trade, dùng daily + intraday.
-
-### ⚠️ Hết tháng — tính lại
-Cuối tháng, tính pivot cho tháng mới. Mức cũ vẫn có giá trị tham khảo nhưng không còn chính xác.
+Trên TradingView: thêm Pivot Point Standard, chọn Weekly. Xem ở cuối chart. Thêm indicator Monthly, chọn Monthly timeframe.
 
 ---
 
-## 7. Cách Thêm Pivot Weekly/Monthly Trên TradingView
+Xác định monthly PP, R1, S1. Xác định weekly PP, R1, S1. So sánh với daily pivot hôm nay. Vùng nào trùng nhau? Đó là vùng quan trọng nhất để canh trade.
 
-**Cách 1:** Thêm indicator Pivot Point Standard → chọn timeframe Weekly/Monthly.
-
-**Cách 2:** Chuyển chart sang Weekly/Monthly → thêm Pivot Point — nó sẽ tính tự động.
-
-**Mẹo:** Thêm cả 3 cùng lúc (Daily, Weekly, Monthly) với màu khác nhau để dễ phân biệt.
-
----
-
-## 🎯 Kết Luận
-
-**Cốt lõi:**
-- Weekly/monthly pivot = tầm nhìn lớn, dùng cho institution
-- Daily pivot = điểm vào/thoát cụ thể
-- Khi daily và weekly trùng = tín hiệu mạnh
-- Trader thông minh luôn nhìn weekly/monthly trước khi trade daily
-- **Xu hướng tháng > xu hướng tuần > biến động trong ngày**
-
----
-
-**Bài tập nhỏ:**
-Mở TradingView, chọn bất kỳ cổ VN30 nào.
-1. Thêm Pivot Point Weekly + Daily
-2. Ghi lại weekly PP, R1, S1
-3. Ghi lại daily PP, R1, S1 hôm nay
-4. Có mức nào trùng nhau không?
-5. Giá hiện tại đang ở đâu so với cả 2?
-
-Bài sau: Vào lệnh tại pivot — entry chi tiết.
-
-— BG 🏠
+Bài 34: Pivot Weekly/Monthly

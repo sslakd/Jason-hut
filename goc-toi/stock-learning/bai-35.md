@@ -1,227 +1,95 @@
 # Bài 35: Vào Lệnh Tại Pivot — Entry Chi Tiết
 
-## 📌 Mở đầu
+Đến lúc quan trọng nhất: vào lệnh.
 
-Đến lúc quan trọng nhất: **vào lệnh**.
-
-Biết pivot ở đâu, biết volume, RSI, MACD, Fibonacci — nhưng không biết **cách đặt lệnh cụ thể** thì cũng vô ích.
-
-Bài này BG chỉ chi tiết từng bước: giá chạm pivot nào, đặt lệnh ra sao, vào lúc nào, với khối lượng bao nhiêu.
+Các bài trước là chuẩn bị — biết pivot là gì, tính thế nào, kết hợp với gì. Bài này là hành động.
 
 ---
 
-## 1. Ba Cách Vào Lệnh Tại Pivot
+## Ba cách vào lệnh tại pivot
 
-### Cách 1: Limit Order — Đón giá tại pivot (ưu tiên số 1)
+**1. Limit entry — canh sẵn**
+Đặt lệnh LO trước ở mức pivot. Không cần ngồi canh chart. Đặt LO mua ở S1, LO bán ở R1.
 
-Đặt lệnh chờ trước khi giá chạm pivot.
+Ưu: kiểm soát giá, không bỏ lỡ. Nhược: có thể không khớp nếu giá không chạm.
 
-```
-FPT: PP = 130,000, S1 = 128,000
-→ Đặt LO mua 1,000 FPT giá 128,000
-→ Nếu giá xuống 128,000 → tự khớp
-→ Nếu không → lệnh treo đến hết phiên
-```
+Dùng khi: tin tưởng pivot sẽ giữ, muốn vào đúng giá.
 
-**Ưu điểm:** Vào lệnh đúng giá, không trượt.
-**Nhược điểm:** Có thể không khớp nếu giá không chạm.
+**2. Market entry — vào ngay sau xác nhận**
+Chờ giá chạm pivot + 1-2 nến xác nhận, sau đó vào MP hoặc LO giá thị trường.
 
-**Khi nào dùng:** Khi cậu có sẵn kế hoạch từ đêm hôm trước, tin rằng giá sẽ chạm pivot.
+Ưu: có xác nhận, ít fakeout hơn. Nhược: vào trễ hơn, giá có thể kém hơn 0.5-1%.
 
-### Cách 2: Market Order — Xác nhận breakout
+Dùng khi: cần xác nhận volume/RSI/MACD trước, chấp nhận giá kém hơn.
 
-Đặt lệnh sau khi giá đã vượt pivot với xác nhận.
+**3. Stop entry — vào sau khi phá pivot**
+Đặt lệnh trên R1 (buy stop) hoặc dưới S1 (sell stop) để bắt breakout.
 
-```
-FPT: R1 = 132,000
-→ Giá vượt 132,000 với nến 15m xanh + volume > 1.5x
-→ Mua MP hoặc LO giá 132,200
-```
+Ưu: bắt được breakout mạnh, không sợ fakeout ở chính pivot. Nhược: nếu breakout giả → dính stop.
 
-**Ưu điểm:** Có xác nhận, giảm fakeout.
-**Nhược điểm:** Vào trễ hơn, giá có thể đã chạy.
-
-**Khi nào dùng:** Khi cần xác nhận breakout, không muốn bị fakeout.
-
-### Cách 3: Limit Order tại pivot + chờ phản ứng (cách yêu thích của BG)
-
-Đặt LO tại pivot, nhưng vào lệnh **sau khi nến xác nhận phản ứng**.
-
-```
-FPT: S1 = 128,000
-→ Đặt LO mua 128,000
-→ Giá chạm 128,000 → nến 15m đóng cửa
-→ Kiểm tra: nến có bấc dưới dài không? RSI < 30?
-→ Nếu OK → giữ lệnh, nếu không → hủy
-```
-
-**Ưu điểm:** Cả 2 thế giới — có giá tốt + có xác nhận.
-**Nhược điểm:** Cần theo dõi chart liên tục.
+Dùng khi: volume cao, kỳ vọng giá tiếp diễn mạnh.
 
 ---
 
-## 2. Chi Tiết Từng Loại Entry
+## Chi tiết từng loại entry
 
-### Entry Long tại S1
+**Limit entry tại S1 — cụ thể:**
+1. Xác định S1 daily
+2. Đặt LO mua tại S1
+3. Stop loss dưới S1 1-2%
+4. Take profit: PP hoặc R1
 
-**Điều kiện cần:**
-- Giá chạm S1
-- RSI < 30 (oversold) hoặc có bullish divergence
-- Nến xác nhận: hammer, bullish engulfing, hoặc bấc dưới dài
-- Volume > TB (xác nhận lực mua)
+Ví dụ: FPT S1 = 128.000. LO mua 128.000, stop 126.500, TP 130.000 (PP).
 
-**Cách đặt lệnh:**
-```
-LO mua tại: S1 hoặc cao hơn 0.2-0.5% (cho spread)
-Ví dụ: S1 = 128,000 → LO mua 128,200
-```
+**Market entry sau xác nhận:**
+1. Giá chạm R1
+2. Chờ 1 nến: nếu nến đóng cửa dưới R1 (shooting star, doji) → short
+3. Vào lệnh tại giá sau nến xác nhận
+4. Stop trên R1, TP tại PP
 
-**Tại sao không đặt đúng S1?** Vì spread. Nếu đặt đúng 128,000 và ask đang 128,100 → không khớp. Cần cho 1 khoảng nhỏ.
-
-### Entry Long tại PP từ dưới lên
-
-Khi giá từ dưới PP **vượt lên trên PP** — đây là tín hiệu chuyển xu hướng trong ngày.
-
-**Cách đặt:**
-```
-Chờ nến 15m đóng cửa trên PP
-LO mua tại PP + 1 spread
-Stop: dưới PP 1%
-TP: R1
-```
-
-### Entry Short tại R1
-
-**Điều kiện cần:**
-- Giá chạm R1
-- RSI > 70 hoặc có bearish divergence
-- Nến xác nhận: shooting star, bearish engulfing, bấc trên dài
-- Volume thấp hoặc bình thường
-
-**Cách đặt lệnh:**
-```
-LO bán tại: R1 hoặc thấp hơn 0.2-0.5%
-Ví dụ: R1 = 132,000 → LO bán 131,800
-```
+**Stop entry cho breakout:**
+1. R1 = 28.700, volume TB 20 = 5 triệu
+2. Đặt buy stop tại 28.800 (phá R1)
+3. Stop loss tại 28.200 (gần PP)
+4. TP tại R2
 
 ---
 
-## 3. Mẹo Vào Lệnh Thực Chiến
+## Mẹo thực chiến
 
-### Mẹo 1: Chia lệnh làm 2 phần
+Nếu đặt limit ở pivot và không khớp → giá có thể chạm xong quay đầu hoặc chạy luôn. Không sao — còn cơ hội khác.
 
-Đừng vào tất tay tại 1 mức.
+Nhiều nến nhỏ quanh pivot = do dự. Chờ đến ATC cho quyết định.
 
-```
-Thay vì mua 2,000 FPT tại S1:
-→ Mua 1,000 tại S1
-→ Mua thêm 1,000 nếu giá bật lên xác nhận
-```
+Volume tăng đột biến khi chạm pivot → big money đang làm gì đó. Theo dõi nhưng chưa vội vào.
 
-### Mẹo 2: Canh theo spread
-
-Xem spread Bid/Ask trước khi vào lệnh.
-
-- Spread hẹp (100-300đ): LO gần pivot OK
-- Spread rộng (>500đ): đặt LO thấp hơn hoặc dùng MP nếu cần gấp
-
-### Mẹo 3: Tránh 15 phút đầu và cuối
-
-- **9:00-9:15** (ATO) — giá chưa ổn định
-- **14:30-14:45** (ATC) — biến động mạnh, fakeout nhiều
-- Thời gian tốt nhất: 9:30-11:00 và 13:30-14:00
-
-### Mẹo 4: Luôn có stop loss trước khi vào
-
-Đây là rule bất di bất dịch. Đặt stop loss **ngay khi đặt lệnh entry**, không chờ "xem sao".
+Với cổ phiếu spread rộng (>0.5%): dùng limit entry. MP sẽ bị trượt giá.
 
 ---
 
-## 4. Ví Dụ Entry Hoàn Chỉnh
+## Ví dụ entry hoàn chỉnh
 
-### Case: FPT Daily
+**MWG — limit entry tại S1:**
+MWG hôm nay: PP = 56.000, R1 = 57.500, S1 = 54.500. AVG volume = 2 triệu. Xu hướng daily: giá đang từ trên xuống.
 
-```
-Thông số:
-- PP = 130,000
-- R1 = 132,000
-- S1 = 128,000
-- RSI = 28 (oversold tại S1)
-- Volume: 1.5x TB
-- Nến hôm qua: hammer tại 128,000
-```
+Kế hoạch: LO mua 5.000 cổ tại 54.500 (S1). Stop: 53.500 (dưới S1 1.8%). TP1: 56.000 (PP), TP2: 57.500 (R1).
 
-**Kế hoạch:**
-```
-Entry: LO mua 1,000 FPT giá 128,200
-Stop loss: 126,500 (dưới S1 ~1.2%)
-Take profit 1: 130,000 (PP) — 50%
-Take profit 2: 132,000 (R1) — 50%
-RR: 1,800 (SL) so với 3,800 (avg TP) → ~1:2.1
-```
-
-**Kịch bản:**
-```
-9:30 — Giá xuống 128,100 → lệnh khớp
-9:45 — Giá bật lên 129,000 → kéo SL lên 128,000 (breakeven)
-10:30 — Giá lên 130,000 → chốt 500cp, kéo SL cho 500cp còn lại lên 129,500
-11:30 — Giá lên 131,500 → chốt 500cp còn lại
-```
+Kết quả: giá chạm 54.500, volume 3.2 triệu (1.6x TB), nến hammer. Lệnh khớp 5.000 cổ. 2 ngày sau giá lên 56.500 — chốt lời TP1.
 
 ---
 
-## 5. Những Sai Lầm Entry Cần Tránh
+## Sai lầm cần tránh
 
-### Sai lầm 1: FOMO — đuổi theo giá đã chạy xa pivot
-```
-FPT từ 128,000 (S1) đã lên 131,000
-→ "Chết, lỡ mất" → mua đuổi 131,000
-→ Lợi nhuận còn 1,000 thay vì 3,000
-→ Stop loss gần hơn → dễ bị quét
-```
+Không có kế hoạch trước khi vào: biết stop ở đâu, TP ở đâu, vào bao nhiêu.
 
-### Sai lầm 2: Không kiểm tra spread
-```
-Đặt LO mua đúng S1 = 50,000
-Nhưng bid đang 50,000, ask 50,500 (spread 500đ)
-→ Không khớp → bỏ lỡ cơ hội
-```
+Vào lệnh bằng MP khi spread rộng: mất 0.5-1% ngay lúc vào.
 
-### Sai lầm 3: Vào lệnh khi chưa có nến xác nhận
-```
-Giá vừa chạm S1 → mua ngay
-→ Chưa biết có bật lên không
-→ Giá thủng S1 → lỗ ngay
-```
+Vào lệnh khi chưa có xác nhận nào: pivot một mình chưa đủ.
 
-**Luật: Chờ 1 nến xác nhận. Chỉ 1 nến — không nhiều hơn.**
+Canh pivot quá xa trong ngày: pivot daily không còn giá trị khi chỉ còn 30 phút đóng cửa.
 
 ---
 
-## 🎯 Kết Luận
+Có 3 cách entry: limit (canh sẵn), market (sau xác nhận), stop (bắt breakout). Chọn cách phù hợp với chiến lược. Luôn có stop và TP trước khi vào.
 
-**Các bước vào lệnh tại pivot:**
-1. Xác định pivot (daily/weekly)
-2. Kiểm tra điều kiện (RSI, volume, nến)
-3. Chọn cách vào (chờ sẵn / chờ breakout / chờ phản ứng)
-4. Đặt LO với khoảng spread
-5. Đặt stop loss NGAY LẬP TỨC
-6. Chia lệnh nếu cần (thêm sau khi xác nhận)
-
----
-
-**Bài tập nhỏ:**
-Với HPG:
-- PP = 28,000, R1 = 29,200, S1 = 26,800
-- RSI = 25
-- Volume tuần trước: 4.5M TB
-
-Viết kế hoạch entry HOÀN CHỈNH:
-1. Entry ở đâu? LO giá bao nhiêu?
-2. Stop loss ở đâu?
-3. Take profit ở đâu?
-4. Nếu giá không chạm — làm gì?
-
-Bài sau: Stop loss cho pivot trade.
-
-— BG 🏠
+Bài 35: Vào Lệnh Tại Pivot
