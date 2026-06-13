@@ -17,6 +17,8 @@
   var grid = document.getElementById("game-grid");
   var topGames = document.getElementById("top-games");
   var newGames = document.getElementById("new-games");
+  var main = document.querySelector("main");
+  var featuredShelves = document.querySelectorAll(".store-shelf");
   var filters = document.getElementById("category-filters");
   var search = document.getElementById("game-search");
   var count = document.getElementById("game-count");
@@ -97,11 +99,19 @@
 
   function renderGames() {
     var visible = getVisibleGames();
+    var searching = Boolean(state.query.trim());
+    main.classList.toggle("is-searching", searching);
+    featuredShelves.forEach(function (shelf) {
+      shelf.hidden = searching;
+    });
+    filters.hidden = searching;
     grid.innerHTML = visible.map(gameCard).join("");
     count.textContent = visible.length + " trò chơi";
-    document.getElementById("library-title").textContent = state.badge === "top"
-      ? "Game được chơi nhiều"
-      : state.badge === "new" ? "Game vừa cập nhật" : "Tất cả trò chơi";
+    document.getElementById("library-title").textContent = searching
+      ? 'Kết quả cho “' + state.query.trim() + '”'
+      : state.badge === "top"
+        ? "Game được chơi nhiều"
+        : state.badge === "new" ? "Game vừa cập nhật" : "Tất cả trò chơi";
     empty.hidden = visible.length !== 0;
   }
 
@@ -405,6 +415,10 @@
   search.addEventListener("input", function () {
     state.query = search.value;
     state.badge = null;
+    if (state.query.trim()) {
+      state.category = "Tất cả";
+      renderFilters();
+    }
     renderGames();
   });
 
