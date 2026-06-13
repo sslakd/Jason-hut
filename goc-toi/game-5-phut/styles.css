@@ -1865,7 +1865,13 @@ body.playing { overflow: hidden; }
   .card-game,
   .quan-game { padding: 10px; }
   .escape-board { width: min(100%, 50vh); }
-  .escape-exit { right: -50px; font-size: 9px; }
+  .escape-exit {
+    right: 8px;
+    padding: 3px 6px;
+    border-radius: 999px;
+    background: rgba(247, 251, 245, .9);
+    font-size: 9px;
+  }
   .mini-panel { align-items: flex-start; flex-direction: column; }
   .mini-panel div { display: none; width: 100%; }
   .mini-panel .mini-control { flex: 1; }
@@ -1889,6 +1895,85 @@ body.playing { overflow: hidden; }
     width: 100%;
     padding: 25px 20px max(20px, env(safe-area-inset-bottom));
   }
+}
+
+@media (max-height: 500px) {
+  .play-screen {
+    padding-top: max(5px, env(safe-area-inset-top));
+    padding-bottom: max(5px, env(safe-area-inset-bottom));
+  }
+
+  .play-topbar {
+    padding: 0 0 5px;
+    grid-template-columns: 36px 1fr 36px;
+  }
+
+  .play-control {
+    width: 36px;
+    height: 36px;
+  }
+
+  .play-meta strong { font-size: 12px; }
+  .play-meta span { margin-top: 0; font-size: 9px; }
+
+  .game-board {
+    min-height: 0;
+    border-radius: 18px;
+  }
+
+  .play-message { padding-top: 5px; }
+  .play-message .button { min-height: 34px; padding-block: 7px; }
+
+  .escape-wrap,
+  .sort-game,
+  .card-game,
+  .quan-game { padding: 6px; }
+
+  .game-caro,
+  .game-number-slide,
+  .game-memory,
+  .game-slide-puzzle,
+  .game-maze-paint,
+  .game-color-fill,
+  .game-word-grid,
+  .game-merge-grid,
+  .game-number-connect,
+  .game-color-connect,
+  .game-sudoku-grid,
+  .game-mines {
+    width: min(68dvh, 100%);
+  }
+
+  .escape-board { width: min(58dvh, 100%); }
+  .game-connect-four { width: min(80dvh, 100%); }
+  .game-color-blocks { width: min(58dvh, 100%); }
+  .game-fruit-merge { width: min(48dvh, 100%); }
+  .game-block-fill { width: min(54dvh, 100%); }
+
+  .game-word-list,
+  .game-merge-head,
+  .game-connect-head,
+  .game-sudoku-head,
+  .game-fruit-next { top: 5px; }
+
+  .game-sudoku-pad,
+  .game-block-fill__tray { bottom: 5px; }
+
+  .game-sudoku-pad button { min-height: 32px; }
+  .game-block-fill__tray { min-height: 42px; }
+  .game-block-fill__piece {
+    width: calc(var(--piece-cols) * 15px);
+    height: calc(var(--piece-rows) * 15px);
+    grid-template-columns: repeat(var(--piece-cols), 15px);
+    grid-template-rows: repeat(var(--piece-rows), 15px);
+  }
+
+  .card-game { gap: 6px; }
+  .ai-hand { min-height: 42px; }
+  .draw-pile,
+  .discard-card,
+  .color-card { width: 54px; height: 76px; }
+  .player-hand { min-height: 64px; }
 }
 
 @media (pointer: coarse) {
