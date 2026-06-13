@@ -11,23 +11,72 @@
     ];
     var words = wordSets[(options.level - 1) % wordSets.length].slice();
     var fillers = "AEOINMTRSLGHUBCDPVY";
-    var board = Array(size * size).fill("");
+    var board;
     var found = new Set();
-    var placements = [
-      [0, 0, 0, 1],
-      [size - 1, 0, 0, 1],
-      [1, size - 1, 1, 0],
-      [size - 2, size - 1, -1, -1]
+    var placements;
+    var directions = [
+      [-1, -1], [-1, 0], [-1, 1],
+      [0, -1], [0, 1],
+      [1, -1], [1, 0], [1, 1]
     ];
 
-    words.forEach(function (word, wordIndex) {
-      var slot = placements[wordIndex];
-      word.split("").forEach(function (letter, index) {
-        board[(slot[0] + slot[2] * index) * size + slot[1] + slot[3] * index] = letter;
+    function shuffle(items) {
+      for (var index = items.length - 1; index > 0; index -= 1) {
+        var swapIndex = Math.floor(Math.random() * (index + 1));
+        var value = items[index];
+        items[index] = items[swapIndex];
+        items[swapIndex] = value;
+      }
+      return items;
+    }
+
+    function candidateCells(word, row, col, rowStep, colStep) {
+      var endRow = row + rowStep * (word.length - 1);
+      var endCol = col + colStep * (word.length - 1);
+      if (endRow < 0 || endRow >= size || endCol < 0 || endCol >= size) return null;
+      return word.split("").map(function (_, letterIndex) {
+        return (row + rowStep * letterIndex) * size + col + colStep * letterIndex;
       });
-    });
-    board = board.map(function (letter, index) {
-      return letter || fillers[(index * 7 + options.level * 3) % fillers.length];
+    }
+
+    function placeWords() {
+      for (var attempt = 0; attempt < 80; attempt += 1) {
+        var nextBoard = Array(size * size).fill("");
+        var nextPlacements = [];
+        var placedAll = words.every(function (word) {
+          var candidates = [];
+          for (var row = 0; row < size; row += 1) {
+            for (var col = 0; col < size; col += 1) {
+              directions.forEach(function (direction) {
+                var cells = candidateCells(word, row, col, direction[0], direction[1]);
+                if (cells) candidates.push(cells);
+              });
+            }
+          }
+          var placement = shuffle(candidates).find(function (cells) {
+            return cells.every(function (cell, letterIndex) {
+              return !nextBoard[cell] || nextBoard[cell] === word[letterIndex];
+            });
+          });
+          if (!placement) return false;
+          placement.forEach(function (cell, letterIndex) {
+            nextBoard[cell] = word[letterIndex];
+          });
+          nextPlacements.push(placement);
+          return true;
+        });
+        if (placedAll) {
+          board = nextBoard;
+          placements = nextPlacements;
+          return;
+        }
+      }
+      throw new Error("Không thể tạo bảng tìm từ hợp lệ.");
+    }
+
+    placeWords();
+    board = board.map(function (letter) {
+      return letter || fillers[Math.floor(Math.random() * fillers.length)];
     });
 
     function lineBetween(start, end) {
@@ -48,16 +97,21 @@
 
     function select(start, end) {
       var cells = lineBetween(start, end);
-      var text = cells.map(function (index) { return board[index]; }).join("");
-      var match = words.find(function (word) {
-        return !found.has(word) && (word === text || word === text.split("").reverse().join(""));
+      var matchIndex = placements.findIndex(function (placement, wordIndex) {
+        if (found.has(words[wordIndex]) || placement.length !== cells.length) return false;
+        var forward = placement.every(function (cell, index) { return cell === cells[index]; });
+        var reverse = placement.every(function (cell, index) {
+          return cell === cells[cells.length - 1 - index];
+        });
+        return forward || reverse;
       });
-      if (!match) {
+      if (matchIndex < 0) {
         root.classList.remove("game-shake");
         root.offsetWidth;
         root.classList.add("game-shake");
         return;
       }
+      var match = words[matchIndex];
       found.add(match);
       window.GameAudio.open();
       render();
@@ -68,9 +122,8 @@
       var foundCells = new Set();
       words.forEach(function (word, wordIndex) {
         if (!found.has(word)) return;
-        var slot = placements[wordIndex];
-        word.split("").forEach(function (_, index) {
-          foundCells.add((slot[0] + slot[2] * index) * size + slot[1] + slot[3] * index);
+        placements[wordIndex].forEach(function (cell) {
+          foundCells.add(cell);
         });
       });
       window.GamePlatform.motion.render(root,
