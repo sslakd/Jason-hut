@@ -13,6 +13,7 @@
     result: null
   };
   var activeGame = null;
+  var playHistoryLocked = false;
 
   var grid = document.getElementById("game-grid");
   var topGames = document.getElementById("top-games");
@@ -249,6 +250,10 @@
     playScreen.classList.add("active");
     playScreen.setAttribute("aria-hidden", "false");
     document.body.classList.add("playing");
+    if (!playHistoryLocked) {
+      history.pushState({ game5phutPlay: true }, "", location.href);
+      playHistoryLocked = true;
+    }
     mountCurrentGame();
     window.GameAudio.tap();
   }
@@ -316,9 +321,23 @@
     playScreen.classList.remove("active");
     playScreen.setAttribute("aria-hidden", "true");
     document.body.classList.remove("playing");
+    if (playHistoryLocked) {
+      playHistoryLocked = false;
+      if (history.state && history.state.game5phutPlay) history.back();
+    }
     state.paused = false;
     document.querySelector("#pause-play i").className = "fa-solid fa-pause";
   }
+
+  window.addEventListener("popstate", function () {
+    if (!document.body.classList.contains("playing")) return;
+    history.pushState({ game5phutPlay: true }, "", location.href);
+    playHistoryLocked = true;
+  });
+
+  playScreen.addEventListener("touchmove", function (event) {
+    if (document.body.classList.contains("playing")) event.preventDefault();
+  }, { passive: false });
 
   function showResult(type, detail) {
     state.result = type;

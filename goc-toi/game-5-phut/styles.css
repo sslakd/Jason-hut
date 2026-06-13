@@ -1150,17 +1150,55 @@ footer {
 .game-connect-four__disc--p1 { background: #d7a959; }
 .game-connect-four__disc--p2 { background: #d8736c; }
 
-.game-number-slide { grid-template-columns: repeat(4, 1fr); }
-.game-number-slide__cell { font-size: clamp(17px, 6vw, 28px); background: #e5eee2; }
-.game-number-slide__cell--n2 { background: #e7f0e3; }
-.game-number-slide__cell--n4 { background: #d7e8d3; }
-.game-number-slide__cell--n8 { background: #f0dfbd; }
-.game-number-slide__cell--n16 { background: #eacb9d; }
-.game-number-slide__cell--n32 { background: #e3ab83; }
-.game-number-slide__cell--n64 { color: white; background: #ce7c67; }
-.game-number-slide__cell--n128,
-.game-number-slide__cell--n256,
-.game-number-slide__cell--n512 { color: white; background: var(--brand-strong); }
+.game-number-slide {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+}
+
+.game-number-slide__cell {
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 16px;
+  background: #dce7d9;
+}
+
+.game-number-slide__tile {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  border-radius: 16px;
+  color: var(--brand-deep);
+  background: #e7f0e3;
+  font-size: clamp(17px, 6vw, 28px);
+  font-weight: 700;
+  will-change: transform, opacity;
+}
+
+.game-number-slide__tile--n4 { background: #d7e8d3; }
+.game-number-slide__tile--n8 { background: #f0dfbd; }
+.game-number-slide__tile--n16 { background: #eacb9d; }
+.game-number-slide__tile--n32 { background: #e3ab83; }
+.game-number-slide__tile--n64 { color: white; background: #ce7c67; }
+.game-number-slide__tile--n128,
+.game-number-slide__tile--n256,
+.game-number-slide__tile--n512,
+.game-number-slide__tile--n1024,
+.game-number-slide__tile--n2048 { color: white; background: var(--brand-strong); }
+.game-number-slide__tile.is-merged { animation: number-merge-pop .2s ease; }
+.game-number-slide__tile.is-new { animation: number-spawn .18s ease; }
+
+@keyframes number-merge-pop {
+  50% { transform: scale(1.13); }
+}
+
+@keyframes number-spawn {
+  from { opacity: 0; transform: scale(.65); }
+}
 
 .game-mines {
   display: grid;
@@ -1748,6 +1786,10 @@ footer {
 }
 
 body.playing { overflow: hidden; }
+html:has(body.playing),
+body.playing {
+  overscroll-behavior-x: none;
+}
 
 @keyframes fade-in {
   from { opacity: 0; }
