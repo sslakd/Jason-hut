@@ -23,4 +23,9 @@ Object.entries(manifest.games).forEach(([gameId, roles]) => {
   });
 });
 
+assert.equal(manifest.games["ghep-trai-cay"].fruits.length, 9);
+manifest.games["ghep-trai-cay"].fruits.forEach((fruitPath) => {
+  assert.ok(fs.existsSync(path.join(base, fruitPath.replace("./", ""))), `${fruitPath} không tồn tại`);
+});
+
 console.log("asset manifest: ok");

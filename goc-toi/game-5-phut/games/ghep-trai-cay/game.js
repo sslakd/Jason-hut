@@ -4,11 +4,20 @@
   window.GamePlatform.register("ghep-trai-cay", function (root, options) {
     var rows = 7;
     var cols = 5;
-    var board = Array(rows * cols).fill(0);
+    var board = Array(rows * cols).fill(null);
     var nextFruit = 1;
+    var nextId = 1;
     var score = 0;
     var drops = 0;
     var ended = false;
+    var busy = false;
+    var droppingId = null;
+    var mergedId = null;
+    var assets = window.GAME_ASSETS && window.GAME_ASSETS.games["ghep-trai-cay"];
+    var fruitImages = assets && assets.fruits || [];
+    var fruitNames = assets && assets.fruitNames || [
+      "Nho", "Chôm chôm", "Nhãn", "Cam", "Táo", "Ổi", "Dưa lưới", "Dưa hấu", "Mít"
+    ];
 
     function difficulty() {
       return options.getEndlessDifficulty(drops);
@@ -16,46 +25,56 @@
 
     function index(row, col) { return row * cols + col; }
 
-    function mergeAt(row, col) {
-      var value = board[index(row, col)];
-      var matches = [[row + 1, col], [row, col - 1], [row, col + 1]].filter(function (cell) {
+    function locationOf(tileId) {
+      var cell = board.findIndex(function (tile) { return tile && tile.id === tileId; });
+      return cell < 0 ? null : [Math.floor(cell / cols), cell % cols];
+    }
+
+    function findMatch(row, col) {
+      var tile = board[index(row, col)];
+      if (!tile) return null;
+      return [[row + 1, col], [row, col - 1], [row, col + 1]].find(function (cell) {
         return cell[0] >= 0 && cell[0] < rows && cell[1] >= 0 && cell[1] < cols &&
-          board[index(cell[0], cell[1])] === value;
+          board[index(cell[0], cell[1])] &&
+          board[index(cell[0], cell[1])].value === tile.value;
       });
-      if (!matches.length) return;
-      var match = matches[0];
-      board[index(match[0], match[1])] = 0;
-      board[index(row, col)] = Math.min(6, value + 1);
-      score += Math.pow(2, value);
+    }
+
+    function mergeStep(tileId) {
+      var location = locationOf(tileId);
+      if (!location) return finishTurn();
+      var row = location[0];
+      var col = location[1];
+      var tile = board[index(row, col)];
+      var match = findMatch(row, col);
+      if (!match) return finishTurn();
+
+      board[index(match[0], match[1])] = null;
+      tile.value = Math.min(9, tile.value + 1);
+      score += Math.pow(2, tile.value - 1);
       collapse();
-      var newRow = -1;
-      for (var scan = rows - 1; scan >= 0; scan -= 1) {
-        if (board[index(scan, col)] === Math.min(6, value + 1)) { newRow = scan; break; }
-      }
-      if (newRow >= 0 && value < 6) mergeAt(newRow, col);
+      mergedId = tileId;
+      window.GameAudio.open();
+      render();
+      options.runtime.timeout(function () { mergeStep(tileId); }, 230);
     }
 
     function collapse() {
       for (var col = 0; col < cols; col += 1) {
-        var values = [];
+        var fruits = [];
         for (var row = rows - 1; row >= 0; row -= 1) {
-          if (board[index(row, col)]) values.push(board[index(row, col)]);
+          if (board[index(row, col)]) fruits.push(board[index(row, col)]);
         }
-        for (row = rows - 1; row >= 0; row -= 1) board[index(row, col)] = values[rows - 1 - row] || 0;
+        for (row = rows - 1; row >= 0; row -= 1) {
+          board[index(row, col)] = fruits[rows - 1 - row] || null;
+        }
       }
     }
 
-    function drop(col) {
-      if (ended) return;
-      var row;
-      for (row = rows - 1; row >= 0 && board[index(row, col)]; row -= 1) {}
-      if (row < 0) return;
-      board[index(row, col)] = nextFruit;
-      drops += 1;
-      nextFruit = Math.random() < Math.min(.9, .7 + difficulty().factor * .07) ? 1 : 2;
-      mergeAt(row, col);
-      collapse();
-      window.GameAudio.tap();
+    function finishTurn() {
+      busy = false;
+      droppingId = null;
+      mergedId = null;
       render();
       if (board.slice(0, cols).every(Boolean)) {
         ended = true;
@@ -63,21 +82,52 @@
       }
     }
 
+    function drop(col) {
+      if (ended || busy) return;
+      var row;
+      for (row = rows - 1; row >= 0 && board[index(row, col)]; row -= 1) {}
+      if (row < 0) return;
+      var tile = { id: nextId++, value: nextFruit };
+      board[index(row, col)] = tile;
+      busy = true;
+      droppingId = tile.id;
+      drops += 1;
+      nextFruit = Math.random() < Math.min(.9, .7 + difficulty().factor * .07) ? 1 : 2;
+      window.GameAudio.tap();
+      render();
+      options.runtime.timeout(function () {
+        droppingId = null;
+        mergeStep(tile.id);
+      }, 320);
+    }
+
+    function fruitHtml(value, tileId) {
+      var src = fruitImages[value - 1] || "";
+      var name = fruitNames[value - 1] || "Trái cây";
+      return '<img class="game-fruit game-fruit--' + value +
+        (tileId === droppingId ? " is-dropping" : "") +
+        (tileId === mergedId ? " is-merged" : "") +
+        '" src="' + src + '" alt="' + name + '" draggable="false">';
+    }
+
     function render() {
       window.GamePlatform.motion.render(root, '<div class="game-live-score" aria-live="polite">Điểm ' + score +
-        ' · Nhịp ' + difficulty().stage + '</div><div class="game-fruit-next">Tiếp theo: <i class="game-fruit game-fruit--' +
-        nextFruit + '"></i></div><div class="game-fruit-merge">' + board.map(function (value, cell) {
+        ' · Nhịp ' + difficulty().stage + '</div><div class="game-fruit-next">Tiếp theo: ' +
+        fruitHtml(nextFruit, null) + '<strong>' + fruitNames[nextFruit - 1] +
+        '</strong></div><div class="game-fruit-merge">' + board.map(function (tile, cell) {
         return '<button data-fruit-column="' + (cell % cols) + '" data-motion-key="fruit-cell-' + cell +
-          '" data-motion-state="' + value + '" class="game-fruit-merge__cell">' +
-          (value ? '<i class="game-fruit game-fruit--' + value + '"></i>' : "") + "</button>";
-      }).join("") + "</div>", { duration: 200 });
+          '" class="game-fruit-merge__cell">' +
+          (tile ? '<span data-motion-key="fruit-' + tile.id + '" data-motion-state="' + tile.value +
+            '">' + fruitHtml(tile.value, tile.id) + "</span>" : "") + "</button>";
+      }).join("") + "</div>", { duration: 260 });
+      mergedId = null;
     }
 
     options.runtime.listen(root, "click", function (event) {
       var cell = event.target.closest("[data-fruit-column]");
       if (cell) drop(Number(cell.dataset.fruitColumn));
     });
-    options.onHint("Ghép càng lâu, tỉ lệ trái nhỏ sẽ tăng và hộp khó dọn hơn.");
+    options.onHint("Thả hai trái giống nhau cạnh nhau để ghép từ nho nhỏ tới quả mít.");
     render();
     return {};
   });
