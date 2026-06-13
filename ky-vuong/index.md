@@ -18,9 +18,9 @@ Buổi chiều hôm đó, một điều khác thường đã xảy ra. Nó khôn
 
 Ở vỉa hè đối diện, dưới gốc cây me già, hai ông già đang chơi một thứ trò chơi trên một tấm bảng bằng gỗ. Từ chỗ Thiên ngồi, nó chỉ thấy lưng họ, thấy những cánh tay chìa ra, những bàn tay cầm những miếng gỗ tròn đặt xuống, thấy những khuôn mặt cau có, hí hoáy, rồi lại giãn ra. Có một đám người đứng xem, người thì chống nạnh, người thì gật gù, người thì lắc đầu, tất cả như bị một thứ ma lực nào đó hút vào tấm bảng nhỏ bé kia.
 
-Thiên đứng dậy. Không phải vì nó muốn. Mà vì chân nó tự động kéo nó qua đường. Nó len qua đám đông. Có tiếng ai đó làu bàu vì bị chen, nhưng Thiên không quan tâm. Nó đứng sau lưng hai ông già, mắt nhìn vào bàn cờ lần đầu tiên trong đời và bộ não của nó bắt đầu làm việc. Ba mươi hai quân. Hai màu. Một bàn cờ chín đường dọc, mười đường ngang. Chỉ với một ánh nhìn, ngay lập tức, những tấm hình chụp từng vị trí, từng quân, từng hướng di chuyển tiềm năng bắt đầu xếp chồng lên nhau trong đầu nó. Nó chưa biết tên từng quân. Nó chưa biết luật. Nhưng nó thấy những quy tắc ẩn sau mỗi nước đi — cái cách con quân hình chóp nhỏ trắng chỉ di chuyển về phía trước một ô, cái cách con quân có mũi tên dài trên đầu bay thẳng từ đầu này sang đầu kia, cái cách con quân tròn to nhất cứ ở lì trong một khu vực bốn ô ở giữa.
+Thiên đứng dậy. Không phải vì nó muốn. Mà vì chân nó tự động kéo nó qua đường. Nó len qua đám đông. Có tiếng ai đó làu bàu vì bị chen, nhưng Thiên không quan tâm. Nó đứng sau lưng hai ông già, mắt nhìn vào bàn cờ lần đầu tiên trong đời và bộ não của nó bắt đầu làm việc. Ba mươi hai quân. Hai màu đỏ và đen. Một bàn cờ chín đường dọc, mười đường ngang, ở giữa có một khoảng trống không có ô — con sông, nhưng nó chưa biết gọi là gì. Chỉ với một ánh nhìn, ngay lập tức, những mảnh ghép về từng vị trí, từng quân, từng hướng di chuyển tiềm năng bắt đầu xếp chồng lên nhau trong đầu nó. Nó không biết quân nào tên gì — trên mỗi miếng gỗ tròn chỉ có những nét chữ nó không đọc được. Nhưng nó thấy những quy tắc ẩn sau mỗi nước đi — cái cách mấy con quân nhỏ ở hàng đầu tiên mỗi bên chỉ đi lên từng ô một, cái cách con quân ở hai góc bàn phóng thẳng suốt dọc suốt ngang không ai cản nổi, cái cách con quân ở giữa hàng cuối — to nhất, ở chính giữa — chỉ loanh quanh trong khu vực chín ô chứ không ra ngoài.
 
-Nó không biết luật. Nhưng nó đã suy ra — từ cách người ta chơi. Một quân Tốt — Thiên gọi nó trong đầu là quân lính — đang đứng ở cuối bàn. Nếu nó lên một ô, nó sẽ chết. Nhưng cái chết đó sẽ mở đường cho quân cái có mũi tên dài — Xe, nó sẽ biết tên sau này. Con Xe sẽ vô chiếu, bắt một quân khác, và từ đó — kết thúc.
+Nó không biết luật. Nhưng nó đã suy ra — từ cách người ta chơi. Một con quân nhỏ ở hàng đầu — Thiên gọi nó trong đầu là quân lính — đang đứng ở cuối bàn, chỉ còn cách hàng cuối của đối phương đúng một ô. Nếu nó lên ô đó, nó sẽ chết. Nhưng cái chết đó sẽ mở đường cho con quân ở góc bàn bên kia — con quân đi xa nhất, phóng thẳng suốt bàn cờ — nó sẽ vô, bắt quân ở cuối hàng đối thủ, và mở toang cánh cửa vào khu vực chín ô ở giữa hàng cuối. Từ đó — kết thúc.
 
 Thiên thấy toàn bộ chuỗi đó trong một tíc tắc. Có những người gọi đó là thiên tài. Thiên gọi nó là: thói quen. Năm năm nhìn xe cộ — và dự đoán. Bàn cờ cũng không khác. Chỉ là những chiếc xe chạy theo những hướng cố định hơn, quy tắc rõ ràng hơn.
 
@@ -38,9 +38,9 @@ Thiên lắc đầu.
 
 — Sao kêu đi Tốt?
 
-Thiên chỉ tay lên bàn. Những ngón tay gầy, lấm bụi đường:
+Thiên chỉ tay lên bàn, những ngón tay gầy lấm bụi đường lướt qua từng quân cờ mà nó gọi không tên:
 
-— Cháu suy ra. Nếu Tốt lên một ô — nó chết. Con ngựa trắng ở ô D4 — cháu không biết tên, nhưng cháu thấy nó có thể nhảy theo đường chéo mở — nó sẽ nhảy lên một ô, không, hai ô, và mất đường, nhưng không sao, vì sau đó con xe này — cháu thấy nó có thể đi xa nhất — nó sẽ vô, bắt con quân ở cuối. Rồi con pháo kia — cái bệnh xa, cháu thấy nó đang ở góc, nó có thể nhảy qua một quân — nó sẽ nhảy qua con Tốt vừa chết, và chiếu. Hết.
+— Cháu suy ra. Con quân này ở cuối bàn — nếu nó lên một ô nữa, nó chết. Nhưng nó chết thì mở đường cho con quân ở góc bàn bên kia — con đi thẳng suốt dọc suốt ngang — nó sẽ phóng xuống, ăn con quân đang chặn ở cuối. Rồi con quân này ở góc đối diện — cháu thấy nó cũng đi dọc ngang như con kia, nhưng khi ăn thì phải nhảy qua đúng một quân — nó sẽ nhảy qua con quân vừa chết, và chiếu thẳng vào ô ở giữa hàng cuối. Hết.
 
 Cả đám im lặng. Một thằng nhỏ không biết đọc, không biết viết, chưa thấy cờ bao giờ — vừa nhìn một bàn cờ và suy ngược ra chiến thuật.
 
