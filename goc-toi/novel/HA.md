@@ -1,123 +1,133 @@
 # HẠ
 
-Sinh vào một trưa hè, nắng gắt, khi mặt đất nứt nẻ và con ve đầu mùa cất tiếng gọi bạn tình. Có lẽ vì thế mà tôi nóng vội. Và có lẽ vì thế mà tôi yêu như một cơn sốt — nhanh, mạnh, và thiêu đốt tất cả.
+*Bà ngoại bảo tôi sinh vào một trưa hè, nắng gắt đến nỗi cây me trước nhà héo cả lá. Mẹ tôi suýt không qua khỏi vì mất máu. Bà ngoại bảo: "Con nhỏ này sau này khó nuôi." Và bà đã đúng. Tôi lớn lên như một cơn giông — đến nhanh, mạnh, và không bao giờ xin phép ai.*
 
 ---
 
-Tôi và Thu vào công ty cùng một ngày.
+Tôi yêu Xuân.
 
-Cùng fresher, cùng phân về một team, cùng bàn, cùng phòng. Nó là đứa bạn thân đầu tiên của tôi ở chỗ làm mới. Hiền, ít nói, hay nhìn mưa. Lúc đó tôi nghĩ — may quá, gặp được đứa bạn tử tế.
+Không phải kiểu yêu thầm lặng lẽ như trong tiểu thuyết con con. Mà là kiểu yêu như lao đầu vào lửa — biết là đau, nhưng không thể không lao. Từ ngày đầu tiên bước vào cái văn phòng chật chội đó, tôi đã nhìn thấy anh ngồi cuối dãy bàn, tay gõ bàn phím, mắt nhìn màn hình, và tôi biết — mình sẽ không bỏ cuộc.
 
-Tôi không biết rằng chính nó sẽ là người làm tôi đau nhất.
+Trong tình yêu, có hai loại người: người chờ được yêu, và người đi giành lấy tình yêu. Tôi thuộc loại thứ hai.
 
----
+Tôi không ngồi im chờ anh để ý. Tôi đến gần. Tôi hỏi bài dù biết câu trả lời. Tôi cười với anh mỗi khi có cơ hội. Tôi mặc những chiếc áo mà tôi biết là anh sẽ nhìn.
 
-Tôi thích Xuân từ ngày đầu tiên.
-
-Lúc đó tôi không biết đó là thích. Tôi chỉ thấy có một người đàn ông ngồi cuối dãy bàn, tay gõ bàn phím, thi thoảng ngước lên cười với cả team. Nụ cười của anh ấy làm tôi muốn nhìn thêm lần nữa.
-
-Tôi tập cho mình thói quen — mỗi sáng bước vào phòng, mắt tìm anh trước khi tìm chỗ ngồi. Mỗi lần anh đi ngang bàn tôi, tôi ngước lên, hy vọng anh nhìn tôi.
-
-Đôi khi anh nhìn. Đôi khi không. Nhưng lúc nào tôi cũng chờ.
+Anh nhìn thật. Nhưng anh nhìn Thu.
 
 ---
 
-Tôi để ý thấy có một ly trà đào trên bàn Thu mỗi sáng.
-
-Lúc đầu tôi không nghĩ gì. Có thể nó tự pha. Nhưng rồi tôi thấy nó không bao giờ pha — nó chỉ đến, ngồi xuống, và ly trà đã ở đó.
-
-Tôi hỏi nó: "Ai pha cho mày vậy?"
-
-Nó nhún vai: "Không biết."
-
-Nhưng mắt nó — tôi thấy nó biết. Nó chỉ không nói.
-
-Và khi tôi nhìn thấy Xuân đi ra từ phòng trà, tay cầm một ly trà đào, đặt lên bàn Thu, tôi hiểu ra tất cả.
-
-Tôi đứng sau cánh cửa, nhìn anh làm điều đó. Nhẹ nhàng. Dứt khoát. Như thể đó là điều hiển nhiên nhất trên đời.
-
-Tôi không biết mình đứng đó bao lâu. Chỉ biết khi tôi quay vào, tay tôi lạnh ngắt.
-
----
-
-Tôi bắt đầu để ý những điều khác.
-
-Ánh mắt anh nhìn Thu. Cái cách anh kéo ghế ngồi cạnh nó. Cái cách anh nói chuyện với nó nhẹ nhàng hơn bất kỳ ai trong phòng.
-
-Tôi muốn tin rằng anh đối xử với tất cả mọi người như thế. Nhưng tôi biết mình đang tự dối lòng.
-
-Một lần, tôi thấy cuốn sổ của anh mở trên bàn. Một dòng chữ:
+Tôi không ngu. Tôi thấy ly trà đào trên bàn nó mỗi sáng. Tôi thấy cách anh kéo ghế ngồi cạnh nó, giọng nói nhẹ hơn hẳn khi nói chuyện với người khác. Tôi thấy cuốn sổ trên bàn anh, và tôi đã đọc nó.
 
 *"Hôm nay nó mặc áo xanh."*
 
-Hôm đó Thu mặc áo xanh.
+Hôm đó tôi cũng mặc áo xanh. Nhưng tôi biết anh không viết về tôi.
 
-Tôi gấp cuốn sổ lại, đặt đúng chỗ cũ. Và tôi không bao giờ kể cho Thu nghe về điều đó.
+Tôi gấp cuốn sổ lại, đặt đúng chỗ cũ. Và tôi quyết định: nếu không thể là người anh yêu, tôi sẽ là người anh không thể quên.
 
----
-
-Rồi tôi gặp Đông.
-
-Hắn là phó tổng mới về. Đẹp, lịch thiệp, nói chuyện có duyên. Hắn để ý tôi từ rất sớm. Lúc đầu tôi cảnh giác. Nhưng hắn kiên nhẫn — hỏi thăm, lắng nghe, xuất hiện đúng lúc.
-
-Một lần, hắn hỏi tôi: "Em có thấy Xuân và Thu thân thiết không?"
-
-Tôi giật mình. Tôi không trả lời.
-
-Hắn cười. Một nụ cười mà tôi không hiểu nổi. "Anh hỏi vậy thôi."
-
-Nhưng từ hôm đó, tôi biết Đông cũng thấy những gì tôi thấy. Và tôi biết hắn có thể giúp tôi.
-
-Tôi không hỏi tại sao hắn ghét Xuân. Tôi không quan tâm. Tôi chỉ muốn Thu không còn ở đó nữa.
+Trong tình yêu, hận còn tốt hơn vô hình.
 
 ---
 
-"Chỉ cần một lá đơn," hắn nói. "Một lá đơn nặc danh nói rằng có dấu hiệu quan hệ không đúng mực giữa người hướng dẫn và fresher. Hội đồng sẽ xem xét. Và cách đơn giản nhất là điều chuyển."
+Tôi bắt đầu chiến dịch của mình.
 
-Tôi run. "Nếu người ta điều tra?"
+Tôi chủ động ngồi gần anh trong các buổi ăn trưa. Tôi nhắn tin hỏi anh về chuyện công việc vào tối muộn. Tôi mượn sách của anh, cố tình trả chậm để có cớ nói chuyện.
 
-"Không ai điều tra cả. Đây là công ty nhỏ. Họ muốn yên chuyện."
+Anh lịch sự đáp lại. Nhưng tôi biết anh không hứng thú. Ánh mắt anh vẫn dừng lại ở bàn cạnh cửa sổ, nơi Thu ngồi.
 
-Tôi im lặng một tuần.
+Thu không làm gì cả. Nó chỉ ngồi đó, nhìn mưa, uống trà, và vô tình có được tất cả những gì tôi muốn.
 
-Rồi tôi viết.
+Tôi không ghét nó. Tôi chỉ muốn những gì nó có.
 
----
-
-Tôi viết đơn vào một đêm, khi Thu đã ngủ.
-
-Nó nằm trên giường bên cạnh, thở đều, tóc dài xõa trên gối. Tôi nhìn nó, tay cầm bút. Tôi muốn dừng lại. Nhưng tôi nghĩ đến ly trà đào mỗi sáng, nghĩ đến ánh mắt Xuân nhìn nó, nghĩ đến cuốn sổ có dòng chữ "áo xanh".
-
-Và tôi viết tiếp.
-
-Sáng hôm sau, tôi gửi đơn cho Đông.
-
-Hắn nhận, không hỏi gì. Chỉ gật. "Để anh lo."
+Và tôi đã sẵn sàng làm tất cả để có được điều đó.
 
 ---
 
-Thu bị điều chuyển một tuần sau đó.
+Tôi gặp Đông ở hành lang tầng hai.
 
-Nó khóc. Nó ôm tôi, hỏi: "Tao làm sai gì à?"
+Hắn mới vào làm phó tổng. Đẹp, lịch thiệp, kiểu đàn ông biết mình đẹp. Hắn nhìn tôi, và ngay lập tức tôi biết — hắn là người nguy hiểm.
 
-Tôi ôm nó. Tôi nói: "Không, mày không làm sai gì cả."
+Nhưng tôi cũng là người nguy hiểm.
 
-Vai nó run lên. Tôi thấy nước mắt nó thấm ướt vai áo tôi. Tôi muốn nói xin lỗi, nhưng tôi không nói.
+"Em thích Xuân phải không?"
 
-Vì nếu tôi nói, tôi sẽ mất tất cả.
+Hắn hỏi thẳng. Không vòng vo. Tôi nhìn hắn, không trả lời. Hắn cười.
 
-Tôi chọn im lặng. Và sống với sự im lặng đó đến cuối đời.
+"Anh có thể giúp em."
+
+Tôi không hỏi tại sao. Tôi không quan tâm. Tôi chỉ hỏi: "Anh muốn gì?"
+
+Hắn nhìn tôi, mắt không chớp. "Công bằng."
+
+Không có câu trả lời nào làm tôi hài lòng hơn thế. Vì tôi cũng chỉ muốn công bằng. Công bằng rằng tôi yêu nhiều như thế, nhưng người tôi yêu lại nhìn về một hướng khác.
+
+Tôi bắt tay hắn. Hai kẻ thù của cùng một kẻ thù — là bạn.
 
 ---
 
-Thu đi rồi, Xuân không còn như trước.
+Tôi viết đơn.
 
-Anh ít nói. Anh ngồi trước màn hình, không làm gì, nhìn ra cửa sổ. Mỗi sáng anh vẫn pha trà — một ly. Rồi anh nhìn nó, uống một mình.
+Không run, không do dự. Tôi viết bằng tay trái — thứ chữ mà không ai nhận ra — trên một tờ giấy trắng mua từ tiệm photocopy cách công ty ba dãy phố. Tôi soạn nội dung với Đông: đủ để gây chú ý, đủ để hội đồng quản trị thấy phiền, đủ để họ giải quyết theo cách đơn giản nhất.
 
-Tôi muốn đến gần. Nhưng tôi không thể. Vì tôi biết — người anh muốn không phải tôi.
+Điều chuyển.
 
-Tôi lấy chồng, có con, sống một cuộc đời bình thường. Nhưng tôi chưa bao giờ kể cho chồng tôi về lá đơn đó.
+Tôi gửi đơn cho Đông. Hắn nhận, gật. Tối đó, tôi ngủ ngon hơn bất kỳ đêm nào trong đời.
 
-Có những bí mật, nếu nói ra, sẽ hủy hoại tất cả. Có những tội lỗi, dù có xin lỗi cả đời, cũng không đủ.
+Tôi nghĩ mình đã thắng.
+
+---
+
+Tôi sai.
+
+Thu không bị điều chuyển. Tôi bị điều chuyển.
+
+Lệnh ký tên Đông. Tôi đọc nó, tay run, mắt không tin vào những gì mình thấy. Tôi lao vào phòng hắn, đóng cửa, ném tờ giấy xuống bàn:
+
+"Thằng chó. Mày làm gì vậy?"
+
+Hắn ngước lên. Mặt không cảm xúc.
+
+"Em viết đơn tố cáo quan hệ giữa người hướng dẫn và fresher. Người hướng dẫn là Xuân. Fresher là Thu."
+
+"Thì sao?"
+
+"Thì fresher là Thu. Em là Hạ. Đơn tố cáo có tên Thu, nhưng em là người đi. Vì nếu điều chuyển Thu, mọi người sẽ hỏi tại sao. Còn điều chuyển em — không ai hỏi cả."
+
+Tôi nhìn hắn. Lúc đó tôi hiểu ra tất cả.
+
+Tôi không phải là đồng minh của hắn. Tôi là quân cờ của hắn. Hắn không muốn hại Thu. Hắn muốn hại Xuân — và hắn dùng tôi để làm điều đó. Bằng cách điều chuyển tôi, hắn lấy đi một người trong team của Xuân, khiến Xuân mất một đồng nghiệp. Và quan trọng hơn — hắn khiến Thu sợ, khiến Thu lùi bước, khiến Thu không dám đến gần Xuân nữa.
+
+Hắn không cần Thu đi. Hắn chỉ cần Thu ở lại, nhưng không dám yêu.
+
+Một cú đánh tinh vi hơn nhiều so với tôi tưởng.
+
+"Cô ra ngoài được rồi," hắn nói.
+
+Tôi muốn đập cái bàn vào mặt hắn. Nhưng tôi biết mình đã thua. Tôi cầm tờ giấy, bước ra khỏi phòng, không nói thêm lời nào.
+
+Tôi ghét Đông. Nhưng tôi cũng ghét chính mình — vì đã ngu ngốc đến mức không thấy được cái bẫy.
+
+---
+
+Tôi không nói cho ai biết sự thật.
+
+Không nói cho Xuân. Không nói cho Thu.
+
+Tôi để nó ôm tôi, khóc, hỏi "tại sao?" Tôi im lặng. Tôi để nó nghĩ rằng tôi là nạn nhân vô tội. Còn hơn để nó biết rằng tôi là kẻ thua cuộc trong một canh bạc mà chính tôi đã đặt cược.
+
+Trước khi đi, tôi nói với Thu một câu:
+
+"Mày biết không, có những chuyện mày tưởng là tình yêu, nhưng thực ra là chiến tranh. Và trong chiến tranh, người thua cuộc phải rời đi."
+
+Nó nhìn tôi, không hiểu. Nhưng tôi không giải thích.
+
+---
+
+Tôi ra đi, mang theo lòng căm hận và một câu hỏi chưa có lời đáp.
+
+Đông thực sự là ai? Tại sao hắn thù Xuân đến thế? Và Thu — cô gái vô tội đó — sẽ ra sao khi ở lại chiến trường mà chính nó còn không biết mình đang đứng?
+
+Tôi không biết. Và tôi cũng không còn ở đó để chứng kiến.
+
+Nhưng có một điều tôi biết chắc: mọi chuyện chưa kết thúc. Đông sẽ không dừng lại. Và cái công ty nhỏ trên phố Hai Bà Trưng đó — nơi tôi đã yêu, đã hận, đã thua — sắp có một cơn bão.
 
 HẾT
