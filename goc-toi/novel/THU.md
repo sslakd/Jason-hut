@@ -1,147 +1,145 @@
 # THU
 
-*Sinh vào một chiều cuối thu, khi những cơn mưa đầu mùa bắt đầu rả rích ngoài ô cửa bệnh viện. Mẹ bảo hồi đó bà khóc nhiều, không biết tại thời tiết hay tại nỗi buồn không tên. Có lẽ tôi thừa hưởng nỗi buồn đó. Và có lẽ tôi đã giữ nó suốt cả cuộc đời.*
+Sinh vào một chiều cuối thu, khi những cơn mưa đầu mùa bắt đầu rả rích ngoài ô cửa bệnh viện. Mẹ bảo tôi sinh ra đã mang nỗi buồn trên mặt, đến nỗi bà sợ tôi sẽ khóc suốt đời. Có lẽ bà đã đúng.
 
 ---
 
-Tôi yêu Xuân từ trước khi Hạ vào công ty.
+Tôi yêu Xuân.
 
-Tôi không nhớ rõ lần đầu tiên. Chỉ nhớ một buổi sáng cuối đông, anh mặc áo sơ mi trắng, tay cầm ly trà, đứng bên cửa sổ, nhìn ra phố. Nắng tháng Giêng vàng nhạt hắt lên mặt anh, làm anh đẹp một cách kỳ lạ — kiểu đẹp mà bạn không thể tả, chỉ có thể nhớ.
+Tôi yêu anh từ những ngày đầu tiên, khi tôi còn là fresher ngơ ngác không biết mình đang ở đâu. Anh là người đầu tiên chỉ tôi chỗ ngồi, pha cho tôi ly trà, hỏi tôi quê ở đâu. Giọng anh trầm, đều, như một bản nhạc không lời.
 
-Hồi đó tôi fresher, còn ngơ ngác, không biết mình đang ở đâu. Anh là người đầu tiên nói chuyện với tôi, chỉ tôi chỗ ngồi, pha cho tôi ly trà. Anh hỏi tôi tên gì, quê ở đâu, có quen với Hà Nội chưa. Tôi trả lời từng câu, mắt không dám nhìn anh quá ba giây.
+Tôi nghĩ — nếu có thể nghe giọng anh mỗi ngày, cuộc đời này sẽ đẹp biết mấy.
 
-Nhưng tim tôi đã thuộc về anh từ lúc đó.
-
----
-
-Tôi giấu tình cảm của mình rất kỹ.
-
-Không phải vì tôi sợ. Mà vì tôi biết — mình không phải mẫu con gái mà người như Xuân sẽ để ý. Tôi trầm, tôi im, tôi hay nhìn mưa và nghĩ vu vơ. Tôi không ồn ào, không nổi bật, không có gì để một người đàn ông như anh nhớ.
-
-Tôi nghĩ: chỉ cần được nhìn anh mỗi ngày, được nghe giọng anh mỗi lần anh nói chuyện với team, được ngồi cùng phòng với anh — thế là đủ.
-
-Tôi đã tự lừa mình rất giỏi.
+Nhưng tôi không nói ra.
 
 ---
 
-Rồi Hạ vào.
+Tôi thấy ly trà đào trên bàn mình mỗi sáng.
 
-Hạ là bạn thân của tôi. Cùng phòng, cùng bàn, cùng fresher. Nó vui vẻ, nó nói nhiều, nó cười to. Nó là tất cả những gì tôi không có.
+Tôi không biết ai pha. Nhưng tôi hy vọng. Hy vọng đó là anh. Mỗi sáng tôi đến, thấy ly trà còn nóng, tôi cầm nó, hít hà mùi trà, và tự hỏi — có phải anh không?
 
-Ngày đầu tiên, tôi thấy nó nhìn Xuân. Ánh mắt đó — tôi biết. Vì tôi cũng nhìn anh bằng ánh mắt đó.
+Tôi không dám hỏi. Vì nếu hỏi, tôi sợ câu trả lời không phải như tôi mong.
 
-Tôi không nói gì.
-
-Nhưng trong lòng, một thứ gì đó vỡ ra. Nhẹ thôi, như kiểu ly thủy tinh rạn một đường — mày thấy được, nhưng mày cố gắng tin rằng nó vẫn còn nguyên.
+Có những hy vọng mong manh đến nỗi chỉ cần một câu hỏi là vỡ tan.
 
 ---
 
-Tôi thấy Xuân pha trà đào cho Hạ.
+Rồi tôi thấy anh quan tâm đến Hạ.
 
-Mỗi sáng. Một ly. Đặt lên bàn nó, không ký tên, không giấy note. Anh không bao giờ làm thế với tôi. Với tôi, anh chỉ lịch sự đúng mực — hỏi thăm, hướng dẫn, trả lời câu hỏi — đúng như một senior PM với fresher.
+Tôi thấy anh cười với nó nhiều hơn. Nói chuyện với nó lâu hơn. Có lần tôi thấy họ ngồi ở quán nước dưới tầng, nói chuyện rất lâu, anh cười, nó cũng cười.
 
-Nhưng với Hạ, anh làm nhiều hơn.
+Tôi quay đi. Tim tôi nhói lên một cái — nhẹ thôi, nhưng đủ để biết mình vừa bị thương.
 
-Tôi thấy. Và tôi im lặng.
+Tôi bắt đầu để ý. Mỗi sáng, Hạ cũng đến sớm. Có hôm nó đi về phía phòng trà, rồi quay ra, tay không. Nhưng ly trà vẫn ở trên bàn tôi. Có thể nó đã thấy ai pha trà. Có thể nó biết điều tôi không biết.
 
-Tôi tập cho mình thói quen không nhìn về phía bàn nó vào buổi sáng, không nhìn cái ly trà đào đó. Tôi tập quên rằng tôi từng mơ một ngày anh pha trà cho tôi.
+Có thể tôi chỉ đang tưởng tượng ra tất cả.
 
-Tôi tập làm người vô hình.
-
-Và tôi đã thành công. Đến nỗi khi mọi chuyện vỡ ra, không ai nghĩ tôi có liên quan.
+Nhưng trong tình yêu, tưởng tượng còn đau hơn sự thật. Vì mày có thể tự tạo ra hàng ngàn kịch bản trong đầu, và mỗi kịch bản đều kết thúc với việc mày là người thua cuộc.
 
 ---
 
-Hạ không biết tôi yêu Xuân. Tôi nghĩ vậy.
+Một lần, tôi thấy cuốn sổ của anh mở trên bàn.
 
-Cho đến một buổi tối, nó hỏi tôi: "Mày có thích ai không?"
+Tôi không cố tình đọc. Nhưng nó mở sẵn, và chữ anh thẳng tắp, dễ đọc.
 
-Tôi không trả lời. Tôi sợ nếu nói ra, tôi sẽ mất nó. Tôi sợ nếu nói ra, nó sẽ nhìn tôi bằng ánh mắt khác. Tôi sợ nếu nói ra, tôi sẽ phải đối mặt với sự thật rằng — người tôi yêu yêu nó, không yêu tôi.
+*"Hôm nay nó mặc áo xanh."*
 
-Nên tôi im lặng.
+Hôm đó Hạ mặc áo xanh.
 
-Nhưng im lặng không làm cho tình yêu biến mất. Nó chỉ làm tình yêu lớn lên trong bóng tối, như một thứ cây độc không cần ánh sáng.
+Tôi gấp cuốn sổ lại, đặt đúng chỗ cũ. Tim tôi nặng trĩu.
 
----
+Vậy là anh viết về nó. Anh để ý từng chi tiết nhỏ về nó. Nó mặc áo xanh — và anh nhớ.
 
-Tôi biết tôi sẽ làm gì đó.
+Tôi không biết rằng hôm đó tôi cũng mặc áo xanh.
 
-Không phải vì tôi muốn phá hoại. Mà vì tôi không thể chịu được cảnh nhìn họ bên nhau thêm nữa. Mỗi buổi sáng thấy ly trà đào trên bàn nó là một nhát dao. Mỗi lần thấy nó cười với anh là một vết cắt.
+Tôi không biết rằng cuốn sổ đó viết về tôi.
 
-Tôi không muốn Hạ đau. Tôi chỉ muốn nỗi đau của mình dừng lại.
-
-Và tôi gặp Đông.
+Tôi không biết rằng mọi hiểu lầm đều bắt đầu từ những điều nhỏ nhặt nhất.
 
 ---
 
-Hắn xuất hiện như một cơ hội. Phó tổng giám đốc mới về. Đẹp, lịch thiệp, nói chuyện nhẹ nhàng. Hắn để ý tôi từ rất sớm. Lúc đầu tôi cảnh giác. Nhưng hắn kiên nhẫn. Hắn không ép. Hắn chỉ hỏi thăm, lắng nghe, xuất hiện đúng lúc.
+Tôi thấy anh và Hạ ngồi cùng nhau ở quán bún chả.
 
-Một lần, hắn hỏi tôi: "Em có thấy giữa Xuân và Hạ có gì không?"
+Một buổi tối OT. Tôi về muộn, đi ngang qua quán quen. Họ ngồi đối diện, nói chuyện, cười. Anh gắp cho nó một miếng thịt.
 
-Tôi giật mình. Tôi không trả lời.
+Tôi đứng ở góc phố. Năm giây. Mười giây. Rồi tôi quay lưng đi.
 
-Hắn cười. Một nụ cười mà tôi không hiểu nổi.
-
-"Anh hỏi vậy thôi."
-
-Nhưng từ hôm đó, tôi biết Đông cũng để ý đến chuyện này. Và tôi biết hắn có thể giúp tôi.
+Tôi không khóc. Không phải vì tôi mạnh mẽ. Mà vì tôi đã quen với việc im lặng chịu đựng.
 
 ---
 
-Tôi viết đơn nặc danh.
+Tôi gặp Đông.
 
-Một tờ giấy trắng, chữ in, không ký tên. Nội dung: "Quan hệ không đúng mực giữa người hướng dẫn và fresher có dấu hiệu thiên vị cá nhân."
+Hắn là phó tổng, mới về, lịch thiệp, dễ gần. Hắn hỏi tôi có chuyện gì buồn. Tôi lắc đầu. Nhưng hắn không hỏi thêm — hắn chỉ ngồi cạnh tôi, im lặng, như một người bạn.
 
-Tôi run khi viết từng chữ. Tay tôi lạnh. Nhưng tôi nghĩ đến ly trà đào mỗi sáng, nghĩ đến ánh mắt anh nhìn nó, nghĩ đến cái cách tim tôi vỡ ra từng mảnh mỗi ngày — và tôi gửi đi.
+Dần dần, tôi mở lòng. Tôi kể về Hạ. Về ly trà đào. Về cuốn sổ. Về quán bún chả.
 
-Tôi đưa đơn cho Đông. Hắn nhận, không hỏi gì. Chỉ gật.
+Hắn nghe, gật đầu. "Em nghĩ Xuân thích Hạ à?"
 
-"Để anh lo."
+Tôi im lặng. Một lúc sau, tôi nói: "Chắc vậy."
 
----
+Hắn không nói gì. Chỉ đặt tay lên vai tôi, nhẹ nhàng.
 
-Hạ bị điều chuyển một tuần sau đó.
-
-Nó không biết tôi đã làm gì. Nó khóc, nó ôm tôi, nó bảo: "Tao không hiểu tại sao."
-
-Tôi ôm nó. Vai nó run lên. Tôi muốn nói xin lỗi. Nhưng tôi không nói.
-
-Vì nếu tôi nói, tôi sẽ mất tất cả — bạn thân, tình yêu, và cả lòng tự trọng cuối cùng còn sót lại.
-
-Tôi chọn im lặng. Và sống với sự im lặng đó đến cuối đời.
+Tôi không biết rằng cái chạm đó là sự thao túng. Tôi không biết rằng hắn đã gieo vào đầu tôi những suy nghĩ mà tôi không đủ tỉnh táo để nhận ra.
 
 ---
 
-Hạ đi rồi, Xuân không còn là anh của ngày xưa.
+Tôi không viết đơn.
 
-Anh ít nói hơn. Anh ngồi trước màn hình, tay gõ phím, mắt nhìn xa xăm. Mỗi sáng anh vẫn pha trà — một ly. Rồi anh nhìn nó, uống một mình.
+Tôi không có đủ dũng cảm để phá hoại người khác.
 
-Tôi muốn đến gần. Nhưng tôi không thể. Vì tôi biết — nếu anh biết sự thật, anh sẽ không bao giờ nhìn tôi bằng ánh mắt cũ nữa.
+Nhưng Đông nói với tôi: "Có người đã viết đơn tố cáo Xuân và Hạ. Em chỉ cần xác nhận rằng em thấy họ thân thiết."
 
-Dù sao thì anh cũng chưa từng nhìn tôi bằng ánh mắt đặc biệt.
+Tôi hỏi: "Ai viết?"
 
-Không như Hạ.
+Hắn không trả lời.
+
+Tôi gật. Tôi xác nhận. Một câu nói. "Tôi thấy họ ngồi cùng nhau nhiều lần."
+
+Ba giây. Ba giây đã thay đổi cuộc đời tôi mãi mãi.
 
 ---
 
-Nhiều năm sau, tôi gặp lại Hạ.
+Hạ bị điều chuyển.
 
-Nó làm trưởng phòng. Tóc cắt ngắn. Mắt nó không còn sáng như ngày xưa. Chúng tôi ngồi trong một quán cà phê nhỏ, im lặng.
+Tôi không ngờ nó lại là người bị điều chuyển. Tôi đã nghĩ — nếu có ai đi, đó sẽ là tôi. Vì tôi là fresher yếu hơn, tôi không nổi bật, tôi dễ bị thay thế.
 
-"Mày có hối hận không?" nó hỏi.
+Nhưng Hạ đi.
 
-Tôi giật mình. Nó biết.
+Nó khóc, nó ôm tôi. Nó nói: "Tao không hiểu tại sao."
 
-"Biết từ lúc nào?"
+Tôi ôm nó. Vai nó run. Tôi cũng muốn khóc, nhưng không phải vì nó đi — mà vì tôi biết tôi đã góp phần vào việc này.
 
-"Từ đầu," nó nói. "Tao biết mày cũng thích Xuân. Tao chỉ không nghĩ mày làm được chuyện đó."
+Tôi không nói gì. Tôi im lặng và nhìn nó đi.
 
-Tôi cúi đầu. Không nói được gì.
+---
 
-"Mà thôi," nó nói. "Lâu quá rồi. Tao cũng mệt."
+Nhiều năm sau, tôi mới biết sự thật.
 
-Nó đứng dậy, trả tiền, đi ra cửa. Tôi nhìn nó đi, không dám gọi.
+Chị Mai — kế toán, người biết hết mọi chuyện trong công ty — một lần uống cà phê với tôi, kể:
 
-Có những thứ, một khi đã làm, không thể gỡ lại. Có những lời xin lỗi, dù có nói cả đời, cũng không đủ.
+"Em biết không, ngày đó Xuân pha trà đào cho em mỗi sáng."
+
+Tôi sững người.
+
+"Nó để trên bàn em. Cả năm trời. Nó không dám nói. Còn em thì cứ tưởng nó thích con Hạ. Hai đứa cứ nhìn nhau, không đứa nào nói, để con Hạ với thằng Đông làm tung lên."
+
+Tôi ngồi im. Trời Hà Nội mùa thu, nắng vàng nhạt hắt qua ô cửa kính. Một ly trà đào để trước mặt tôi, nguội lạnh.
+
+Tôi nhìn ly trà. Nhớ về những buổi sáng năm xưa, khi tôi còn là fresher, khi tôi chưa biết ghen, khi tôi chưa biết sợ, khi tôi còn tin rằng tình yêu sẽ đến với những người xứng đáng.
+
+Tôi đã sai. Tình yêu không đến với người xứng đáng. Tình yêu đến với người dám nói.
+
+Và tôi đã không dám.
+
+---
+
+Sau này, tôi vẫn sống. Đi làm, về nhà, nấu cơm, xem phim, ngủ. Mỗi ngày giống nhau. Tôi không lấy chồng.
+
+Thi thoảng tôi nhớ về ly trà đào. Nhớ về cuốn sổ có dòng chữ "Hôm nay nó mặc áo xanh." Nhớ về ánh mắt anh nhìn tôi ở quán bún chả, khi anh hỏi: "Đi ăn không?"
+
+Tôi không biết anh có nhớ tôi không. Nhưng tôi nhớ anh. Tôi sẽ nhớ anh suốt đời.
+
+Vì có những người, dù chỉ thoáng qua, cũng đủ để lại dấu ấn không thể xóa.
 
 HẾT

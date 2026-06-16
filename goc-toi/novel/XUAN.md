@@ -1,95 +1,79 @@
 # XUÂN
 
-*Sinh vào một sáng đầu xuân, khi những chồi non đầu tiên vừa nhú trên cành bàng trước cửa bệnh viện. Mẹ bảo hôm đó trời đẹp, nắng vàng, gió nhẹ, như cả đất trời đang cười. Có lẽ vì thế mà tôi hay tin vào những điều tốt đẹp. Và có lẽ vì thế mà tôi dễ bị tổn thương.*
+Sinh vào một sáng đầu xuân, khi những chồi non đầu tiên vừa nhú trên cành bàng trước cửa bệnh viện. Mẹ bảo hôm đó trời đẹp, nắng vàng, gió nhẹ. Có lẽ vì thế mà tôi hay tin vào những điều tốt đẹp, dù sau này cuộc đời dạy tôi rằng tin vào điều tốt đẹp là cách nhanh nhất để bị tổn thương.
 
 ---
 
 Tôi là senior PM của một công ty nhỏ trên phố Hai Bà Trưng.
 
-Bảy người. Một team. Sếp Hải năm mươi tuổi, ít nói, hay uống trà nóng dù trời có nóng thế nào. Chị Mai kế toán pha trà bí đao mỗi sáng, để sẵn một bình trên bàn cho cả phòng. Thằng Tuấn dev cứ 10h lại hỏi "có ai ăn sáng không?" dù chưa lần nào có ai bảo có.
+Bảy người. Sếp Hải năm mươi tuổi, ít nói, uống trà nóng quanh năm. Chị Mai kế toán pha trà bí đao mỗi sáng. Thằng Tuấn dev cứ 10h hỏi "có ai ăn sáng không?" dù chưa lần nào có ai bảo có.
 
-Công ty nhỏ, nghèo, nhưng vui.
+Tôi thích công việc của mình. Tôi thích cảm giác đứng giữa mọi người, xếp những mảnh ghép rời rạc thành một bức tranh hoàn chỉnh. Làm PM với tôi không phải là quản lý — mà là làm cho người khác tin rằng họ có thể làm được những điều họ chưa từng nghĩ tới.
 
-Tôi thích công việc của mình. Tôi thích cảm giác đứng giữa team, kết nối người này với người kia, xếp những mảnh ghép rời rạc thành một bức tranh hoàn chỉnh. Làm PM không phải là quản lý — mà là làm cho mọi người tin rằng họ có thể làm được những điều họ chưa từng nghĩ tới.
-
-Và rồi Hạ vào công ty.
+Và rồi Thu vào công ty.
 
 ---
 
-Nó là fresher mới ra trường, được phân cho tôi hướng dẫn.
+Nó là fresher, cùng đợt với một đứa con gái khác tên Hạ.
 
-Lần đầu gặp, nó mặc áo sơ mi trắng, tóc dài, mắt sáng. Nó bước vào phòng họp, nhìn quanh một vòng, rồi cười với tôi. Một nụ cười không ngại ngùng, không e dè — nụ cười của người sẵn sàng đón nhận thế giới.
+Cả hai đều mới ra trường, đều ngơ ngác. Nhưng ngay từ ngày đầu tiên, tôi đã để ý đến Thu. Không phải vì nó nổi bật. Mà vì nó không nổi bật. Nó ngồi góc trong cùng, cạnh cửa sổ, ít nói, hay nhìn ra ngoài trời. Có những lúc tôi đi ngang, thấy nó nhìn mưa, mắt xa xăm, và tôi tự hỏi — nó đang nghĩ gì?
 
-Tôi biết ngay — đứa này sẽ làm tôi nhớ.
-
-Nhưng hồi đó tôi nghĩ: "Chắc tại mình lâu rồi không có fresher mới. Cảm giác quen thuộc thôi."
-
-Tôi đã tự lừa mình rất giỏi.
+Tôi bắt đầu để ý đến nó nhiều hơn mức cần thiết.
 
 ---
 
-Những ngày đầu, tôi dạy nó viết spec, dạy nó cách đọc requirement, dạy nó cách nói chuyện với khách hàng mà không để họ nuốt mất lời của mình.
+Tôi tập cho mình thói quen — mỗi sáng, khi đến công ty, tôi pha một ly trà đào. Tôi đặt nó lên bàn Thu, không kèm giấy note, không ký tên. Chỉ một ly trà đào, vị ngọt nhẹ, để bắt đầu ngày mới.
 
-Nó học nhanh. Những câu hỏi của nó không phải kiểu "cái này là gì" mà là "tại sao lại làm thế". Nó không chỉ muốn biết cách làm — nó muốn hiểu lý do.
+Tôi không biết nó có thích không. Nhưng tôi thấy nó uống. Và điều đó làm tôi vui cả ngày.
 
-Tôi thích điều đó. Mỗi lần nó hỏi, tôi kéo ghế ngồi xuống cạnh nó, giải thích chậm rãi. Tay tôi hay trỏ vào màn hình. Một lần, tôi để ý thấy nó không nhìn màn hình — nó nhìn tay tôi.
+Có lần, tôi đến sớm hơn thường lệ, thấy nó đang cầm ly trà, chưa uống, chỉ nhìn. Nó nhìn lâu đến nỗi tôi nghĩ nó đang nghĩ về ai đó. Tôi muốn bước ra, muốn nói: "Anh pha cho em đấy." Nhưng tôi không đủ dũng cảm.
 
-Lúc đó tim tôi ngừng đập nửa nhịp. Nhưng tôi giả vờ không thấy.
-
-Tôi có thói quen — mỗi sáng, khi đến công ty, tôi pha một ly trà đào để sẵn trên bàn cho nó. Không kèm giấy note. Không ký tên. Chỉ một ly trà đào, vị ngọt nhẹ, thơm thoang thoảng, bắt đầu một ngày mới.
-
-Nó không bao giờ hỏi ai pha. Tôi không bao giờ nói.
-
-Có những chuyện đẹp nhất là những chuyện không cần giải thích.
+Tôi quay lưng, đi vào phòng mình, mở laptop, giả vờ có việc.
 
 ---
 
-Cuối giờ làm, khi cả team đã về, tôi hay ngồi lại một mình.
+Những buổi tối OT, tôi hay ở lại dù không cần.
 
-Không phải vì việc. Tôi ngồi lại vì biết nó cũng hay ở lại. Tôi mở laptop, gõ gõ mấy dòng vô nghĩa, chờ nó xong việc. Khi nó đứng dậy, tôi hỏi: "Đi ăn không?"
+Tôi mở một file cũ, gõ gõ vài dòng vô nghĩa, chờ nó đi về. Khi nó đứng dậy, tôi hỏi: "Đi ăn không?" Nó cười, gật đầu. Chúng tôi đi ăn bún chả dưới trời mưa, ngồi dưới mái hiên nhỏ, nói đủ thứ chuyện — chuyện công việc, chuyện cuộc sống, chuyện những điều vu vơ không tên.
 
-Nó cười: "Em lúc nào cũng đói."
+Một lần, nó hỏi tôi: "Anh có thích ai không?"
 
-Chúng tôi đi ăn bún chả dưới trời mưa bụi cuối xuân. Nó nói về tuổi thơ của nó, về một cây me già trước nhà mà mỗi mùa hoa nở là cả con đường thơm nức. Tôi ngồi nghe, quên mất tô bún đang nguội.
+Tim tôi ngừng đập. Tôi nhìn nó, định nói "có, em đấy." Nhưng tôi sợ. Sợ nếu nói ra, mọi thứ sẽ khác. Sợ nếu nói ra, nó sẽ không còn thoải mái ngồi ăn bún chả với tôi nữa.
 
-Lúc về, nó giũ áo, một giọt mưa vương trên tóc. Tay tôi giơ lên, định gạt giúp nó. Rồi tôi rụt lại.
+Tôi cười: "Chưa."
 
-Điều đó làm tôi nhớ đến mình — tôi đã từng dũng cảm với công việc, với những cuộc họp, với những quyết định khó khăn. Nhưng với một cô gái, tôi lại trở nên hèn nhát nhất trần đời.
-
----
-
-Tôi không biết nó có để ý đến tôi không.
-
-Có những ngày nó ngồi cạnh tôi hơi lâu. Có những ngày nó hỏi bài dù biết câu trả lời. Có những ngày mắt nó nhìn tôi dài hơn một chút, rồi nó quay đi.
-
-Tôi bắt đầu viết nhật ký. Một cuốn sổ nhỏ, mỗi ngày một dòng:
-
-*"Hôm nay nó cười. 9h15 sáng."*
-
-*"Mưa. Đi ăn cùng. Nó hỏi tại sao tao hay nhìn ra cửa sổ."*
-
-*"Nó mặc áo xanh. Màu xanh đó hợp với nó nhất trên đời."*
-
-Tôi 30 tuổi, viết nhật ký như một thằng nhóc cấp ba. Nếu ai đó biết, chắc họ cười tôi. Nhưng tôi không quan tâm. Vì lần đầu tiên sau rất nhiều năm, tôi cảm thấy mình đang sống.
+Nó gật, nhìn xuống bát bún. Tôi thấy mắt nó buồn, nhưng tôi không dám hỏi tại sao.
 
 ---
 
-Một buổi chiều, tôi nói với nó:
+Tôi bắt đầu viết nhật ký.
+
+Không phải vì tôi thích viết. Mà vì những điều tôi muốn nói với Thu, tôi không thể nói ra bằng lời. Tôi viết chúng vào một cuốn sổ nhỏ, mỗi ngày một dòng:
+
+*"Hôm nay nó mặc áo xanh. Màu đó hợp với nó nhất."*
+
+*"Nó ăn bún chả không bỏ rau. Lạ."*
+
+*"Nó hỏi anh có thích ai không. Anh nói dối."*
+
+Đêm nào tôi cũng viết. Những dòng chữ ngắn ngủi, vô dụng, nhưng là tất cả những gì tôi có.
+
+Tôi 30 tuổi, viết nhật ký như một thằng nhóc cấp ba.
+
+---
+
+Một buổi chiều cuối xuân, tôi nói với nó:
 
 "Em biết không, mùa xuân là mùa đẹp nhất trong năm."
 
-Nó nhìn tôi, chờ tôi giải thích.
+Nó nhìn tôi, chờ giải thích.
 
 "Vì mùa xuân không hứa hẹn điều gì cả. Nó chỉ đến. Và mọi thứ bắt đầu."
 
-Nó không nói gì. Nhưng mắt nó cười.
-
-Và tôi biết — tôi yêu nó mất rồi.
-
----
+Nó không nói gì. Nhưng mắt nó cười. Và tôi biết — tôi yêu nó mất rồi.
 
 Nhưng mùa xuân không kéo dài mãi.
 
-Có những cơn gió lạnh bắt đầu ùa về từ cuối phố, mang theo những áng mây xám. Và tôi không biết rằng, trước khi mùa hè kịp đến, mọi thứ đã tan vỡ.
+Có những cơn gió lạnh bắt đầu ùa về từ cuối phố. Và trước khi tôi kịp nói ra điều gì, mọi thứ đã vỡ tan.
 
 HẾT
