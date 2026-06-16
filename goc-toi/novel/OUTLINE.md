@@ -2,45 +2,51 @@
 
 ---
 
-## RED HERRING (gieo từ chap 1 & 2)
+## PLOT CHÍNH
 
-Trong chapter 1 (Xuân), có một đoạn ngắn:
-> Sếp Hải có một cuốn album cũ trên bàn. Một lần tôi thấy ảnh chụp hai đứa trẻ — một là Hải hồi trẻ, đứa kia hao hao giống Đông. Tôi hỏi: "Ai vậy sếp?" Hải cười: "Bạn cũ." Không nói thêm.
+**Xuân** (senior PM) ❤️ **Thu** (fresher) — yêu nhau từ ánh mắt đầu tiên. Cả hai đều yêu, cả hai đều im.
 
-→ Người đọc sẽ nghĩ: **"Đông có liên quan đến sếp Hải? Có thể Đông vào đây để trả thù Hải?"** — đoán sai hướng. Đến chapter 4 mới vỡ lở là bạn thân của Xuân, liên quan Mai.
+**Hạ** (fresher, cùng đợt với Thu) — cũng yêu Xuân. Muốn chen ngang, muốn chia tách.
+
+**Đông** (phó tổng) — tiếp cận Hạ, giúp Hạ phá hoại. Nhưng mục đích thực sự: **trả thù Xuân** vì Mai tự tử 10 năm trước. Đông không cần Hạ thắng. Đông chỉ cần **Thu ra đi** — để Xuân mất người nó yêu.
+
+Hạ viết đơn. Đông ký lệnh. **Thu bị điều chuyển.**
+
+Hạ tưởng mình thắng. Hoá ra chỉ là quân cờ của Đông.
 
 ---
 
-## CHI TIẾT ÁO XANH (gieo từ chap 2)
+## RED HERRING (gieo từ chap 1)
 
-Trong chapter 2 (Hạ), thêm nhiều chi tiết Hạ mặc áo xanh:
-- Ngày đầu tiên đi làm: áo xanh
-- Ngày gặp Đông ở hành lang: áo xanh
-- Tự nhận: *"Tôi có cả tủ áo xanh. Màu đó hợp với tôi nhất."*
+Chap 1 (Xuân): Xuân thấy album cũ trên bàn sếp Hải — ảnh chụp hai đứa trẻ, một là Hải hồi trẻ, đứa kia hao hao giống Đông.
 
-→ Người đọc nhìn từ góc Hạ thấy chi tiết này bình thường. Nhưng đến chapter 3, Thu đọc nhật ký, thấy Hạ mặc áo xanh hôm đó — và hiểu lầm. **Có cơ sở để hiểu lầm.**
+→ Người đọc đoán: **"Đông có thù với Hải?"** — sai hướng. Sự thật: Đông thù Xuân, vì Mai.
 
-Đồng thời, trong chapter 1 (Xuân), cần làm mờ chi tiết áo xanh — không nói rõ Thu hay Hạ mặc áo xanh. Chỉ nói *"Hôm đó nó mặc áo xanh"* — để cả hai đều có thể hiểu theo cách của mình.
+---
+
+## CHI TIẾT ÁO XANH
+
+- Trong chap 1 (Xuân): nhật ký — *"Hôm nay nó mặc áo xanh"* — không nói rõ là ai.
+- Trong chap 2 (Hạ): *"Tôi có cả tủ áo xanh. Màu đó hợp với tôi nhất."*
+- Trong chap 3 (Thu): Thu đọc nhật ký — thấy Hạ mặc áo xanh hôm đó (vì Hạ được gieo là siêu hay mặc áo xanh) → hiểu lầm tất cả.
 
 ---
 
 ## CHỊ MAI (gieo từ chap 1)
 
-Thêm vào chapter 1 (Xuân) một đoạn:
-> *Chị Mai ít nói, nhưng mắt chị thấy hết. Có những người trong văn phòng này, tưởng mình giấu được, nhưng chị thấy tất cả. Chị chỉ không nói.*
+Gieo trong chap 1 (Xuân): *"Chị Mai thấy hết mọi chuyện. Chỉ không nói."*
 
-→ Đến chapter 3, khi chị Mai kéo Thu ra nói chuyện, không bị đột ngột.
+→ Đến chap 3, chị Mai là người tiết lộ sự thật cho Thu.
 
 ---
 
-## 5. LÝ DO HẠ BỊ ĐIỀU CHUYỂN (fix)
+## LÝ DO THU BỊ ĐIỀU CHUYỂN
 
-Trong chapter 2 (Hạ), thêm chi tiết:
-- Hạ vì quá tập trung tán tỉnh Xuân nên trễ deadline một spec nhỏ
-- Tuần đó Hạ còn lỗi 3 lần đi muộn
-- Đông dùng cái đó làm cớ *"Tạm thời điều chuyển đứa có vấn đề gần đây. Để hội đồng thấy chúng ta xử lý nghiêm."*
-- Hạ biết mình có lỗi thật — nên không cãi được
-- Thực ra đó là bẫy của Đông từ đầu: Đông biết Hạ sẽ lơ là việc khi yêu
+Hạ viết đơn nặc danh tố cáo "quan hệ không đúng mực giữa người hướng dẫn và fresher." Đơn không ghi tên — chỉ nói chung chung.
+
+Đông — với tư cách phó tổng — nói với hội đồng: *"Cần điều chuyển một fresher để chấm dứt ồn ào. Đứa nào vào sau cùng? Thu."*
+
+Đơn giản. Dứt khoát. Không ai hỏi. Vì Thu là fresher vào sau Hạ một tuần, yếu thế nhất trong phòng.
 
 ---
 
@@ -51,179 +57,150 @@ Trong chapter 2 (Hạ), thêm chi tiết:
 ## 🟢 Chapter 1: XUÂN
 **"Cô gái ở bàn cạnh cửa sổ"**
 
-**Giọng:** Ấm, chậm, hy vọng — nhưng có linh cảm chẳng lành.
+**Giọng:** Ấm, chậm, hy vọng — nhưng linh cảm chẳng lành.
 
 **Nội dung:**
-- Mở: Ly trà đào mỗi sáng trên bàn cạnh cửa sổ. Xuân pha, không nói ra.
-- Giới thiệu văn phòng: sếp Hải (album ảnh cũ — red herring), chị Mai (im lặng nhưng thấy hết), Tuấn dev (hỏi ăn sáng mỗi ngày)
-- Thu và Hạ vào cùng đợt. Mắt Xuân dừng lại ở Thu — ngồi cạnh cửa sổ, nhìn mưa. Mắt Thu buồn.
-- OT — đi ăn bún chả dưới mưa. Câu chuyện về mưa cuối xuân.
+- Mở: Ly trà đào trên bàn cạnh cửa sổ. Xuân pha mỗi sáng, không nói ra.
+- Giới thiệu văn phòng: sếp Hải (album ảnh cũ — red herring), chị Mai (im lặng nhưng thấy hết), Tuấn dev.
+- Thu và Hạ vào cùng đợt. Mắt Xuân dừng lại ở Thu — ngồi cạnh cửa sổ, nhìn mưa.
+- Buổi OT, đi ăn bún chả dưới mưa — mưa cuối xuân.
 - Cuộc đối thoại: "Anh có thích ai không?" — "Chưa." — Xuân nói dối.
 - Nhật ký: *"Hôm nay nó mặc áo xanh"* — không nói rõ là ai.
-- Cuối chap: Xuân thấy người đàn ông lạ đứng hành lang tầng hai, nhìn về phía Thu. Nghe tin công ty sắp có phó tổng mới. Trong album sếp Hải, có một người hao hao giống hắn.
+- Cuối chap: Xuân thấy người đàn ông lạ đứng hành lang tầng hai, nhìn về phía Thu. Nghe tin sắp có phó tổng mới. Trong album sếp Hải, có người hao hao giống hắn.
 
-**Kết:** *"Tôi không hỏi tên. Nhưng tôi biết đó là hắn. Và tôi biết — khi hắn bước vào văn phòng này, mọi thứ sẽ không còn như trước nữa."*
-
-**Hook:** Đông là ai? Có liên quan gì đến sếp Hải? Tại sao nhìn Thu? → kéo sang chap 2.
+**Kết:** *"Tôi không hỏi tên. Nhưng tôi biết đó là hắn. Và tôi biết — khi hắn bước vào, mọi thứ sẽ không còn như trước."*
 
 ---
 
 ## 🔥 Chapter 2: HẠ
 **"Người con gái không bao giờ chịu thua"**
 
-**Giọng:** Nhanh, mạnh, quyết tuyệt, kiểu *"tao biết tao muốn gì và tao sẽ lấy nó"*.
+**Giọng:** Nhanh, mạnh, quyết tuyệt — "tao muốn là tao lấy."
 
 **Nội dung:**
-- Mở: *"Tôi yêu Xuân. Và tôi không ngồi im chờ ai ban phát tình yêu."*
-- Hạ yêu Xuân — chủ động tấn công: hỏi bài muộn, mượn sách trả chậm, ngồi gần. Chi tiết áo xanh — *"Tôi có cả tủ áo xanh. Màu đó hợp với tôi nhất."*
-- Phát hiện ly trà đào + nhật ký → biết Xuân yêu Thu. Quyết định: *"Không thể là người anh yêu — thì là người anh không thể quên."*
-- Hạ trễ deadline, đi muộn 3 lần — vì quá tập trung vào Xuân.
-- Gặp Đông. Hắn nói: "Có một cách." Hạ nói: "Nói đi." Không run, không hỏi tại sao — họ bắt tay. Đồng minh vì lợi ích.
-- Viết đơn — bằng tay trái, mua giấy xa. Gửi cho Đông.
-- Hạ bị điều chuyển — chính mình, không phải Thu. Lệnh ký tên Đông.
-- Đối chất: *"Tôi trễ deadline một lần. Lỗi nhỏ."* Đông: *"Nhưng đủ để làm cớ. Và tôi không cần cớ lớn — tôi chỉ cần một cái cớ."*
-- Hạ ra đi. Nhìn Thu khóc, ôm mình, không nói sự thật. Chỉ nói: *"Trong chiến tranh, người thua cuộc phải rời đi."*
+- Hạ yêu Xuân — chủ động: hỏi bài, mượn sách, ngồi gần. *"Tôi có cả tủ áo xanh."*
+- Phát hiện ly trà đào + nhật ký → biết Xuân yêu Thu.
+- Quyết: không thể là người anh yêu → là người anh không thể quên.
+- Gặp Đông. Bắt tay. Hạ viết đơn — không do dự.
+- Đông nói: *"Để anh lo."*
+- Hạ tưởng mình sắp thắng.
+- **Một tuần sau: lệnh điều chuyển Thu.**
+- Hạ sốc: *"Sao lại là nó? Đơn tố cáo nó mà —"* Đông nói: *"Đúng. Đơn tố cáo nó. Nên nó đi. Em muốn gì?"*
+- Hạ nhận ra mình bị lừa — nhưng đã quá muộn. Hạ không thể rút lại. Và Hạ cũng không thể nói ra sự thật — vì nếu nói, Hạ sẽ lộ mình là người viết đơn.
+- Hạ im lặng. Nhìn Thu thu dọn đồ. Không nói được lời nào.
 
-**Kết:** *"Tôi ra đi, mang theo lòng căm hận và một câu hỏi: Đông là ai? Và tại sao hắn thù Xuân đến thế? Nhưng tôi không còn ở đó để tìm câu trả lời. Cơn bão — tôi chỉ kịp thấy nó đến, rồi bị cuốn đi."*
+**Kết:** *"Tôi muốn phá hoại tình yêu của nó. Và tôi đã thành công. Nhưng tôi không ngờ rằng — kẻ phá hoại thực sự không phải tôi. Tôi chỉ là một con rối. Và người giật dây đang cười trong bóng tối."*
 
-**Còn bí ẩn:** Đông là ai? Tại sao thù Xuân? → đẩy sang chap 3 & 4.
+**Bí ẩn:** Đông thực sự muốn gì? Tại sao hắn làm vậy?
 
 ---
 
 ## 🟠 Chapter 3: THU
-**"Cô gái không dám nói — và phát hiện ra mọi thứ đã sai"**
+**ĐỈNH ĐIỂM DRAMA — "Cô gái không dám nói, và phát hiện ra quá muộn"**
 
-**Giọng:** Nhẹ → nặng dần. Từ buồn → hoảng loạn → sụp đổ. Cao trào toàn bộ series.
+**Giọng:** Nhẹ → nặng dần. Buồn → hoảng loạn → sụp đổ.
 
 ---
 
 ### ACT 1 — TÌNH YÊU THẦM LẶNG (chậm, nhẹ)
 
-- Thu yêu Xuân từ ngày đầu — yêu thầm, không dám nói. Ngồi cạnh cửa sổ, hay nhìn mưa, viết tên anh vào cuốn sổ tay rồi gạch đi.
-- Ly trà đào — không biết ai pha. Hy vọng, nhưng không dám hỏi.
-- **Thấy Xuân thân thiết với Hạ:** Xuân cười với Hạ, Hạ ngồi gần Xuân, nhắn tin muộn cho Xuân. Chi tiết này được kể lại qua mắt Thu: *"Tôi thấy họ nói chuyện rất lâu ở quán nước. Hạ cười rất tươi."* → Gieo hiểu lầm.
-- **Đọc nhật ký:** Vô tình thấy cuốn sổ mở. Dòng chữ: *"Hôm nay nó mặc áo xanh."* — Hạ siêu hay mặc áo xanh. Thu tin chắc đó là Hạ.
+- Thu yêu Xuân từ ngày đầu. Yêu thầm. Không dám nói.
+- Ngồi cạnh cửa sổ, hay nhìn mưa.
+- Ly trà đào mỗi sáng — không biết ai pha, hy vọng nhưng không dám hỏi.
+- **Thấy Xuân thân thiết với Hạ:** Xuân cười với Hạ, Hạ ngồi gần Xuân. Thu thấy — và hiểu lầm.
+- Đọc nhật ký: *"Hôm nay nó mặc áo xanh"* — Hạ mặc áo xanh hôm đó → Thu tin chắc đó là Hạ.
 - Càng yêu — càng đau. Càng im — càng tuyệt vọng.
 
-**Tâm trạng cuối Act 1:** *"Tôi yêu anh trong im lặng. Và tôi nghĩ — mình không đủ tốt để anh nhìn thấy."*
+---
+
+### ACT 2 — SỤP ĐỔ (nhanh, căng)
+
+- Thu bị gọi lên phòng Đông. Lệnh điều chuyển.
+- *"Lý do?"* — *"Nội bộ."*
+- Thu hỏi Hạ. Hạ tránh mắt. Thu hỏi Xuân. Anh nhìn nó, mặt tái đi, không nói được gì.
+- Thu thu dọn đồ. Ra khỏi văn phòng lần cuối.
+- **Cảnh: Xuân và Thu ở hành lang.** Họ nhìn nhau. Anh muốn nói. Nó muốn nói. Cả hai đều không.
+- Cuối cùng, Xuân nói: *"Giữ gìn sức khỏe."* — rẻ rúng nhất trong những lời tạm biệt.
+- Thu gật. Bước đi. Không dám quay lại vì sợ khóc.
 
 ---
 
-### ACT 2 — SỤP ĐỔ (nhanh, căng thẳng)
+### ACT 3 — SỰ THẬT (CLIMAX — ĐAU NHẤT)
 
-- Đông tiếp cận Thu — làm bạn, lắng nghe.
-- Thu kể tất cả: ly trà đào, nhật ký, Hạ.
-- Đông hỏi: *"Có một lá đơn tố cáo Xuân và Hạ. Em chỉ cần xác nhận em thấy họ thân thiết."*
-- Thu gật. Chỉ một câu nói: *"Tôi thấy họ ngồi cùng nhau nhiều lần."*
-- Hạ bị điều chuyển.
-- Thu mang tội. **Đoạn tự vấn:** *"Tôi không viết đơn. Nhưng tôi đưa lưỡi dao. Và tôi không biết rằng mình vừa giết chết bạn thân."*
-- Sau khi Hạ đi, Thu không dám nhìn Xuân. Càng yêu — càng sợ.
+- Một tuần sau, chị Mai đến tìm Thu. Họ ngồi ở quán bún chả.
+- *"Chị thấy hết. Từ đầu đến cuối."*
+- *"Ly trà đào — Xuân pha cho em. Sáng nào cũng vậy. Cả năm trời."*
+- Thu hỏi về cuốn sổ. *"Dòng chữ 'Hôm nay nó mặc áo xanh'..."*
+- Chị Mai nhìn Thu: *"Hôm đó em mặc áo xanh. Con Hạ mặc áo trắng."*
 
-**Cao trào nhỏ:** Thu thấy Xuân cầm ly trà đào, nhìn nó một lúc, rồi uống một mình. Đau — nhưng vẫn không dám lại gần.
+**CLIMAX — viết chậm:**
 
----
-
-### ACT 3 — SỰ THẬT (CLIMAX)
-
-- Một tuần sau khi Hạ đi, chị Mai kéo Thu ra quán nước.
-- *"Chị thấy chuyện gì?"* — Thu hỏi.
-- Chị Mai: *"Chị thấy hết. Từ đầu đến cuối."*
-- *"Em biết không, ngày đó Xuân pha trà đào cho em. Sáng nào cũng vậy."*
-- *"Nó để trên bàn em. Cả năm trời. Nó không dám nói. Còn em thì cứ tưởng..."* — Chị Mai dừng lại.
-- Thu hỏi về cuốn sổ. *"Cuốn sổ có dòng chữ 'Hôm nay nó mặc áo xanh'."*
-- Chị Mai nhìn Thu một lúc. Rồi chị nói nhẹ như gió thoảng:
-- *"Hôm đó, em mặc áo xanh. Con Hạ mặc áo trắng."*
-
-**CLIMAX — đoạn này viết chậm, từng câu ngắn:**
-
-> Tôi ngồi im.
+> Tôi nhớ lại.
 > 
-> Ly trà đào trên bàn đã nguội từ lúc nào.
-> 
-> Tôi nhớ lại từng chi tiết. Những buổi sáng ly trà còn nóng. Những buổi tối đi ăn bún chả dưới mưa. Câu hỏi: "Anh có thích ai không?" và câu trả lời "Chưa" — mà tôi không biết rằng đó là lời nói dối của một người đàn ông sợ mất tôi.
+> Tất cả những buổi sáng ly trà còn nóng trên bàn. Những buổi tối đi ăn bún chả, anh hỏi "Em đói không?" bằng giọng dịu nhất mà tôi từng nghe. Câu hỏi "Anh có thích ai không?" và câu trả lời "Chưa" — mà tôi không biết rằng đó là lời nói dối cuối cùng của một người đàn ông không đủ can đảm để yêu.
 > 
 > Cuốn sổ. Dòng chữ. Của tôi. Tất cả là của tôi.
 > 
-> Và tôi — tôi đã xác nhận lời tố cáo. Tôi đã giúp hại chính người mình yêu và hại bạn thân của mình, chỉ vì tôi không đủ can đảm để hỏi một câu: *"Ly trà này có phải của anh không?"*
+> Anh yêu tôi. Và tôi yêu anh. Và cả hai đều không nói ra.
+> 
+> Và bây giờ tôi đang ngồi ở một quán bún chả xa lạ, với một ly trà đào nguội lạnh, và biết rằng mình đã mất anh mãi mãi.
 
-- Thu hỏi về Đông. Chị Mai: *"Chị không biết nó là ai. Nhưng chị biết nó không vào đây vì công việc."*
-- Thu xin nghỉ phép. Ngồi ở nhà ba ngày, không nói với ai. Không khóc được.
+**Kết:** *"Tôi yêu anh. Và điều duy nhất tôi có được từ tình yêu đó là nỗi đau khi biết rằng — anh cũng yêu tôi. Nhưng đã quá muộn."*
 
----
-
-### KẾT CHAPTER 3 — đau nhất series
-
-> Tôi yêu anh. Và tôi đã hủy hoại tất cả — bằng tình yêu của chính mình.
->
-> Không phải vì tôi ác. Mà vì tôi không đủ dũng cảm.
->
-> Có một ly trà đào để trên bàn tôi suốt một năm. Và tôi chưa từng uống hết nó — vì tôi sợ nó sẽ hết, như cách tôi sợ tình yêu này sẽ hết nếu tôi dám thừa nhận.
->
-> Nhưng tôi vẫn còn một câu hỏi — người đàn ông tên Đông kia, hắn là ai? Tại sao hắn làm tất cả điều này?
->
-> *Tôi phải biết.*
-
-**Hook cuối:** Ai là Đông? Tại sao làm vậy? → kéo sang chap 4.
+**Hook:** Nhưng tại sao Đông làm vậy? Đông là ai? → kéo sang chap 4.
 
 ---
 
 ## 🔵 Chapter 4: ĐÔNG
 **"Người đàn ông không bao giờ quên"**
 
-**Giọng:** Trầm, đều, lạnh — nhưng bên dưới là vực thẳm 10 năm.
+**Giọng:** Trầm, đều, lạnh — phía dưới là vực thẳm 10 năm.
 
 ---
 
-### ACT 1 — QUÁ KHỨ (chậm, nặng)
+### ACT 1 — QUÁ KHỨ
 
-- Đông và Xuân — bạn thân đại học. Cùng ký túc xá, cùng nhóm, cùng những đêm thức trắng.
-- *"Tôi tin nó hơn bất kỳ ai trên đời."*
+- Đông và Xuân — bạn thân đại học.
 - Mai — bạn gái Đông. Tóc dài, hay cười, viết thơ dở.
-- *"Một lần tôi rủ Mai đi gặp Xuân. Giới thiệu người con gái mình yêu với bạn thân. Sai lầm lớn nhất đời tôi."*
-- Mai yêu Xuân. Xuân từ chối. Mai tự tử — cầu Tràng Tiền, đêm mưa, lá thư để lại.
-- *"Tôi đọc nó cả trăm lần. Cho đến khi thuộc từng chữ. Cho đến khi tôi thề — tôi sẽ hủy hoại cuộc đời nó."*
+- *"Tôi dẫn Mai gặp Xuân. Sai lầm lớn nhất đời tôi."*
+- Mai yêu Xuân. Xuân từ chối. Mai tự tử — cầu Tràng Tiền. Lá thư để lại.
+- *"Tôi thề — tôi sẽ hủy hoại cuộc đời nó."*
 
 ---
 
-### ACT 2 — KẾ HOẠCH (nhanh, lạnh, từng bước)
+### ACT 2 — KẾ HOẠCH
 
-- 10 năm. Đông gây dựng sự nghiệp. Vào công ty. Thấy Xuân yêu Thu — biết đây là cơ hội.
-- Tiếp cận Hạ (ghen — *"dễ nhất"*), tiếp cận Thu (hiểu lầm — *"cũng dễ không kém"*).
-- Hạ viết đơn. Đông dùng lỗi trễ deadline của Hạ làm cớ điều chuyển.
-- Thu xác nhận. Đông ký lệnh. Hạ đi.
-- *"Tôi phá hủy tất cả. Từng bước. Không ai thoát."*
-
----
-
-### ACT 3 — TRỐNG RỖNG + TIA SÁNG (chậm lại, nhẹ hơn)
-
-- Đông thắng — nhưng không thấy gì ngoài một sự im lặng mênh mông.
-- Cảnh khuya: Đông mở ảnh Mai trên điện thoại. Nhìn lâu.
-- *"Tôi tự hỏi — nếu Mai còn sống, liệu cô ấy có muốn tôi làm thế này không?"*
-- *"Câu trả lời: tôi không bao giờ biết được. Và đó là sự trừng phạt lớn nhất."*
-- Đông đốt lá thư cũ. Lần đầu tiên sau 10 năm.
-- *"Tôi không tha thứ cho Xuân. Nhưng tôi ngừng để quá khứ điều khiển mình."*
+- 10 năm sau, Đông vào công ty. Thấy Xuân yêu Thu.
+- Tiếp cận Hạ (ghen). Xúi Hạ viết đơn.
+- Đông ký điều chuyển Thu — không phải vì đơn, mà vì hắn muốn.
+- *"Hạ nghĩ nó đang phá hoại tình yêu. Nó không biết nó đang giúp tôi."*
 
 ---
 
-## TIA SÁNG CUỐI CÙNG
+### ACT 3 — KẾT THÚC + TIA SÁNG
 
-Sau chapter 4, một **mini-epilogue** ngắn — không thuộc chapter nào, có thể đặt riêng. Khoảng 1 trang.
+- Đông thắng. Xuân mất Thu.
+- Nhưng Đông thấy trống rỗng.
+- Đốt lá thư cũ của Mai.
 
-**Cảnh:** Một quán bún chả quen. Chiều cuối thu. Mưa bụi.
+> *"Tôi đã hủy hoại nó. Nhưng tôi không thấy vui. Tôi chỉ thấy một người đàn ông khác, cũng đau khổ như tôi."*
+
+---
+
+## ✨ EPILOGUE — TIA SÁNG
+
+Một năm sau. Quán bún chả quen. Chiều cuối thu, mưa bụi.
 
 Một người đàn ông ngồi ở bàn trong. Trước mặt là một ly trà đào — nóng, mới pha.
 
-Một người phụ nữ bước vào quán. Tóc ngắn. Tay cầm ô dù còn ướt. Nhìn quanh.
+Một người phụ nữ bước vào. Tóc ngắn hơn xưa. Tay cầm ô dù còn ướt.
 
 Mắt họ gặp nhau.
 
-Người đàn ông — không cười, không nói. Chỉ đẩy nhẹ ly trà về phía trước, về phía chiếc ghế trống đối diện.
+Người đàn ông không cười. Không nói. Chỉ đẩy nhẹ ly trà về phía trước — về phía chiếc ghế trống đối diện.
 
 Cô gái nhìn ly trà. Một lúc lâu.
 
 Rồi cô kéo ghế ra, ngồi xuống.
 
-> *Ngoài kia, mùa đông đang đến. Nhưng trong ly trà đào này, mùa xuân vẫn còn.*
-
-HẾT
+> *Ngoài kia, mùa đông đang đến. Nhưng trong ly trà đào này — mùa xuân vẫn còn.*
