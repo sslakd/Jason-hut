@@ -1,197 +1,125 @@
 # ĐÔNG
 
-*Tôi tên Đông. Không phải vì sinh vào mùa đông. Mà vì mẹ bảo hồi đó bà thích chữ Đông — nghe nó cứng, nó lạnh. Bà không biết rằng sau này tôi sẽ sống đúng như cái tên của mình.*
+*Sinh vào một đêm mùa đông, khi cái rét cắt da cắt thịt ùa về bất chợt, và mẹ tôi suýt không qua khỏi. Có lẽ vì thế mà tôi sinh ra đã mang trong mình một sự lạnh lẽo không tên. Và có lẽ vì thế mà tôi không bao giờ biết cách yêu thương — chỉ biết cách giữ mãi một mối thù.*
 
 ---
 
-Tôi không nhớ rõ lần đầu tiên gặp Thu.
+Tôi và Xuân học cùng đại học.
 
-Nói thật, tôi không phải kiểu người để ý đến những thứ nhỏ nhặt. Một fresher mới vào, tôi được phân công hướng dẫn — tôi hướng dẫn. Hồi đó tôi nghĩ đơn giản lắm: dạy cho nó biết việc, ba tháng sau nó tự làm được, thế là xong trách nhiệm.
+Cùng lớp, cùng ký túc xá, cùng nhóm bạn. Chúng tôi uống chung một ly bia, ngủ chung một giường những hôm trời lạnh, cãi nhau như chó với mèo rồi lại làm lành sau một gói thuốc lá. Hồi đó, tôi nghĩ thằng này là bạn thân nhất của mình. Một thằng bạn mà tôi có thể tin cả tính mạng.
 
-Nhưng mà có những chuyện, mày tính không lại.
-
----
-
-Nó ngồi bàn trong cùng, cạnh cửa sổ. Tôi ngồi cuối dãy, quay lưng ra cửa. Mỗi lần nó hỏi bài, nó phải đi qua năm cái bàn. Nó hay đến vào cuối giờ, lúc tôi sắp sửa về. Cầm cái laptop, kéo ghế ngồi xuống cạnh tôi, tóc dài, tay nhỏ, hỏi những câu mà tôi biết nó có thể hỏi từ sáng.
-
-Lần đầu tôi nghĩ: chắc nó ngại.
-
-Lần thứ hai: chắc nó sợ hỏi giữa đám đông.
-
-Đến lần thứ mười, tôi không nghĩ gì nữa. Vì nếu nghĩ, tôi sẽ phải nghĩ đến những thứ tôi không nên nghĩ.
+Cho đến ngày tôi gặp Mai.
 
 ---
 
-Tôi 30 tuổi, làm PM được năm năm.
+Mai là bạn gái tôi năm thứ ba đại học.
 
-Không phải tôi chưa từng thích ai. Nhưng ở tuổi đó, mày biết rõ giới hạn của mình. Mày biết cái gì nên làm, cái gì không. Mày biết một đứa fresher và người hướng dẫn nó — nếu có chuyện gì xảy ra — sẽ không chỉ là chuyện của riêng hai đứa mày.
+Tôi yêu Mai theo cái cách của một thằng sinh viên năm ba — chân thành, hết mình, nghĩ rằng tình yêu là thứ duy nhất đáng sống trên đời. Mai là con gái ngành Văn, tóc dài, hay cười, viết thơ dở nhưng viết hoài. Mỗi lần cô ấy đọc thơ cho tôi nghe, tôi nói dối: "Hay lắm."
 
-Công ty nhỏ, bảy người. Ai cũng biết ai. Một cái nhìn cũng đủ để thiên hạ đồn thổi.
+Tôi dẫn Mai đi gặp Xuân. Lần đầu tiên. Tôi muốn giới thiệu người con gái mình yêu với người bạn thân nhất của mình.
 
-Mà tôi thì ghét nhất cái cảnh thiên hạ bàn tán về mình.
-
----
-
-Hôm đó OT tới chín giờ. Cả team về hết. Nó ngồi lại, tôi cũng ngồi lại.
-
-Tôi xong việc từ bảy giờ. Nhưng tôi không về. Tôi mở laptop, mở một file cũ ra, gõ gõ vài dòng vô nghĩa, chờ nó xong.
-
-Đến chín giờ rưỡi, tôi hỏi: "Em đói không?"
-
-Câu hỏi đó tôi đã chuẩn bị từ hai tiếng trước.
+Đó là sai lầm lớn nhất đời tôi.
 
 ---
 
-Chúng tôi đi ăn bún chả dưới trời mưa.
+Những ngày sau đó, tôi thấy Mai thay đổi.
 
-Mưa cuối thu, kiểu mưa không ướt áo nhưng làm lòng người nặng trĩu. Nó hỏi tôi sao mưa cuối thu hay buồn. Tôi nói đại một câu trong đầu vừa nghĩ ra: "Tại nó không mưa dứt khoát."
+Cô ấy ít nói hơn khi ở cạnh tôi. Cô ấy hay nhìn ra xa. Cô ấy hỏi về Xuân nhiều hơn — "Nó thích gì?", "Nó có bạn gái chưa?", "Sao nó ít nói vậy?"
 
-Sau này tôi mới biết, nó nhớ câu đó.
+Tôi thấy. Nhưng tôi không dám tin.
 
-Tôi nhớ lúc đứng dậy về, nó giũ áo, một cọng tóc dài rơi xuống vai tôi. Tôi nhặt lên. Tay tôi ngừng lại.
+Một tháng sau, Mai nói với tôi: "Chia tay đi."
 
-Mày biết không, có những khoảnh khắc mày biết nếu mày làm một cái gì đó, mọi thứ sẽ thay đổi. Và mày đứng giữa lựa chọn — làm, hoặc không làm.
+Tôi hỏi tại sao. Cô ấy không trả lời. Mắt cô ấy nhìn xuống đất. Và tôi biết — cô ấy yêu người khác. Người đó là Xuân.
 
-Tôi đã cầm cọng tóc đó trong tay.
+Tôi hỏi Xuân. Nó bảo: "Tao không có tình cảm với con bé. Tao đã từ chối rồi."
 
-Một tích tắc. Cảm giác như cả đời.
-
-Rồi tôi cất nó vào túi áo. Không nói gì.
+Tôi muốn tin nó. Nhưng nỗi đau trong tôi đã bắt đầu nảy mầm.
 
 ---
 
-Vụ spec sai, nó bị ông phó tổng gọi lên.
+Mai tự tử ba tháng sau đó.
 
-Tôi thấy nó đi xuống, mắt đỏ hoe, úp mặt xuống bàn. Tôi muốn hỏi, nhưng biết hỏi lúc này chỉ làm nó tủi thân thêm. Tôi ngồi cạnh nó một lúc, không nói. Khi nó ngẩng lên, tôi đứng dậy.
+Không phải bằng dao, không phải bằng thuốc ngủ. Cô ấy ra giữa cầu Tràng Tiền, đêm mưa tháng Sáu, nhảy xuống. Dòng nước lũ cuốn đi. Đến khi vớt được xác lên, mặt cô ấy đã không còn nhận ra nổi.
 
-"Lên gặp ông phó tổng."
+Trong túi áo cô ấy có một lá thư mỏng. Một dòng duy nhất:
 
-Nó hốt hoảng: "Đừng! Em sai mà —"
+*"Em không thể sống khi biết mình yêu một người không yêu lại mình."*
 
-Tôi dừng lại. Tôi biết nó sai. Nhưng tôi cũng biết ông ta không có quyền làm nó khóc như thế.
+Tôi đọc lá thư đó mười lần. Trăm lần. Ngàn lần. Cho đến từng chữ, từng nét mực, từng vết nhăn trên tờ giấy đã in sâu vào trí nhớ tôi như một vết sẹo.
 
-"Có gì anh nói chuyện với ổng."
+Tôi không trách Mai. Tôi trách Xuân. Nếu nó yêu cô ấy, cô ấy đã không chết. Nếu nó từ chối một cách tử tế hơn, cô ấy đã không tuyệt vọng đến thế.
 
-Tôi lên phòng ông ta. Nói chuyện năm phút. Ông ta nhìn tôi bằng cái nhìn của người biết tôi đang bảo vệ cái gì. Nhưng ông ta không nói gì. Vì tôi có lý do chính đáng — bản spec lẽ ra phải qua tôi kiểm tra.
+Nhưng nó đã không làm thế. Nó từ chối khô khốc, lạnh lùng, như thể tình yêu của Mai chỉ là một món hàng bị trả lại.
 
-Xuống dưới, tôi thấy nó vẫn ngồi đó, nhìn tôi như sắp khóc lần nữa.
+Tối hôm đám tang, tôi ngồi một mình trong phòng, nhìn di ảnh của Mai trên điện thoại. Và tôi thề — tôi sẽ hủy hoại cuộc đời thằng Xuân. Không phải bằng cách giết nó. Mà bằng cách lấy đi thứ nó yêu quý nhất, y như nó đã lấy đi thứ quý nhất của tôi.
 
-"Sao? Tưởng anh bị đuổi việc rồi hả?"
-
-Nó cười. Mắt nó còn đỏ. Tôi thấy tim mình thắt lại. Tôi quay đi, giả vờ nhìn màn hình.
+Tôi có mười năm để chuẩn bị.
 
 ---
 
-Tôi bắt đầu để ý những chuyện vặt vãnh.
+Sau khi ra trường, tôi không liên lạc với Xuân nữa.
 
-Cách nó kéo ghế, hơi lệch sang một bên. Cách nó cắn bút mỗi khi nghĩ. Cách nó nhìn mưa, mắt xa xăm như thể đang nhìn thấy cái gì đó mà tôi không thấy.
+Tôi cắt đứt mọi quan hệ. Tôi chuyển công ty ba lần, leo lên chức phó tổng, gây dựng một mạng lưới quan hệ đủ rộng để có thể kiểm soát nhiều thứ. Tôi không vội. Thù hận mà vội là thù hận ngu ngốc. Thù hận cần thời gian, kiên nhẫn, và một cái đầu lạnh.
 
-Những chuyện đó, nếu hỏi tôi một năm trước, tôi sẽ bảo mày bị điên. Nhưng bây giờ tôi để ý. Và càng để ý, tôi càng muốn không để ý.
+Mười năm sau, tôi biết Xuân vẫn độc thân. Nó làm senior PM cho một công ty nhỏ trên phố Hai Bà Trưng. Tôi xin vào làm phó tổng của công ty đó. Hội đồng quản trị không từ chối — hồ sơ của tôi quá đẹp.
 
-Một lần cả team đi ăn, chị Mai hỏi nó: "Sao dạo này em hay ngồi gần người ta thế?" Cả bàn cười. Nó đỏ mặt, cúi gằm xuống.
+Tuần đầu tiên, tôi thấy nó. Già hơn, trầm hơn, mắt có quầng thâm. Nhưng vẫn là nó.
 
-Tôi không cười. Tôi không nói gì. Nhưng tôi biết chị Mai thấy hết. Và tôi biết từ hôm đó chị Mai nhìn tôi bằng ánh mắt khác.
+Và tôi thấy nó nhìn Hạ.
 
-Cái ánh mắt của người biết chuyện nhưng không nói.
+Cái nhìn đó. Tôi biết. Tôi đã nhìn Mai bằng cái nhìn đó mười lăm năm trước. Trong mắt nó có tất cả — sự dịu dàng, sự nâng niu, sự sợ hãi. Nó đang yêu.
 
----
+Tôi cười lần đầu tiên sau nhiều năm.
 
-Đi Ninh Bình, cuối năm.
-
-Buổi tối mọi người ngồi quanh đống lửa. Tôi thấy nó ngồi dưới gốc cây, xa mọi người. Tôi cầm cốc trà nóng đi ra.
-
-"Sao không vô trong kia?"
-
-"Ồn quá."
-
-Tôi ngồi xuống. Trời nhiều sao. Hồi nhỏ tôi hay ngắm sao, lớn lên quên mất.
-
-Nó chỉ lên trời, hỏi tôi thích sao nào nhất. Tôi bảo: "Sao nào cũng được." Nó chỉ một chấm sáng nhỏ xíu, bảo nó thích sao đó — nhỏ xíu mà cứ sáng hoài.
-
-Tôi nhìn theo tay nó.
-
-"Sáng thiệt."
-
-Tôi nói về ngôi sao. Hay về nó. Tôi cũng không biết nữa. Cả hai đều không hỏi.
-
-Một lúc sau thằng Tuấn hét lên mất dép, cả đám cười ồ, khoảnh khắc vỡ tan. Tôi mừng. Vì nếu nó kéo dài thêm, tôi không biết mình sẽ nói gì.
+Cuối cùng, nó cũng yêu.
 
 ---
 
-Tôi thấy ông phó tổng để ý nó.
+Tôi không nhắm vào Hạ.
 
-Tôi thấy cái cách ông ta gọi nó lên phòng riêng, giao việc không qua tôi. Tôi thấy nó đi xuống, tay nắm chặt, mặt vô cảm. Tôi thấy hết. Nhưng tôi không thể làm gì.
+Đánh vào Hạ là ngu. Hạ là mục tiêu quá rõ ràng. Tôi nhắm vào một người khác — Thu.
 
-Vì tôi là gì của nó? Một senior PM hướng dẫn fresher. Hết.
+Tôi phát hiện ra Thu yêu Xuân từ rất lâu, trước cả khi Hạ vào công ty. Một tình yêu thầm lặng, không lời, tuyệt vọng. Thu không phải mẫu con gái để Xuân để ý. Nó trầm, nó im, nó vô hình. Tôi biết cảm giác đó.
 
-Tôi ngồi im, nhìn nó từ bàn mình. Nỗi lo nhân lên mỗi ngày. Nhưng tôi không có quyền hỏi. Không có quyền bảo vệ. Ở chốn công sở, quyền lực không nằm ở cảm xúc — nó nằm ở chức danh. Và chức danh của tôi không đủ.
+Tôi tiếp cận Thu. Làm bạn. Lắng nghe. Dần dần, nó tin tôi. Và một ngày, tôi nói:
 
----
+"Có một cách để mọi chuyện trở về đúng chỗ của nó."
 
-Nó nói nó sắp chuyển bộ phận.
+Thu không trả lời. Nhưng mắt nó nói hết.
 
-Quán bún chả quen. Buổi trưa cuối thu. Nắng bắt đầu tắt sớm. Nó ngồi trước mặt tôi, tóc dài, mắt nhìn xuống ly nước, nói giọng cố tỏ ra bình thường.
-
-Tôi gật. Tôi nghĩ tôi sẽ nói gì đó. Nhưng tôi không tìm được câu nào.
-
-Tôi nhìn nó, nhìn tóc nó. Muốn nói nhiều thứ. Muốn nói: "Đừng đi." Muốn nói: "Ở lại." Muốn nói: "Anh thích em."
-
-Nhưng tôi cười.
-
-"Ừ. Chúc em may mắn."
-
-Nó đứng dậy. Tôi không đứng dậy theo. Tôi ngồi nhìn nó đi ra đường, tóc dài bay trong gió cuối thu.
-
-Nó không quay lại.
+Không cần thêm lời nào. Tôi chỉ cần gieo hạt giống. Còn lại, thời gian và nỗi đau sẽ làm nốt.
 
 ---
 
-Tôi lấy vợ hai năm sau đó.
+Hạ viết đơn nặc danh.
 
-Không phải vì tôi hết thương nó. Mà vì tôi 30, mẹ giục, bạn bè lần lượt có gia đình. Và vì tôi biết — nếu tôi không lấy ai đó, tôi sẽ mãi chờ một người không bao giờ quay lại.
+Thực ra, Thu viết. Tôi soạn nội dung. Một cái đơn vừa đủ để hội đồng quản trị thấy phiền, vừa đủ để họ giải quyết theo cách đơn giản nhất — điều chuyển.
 
-Vợ tôi tốt. Người phụ nữ hiền lành, đảm đang, yêu thương tôi theo cái cách mà một người đàn ông nên cảm thấy đủ.
+Tôi ký lệnh điều chuyển.
 
-Tôi thương cô ấy. Nhưng thương và yêu — hai chuyện khác nhau. Khi mày già đi, mày học cách chấp nhận sự khác nhau đó.
+Hạ đi.
 
----
+Xuân ngồi im. Không hỏi, không khóc, không chửi. Nó chỉ ngồi đó, lặng lẽ, nhìn ra cửa sổ, tay cầm ly trà đào nguội lạnh.
 
-Nhiều năm sau, tôi gặp lại nó.
+Tôi đứng từ phòng mình, nhìn nó qua tấm kính một chiều. Cảm giác chiến thắng ngọt ngào hơn tôi tưởng. Nhưng nó cũng trống rỗng hơn tôi tưởng.
 
-Quán bún chả cũ. Ghế nhựa đỏ, bàn nhôm móp méo. Bà chủ già hơn, nhưng vẫn nhận ra tôi.
-
-Nó ngồi xuống, tóc cắt ngắn. Tôi chợt nhận ra nó không còn là cô gái fresher tóc dài năm nào. Nó trưởng thành hơn, già hơn.
-
-"Ủa, Thu. Tóc em cắt rồi hả?"
-
-"Dạ, cắt lâu rồi."
-
-Tôi gật. Chúng tôi nói những chuyện xã giao, chuyện công ty cũ, chuyện vợ con tôi. Nó nói nó chưa lấy chồng. Tôi không hỏi tại sao.
-
-Trước khi chia tay, tôi nói:
-
-"Hồi đó, anh muốn nói nhiều thứ lắm. Mà hồi đó anh cũng sợ nhiều thứ lắm."
-
-Nó không nói gì. Chỉ nhìn tôi.
-
-Tôi cười. Bắt tay nó.
-
-"Vui vì gặp lại em."
+Tôi đã đợi mười năm để có khoảnh khắc này. Và khi nó đến, tôi không thấy gì ngoài một sự im lặng mênh mông.
 
 ---
 
-Về nhà, tôi lục tủ đồ cũ.
+Tôi không bao giờ gặp lại Xuân sau ngày đó.
 
-Tôi tìm thấy nó — một cọng tóc dài, đen, mượt, được kẹp trong một cuốn sách cũ. Hồi đó tôi đã cất nó vào đây, trong cuốn "Mùa thu của những chiếc lá cuối cùng" — cuốn tôi mua ở quán sách mà tôi chưa bao giờ đọc hết.
+Không phải vì tôi tránh. Mà vì tôi không còn cần. Mối thù của tôi đã được trả. Kết quả là một người đàn ông có trái tim rỗng tuếch — giống hệt tôi.
 
-Cọng tóc vẫn còn. Không phai, không mục, không đứt.
+Tôi vẫn nhớ Mai.
 
-Tôi nhìn nó một lúc. Nhớ lại cái tích tắc dưới cơn mưa cuối thu, khi tay tôi ngừng lại, trái tim tôi nói cho tôi biết một điều mà tôi quá hèn để làm theo.
+Những đêm khuya, khi thành phố ngủ, tôi mở điện thoại, nhìn tấm ảnh cũ của cô ấy. Cô ấy cười, tóc dài, mắt sáng, không biết rằng mình sắp chết. Tôi tự hỏi — nếu ngày đó tôi không dẫn cô ấy đi gặp Xuân, liệu mọi chuyện có khác?
 
-Rồi tôi cất cuốn sách lại vào tủ.
+Nhưng câu hỏi đó vô nghĩa. Quá khứ là quá khứ. Tôi đã làm những gì tôi phải làm. Và tôi sẽ sống với nó đến cuối đời.
 
-Vợ tôi gọi: "Anh ơi, vào ăn cơm."
+Người ta bảo tôi là kẻ ác. Có thể đúng.
 
-Tôi đóng tủ. Đi vào.
+Nhưng trước khi là kẻ ác, tôi đã từng là người yêu. Và tôi yêu nhiều đến nỗi sự mất mát đó đã nung tôi thành một thứ khác — lạnh lẽo hơn, sắc bén hơn, và không bao giờ quên.
 
 HẾT

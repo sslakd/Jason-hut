@@ -1,115 +1,95 @@
 # XUÂN
 
-*Tôi sinh vào mùa xuân. Người ta nói mùa xuân là mùa của hy vọng. Nhưng tôi chưa bao giờ tin vào hy vọng.*
+*Sinh vào một sáng đầu xuân, khi những chồi non đầu tiên vừa nhú trên cành bàng trước cửa bệnh viện. Mẹ bảo hôm đó trời đẹp, nắng vàng, gió nhẹ, như cả đất trời đang cười. Có lẽ vì thế mà tôi hay tin vào những điều tốt đẹp. Và có lẽ vì thế mà tôi dễ bị tổn thương.*
 
 ---
 
-Tôi và Đông học cùng đại học.
+Tôi là senior PM của một công ty nhỏ trên phố Hai Bà Trưng.
 
-Cùng lớp, cùng ký túc xá, cùng một nhóm bạn. Chúng tôi uống chung một ly bia, thức cùng một đêm để chạy deadline, cãi nhau về những thứ vớ vẩn rồi lại làm lành sau một điếu thuốc. Hồi đó tôi nghĩ — thằng bạn này chơi được. Cả đời này tao có một thằng bạn như mày là đủ.
+Bảy người. Một team. Sếp Hải năm mươi tuổi, ít nói, hay uống trà nóng dù trời có nóng thế nào. Chị Mai kế toán pha trà bí đao mỗi sáng, để sẵn một bình trên bàn cho cả phòng. Thằng Tuấn dev cứ 10h lại hỏi "có ai ăn sáng không?" dù chưa lần nào có ai bảo có.
 
-Tôi không biết rằng rồi tôi sẽ dành cả đời để hận nó.
+Công ty nhỏ, nghèo, nhưng vui.
 
----
+Tôi thích công việc của mình. Tôi thích cảm giác đứng giữa team, kết nối người này với người kia, xếp những mảnh ghép rời rạc thành một bức tranh hoàn chỉnh. Làm PM không phải là quản lý — mà là làm cho mọi người tin rằng họ có thể làm được những điều họ chưa từng nghĩ tới.
 
-Mai.
-
-Cô ấy là bạn gái tôi năm thứ ba đại học. Con gái ngành Văn, tóc dài, hay cười, viết thơ dở ẹc nhưng viết hoài. Tôi yêu cô ấy theo cái cách của một thằng sinh viên năm ba — chân thành, ngốc nghếch, không biết gì về cuộc đời cả.
-
-Tôi dẫn Mai đi gặp Đông. Lần đầu tiên. Tôi muốn giới thiệu người con gái mình yêu với người bạn thân nhất của mình.
-
-Sau nụ cười đó, tôi không bao giờ có thể nhìn Mai bằng đôi mắt cũ nữa. Cô ấy cười với Đông. Đông cười lại. Tôi đứng bên cạnh, tay đút túi, nghĩ không có gì.
-
-Một tháng sau, Mai nói với tôi: "Chia tay đi."
-
-Hỏi tại sao. Cô ấy không trả lời.
-
-Nhưng tôi biết. Con gái khi yêu người khác, họ không cần nói — mắt họ đã nói hết.
-
-Tôi hỏi Đông. Nó bảo: "Tao không có tình cảm với con bé. Tao từ chối rồi."
-
-Tôi muốn tin nó.
+Và rồi Hạ vào công ty.
 
 ---
 
-Mai tự tử ba tháng sau đó.
+Nó là fresher mới ra trường, được phân cho tôi hướng dẫn.
 
-Không phải bằng dao, không phải bằng thuốc ngủ. Cô ấy ra giữa cầu, đêm mưa, nhảy xuống. Đến khi vớt được xác lên, mặt cô ấy đã không còn nhận ra nữa.
+Lần đầu gặp, nó mặc áo sơ mi trắng, tóc dài, mắt sáng. Nó bước vào phòng họp, nhìn quanh một vòng, rồi cười với tôi. Một nụ cười không ngại ngùng, không e dè — nụ cười của người sẵn sàng đón nhận thế giới.
 
-Trong túi áo cô ấy có một lá thư.
+Tôi biết ngay — đứa này sẽ làm tôi nhớ.
 
-Không gửi cho tôi. Không gửi cho Đông. Chỉ có một dòng: *"Em không thể sống khi biết mình không được yêu thương."*
+Nhưng hồi đó tôi nghĩ: "Chắc tại mình lâu rồi không có fresher mới. Cảm giác quen thuộc thôi."
 
-Tôi đọc lá thư đó mười lần. Trăm lần. Cho đến khi tôi thuộc từng chữ, từng nét chữ, từng vết nhăn trên tờ giấy.
-
-Đêm đó tôi thề: tôi sẽ hủy hoại cuộc đời thằng Đông. Không phải bằng cách giết nó. Mà bằng cách lấy đi thứ nó yêu quý nhất.
-
-Y như nó đã lấy đi thứ quý nhất của tôi.
+Tôi đã tự lừa mình rất giỏi.
 
 ---
 
-Mười năm.
+Những ngày đầu, tôi dạy nó viết spec, dạy nó cách đọc requirement, dạy nó cách nói chuyện với khách hàng mà không để họ nuốt mất lời của mình.
 
-Tôi mất mười năm để gây dựng sự nghiệp, để có một chức vụ đủ cao, để tiếp cận được nó. Tôi không vội. Thù hận mà vội là thù hận ngu ngốc. Tôi muốn nó đau một cách hoàn hảo.
+Nó học nhanh. Những câu hỏi của nó không phải kiểu "cái này là gì" mà là "tại sao lại làm thế". Nó không chỉ muốn biết cách làm — nó muốn hiểu lý do.
 
-Tôi biết Đông vẫn độc thân. Tôi biết nó vẫn chưa yêu ai. Có lúc tôi sợ nó sẽ chẳng yêu ai nữa — và thế thì mối thù của tôi sẽ vô nghĩa.
+Tôi thích điều đó. Mỗi lần nó hỏi, tôi kéo ghế ngồi xuống cạnh nó, giải thích chậm rãi. Tay tôi hay trỏ vào màn hình. Một lần, tôi để ý thấy nó không nhìn màn hình — nó nhìn tay tôi.
 
-Rồi tôi thấy nó nhìn Thu.
+Lúc đó tim tôi ngừng đập nửa nhịp. Nhưng tôi giả vờ không thấy.
 
-Cái nhìn đó. Tôi biết. Tôi đã nhìn Mai bằng cái nhìn đó mười năm trước.
+Tôi có thói quen — mỗi sáng, khi đến công ty, tôi pha một ly trà đào để sẵn trên bàn cho nó. Không kèm giấy note. Không ký tên. Chỉ một ly trà đào, vị ngọt nhẹ, thơm thoang thoảng, bắt đầu một ngày mới.
 
-Tôi cười. Cuối cùng, nó cũng yêu.
+Nó không bao giờ hỏi ai pha. Tôi không bao giờ nói.
 
----
-
-Tôi không vội tiếp cận Thu. Làm thế là ngu. Tôi tiếp cận một người khác — Hạ.
-
-Con bé cùng phòng với Thu. Cũng fresher. Cũng mới ra trường. Nhưng mắt nó nhìn Đông khác. Nó có thứ mà Thu không có — một vết nứt để tôi chui vào.
-
-Ghen tuông.
-
-Tôi làm bạn với nó. Tôi hỏi han. Lắng nghe. Dần dần, nó tin tôi. Và một ngày, tôi gieo hạt giống đầu tiên:
-
-"Em biết không, nếu không có Thu, chắc mọi chuyện đã khác."
-
-Hạ không trả lời. Nhưng mắt nó nói hết.
-
-Tôi biết nó sẽ làm. Chỉ là vấn đề thời gian.
+Có những chuyện đẹp nhất là những chuyện không cần giải thích.
 
 ---
 
-Đơn nặc danh.
+Cuối giờ làm, khi cả team đã về, tôi hay ngồi lại một mình.
 
-Hạ viết. Tôi soạn nội dung. Một cái đơn đủ để gây chú ý nhưng không đủ để điều tra. Đủ để hội đồng quản trị thấy phiền và giải quyết theo cách đơn giản nhất — điều chuyển.
+Không phải vì việc. Tôi ngồi lại vì biết nó cũng hay ở lại. Tôi mở laptop, gõ gõ mấy dòng vô nghĩa, chờ nó xong việc. Khi nó đứng dậy, tôi hỏi: "Đi ăn không?"
 
-Tôi ký lệnh điều chuyển.
+Nó cười: "Em lúc nào cũng đói."
 
-Thu đi.
+Chúng tôi đi ăn bún chả dưới trời mưa bụi cuối xuân. Nó nói về tuổi thơ của nó, về một cây me già trước nhà mà mỗi mùa hoa nở là cả con đường thơm nức. Tôi ngồi nghe, quên mất tô bún đang nguội.
 
-Đông ngồi im, không hỏi, không khóc, không làm loạn. Nó chỉ ngồi đó, lặng lẽ, nhìn ra cửa sổ.
+Lúc về, nó giũ áo, một giọt mưa vương trên tóc. Tay tôi giơ lên, định gạt giúp nó. Rồi tôi rụt lại.
 
-Tôi nhìn nó từ phòng mình. Cảm giác chiến thắng ngọt ngào hơn tôi tưởng.
-
----
-
-Hai năm sau, Đông lấy Hạ.
-
-Tôi không ngờ tới chuyện đó. Nhưng tôi không quan tâm. Tôi đã làm được điều mình muốn — tôi lấy đi người nó yêu. Nó sẽ sống cả đời với một người nó không yêu, và mỗi ngày thức dậy, nó sẽ nhớ đến Thu.
-
-Cũng như tôi đã sống mười năm với ký ức về Mai.
+Điều đó làm tôi nhớ đến mình — tôi đã từng dũng cảm với công việc, với những cuộc họp, với những quyết định khó khăn. Nhưng với một cô gái, tôi lại trở nên hèn nhát nhất trần đời.
 
 ---
 
-Tôi không bao giờ gặp lại Đông sau ngày đó.
+Tôi không biết nó có để ý đến tôi không.
 
-Không phải vì tôi tránh. Mà vì tôi không còn cần. Mối thù của tôi đã kết thúc. Kết quả là một người đàn ông có gia đình và trái tim rỗng tuếch — giống hệt tôi.
+Có những ngày nó ngồi cạnh tôi hơi lâu. Có những ngày nó hỏi bài dù biết câu trả lời. Có những ngày mắt nó nhìn tôi dài hơn một chút, rồi nó quay đi.
 
-Công bằng chưa? Công bằng rồi.
+Tôi bắt đầu viết nhật ký. Một cuốn sổ nhỏ, mỗi ngày một dòng:
 
-Tôi vẫn nhớ Mai. Có những đêm tôi mơ thấy cô ấy, nước chảy đầy mặt, tóc bết vào da. Tôi gọi tên cô ấy, nhưng cô ấy không nghe.
+*"Hôm nay nó cười. 9h15 sáng."*
 
-Họ bảo tôi là kẻ ác. Có lẽ đúng.
+*"Mưa. Đi ăn cùng. Nó hỏi tại sao tao hay nhìn ra cửa sổ."*
 
-Nhưng trước khi là kẻ ác, tôi đã từng là người yêu. Và tôi yêu nhiều đến nỗi sự mất mát đó đã nung tôi thành một thứ khác — lạnh lẽo hơn, sắc bén hơn, và không bao giờ quên.
+*"Nó mặc áo xanh. Màu xanh đó hợp với nó nhất trên đời."*
+
+Tôi 30 tuổi, viết nhật ký như một thằng nhóc cấp ba. Nếu ai đó biết, chắc họ cười tôi. Nhưng tôi không quan tâm. Vì lần đầu tiên sau rất nhiều năm, tôi cảm thấy mình đang sống.
+
+---
+
+Một buổi chiều, tôi nói với nó:
+
+"Em biết không, mùa xuân là mùa đẹp nhất trong năm."
+
+Nó nhìn tôi, chờ tôi giải thích.
+
+"Vì mùa xuân không hứa hẹn điều gì cả. Nó chỉ đến. Và mọi thứ bắt đầu."
+
+Nó không nói gì. Nhưng mắt nó cười.
+
+Và tôi biết — tôi yêu nó mất rồi.
+
+---
+
+Nhưng mùa xuân không kéo dài mãi.
+
+Có những cơn gió lạnh bắt đầu ùa về từ cuối phố, mang theo những áng mây xám. Và tôi không biết rằng, trước khi mùa hè kịp đến, mọi thứ đã tan vỡ.
 
 HẾT

@@ -1,255 +1,147 @@
 # THU
 
-*Thu. Mẹ bảo tôi sinh vào một chiều cuối thu, khi những cơn mưa đầu mùa bắt đầu rả rích ngoài ô cửa bệnh viện. Có lẽ vì thế mà tôi hay buồn những chuyện không đâu, hay nhìn mưa và nghĩ vu vơ, và hay nhớ những điều đã qua lâu lắm rồi.*
+*Sinh vào một chiều cuối thu, khi những cơn mưa đầu mùa bắt đầu rả rích ngoài ô cửa bệnh viện. Mẹ bảo hồi đó bà khóc nhiều, không biết tại thời tiết hay tại nỗi buồn không tên. Có lẽ tôi thừa hưởng nỗi buồn đó. Và có lẽ tôi đã giữ nó suốt cả cuộc đời.*
 
 ---
 
-Hồi đó tôi mới ra trường, ngơ ngác như con bò vàng lạc vào xứ sở của những con người biết mình đang làm gì.
+Tôi yêu Xuân từ trước khi Hạ vào công ty.
 
-Công ty đầu tiên của tôi là một văn phòng nhỏ trên phố Hai Bà Trưng. Bảy người. Một team duy nhất. Sếp tên Hải, năm mươi tuổi, ít nói, hay nhìn ra cửa sổ và uống trà nóng dù trời có nóng thế nào đi nữa. Chị Mai kế toán hay pha trà bí đao mỗi sáng, để sẵn một bình trên bàn cho cả phòng. Anh Tuấn dev thì cứ 10h là chạy xuống căng tin mua bánh mì, lần nào cũng hỏi: "Có ai ăn sáng không?" dù chưa lần nào có ai bảo có.
+Tôi không nhớ rõ lần đầu tiên. Chỉ nhớ một buổi sáng cuối đông, anh mặc áo sơ mi trắng, tay cầm ly trà, đứng bên cửa sổ, nhìn ra phố. Nắng tháng Giêng vàng nhạt hắt lên mặt anh, làm anh đẹp một cách kỳ lạ — kiểu đẹp mà bạn không thể tả, chỉ có thể nhớ.
 
-Công ty nhỏ, nghèo, nhưng vui.
+Hồi đó tôi fresher, còn ngơ ngác, không biết mình đang ở đâu. Anh là người đầu tiên nói chuyện với tôi, chỉ tôi chỗ ngồi, pha cho tôi ly trà. Anh hỏi tôi tên gì, quê ở đâu, có quen với Hà Nội chưa. Tôi trả lời từng câu, mắt không dám nhìn anh quá ba giây.
 
-Tôi được phân công học việc dưới sự hướng dẫn của một senior PM. Anh là người tôi sẽ kể về suốt câu chuyện này. Nhưng mà, kể về người ta thế nào nhỉ?
-
-Hồi đó tôi không biết anh bao nhiêu tuổi. Chỉ biết anh đi làm lâu rồi, vì mỗi lần tôi hỏi một cái gì đó, anh đều trả lời như thể đã gặp câu hỏi đó cả trăm lần rồi. Nhưng anh không bao giờ tỏ ra sốt ruột. Anh kéo ghế ngồi xuống cạnh tôi, trỏ vào màn hình, nói chậm rãi, giọng trầm và đều, như thể đang đọc một câu chuyện trước giờ đi ngủ. Tay anh dài, gầy. Lúc anh trỏ vào màn hình, tôi hay nhìn tay anh thay vì nhìn chữ trên màn hình.
-
-Lần đầu tiên tôi để ý điều đó, tôi tự nhủ: chắc tại mình mệt.
-
-Nhưng lần thứ hai, thứ ba, thứ mười — tôi biết là không phải.
+Nhưng tim tôi đã thuộc về anh từ lúc đó.
 
 ---
 
-Ngày đầu tiên tôi thực sự thấy trái tim mình có vấn đề là một buổi chiều mưa cuối thu.
+Tôi giấu tình cảm của mình rất kỹ.
 
-Tụi tôi OT tới chín giờ. Cả team về hết. Tôi ngồi lại vì còn một cái deadline phải chạy cho xong. Anh cũng ngồi lại. Không phải vì cần — vì tôi thấy anh xong việc từ bảy giờ rồi, nhưng vẫn mở laptop, vẫn gõ gõ cái gì đó, thinh thít.
+Không phải vì tôi sợ. Mà vì tôi biết — mình không phải mẫu con gái mà người như Xuân sẽ để ý. Tôi trầm, tôi im, tôi hay nhìn mưa và nghĩ vu vơ. Tôi không ồn ào, không nổi bật, không có gì để một người đàn ông như anh nhớ.
 
-Chín giờ rưỡi, anh ngước lên: "Em đói không?"
+Tôi nghĩ: chỉ cần được nhìn anh mỗi ngày, được nghe giọng anh mỗi lần anh nói chuyện với team, được ngồi cùng phòng với anh — thế là đủ.
 
-Tôi gật đầu. Lúc nào tôi cũng đói. Anh cười, đứng dậy, bảo: "Đi ăn."
-
-Trời lúc đó bắt đầu mưa — cái mưa bụi cuối thu kiểu Hà Nội, lất phất, nhẹ như hơi thở. Chúng tôi chạy bộ qua hai dãy phố vào một quán vỉa hè bà chủ bán bún chả. Hai suất, thêm ớt, thêm chanh. Ngồi dưới mái hiên nhỏ, nhìn mưa bay lơ lửng ngoài đường, những hạt mưa nhỏ xíu như bụi phấn, đọng trên lá bàng ướt nhoẹt, long lanh dưới ánh đèn đường.
-
-Anh hỏi: "Em có biết tại sao mưa cuối thu hay buồn không?"
-
-Tôi lắc đầu.
-
-"Tại nó không mưa dứt khoát. Nó cứ lất phất, lất phất, như có chuyện gì muốn nói nhưng không nói."
-
-Tôi nhìn anh lúc đó. Anh không nhìn tôi. Mắt anh nhìn ra cơn mưa, xa lơ xa lắc. Tôi thấy mũi mình hơi cay. Chắc tại bát bún chả có nhiều hành.
-
-Ăn xong, đứng dậy chuẩn bị về, tôi giũ giũ áo, và một cọng tóc dài của tôi rơi xuống vương trên vai. Anh — vô tình hay cố ý — nhặt nó lên, định thả ra ngoài. Nhưng tay anh ngừng lại một tích tắc. Rồi anh cầm cọng tóc đó, không bỏ, không nói gì.
-
-Tôi đứng im. Anh cũng im. Cơn mưa vẫn rả rích ngoài kia.
-
-Không có gì xảy ra sau đó. Chúng tôi ai về nhà nấy, trời mưa nhẹ, đường vắng.
-
-Nhưng tôi nhớ. Tôi nhớ cái tích tắc đó. Có nhiều thứ xảy ra trong nửa giây hơn là trong cả cuộc đời.
+Tôi đã tự lừa mình rất giỏi.
 
 ---
 
-Mùa đông năm đó, dự án gặp chuyện.
+Rồi Hạ vào.
 
-Tôi gửi nhầm bản spec cũ cho khách hàng. Họ đọc xong, so với tiến độ, thấy sai tùm lum, thế là nổi đóa. Phó tổng giám đốc — mới về công ty được vài tháng — gọi tôi lên phòng. Ông không hét, nhưng giọng ông lạnh hơn cả cái điều hòa đang bật 16 độ.
+Hạ là bạn thân của tôi. Cùng phòng, cùng bàn, cùng fresher. Nó vui vẻ, nó nói nhiều, nó cười to. Nó là tất cả những gì tôi không có.
 
-Tôi bước ra khỏi phòng với hai hàng nước mắt không kịp lau. Vừa đi vừa lấy tay quẹt, nhưng càng quẹt càng ướt.
+Ngày đầu tiên, tôi thấy nó nhìn Xuân. Ánh mắt đó — tôi biết. Vì tôi cũng nhìn anh bằng ánh mắt đó.
 
-Tôi ngồi vào bàn, úp mặt xuống, không khóc thành tiếng nhưng vai run lên.
+Tôi không nói gì.
 
-Một lúc sau, tôi nghe tiếng ghế kéo ra. Anh ngồi xuống cạnh tôi.
-
-Không nói gì. Chỉ ngồi.
-
-Một lúc lâu, tôi ngẩng lên. Anh nhìn tôi, ngắn thôi, rồi đứng dậy.
-
-"Anh đi đâu?"
-
-"Lên gặp ông phó tổng."
-
-Tôi hốt hoảng: "Đừng! Em sai mà —"
-
-Anh dừng lại, quay đầu. Giọng anh nhẹ, gần như thì thầm:
-
-"Có gì anh nói chuyện với ổng. Chuyện này lẽ ra phải qua anh kiểm tra trước."
-
-Nói xong anh đi, để tôi ngồi đó với trái tim đập loạn xạ và hai tay lạnh ngắt.
-
-Năm phút sau anh quay xuống. Mặt bình thản.
-
-"Xong rồi. Ngày mai anh với em ngồi lại làm cái spec mới. Giờ về đi."
-
-Tôi không nói được gì. Chỉ nhìn anh. Anh thấy tôi nhìn, hơi cười:
-
-"Sao? Tưởng anh bị đuổi việc rồi hả?"
-
-Tôi bật cười dù mắt còn đỏ.
+Nhưng trong lòng, một thứ gì đó vỡ ra. Nhẹ thôi, như kiểu ly thủy tinh rạn một đường — mày thấy được, nhưng mày cố gắng tin rằng nó vẫn còn nguyên.
 
 ---
 
-Từ hôm đó, tôi tập trung hơn. Muốn chứng tỏ mình không phải đứa vô dụng. Và tôi bắt đầu để ý — tôi hay để ý anh quá nhiều.
+Tôi thấy Xuân pha trà đào cho Hạ.
 
-Cả team đi ăn là tôi hay ngồi gần chỗ anh. Có hôm cố tình ngồi đối diện, có hôm vô tình ngồi bên cạnh. Tôi không nhớ nổi mình đã vô tình bao nhiêu lần.
+Mỗi sáng. Một ly. Đặt lên bàn nó, không ký tên, không giấy note. Anh không bao giờ làm thế với tôi. Với tôi, anh chỉ lịch sự đúng mực — hỏi thăm, hướng dẫn, trả lời câu hỏi — đúng như một senior PM với fresher.
 
-Chị Mai kế toán bắt đầu để ý. Một lần, đang ăn, chị chồm qua bàn hỏi tôi: "Sao dạo này em hay ngồi gần người ta thế?" Tôi suýt sặc nước. Chị nói xong còn nháy mắt, làm cả bàn cười ồ lên. Tôi đỏ mặt, cúi gằm mặt xuống bát cơm, không dám nhìn về phía anh.
+Nhưng với Hạ, anh làm nhiều hơn.
 
-Cả buổi ăn sau đó tôi im lặng. Anh cũng không nói gì.
+Tôi thấy. Và tôi im lặng.
 
----
+Tôi tập cho mình thói quen không nhìn về phía bàn nó vào buổi sáng, không nhìn cái ly trà đào đó. Tôi tập quên rằng tôi từng mơ một ngày anh pha trà cho tôi.
 
-Cuối năm, công ty tổ chức đi Ninh Bình.
+Tôi tập làm người vô hình.
 
-Buổi tối mọi người ngồi quanh đống lửa. Anh Tuấn dev mang đàn ra gảy, hát một bài mà chẳng ai biết là bài gì. Chị Mai pha trà bí đao mang theo từ sáng, chia cho mọi người. Tôi ngồi hơi xa một chút, dưới gốc cây, nhìn lên trời.
-
-Tôi thấy anh đi ra. Anh ngồi xuống cạnh tôi, đưa cho tôi một cốc trà nóng.
-
-"Sao không vô trong kia?"
-
-"Ồn quá."
-
-Anh gật. Hai đứa ngồi im. Bên trong đống lửa, tiếng cười đùa, tiếng đàn, tiếng chị Mai la "hát sai nhạc rồi". Bên ngoài này, chỉ có tiếng gió và tiếng côn trùng và trái tim tôi đập thình thịch.
-
-"Anh nhìn kìa," tôi chỉ lên trời. "Nhiều sao quá."
-
-"Ở Hà Nội không thấy được nhiều như vậy," anh nói.
-
-Chúng tôi nhìn lên trời một lúc. Rồi anh hỏi:
-
-"Em thích sao nào nhất?"
-
-Tôi suy nghĩ một lúc, chỉ lên một chấm sáng nhỏ xíu, leo lét ở góc: "Sao kia."
-
-"Sao gì?"
-
-"Em không biết tên. Nhưng nó nhỏ xíu, mà cứ sáng hoài."
-
-Anh nhìn theo tay tôi. Rồi anh nói, giọng bình thản như thể đang nhận xét thời tiết:
-
-"Sáng thiệt."
-
-Tim tôi ngừng đập nửa nhịp. Tôi không biết anh nói về ngôi sao hay nói về tôi. Và tôi cũng không dám hỏi.
-
-Có những câu hỏi, nếu hỏi ra, thì mọi thứ sẽ khác. Và cả hai đều biết — không phải lúc nào "khác" cũng là "tốt hơn".
-
-Một lúc sau, thằng Tuấn ở trong hét to: "Mất dép! Ai lấy dép tao?!" Cả đám cười như vỡ chợ. Khoảnh khắc giữa hai đứa tôi vỡ tan.
-
-Tôi cười theo. Anh cũng cười. Rồi tôi cúi xuống uống hết cốc trà.
+Và tôi đã thành công. Đến nỗi khi mọi chuyện vỡ ra, không ai nghĩ tôi có liên quan.
 
 ---
 
-Sau chuyến đi đó, tôi không biết giữa chúng tôi có thứ gì không. Có lẽ có. Có lẽ không. Có những ngày tôi nghĩ mình đang tưởng tượng ra tất cả.
+Hạ không biết tôi yêu Xuân. Tôi nghĩ vậy.
 
-Mỗi sáng tôi đến công ty, tôi thấy anh ngồi ở bàn mình, trước màn hình, lưng hơi khòm xuống. Thi thoảng anh ngước lên, bắt gặp ánh mắt tôi, rồi lảng đi. Cả hai đều đóng kịch rất giỏi.
+Cho đến một buổi tối, nó hỏi tôi: "Mày có thích ai không?"
 
-Chị Mai một hôm hỏi, nửa đùa nửa thật: "Bộ phim tình cảm Việt Nam này tới tập cuối chưa?" Tôi giả vờ không hiểu, chị cười khà khà, không hỏi nữa.
+Tôi không trả lời. Tôi sợ nếu nói ra, tôi sẽ mất nó. Tôi sợ nếu nói ra, nó sẽ nhìn tôi bằng ánh mắt khác. Tôi sợ nếu nói ra, tôi sẽ phải đối mặt với sự thật rằng — người tôi yêu yêu nó, không yêu tôi.
 
-Anh không bao giờ tỏ ra điều gì với tôi. Không quà, không giấy note, không một hành động nào có thể gọi là quá giới hạn. Anh chỉ dạy tôi việc, sửa lỗi cho tôi, trả lời câu hỏi của tôi bằng giọng bình thản — đúng như một senior PM dạy một đứa fresher. Từng đó thôi.
+Nên tôi im lặng.
 
-Và chính cái "từng đó thôi" đó làm tôi điên lên. Vì tôi không biết — tôi có đặc biệt với anh không, hay anh đối xử với tất cả mọi người như thế.
-
-Tôi thích anh. Có lẽ. Tôi cũng không chắc nữa. Cái cảm giác khi nghĩ về một người mà không dám khẳng định — đó là thích hay chỉ là tưởng tượng?
-
-Ở chốn công sở, có những thứ không thể nói ra. Vì nếu nói ra mà không đúng, mọi thứ sẽ hỏng. Và nếu nói ra mà đúng, mọi thứ cũng sẽ hỏng nốt.
-
-Cả hai đều biết thế. Nên không ai nói.
+Nhưng im lặng không làm cho tình yêu biến mất. Nó chỉ làm tình yêu lớn lên trong bóng tối, như một thứ cây độc không cần ánh sáng.
 
 ---
 
-Rồi ông phó tổng bắt đầu để ý tôi.
+Tôi biết tôi sẽ làm gì đó.
 
-Lúc đầu chỉ là những câu hỏi xã giao ở hành lang: "Em làm có mệt không?", "Dự án ổn chứ?" Tôi trả lời lễ phép, rồi xuống bàn mình làm việc tiếp.
+Không phải vì tôi muốn phá hoại. Mà vì tôi không thể chịu được cảnh nhìn họ bên nhau thêm nữa. Mỗi buổi sáng thấy ly trà đào trên bàn nó là một nhát dao. Mỗi lần thấy nó cười với anh là một vết cắt.
 
-Rồi ông bắt đầu giao việc riêng cho tôi. Một bản báo cáo tổng hợp. Một vài số liệu cần soạn lại. Việc nhỏ thôi, nhưng lẽ ra phải qua trưởng dự án — tức là anh — trước. Ông không làm thế.
+Tôi không muốn Hạ đau. Tôi chỉ muốn nỗi đau của mình dừng lại.
 
-Một lần ông gửi email riêng cho tôi, kêu tôi lên phòng. Nói chuyện công việc, nhưng mắt ông không nhìn vào màn hình. Tôi ngồi, trả lời, gật đầu, rồi về. Lúc ra ngoài, tôi thấy anh đang nhìn từ bàn mình.
-
-Ánh mắt đó — không phải ghen, không phải giận. Mà là một nỗi lo. Một nỗi lo của người biết mình không có quyền lên tiếng.
+Và tôi gặp Đông.
 
 ---
 
-Những ngày sau đó, giữa tôi và anh không có gì thay đổi. Anh vẫn chỉnh spec cho tôi, vẫn kéo ghế ngồi cạnh mỗi lần tôi hỏi bài. Anh không hỏi tôi về ông phó tổng, không nhắc gì về mấy lần tôi lên phòng riêng.
+Hắn xuất hiện như một cơ hội. Phó tổng giám đốc mới về. Đẹp, lịch thiệp, nói chuyện nhẹ nhàng. Hắn để ý tôi từ rất sớm. Lúc đầu tôi cảnh giác. Nhưng hắn kiên nhẫn. Hắn không ép. Hắn chỉ hỏi thăm, lắng nghe, xuất hiện đúng lúc.
 
-Có lúc tôi ước anh hỏi. Có lúc tôi sợ anh hỏi.
+Một lần, hắn hỏi tôi: "Em có thấy giữa Xuân và Hạ có gì không?"
 
-Tôi đứng giữa hai thế giới. Một bên là những buổi trưa bún chả, những câu chuyện vu vơ dưới trời sao Ninh Bình, những lần anh ngồi cạnh sửa lỗi cho tôi bằng giọng đều đều như ru. Một bên là cái thế giới sáng loáng của quà tặng, nhà hàng ven hồ, những lời hứa thăng tiến.
+Tôi giật mình. Tôi không trả lời.
 
-Tôi hai mươi mấy tuổi, tôi muốn tất cả. Và trong cái "tất cả" đó, tôi không biết anh có phải là một phần không. Vì anh chưa bao giờ nói. Và tôi — tôi cũng thế.
+Hắn cười. Một nụ cười mà tôi không hiểu nổi.
 
----
+"Anh hỏi vậy thôi."
 
-Món quà của ông phó tổng — một chiếc túi xách đắt tiền — tôi giấu trong ba lô, không dám mang vào công ty. Tối đó, tôi ngồi một mình trong phòng, nhìn chiếc túi, rồi nhìn điện thoại.
-
-Tôi muốn nhắn tin cho anh. Chỉ là hỏi thăm thôi. Nhưng nói gì bây giờ? "Anh ơi em vừa nhận quà của sếp, anh nghĩ sao?" Tôi không nhắn. Tôi tắt đèn, nằm nhìn trần nhà.
-
-Chiếc túi vẫn nằm đó trong bóng tối, như một câu hỏi mà tôi không dám trả lời.
+Nhưng từ hôm đó, tôi biết Đông cũng để ý đến chuyện này. Và tôi biết hắn có thể giúp tôi.
 
 ---
 
-Một tuần sau, tôi ngồi với anh ở quán vỉa hè quen. Buổi trưa cuối thu. Nắng đã bắt đầu tắt sớm hơn.
+Tôi viết đơn nặc danh.
 
-Tôi nói tôi sắp chuyển bộ phận. Dự án mới. Cơ hội mới.
+Một tờ giấy trắng, chữ in, không ký tên. Nội dung: "Quan hệ không đúng mực giữa người hướng dẫn và fresher có dấu hiệu thiên vị cá nhân."
 
-Anh gật đầu. Không hỏi gì thêm. Đá trong ly nước của anh tan hết, loãng ra, nhạt nhẽo. Anh nhìn tôi lâu hơn mọi khi. Rồi mắt anh rời xuống mái tóc tôi — dài, đen, mượt, vẫn còn nguyên.
+Tôi run khi viết từng chữ. Tay tôi lạnh. Nhưng tôi nghĩ đến ly trà đào mỗi sáng, nghĩ đến ánh mắt anh nhìn nó, nghĩ đến cái cách tim tôi vỡ ra từng mảnh mỗi ngày — và tôi gửi đi.
 
-Anh mỉm cười. Một nụ cười rất nhẹ.
+Tôi đưa đơn cho Đông. Hắn nhận, không hỏi gì. Chỉ gật.
 
-— Ừ. Chúc em may mắn.
-
-Câu nói ngắn. Mà nặng.
-
-Tôi đứng dậy. Anh không đứng dậy theo. Tôi bước ra đường, trời Hà Nội chiều muộn đã chuyển lạnh. Trên đường về, tôi rưng rưng, nhưng không khóc.
-
-Tóc tôi hôm đó vẫn còn dài.
+"Để anh lo."
 
 ---
 
-Tôi cắt tóc hai năm sau đó. Không có lý do gì to tát. Một buổi chiều tôi bước vào tiệm, ngồi xuống, bảo chị thợ: "Cắt ngắn." Chị hỏi: "Cắt bao nhiêu?" Tôi nói: "Cắt hết."
+Hạ bị điều chuyển một tuần sau đó.
 
-Tóc rơi xuống nền gạch hoa từng mảng đen dài. Tôi nhìn nó, thấy mình nhẹ hơn một chút.
+Nó không biết tôi đã làm gì. Nó khóc, nó ôm tôi, nó bảo: "Tao không hiểu tại sao."
 
-Một lần, tôi thấy chị Mai đăng ảnh — anh đứng trước một quán nhỏ, cười, tay cầm một cuốn sách. Có một người phụ nữ đứng bên cạnh, và một đứa bé gái. Họ trông hạnh phúc.
+Tôi ôm nó. Vai nó run lên. Tôi muốn nói xin lỗi. Nhưng tôi không nói.
 
-Tôi nhìn tấm hình một lúc, rồi tắt điện thoại. Không buồn, không tiếc. Không có gì để buồn hay tiếc cả — vì giữa tôi và anh, chưa từng có điều gì thực sự bắt đầu.
+Vì nếu tôi nói, tôi sẽ mất tất cả — bạn thân, tình yêu, và cả lòng tự trọng cuối cùng còn sót lại.
+
+Tôi chọn im lặng. Và sống với sự im lặng đó đến cuối đời.
 
 ---
 
-Ba năm sau, tôi gặp lại anh ở cái quán quen.
+Hạ đi rồi, Xuân không còn là anh của ngày xưa.
 
-Quán cũng vẫn vậy. Ghế nhựa đỏ, bàn nhôm móp méo. Bà chủ vẫn bán bún chả.
+Anh ít nói hơn. Anh ngồi trước màn hình, tay gõ phím, mắt nhìn xa xăm. Mỗi sáng anh vẫn pha trà — một ly. Rồi anh nhìn nó, uống một mình.
 
-Anh ngồi chờ tôi, tay đặt trên bàn — một chiếc nhẫn bạc đơn giản. Anh nhìn tôi một lúc, rồi dừng lại ở mái tóc.
+Tôi muốn đến gần. Nhưng tôi không thể. Vì tôi biết — nếu anh biết sự thật, anh sẽ không bao giờ nhìn tôi bằng ánh mắt cũ nữa.
 
-— Ủa, Thu. Tóc em cắt rồi hả?
+Dù sao thì anh cũng chưa từng nhìn tôi bằng ánh mắt đặc biệt.
 
-— Dạ, cắt lâu rồi.
+Không như Hạ.
 
-Anh gật, cười. Nụ cười giống hệt năm xưa. Chúng tôi ngồi nói đủ thứ chuyện, chuyện công ty cũ, chuyện quán anh, chuyện vợ con anh. Anh kể bằng giọng nhẹ nhàng, thong thả, như đang kể một câu chuyện đẹp.
+---
 
-— Còn em?
+Nhiều năm sau, tôi gặp lại Hạ.
 
-Tôi nói tôi làm trưởng phòng. Mỗi ngày như nhau. Chưa lấy chồng.
+Nó làm trưởng phòng. Tóc cắt ngắn. Mắt nó không còn sáng như ngày xưa. Chúng tôi ngồi trong một quán cà phê nhỏ, im lặng.
 
-Anh gật, rồi nhìn tôi, im một lúc.
+"Mày có hối hận không?" nó hỏi.
 
-— Hồi đó, anh muốn nói nhiều thứ lắm. Mà hồi đó anh cũng sợ nhiều thứ lắm.
+Tôi giật mình. Nó biết.
 
-Tôi không nói gì. Chỉ chờ.
+"Biết từ lúc nào?"
 
-— Mà thôi, hồi đó là hồi đó. Nếu quay lại, chắc anh làm khác. Nhưng giờ — ai cũng có cuộc sống riêng rồi.
+"Từ đầu," nó nói. "Tao biết mày cũng thích Xuân. Tao chỉ không nghĩ mày làm được chuyện đó."
 
-Nói xong, anh cười, đưa tay ra bắt tay tôi.
+Tôi cúi đầu. Không nói được gì.
 
-— Vui vì gặp lại em.
+"Mà thôi," nó nói. "Lâu quá rồi. Tao cũng mệt."
 
-Tôi bắt tay anh. Bàn tay anh, vẫn gầy, vẫn dài.
+Nó đứng dậy, trả tiền, đi ra cửa. Tôi nhìn nó đi, không dám gọi.
 
-Tôi đứng dậy, đi ra đường. Một chiếc lá bàng rơi ngay trước mặt, xoay một vòng rồi nằm im trên mặt đất. Trời đã sang cuối thu, lạnh hơn, gió nhiều hơn. Những chiếc lá cuối cùng cũng sắp rụng hết.
-
-Tôi leo lên xe, nổ máy. Trong gương chiếu hậu, tôi thấy anh vẫn ngồi đó, một mình, trước một ly nước đã cạn từ lâu.
-
-Hôm đó tôi không khóc. Nhưng tôi nghĩ — giá mà hồi đó một trong hai đứa mình dũng cảm hơn. Chỉ một chút thôi.
-
-Có những lời không nói ra — không phải vì không muốn nói. Mà vì sợ khi nói ra, mọi thứ sẽ không còn đẹp như trong ký ức.
-
-Và tôi vẫn không biết, cho đến tận bây giờ — anh có từng thích tôi không?
+Có những thứ, một khi đã làm, không thể gỡ lại. Có những lời xin lỗi, dù có nói cả đời, cũng không đủ.
 
 HẾT
