@@ -1,24 +1,24 @@
 # HẠ
 
-Tao và nó là bạn thân từ năm thứ nhất đại học. Chung giảng đường, chung nhóm bài tập, chung cả mấy câu chuyện tào lao không đầu không cuối. Nó ít nói. Tao nói nhiều. Nó nhìn mưa. Tao nhìn nó. Đơn giản vậy thôi.
+Tôi và nó là bạn thân từ năm thứ nhất đại học. Chung giảng đường, chung bài tập, chung mấy câu chuyện tào lao. Nó ít nói, tôi nói nhiều. Nó nhìn mưa, tôi nhìn nó. Đơn giản vậy thôi.
 
-Ra trường, tụi tao cùng xin vào một công ty. Cùng ngày, cùng vị trí fresher PM, cùng ngồi chung cái bàn cạnh cửa sổ. Nó ngồi trong, tao ngồi ngoài. Sáng nào tao cũng đi ngang qua bàn nó, vỗ vai nó một cái: "Dậy chưa?" Nó gật đầu, cười, mở laptop.
+Ra trường, tụi tôi cùng xin vào một công ty. Cùng ngày, cùng vị trí, cùng ngồi chung cái bàn cạnh cửa sổ. Nó ngồi trong, tôi ngồi ngoài. Sáng nào tôi cũng đi ngang qua bàn nó, vỗ vai: "Dậy chưa?" Nó gật đầu, cười, mở laptop.
 
-Tao thương nó. Thương cái cách nó ít nói nhưng biết nghĩ, thương cái cách nó làm việc giỏi nhưng không bao giờ khoe.
+Tôi thương nó. Nó ít nói nhưng biết nghĩ, làm việc giỏi nhưng không bao giờ khoe.
 
-Rồi tao gặp anh ấy.
+Rồi tôi gặp anh ấy.
 
 ---
 
-Anh ấy là senior PM, hướng dẫn tụi tao. Ngày đầu tiên bước vào phòng, anh ấy đứng gần cửa sổ, áo sơ mi trắng, tay cầm ly nước. Anh ấy nói chuyện với tụi tao về dự án, giọng trầm, chậm, kiểu người biết mình đang nói gì.
+Anh ấy là senior PM, hướng dẫn tụi tôi. Ngày đầu tiên, anh ấy đứng gần cửa sổ, áo sơ mi trắng. Nói chuyện về dự án, giọng trầm, chậm.
 
-Tao không biết yêu từ cái nhìn đầu tiên có thật không. Nhưng hôm đó về nhà, tao nhớ giọng nói của anh ấy. Nhớ cái cách anh ấy gật đầu khi nghe tao trả lời. Nhớ nụ cười thoáng qua khi tao nói sai cái gì đó.
+Hôm đó về nhà, tôi nhớ giọng nói của anh ấy.
 
-Mấy tháng đầu, tao hỏi anh ấy đủ thứ. Có những câu tao biết câu trả lời rồi, nhưng tao vẫn hỏi, chỉ để được nghe anh ấy nói. Tao mặc áo xanh mỗi ngày vì có lần anh ấy nói màu đó hợp với tao. Tao cười hơi to hơn bình thường mỗi khi anh ấy ở gần.
+Mấy tháng đầu, tôi hỏi anh ấy đủ thứ. Có những câu tôi biết câu trả lời rồi, nhưng vẫn hỏi, chỉ để nghe anh ấy nói. Tôi mặc áo xanh mỗi ngày. Tôi cười hơi to hơn mỗi khi anh ấy ở gần.
 
-Tao không giấu. Tao chủ động. Tao nghĩ tình yêu là phải giành lấy.
+Tôi không giấu. Tôi nghĩ tình yêu là phải giành lấy.
 
-Vấn đề là: anh ấy không nhìn tao. Anh ấy nhìn nó.
+Nhưng anh ấy không nhìn tôi. Anh ấy nhìn nó.
 
 ---
 
@@ -34,13 +34,9 @@ Tôi ghét cái ánh sáng đó.
 
 ---
 
-Tôi biết tính nó. Biết rõ. Nó là kiểu con gái sống trong khoảnh khắc. Có những người đến để ở lại. Có những người đến để đi qua. Nó là kiểu đi qua.
+Tôi biết tính nó. Nó là kiểu sống hết mình trong khoảnh khắc. Có thể rất nhiệt tình với ai đó hôm nay, ngày mai đã lạnh như không quen. Hồi đại học, có thằng để ý nó cả năm. Nó đi chơi với nó một lần, vui vẻ. Hôm sau thằng đó nhắn tin, nó trả lời lịch sự, rồi thôi. Thằng đó hỏi tôi: "Tao làm gì sai à?" Tôi không biết trả lời sao. Chẳng sai gì cả. Chỉ là nó hết hứng rồi.
 
-Nó có thể yêu ai đó say đắm trong một đêm, rồi sáng hôm sau như chưa có gì. Chính tôi đã chứng kiến. Hồi đại học, có thằng để ý nó cả năm trời. Nó đi chơi với nó một lần, vui vẻ cả buổi tối. Hôm sau thằng đó nhắn tin, nó trả lời lịch sự, rồi không trả lời nữa. Thằng đó hỏi tôi: "Tao làm gì sai à?" Tôi không biết trả lời thế nào. Vì nó không sai. Chỉ là khoảnh khắc qua rồi.
-
-Tôi biết nó. Và tôi biết anh ấy sẽ đau.
-
-Tôi không muốn anh ấy đau. Tôi yêu anh ấy.
+Tôi biết nó sẽ làm tổn thương anh ấy. Và tôi không muốn điều đó xảy ra.
 
 ---
 
@@ -52,7 +48,7 @@ Tôi đứng im dưới nước. Nước biển lạnh, nhưng tôi còn thấy 
 
 Nó bỏ tay ra. Chạy xuống chỗ tôi, cười như không có gì. Tôi cũng cười. Tôi không biết mình làm thế nào để cười được lúc đó.
 
-Đêm hôm đó, tôi nằm trong phòng, nghe nó thở đều bên cạnh. Nó ngủ ngon lành. Tôi thì không. Tôi nhìn lên trần nhà, nghĩ: giá như mày không phải bạn tao. Giá như tao có thể ghét mày một cách dễ dàng. Nhưng mày là bạn tao. Và tao thương mày.
+Đêm hôm đó, tôi nằm trong phòng, nghe nó thở đều bên cạnh. Nó ngủ ngon. Tôi thì nằm nhìn trần nhà, nghĩ: mày là bạn tao, sao tao lại muốn ghét mày đến thế.
 
 ---
 
@@ -92,7 +88,7 @@ Tôi không trả lời được. Tôi muốn ai? Không phải nó. Nhưng tôi
 
 Hắn cười: "Em là quân cờ."
 
-Tôi nhìn hắn. Câu nói đó rơi xuống như một cái tát.
+Tôi đứng im. Không nói được gì.
 
 ---
 
