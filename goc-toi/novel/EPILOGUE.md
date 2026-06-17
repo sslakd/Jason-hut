@@ -1,39 +1,27 @@
 # EPILOGUE
 
-*Một năm sau. Chiều cuối thu. Mưa bụi.*
+Một năm sau. Sáng thứ Hai.
 
----
+Minh vào phòng trà, pha một ly trà đào. Một ly thôi, mang ra để lên bàn mình.
 
-Quán bún chả quen — ghế nhựa đỏ, bàn nhôm móp méo, bà chủ vẫn còn nhớ mặt.
+Rồi anh dừng lại.
 
-Một người đàn ông ngồi ở bàn trong, sát mái hiên. Trước mặt anh ta là một ly trà đào — nóng, mới pha, khói bay nghi ngút trong không khí lạnh.
+Trên bàn cạnh cửa sổ — cái bàn trống suốt một năm — có một ly trà đào khác. Còn bốc khói.
 
-Anh ta không uống. Anh ta đợi.
+Một người đang ngồi đó. Tóc ngắn hơn xưa. Mặt hơi gầy. Nhìn ra đường Hai Bà Trưng sáng sớm.
 
-Ngoài đường, mưa bay lất phất. Những hạt mưa cuối thu nhỏ như bụi phấn, đọng trên lá bàng ướt nhoẹt, long lanh dưới ánh đèn đường vàng vọt.
+Nghe tiếng bước chân, người đó quay lại.
 
-Một người phụ nữ bước vào quán. Tóc ngắn hơn xưa. Tay cầm ô dù còn ướt. Chị ta nhìn quanh — và dừng lại ở bàn trong.
+"Chào anh. Em xin việc lại."
 
-Mắt họ gặp nhau.
+Minh không nói gì. Anh cầm ly trà trên bàn mình, bước lại, đặt xuống bên cạnh ly trà kia.
 
-Người đàn ông không cười. Không nói. Chỉ đẩy nhẹ ly trà đào về phía trước, về phía chiếc ghế trống đối diện.
+Người đó nhìn ly trà, rồi nhìn anh.
 
-Một khoảnh khắc im lặng.
+Minh kéo ghế ra, ngồi xuống.
 
-Rồi chị ta bước tới, kéo ghế ra, ngồi xuống.
+"Vẫn ấm," người đó nói.
 
-Bà chủ quán từ trong bếp ngó ra, thấy họ ngồi đối diện, thì tự động gọi với ra:
+Minh gật đầu.
 
-"Hai suất bún chả, thêm ớt, thêm chanh — đúng không?"
-
-Cả hai cùng nhìn bà. Rồi nhìn nhau.
-
-— Dạ, — người đàn ông nói. Giọng hơi khàn.
-
-— Dạ, — người phụ nữ nói. Môi hơi run.
-
-Ngoài kia, mùa đông đang đến.
-
-Nhưng trong ly trà đào này, mùa xuân vẫn còn.
-
-HẾT
+Ngoài kia, nắng cuối thu vàng nhạt trên những tán bàng. Một ngày mới bắt đầu.

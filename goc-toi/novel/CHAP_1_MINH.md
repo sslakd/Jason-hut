@@ -1,8 +1,8 @@
-# XUÂN
+# MINH
 
 Tôi thích em từ ngày đầu tiên em bước chân vào văn phòng đó.
 
-Lúc ấy tôi còn tưởng là khách đến thăm công ty. Mặt em căng cứng, tay giữ chặt quai túi. Hạ đứng sau lưng, nói như chim chích: "Đây là bạn em, tụi em học cùng đại học, cùng xin vào đây luôn." Em gật đầu, cười nhẹ: "Chào anh." Rồi ngồi xuống, mở laptop, không nói thêm câu nào nữa.
+Lúc ấy tôi còn tưởng là khách đến thăm công ty. Mặt em căng cứng, tay giữ chặt quai túi. Trang đứng sau lưng, nói như chim chích: "Đây là bạn em, tụi em học cùng đại học, cùng xin vào đây luôn." Em gật đầu, cười nhẹ: "Chào anh." Rồi ngồi xuống, mở laptop, không nói thêm câu nào nữa.
 
 Buổi tối hôm đó tôi không ngủ được. Tôi tự nói với mình: mày điên rồi. Mới gặp có một lần. Con bé ấy vào làm fresher, nhỏ hơn mày cả chục tuổi. Mày là senior PM, là người hướng dẫn nó. Đừng dại.
 
@@ -18,7 +18,7 @@ Nhưng tôi không nói. Tôi chỉ pha trà.
 
 ---
 
-Hai đứa nó vào cùng ngày, cùng vị trí fresher PM. Hạ nói nhiều, hỏi nhiều, cười to. Chúng nó thân nhau lắm — cùng ăn trưa, cùng về, thỉnh thoảng còn ở lại công ty chơi bài với nhau. Em thì ít nói. Tôi để ý thấy em hay nhìn ra cửa sổ, tay cầm ly trà, mặt nghĩ ngợi gì đó xa xôi. Có những hôm thấy em ngồi im như vậy cả chục phút.
+Hai đứa nó vào cùng ngày, cùng vị trí fresher PM. Trang nói nhiều, hỏi nhiều, cười to. Chúng nó thân nhau lắm — cùng ăn trưa, cùng về, thỉnh thoảng còn ở lại công ty chơi bài với nhau. Em thì ít nói. Tôi để ý thấy em hay nhìn ra cửa sổ, tay cầm ly trà, mặt nghĩ ngợi gì đó xa xôi. Có những hôm thấy em ngồi im như vậy cả chục phút.
 
 Em làm việc giỏi. Có lần tôi giao một cái task khó, định bụng lát nữa sẽ qua hướng dẫn. Chưa kịp mở miệng thì cuối ngày em đã gửi file hoàn chỉnh. Tôi đọc, ngạc nhiên. Chất lượng hơn tôi mong đợi.
 
@@ -40,7 +40,7 @@ Cả team đi chơi sau khi kết thúc dự án. Buổi tối ra biển, mọi 
 
 Tôi đứng im. Cảm giác cánh tay em mềm, mát, qua lớp áo mỏng. Tôi ngước lên nhìn trời, thấy đầy sao, nhưng chẳng thấy gì ngoài hơi ấm từ người em.
 
-Mười giây. Rồi em bỏ tay ra, chạy xuống chỗ Hạ, cười vang dưới ánh đèn bờ biển. Như không có chuyện gì.
+Mười giây. Rồi em bỏ tay ra, chạy xuống chỗ Trang, cười vang dưới ánh đèn bờ biển. Như không có chuyện gì.
 
 Tôi đứng đó thêm một lúc. Trong đầu tôi lúc ấy chỉ có một câu: mày nên vui vì ít nhất cũng đã có mười giây.
 
@@ -70,9 +70,9 @@ Tôi ra khuất tầm mắt rồi mới quay vào. Đứng bên cái bàn trốn
 
 ---
 
-Cùng tuần đó, tôi biết ký lệnh điều chuyển là Đông. Phó tổng mới. Bạn đại học cũ của tôi.
+Cùng tuần đó, tôi biết ký lệnh điều chuyển là Hoàng. Phó tổng mới. Bạn đại học cũ của tôi.
 
-Hồi đại học, tôi và nó thân lắm. Chung phòng, chung bát mì tôm, chung cả đống chuyện tào lao. Nó có người yêu tên Mai. Một cô gái tóc dài, hay cười. Mai thích tôi. Tôi không thích. Một lần nó không biết, Mai nói với tôi. Tôi từ chối. Mai khóc, Mai buồn, rồi chuyện gì đó xảy ra — tôi không biết hết. Sau đó Mai đi. Nó cũng đi. Mười năm không gặp.
+Hồi đại học, tôi và nó thân lắm. Chung phòng, chung bát mì tôm, chung cả đống chuyện tào lao. Nó có người yêu tên Vân. Một cô gái tóc dài, hay cười. Vân thích tôi. Tôi không thích. Một lần nó không biết, Vân nói với tôi. Tôi từ chối. Vân khóc, Vân buồn, rồi chuyện gì đó xảy ra — tôi không biết hết. Sau đó Vân đi. Nó cũng đi. Mười năm không gặp.
 
 Giờ nó ngồi phòng cuối hành lang, ký giấy điều chuyển em đi, nhìn tôi như chưa từng quen.
 
