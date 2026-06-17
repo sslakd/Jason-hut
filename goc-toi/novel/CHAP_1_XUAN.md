@@ -4,7 +4,7 @@ Tôi không tin vào tình yêu sét đánh. Chưa bao giờ. Cho đến ngày e
 
 Em và Hạ — hai đứa con gái vào cùng ngày, cùng vị trí fresher PM, cùng cái bàn không đủ rộng cho hai cái laptop. Hạ nói nhiều đến nỗi ngày đầu tiên tôi đã biết nó học ở đâu, quê ở đâu, nó thích màu xanh, và nó từng nuôi một con mèo tên Bột. Còn em ngồi im, mở laptop, gõ gì đó, không nói một câu nào suốt buổi sáng.
 
-Tôi nhìn em lúc đó — không phải vì thích, mà vì tò mò. Một cô gái ngồi cạnh cửa sổ, mặt nghiêng nghiêng về phía ánh sáng, tay gõ bàn phím nhẹ và đều. Có một cái gì đó tĩnh lặng ở em — kiểu tĩnh lặng của người không cần nói nhiều để người khác thấy mình tồn tại.
+Tôi nhìn em lúc đó — và tôi biết ngay, tim mình đã không còn là của mình nữa. Một cô gái ngồi cạnh cửa sổ, mặt nghiêng nghiêng về phía ánh sáng, tay gõ bàn phím nhẹ và đều. Có một cái gì đó tĩnh lặng ở em — kiểu tĩnh lặng của người không cần nói nhiều để người khác thấy mình tồn tại.
 
 Hạ giới thiệu em với tôi: "Đây là bạn em, tụi em học cùng đại học, cùng xin vào đây luôn."
 
@@ -12,7 +12,7 @@ Em gật đầu, cười nhẹ: "Chào anh."
 
 Giọng em nhỏ, nhưng không yếu. Hai chữ thôi, mà có cái gì đó làm tôi nhớ. Có lẽ vì em không cười lấy lòng, không cười xã giao — em chỉ cười đủ để lịch sự, rồi quay lại màn hình.
 
-Tôi không nghĩ gì nhiều ngày hôm đó.
+Đêm đó tôi không ngủ được. Nằm nhìn trần nhà, nghĩ về một cô gái tôi vừa gặp sáng nay, tự hỏi tại sao mình lại nhớ giọng nói của một người chỉ nói có hai chữ.
 
 ---
 
