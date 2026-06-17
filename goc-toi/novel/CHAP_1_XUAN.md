@@ -1,101 +1,87 @@
 # XUÂN
 
-Nếu có ai hỏi tôi yêu em từ bao giờ, tôi không trả lời được. Có thể là buổi sáng đầu tiên em bước vào văn phòng đó, tay cầm ly nước lọc, mắt nhìn ra đường, không nói một câu nào với ai suốt mấy tiếng đồng hồ. Lúc đó tôi nghĩ: con bé này lạ.
+Tôi thích em từ ngày đầu tiên em bước chân vào văn phòng đó.
 
-Hai đứa vào cùng ngày, cùng vị trí fresher, cùng cái bàn cạnh cửa sổ chật cứng hai cái laptop. Hạ nói nhiều như chim chích, tôi biết tuốt về nó trong buổi sáng đầu tiên: quê ở Thanh Hóa, học Bách Khoa, thích màu xanh, từng nuôi con mèo tên Bột. Đứa kia thì không. Nó ngồi im, gõ bàn phím, lâu lâu nhìn lên một cái rồi lại cúi xuống.
+Lúc ấy tôi còn tưởng là khách đến thăm công ty. Mặt em căng cứng, tay giữ chặt quai túi. Hạ đứng sau lưng, nói như chim chích: "Đây là bạn em, tụi em học cùng đại học, cùng xin vào đây luôn." Em gật đầu, cười nhẹ: "Chào anh." Rồi ngồi xuống, mở laptop, không nói thêm câu nào nữa.
 
-Tối hôm đó tôi về nhà, nằm trên giường, tự nhiên nhớ mặt nó. Nhớ cái cách nó cúi xuống khi gõ bàn phím, tay nhẹ, đều, không vội. Tôi bảo mình: đừng dại.
+Buổi tối hôm đó tôi không ngủ được. Tôi tự nói với mình: mày điên rồi. Mới gặp có một lần. Con bé ấy vào làm fresher, nhỏ hơn mày cả chục tuổi. Mày là senior PM, là người hướng dẫn nó. Đừng dại.
 
-Nhưng sáng hôm sau, tôi dậy sớm hơn thường lệ.
+Nhưng mà không dừng được.
 
----
+Tôi bắt đầu pha trà đào để lên bàn em từ tuần thứ hai. Sáng nào cũng vậy. Vào công ty lúc bảy giờ, lúc mọi người chưa đến, pha một ly, đặt lên bàn cạnh cửa sổ — chỗ em ngồi — rồi về chỗ mình, mở máy, làm việc. Không note, không tên, không ai thấy.
 
-Công ty tôi nhỏ, bảy người, một phòng. Tôi ngồi cuối dãy, bàn cạnh cửa sổ là chỗ nó. Chị Mai kế toán ngồi gần phòng trà, thấy hết mọi chuyện nhưng không bao giờ nói. Sếp Hải ít nói, hay uống trà nóng dù trời nóng, trên bàn có cuốn album cũ.
+Em không hỏi. Nhưng mỗi lần tôi đi ngang, ly trà vơi một nửa. Nhiều hôm tôi cố tình đi qua bàn em vài lần, chỉ để nhìn cái ly. Chỉ để biết em đã uống hay chưa.
 
-Mỗi sáng, trước khi mọi người đến, tôi pha một ly trà đào, đặt lên bàn nó, rồi về chỗ. Không giấy note, không ký tên, không ai thấy. Hồi đầu tôi nghĩ mình bị điên. Một thằng đàn ông gần ba mươi, dậy sớm pha trà cho con bé mới vào, không nói được một câu.
+Trong đầu tôi lúc nào cũng có mấy câu nói lặp đi lặp lại. Tiếc thật, giá mà gặp em sớm hơn, anh chắc chắn sẽ cua em rồi. Thật tiếc vì mình gặp nhau lúc này. Anh thích em lắm. Muốn chở em đi chơi, muốn xem phim cùng, ăn những món em thích, được cùng em nói chuyện thâu đêm suốt sáng.
 
-Nhưng rồi thành quen.
-
-Nó không hỏi. Tôi không nói. Nhưng mỗi lần đi ngang, ly trà vơi một nửa. Lâu lâu nó cầm ly trà lên, uống một ngụm, rồi đặt xuống, mắt vẫn nhìn màn hình. Tôi đứng sau lưng, thấy nó uống trà của mình, tự nhiên trong lòng ấm lạ.
-
-Có lần Hạ hỏi tôi: "Anh ơi, ai pha trà để lên bàn tụi em vậy?"
-
-Tôi nói: "Chắc chị Mai."
-
-Hạ ồ lên. Còn nó thì nãy giờ vẫn gõ bàn phím, nhưng tôi thấy nó cười. Chỉ một chút ở khóe miệng thôi. Một kiểu cười như biết hết, nhưng không nói.
+Nhưng tôi không nói. Tôi chỉ pha trà.
 
 ---
 
-Tháng thứ năm có chuyến Đà Nẵng. Dự án xong, sếp Hải bảo đi chơi một bữa.
+Hai đứa nó vào cùng ngày, cùng vị trí fresher PM. Hạ nói nhiều, hỏi nhiều, cười to. Chúng nó thân nhau lắm — cùng ăn trưa, cùng về, thỉnh thoảng còn ở lại công ty chơi bài với nhau. Em thì ít nói. Tôi để ý thấy em hay nhìn ra cửa sổ, tay cầm ly trà, mặt nghĩ ngợi gì đó xa xôi. Có những hôm thấy em ngồi im như vậy cả chục phút.
 
-Buổi tối đầu tiên cả đám ra biển. Hạ chạy nhảy dưới nước, quần áo ướt hết. Chị Mai ngồi trên bờ uống nước dừa, nhìn ra xa. Tôi đứng một góc, nhìn cái mênh mông của biển, nghĩ linh tinh.
+Em làm việc giỏi. Có lần tôi giao một cái task khó, định bụng lát nữa sẽ qua hướng dẫn. Chưa kịp mở miệng thì cuối ngày em đã gửi file hoàn chỉnh. Tôi đọc, ngạc nhiên. Chất lượng hơn tôi mong đợi.
 
-Tự nhiên nó xuất hiện cạnh tôi. Tôi không nghe tiếng bước chân, chỉ thấy một cánh tay khoác vào cánh tay tôi, nhẹ như không.
-
-"Anh nhìn kìa," nó nói. Tay kia chỉ lên trời.
-
-Trời Đà Nẵng đầy sao, thật. Nhưng lúc đó tôi không thấy sao. Tôi chỉ thấy cánh tay nó, thấy tóc nó bay trong gió biển, thấy hơi ấm từ người nó truyền sang tôi qua lớp áo mỏng.
-
-Tôi đứng im. Không dám cử động. Sợ mình động đậy một cái là nó bỏ tay ra.
-
-"Mười giây," tôi tự đếm trong đầu. "Mười giây thôi."
-
-Khoảng mười giây sau, nó bỏ tay ra, chạy xuống chỗ Hạ, cười vang. Như chưa có chuyện gì.
-
-Tôi đứng đó thêm mười phút, nhìn biển, không thấy gì hết.
+Tôi khen em trước mặt cả team. Em cúi xuống, không nói gì. Mấy hôm sau tôi thấy em vẫn làm việc như không có chuyện gì. Không phải giả vờ khiêm tốn, mà kiểu thật sự không thấy cần phải để tâm.
 
 ---
 
-Sau Đà Nẵng, mọi thứ vẫn vậy. Nó uống trà, tôi pha trà. Thỉnh thoảng mắt chúng tôi gặp nhau, nó cúi xuống trước. Một lần tôi về muộn, thấy nó ngồi một mình cạnh cửa sổ, tay cầm ly trà nguội.
+Một năm làm việc cạnh nhau. Một năm tôi sống như kẻ đi trên dây.
 
-"Về muộn," tôi nói.
+Vừa vui sướng hạnh phúc khi được ở gần em, vừa đau khổ cùng cực vì biết đó là điều sai trái. Nhiều hôm tôi về nhà, nằm trên giường, nhìn lên trần nhà, tự hỏi mình đang làm cái quái gì vậy. Một thằng đàn ông gần ba mươi, yêu một đứa fresher hơn mình cả chục tuổi, không dám nói, chỉ biết pha trà.
 
-"Ừ, còn tí việc."
-
-"Cần anh gọi grab không?"
-
-Nó quay lại cười — cái cười hôm ở Đà Nẵng. "Không sao. Em quen rồi."
-
-Em quen rồi. Câu đó tôi nhớ đến tận bây giờ. Quen với việc về muộn, hay quen với việc ở một mình? Tôi không hỏi. Tôi về nhà, nằm nhìn trần nhà, nghĩ về nó, nghĩ về mười giây ở biển Đà Nẵng, và nghĩ rằng mình nên dừng lại. Nhưng mà không dừng được.
+Tôi tự nói với bản thân: thôi mày ơi, dừng lại đi. Nhưng sáng hôm sau tôi lại dậy sớm, lại vào phòng trà, lại pha trà.
 
 ---
 
-Hạ.
+Đà Nẵng, tháng thứ năm.
 
-Tôi biết nó thích tôi. Những buổi chiều nó qua bàn hỏi bài, những lần nó mặc áo xanh, những tiếng cười hơi to khi tôi ở gần. Tôi biết. Và tôi không muốn.
+Cả team đi chơi sau khi kết thúc dự án. Buổi tối ra biển, mọi người chạy nhảy tung tăng. Tôi đứng xa xa, nhìn ra biển. Tự nhiên em xuất hiện cạnh tôi, tay khoác vào cánh tay tôi: "Anh nhìn kìa, sao ở đây nhiều quá ha."
 
-Không phải vì Hạ không tốt. Nó trẻ, xinh, nhiệt tình. Nhưng lòng tôi đã ở chỗ khác mất rồi — ở một người im lặng, ngồi cạnh cửa sổ, uống trà pha sẵn mỗi sáng mà không hỏi một câu.
+Tôi đứng im. Cảm giác cánh tay em mềm, mát, qua lớp áo mỏng. Tôi ngước lên nhìn trời, thấy đầy sao, nhưng chẳng thấy gì ngoài hơi ấm từ người em.
 
-Tôi nghĩ im lặng là tử tế. Sau này mới biết, im lặng là tàn nhẫn hơn tất cả.
+Mười giây. Rồi em bỏ tay ra, chạy xuống chỗ Hạ, cười vang dưới ánh đèn bờ biển. Như không có chuyện gì.
 
----
-
-Tháng tám. Một buổi sáng tôi ra đặt trà, thấy ly trà hôm qua vẫn còn nguyên. Lần đầu tiên.
-
-Đến trưa thì biết tin: nó được điều chuyển. Chi nhánh khác, thành phố khác. Sếp Hải nói: "Công ty cần người xuống chi nhánh mới. Nó đồng ý rồi."
-
-Tôi hỏi: "Em ấy nói gì không?"
-
-"Nó không nói gì."
-
-Không nói gì. Đúng là nó.
-
-Trưa hôm đó tôi vào phòng trà, pha một ly trà đào, đặt lên bàn nó. Ly trà đó nó không uống. Cả chiều nó thu dọn đồ, gấp từng cuốn sách, từng cây bút, chậm, nhẹ, không vội. Tôi đứng nhìn từ xa, muốn nói gì đó lắm, nhưng không thốt lên được.
-
-Có một lúc nó ngước lên, mắt chúng tôi gặp nhau. Một giây. Hai giây. Rồi nó cúi xuống tiếp.
-
-Nó ra về lúc bốn giờ chiều, hộp giấy trên tay, không ngoảnh đầu.
-
-Tôi đứng cạnh cửa sổ, chỗ nó hay ngồi, nhìn ra đường. Cây bàng trước cửa đang thay lá. Một cơn gió thổi qua, mấy chiếc lá vàng rơi lả tả.
+Tôi đứng đó thêm một lúc. Trong đầu tôi lúc ấy chỉ có một câu: mày nên vui vì ít nhất cũng đã có mười giây.
 
 ---
 
-Cùng tuần đó tôi biết người ký lệnh điều chuyển là Đông. Phó tổng giám đốc mới. Bạn đại học của tôi.
+Tôi biết mình không thể.
 
-Hồi đại học, tôi và nó thân lắm. Chung phòng, chung bát mì tôm, chung những đêm thức trắng ôn thi. Rồi có chuyện xảy ra — chuyện về Mai, bạn gái nó — và chúng tôi không còn gặp nhau nữa. Mười năm.
+Cuộc sống của người trưởng thành không dễ bộc lộ cảm xúc. Tôi chỉ biết nuốt vào trong lòng, che giấu mọi thứ, bởi hiểu rõ mình chẳng thể mang lại điều tốt đẹp gì cho em.
 
-Giờ nó quay lại, làm phó tổng, ký giấy điều chuyển em. Hỏi tôi có biết nó làm vậy vì chuyện cũ không — tôi biết chứ. Nhưng biết thì sao? Người đi đã đi rồi.
+Có lần tôi đi ngang bàn em, thấy em ngồi một mình, tay cầm ly trà nguội, mắt nhìn ra đường Nguyễn Du tối đen. Tôi muốn kéo ghế ngồi xuống, muốn nói chuyện với em, muốn hỏi em đang nghĩ gì. Nhưng tôi chỉ nói: "Về muộn nhỉ." Em quay lại, cười: "Ừ, còn tí việc." Tôi hỏi: "Cần anh gọi grab không?" Em lắc đầu: "Không sao. Em quen rồi."
 
-Tôi không đến gặp nó. Không hỏi. Có những chuyện hỏi ra chỉ thêm đau.
+Câu đó làm tôi nhói. Em quen rồi. Quen với việc về muộn một mình. Quen với việc tự lo mọi thứ. Tôi muốn nói: "Anh có thể đưa em về." Nhưng tôi không nói. Tôi chỉ gật đầu rồi đi.
 
-Tôi chỉ pha trà mỗi sáng, đặt lên bàn cạnh cửa sổ, dù không còn ai uống. Không phải vì tôi đợi. Mà vì quen rồi.
+---
+
+Một buổi sáng tháng tám.
+
+Tôi ra đặt trà như thường lệ. Ly trà hôm qua vẫn còn nguyên trên bàn, chưa động đến. Tôi nhìn nó hồi lâu. Trong lòng chợt nặng.
+
+Đến trưa, Hải nói: em được điều chuyển, chi nhánh khác, thành phố khác.
+
+Tôi hỏi em ấy có đồng ý không. Hải bảo em không phản đối.
+
+Tôi đứng nhìn em thu dọn đồ. Em gấp từng cuốn sách, từng cây bút, chậm rãi, không vội. Có một lúc em ngước lên. Mắt chúng tôi gặp nhau. Một giây. Hai giây. Rồi em cúi xuống, tiếp tục gấp. Em ra về lúc bốn giờ chiều. Không ngoảnh đầu lại.
+
+Tôi ra khuất tầm mắt rồi mới quay vào. Đứng bên cái bàn trống, ly trà còn nguyên trên đó.
+
+---
+
+Cùng tuần đó, tôi biết ký lệnh điều chuyển là Đông. Phó tổng mới. Bạn đại học cũ của tôi.
+
+Hồi đại học, tôi và nó thân lắm. Chung phòng, chung bát mì tôm, chung cả đống chuyện tào lao. Nó có người yêu tên Mai. Một cô gái tóc dài, hay cười. Mai thích tôi. Tôi không thích. Một lần nó không biết, Mai nói với tôi. Tôi từ chối. Mai khóc, Mai buồn, rồi chuyện gì đó xảy ra — tôi không biết hết. Sau đó Mai đi. Nó cũng đi. Mười năm không gặp.
+
+Giờ nó ngồi phòng cuối hành lang, ký giấy điều chuyển em đi, nhìn tôi như chưa từng quen.
+
+Tôi chưa gặp nó. Không biết nói gì. Xin lỗi? Hỏi tại sao? Cả hai đều vô nghĩa.
+
+---
+
+Tôi vẫn pha trà đào mỗi sáng. Không còn bàn để đặt nó nữa, nhưng sáng nào cũng pha. Một ly, để lên bàn mình, uống một mình.
+
+Không phải vì tôi đợi em quay lại. Mà vì quen rồi.
+
+Có những thứ, khi đã trở thành thói quen, thì dừng lại còn khó hơn là tiếp tục.
