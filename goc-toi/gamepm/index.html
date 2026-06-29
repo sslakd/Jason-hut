@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>The Delivery Guild - Web Demo</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">The Delivery Guild</p>
+          <h1 id="screen-title">Dashboard</h1>
+        </div>
+        <button id="continue-button" class="primary-action" type="button">Continue</button>
+      </header>
+
+      <main class="screen">
+        <section class="summary-strip" aria-label="Project summary">
+          <article class="metric">
+            <span>Week</span>
+            <strong id="week-value">1</strong>
+            <small>Demo Review W4</small>
+          </article>
+          <article class="metric alert">
+            <span>Blockers</span>
+            <strong id="blocker-value">1</strong>
+            <small>Must Respond</small>
+          </article>
+          <article class="metric">
+            <span>AP</span>
+            <strong>3/3</strong>
+            <small>This week</small>
+          </article>
+        </section>
+
+        <nav class="tabs" aria-label="Main navigation">
+          <button data-screen="dashboard" class="active" type="button">Dashboard</button>
+          <button data-screen="inbox" type="button">Inbox</button>
+          <button data-screen="health" type="button">Health</button>
+          <button data-screen="decisions" type="button">Decisions</button>
+        </nav>
+
+        <section id="content" class="content" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <div id="event-modal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-card">
+        <button id="close-event" class="icon-button" type="button" aria-label="Close">×</button>
+        <p id="event-type" class="eyebrow">Decision Needed</p>
+        <h2 id="event-title"></h2>
+        <p id="event-context"></p>
+        <div id="event-clues" class="clue-box"></div>
+        <p class="rule-note">Choose a response. Stat impact is hidden until after commitment.</p>
+        <div id="event-choices" class="choice-list"></div>
+      </div>
+    </div>
+
+    <div id="result-modal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-card">
+        <p class="eyebrow">Immediate Consequence</p>
+        <h2 id="result-title">Decision committed</h2>
+        <p id="result-text"></p>
+        <pre id="result-changes"></pre>
+        <button id="result-continue" class="primary-action wide" type="button">Continue</button>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
